@@ -115,6 +115,9 @@ static NSData *nsdata_nk_digest(NSData *this, unsigned char *(*func)(const void 
 
 @implementation NSData (Crypto)
 
+#define kNKCryptoEncrypt YES
+#define kNKCryptoDecrypt NO
+
 static NSData *nsdata_nk_crypt(BOOL encrypt, NSData *this, CCAlgorithm algo, id key, CCOptions opt, NSError **error) {
     CCCryptorStatus status = kCCSuccess;
     NSData *result = nil;
@@ -134,27 +137,27 @@ static NSData *nsdata_nk_crypt(BOOL encrypt, NSData *this, CCAlgorithm algo, id 
 }
 
 - (NSData *)AES256EncryptedDataUsingKey:(id)key error:(NSError **)error {
-    return nsdata_nk_crypt(YES, self, kCCAlgorithmAES128, key, kCCOptionPKCS7Padding, error);
+    return nsdata_nk_crypt(kNKCryptoEncrypt, self, kCCAlgorithmAES128, key, kCCOptionPKCS7Padding, error);
 }
 
 - (NSData *)decryptedAES256DataUsingKey:(id)key error:(NSError **)error {
-    return nsdata_nk_crypt(NO, self, kCCAlgorithmAES128, key, kCCOptionPKCS7Padding, error);
+    return nsdata_nk_crypt(kNKCryptoDecrypt, self, kCCAlgorithmAES128, key, kCCOptionPKCS7Padding, error);
 }
 
 - (NSData *)DESEncryptedDataUsingKey:(id)key error:(NSError **)error {
-    return nsdata_nk_crypt(YES, self, kCCAlgorithmDES, key, kCCOptionPKCS7Padding, error);
+    return nsdata_nk_crypt(kNKCryptoEncrypt, self, kCCAlgorithmDES, key, kCCOptionPKCS7Padding, error);
 }
 
 - (NSData *)decryptedDESDataUsingKey:(id)key error:(NSError **)error {
-    return nsdata_nk_crypt(NO, self, kCCAlgorithmDES, key, kCCOptionPKCS7Padding, error);
+    return nsdata_nk_crypt(kNKCryptoDecrypt, self, kCCAlgorithmDES, key, kCCOptionPKCS7Padding, error);
 }
 
 - (NSData *)CASTEncryptedDataUsingKey:(id)key error:(NSError **)error {
-    return nsdata_nk_crypt(YES, self, kCCAlgorithmCAST, key, kCCOptionPKCS7Padding, error);
+    return nsdata_nk_crypt(kNKCryptoEncrypt, self, kCCAlgorithmCAST, key, kCCOptionPKCS7Padding, error);
 }
 
 - (NSData *)decryptedCASTDataUsingKey:(id)key error:(NSError **)error {
-    return nsdata_nk_crypt(NO, self, kCCAlgorithmCAST, key, kCCOptionPKCS7Padding, error);
+    return nsdata_nk_crypt(kNKCryptoDecrypt, self, kCCAlgorithmCAST, key, kCCOptionPKCS7Padding, error);
 }
 
 @end
