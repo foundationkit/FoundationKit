@@ -164,47 +164,21 @@ static NSData *nsdata_nk_crypt(BOOL encrypt, NSData *this, CCAlgorithm algo, id 
 
 @implementation NSData (LowLevelCryptor)
 
-static void nsdata_nk_set_key_len( CCAlgorithm algorithm, NSMutableData *keyData, NSMutableData *ivData) {
+#define kNKDontEnforceKeyLength -1
+
+static void nsdata_nk_enforce_key_len(CCAlgorithm algorithm, NSMutableData *keyData, NSMutableData *ivData) {
 	NSUInteger keyLength = [keyData length];
+    NSInteger forceTo = kNKDontEnforceKeyLength;
 	switch (algorithm) {
-		case kCCAlgorithmAES128: {
-			if (keyLength < 16) {
-                [keyData setLength:16];
-			}
-			else if (keyLength < 24) {
-				[keyData setLength:24];
-			}
-			else {
-                [keyData setLength:32];
-			}
-			break;
-		}
-		case kCCAlgorithmDES: {
-			[keyData setLength:8];
-			break;
-		}
-		case kCCAlgorithm3DES: {
-			[keyData setLength:24];
-			break;
-		}
-		case kCCAlgorithmCAST: {
-			if (keyLength < 5) {
-				[keyData setLength:5];
-			}
-			else if (keyLength > 16) {
-				[keyData setLength:16];
-			}
-			break;
-		}
-		case kCCAlgorithmRC4: {
-			if (keyLength > 512) {
-                [keyData setLength:512];
-            }
-			break;
-		}
-		default:
-			break;
+		case kCCAlgorithmAES128: forceTo = (keyLength < 16 ? 16 : (keyLength < 24 ? 24 : 32)); break;
+		case kCCAlgorithmDES: forceTo = 8; break;
+		case kCCAlgorithm3DES: forceTo = 24; break;
+		case kCCAlgorithmCAST: forceTo = (keyLength < 5 ? 5 : (keyLength > 16 ? 16 : kNKDontEnforceKeyLength)); break;
+		case kCCAlgorithmRC4: forceTo = (keyLength > 512 ? 512 : kNKDontEnforceKeyLength); break;
 	}
+    if (forceTo != kNKDontEnforceKeyLength) {
+        [keyData setLength:forceTo];
+    }
 	[ivData setLength:[keyData length]];
 }
 
@@ -265,7 +239,7 @@ static void nsdata_nk_set_key_len( CCAlgorithm algorithm, NSMutableData *keyData
     }
 
 	// Ensure correct lengths for key and iv data, based on algorithms
-	nsdata_nk_set_key_len(algorithm, keyData, ivData);
+	nsdata_nk_enforce_key_len(algorithm, keyData, ivData);
 	status = CCCryptorCreate(kCCEncrypt, algorithm, options, [keyData bytes], [keyData length], [ivData bytes], &cryptor);
 	if (status != kCCSuccess) {
         if ( error != NULL ) {
@@ -315,7 +289,7 @@ static void nsdata_nk_set_key_len( CCAlgorithm algorithm, NSMutableData *keyData
     }
 
 	// Ensure correct lengths for key and iv data, based on algorithms
-	nsdata_nk_set_key_len(algorithm, keyData, ivData);
+	nsdata_nk_enforce_key_len(algorithm, keyData, ivData);
 
 	status = CCCryptorCreate(kCCDecrypt, algorithm, options, [keyData bytes], [keyData length], [ivData bytes], &cryptor);
 	if (status != kCCSuccess) {
