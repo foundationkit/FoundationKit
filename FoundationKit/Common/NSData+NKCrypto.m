@@ -206,32 +206,29 @@ static void nsdata_nk_set_key_len( CCAlgorithm algorithm, NSMutableData *keyData
 }
 
 - (NSData *)_runCryptor:(CCCryptorRef)cryptor result:(CCCryptorStatus *)status {
-	size_t bufsize = CCCryptorGetOutputLength( cryptor, (size_t)[self length], true );
-	void * buf = malloc( bufsize );
+	size_t bufsize = CCCryptorGetOutputLength(cryptor, (size_t)[self length], true);
+	void * buf = malloc(bufsize);
 	size_t bufused = 0;
     size_t bytesTotal = 0;
-	*status = CCCryptorUpdate( cryptor, [self bytes], (size_t)[self length],
-							  buf, bufsize, &bufused );
-	if ( *status != kCCSuccess )
-	{
-		free( buf );
-		return ( nil );
+	*status = CCCryptorUpdate(cryptor, [self bytes], (size_t)[self length], buf, bufsize, &bufused);
+	if (*status != kCCSuccess) {
+		free(buf);
+		return nil;
 	}
 
     bytesTotal += bufused;
 
 	// From Brent Royal-Gordon (Twitter: architechies):
-	//  Need to update buf ptr past used bytes when calling CCCryptorFinal()
-	*status = CCCryptorFinal( cryptor, buf + bufused, bufsize - bufused, &bufused );
-	if ( *status != kCCSuccess )
-	{
-		free( buf );
-		return ( nil );
+	// Need to update buf ptr past used bytes when calling CCCryptorFinal()
+	*status = CCCryptorFinal(cryptor, buf + bufused, bufsize - bufused, &bufused);
+	if (*status != kCCSuccess) {
+		free(buf);
+		return nil;
 	}
 
     bytesTotal += bufused;
 
-	return ( [NSData dataWithBytesNoCopy: buf length: bytesTotal] );
+	return [NSData dataWithBytesNoCopy:buf length:bytesTotal];
 }
 
 - (NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm key:(id)key error:(CCCryptorStatus *)error {
