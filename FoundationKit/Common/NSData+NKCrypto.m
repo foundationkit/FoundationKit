@@ -159,70 +159,51 @@ static NSData *nsdata_nk_crypt(BOOL encrypt, NSData *this, CCAlgorithm algo, id 
 
 @end
 
-static void FixKeyLengths( CCAlgorithm algorithm, NSMutableData * keyData, NSMutableData * ivData )
-{
+@implementation NSData (LowLevelCryptor)
+
+static void nsdata_nk_set_key_len( CCAlgorithm algorithm, NSMutableData *keyData, NSMutableData *ivData) {
 	NSUInteger keyLength = [keyData length];
-	switch ( algorithm )
-	{
-		case kCCAlgorithmAES128:
-		{
-			if ( keyLength < 16 )
-			{
-				[keyData setLength: 16];
+	switch (algorithm) {
+		case kCCAlgorithmAES128: {
+			if (keyLength < 16) {
+                [keyData setLength:16];
 			}
-			else if ( keyLength < 24 )
-			{
-				[keyData setLength: 24];
+			else if (keyLength < 24) {
+				[keyData setLength:24];
 			}
-			else
-			{
-				[keyData setLength: 32];
+			else {
+                [keyData setLength:32];
 			}
-
 			break;
 		}
-
-		case kCCAlgorithmDES:
-		{
-			[keyData setLength: 8];
+		case kCCAlgorithmDES: {
+			[keyData setLength:8];
 			break;
 		}
-
-		case kCCAlgorithm3DES:
-		{
-			[keyData setLength: 24];
+		case kCCAlgorithm3DES: {
+			[keyData setLength:24];
 			break;
 		}
-
-		case kCCAlgorithmCAST:
-		{
-			if ( keyLength < 5 )
-			{
-				[keyData setLength: 5];
+		case kCCAlgorithmCAST: {
+			if (keyLength < 5) {
+				[keyData setLength:5];
 			}
-			else if ( keyLength > 16 )
-			{
-				[keyData setLength: 16];
+			else if (keyLength > 16) {
+				[keyData setLength:16];
 			}
-
 			break;
 		}
-
-		case kCCAlgorithmRC4:
-		{
-			if ( keyLength > 512 )
-				[keyData setLength: 512];
+		case kCCAlgorithmRC4: {
+			if (keyLength > 512) {
+                [keyData setLength:512];
+            }
 			break;
 		}
-
 		default:
 			break;
 	}
-
-	[ivData setLength: [keyData length]];
+	[ivData setLength:[keyData length]];
 }
-
-@implementation NSData (LowLevelCryptor)
 
 - (NSData *)_runCryptor:(CCCryptorRef)cryptor result:(CCCryptorStatus *)status {
 	size_t bufsize = CCCryptorGetOutputLength( cryptor, (size_t)[self length], true );
@@ -265,8 +246,8 @@ static void FixKeyLengths( CCAlgorithm algorithm, NSMutableData * keyData, NSMut
 	CCCryptorRef cryptor = NULL;
 	CCCryptorStatus status = kCCSuccess;
 
-	NSParameterAssert([key isKindOfClass:[NSData class]] || [key isKindOfClass:[NSString class]]);
-	NSParameterAssert(iv == nil || [iv isKindOfClass:[NSData class]] || [iv isKindOfClass:[NSString class]]);
+	assert([key isKindOfClass:[NSData class]] || [key isKindOfClass:[NSString class]]);
+	assert(iv == nil || [iv isKindOfClass:[NSData class]] || [iv isKindOfClass:[NSString class]]);
 
 	NSMutableData *keyData = nil;
     NSMutableData *ivData = nil;
@@ -283,8 +264,8 @@ static void FixKeyLengths( CCAlgorithm algorithm, NSMutableData * keyData, NSMut
         ivData = [(NSMutableData *)[iv mutableCopy] autorelease];
     }
 
-	// ensure correct lengths for key and iv data, based on algorithms
-	FixKeyLengths(algorithm, keyData, ivData);
+	// Ensure correct lengths for key and iv data, based on algorithms
+	nsdata_nk_set_key_len(algorithm, keyData, ivData);
 	status = CCCryptorCreate(kCCEncrypt, algorithm, options, [keyData bytes], [keyData length], [ivData bytes], &cryptor);
 	if (status != kCCSuccess) {
         if ( error != NULL ) {
@@ -333,8 +314,8 @@ static void FixKeyLengths( CCAlgorithm algorithm, NSMutableData * keyData, NSMut
         ivData = [(NSMutableData *)[iv mutableCopy] autorelease];
     }
 
-	// ensure correct lengths for key and iv data, based on algorithms
-	FixKeyLengths(algorithm, keyData, ivData);
+	// Ensure correct lengths for key and iv data, based on algorithms
+	nsdata_nk_set_key_len(algorithm, keyData, ivData);
 
 	status = CCCryptorCreate(kCCDecrypt, algorithm, options, [keyData bytes], [keyData length], [ivData bytes], &cryptor);
 	if (status != kCCSuccess) {
