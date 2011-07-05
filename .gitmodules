@@ -16,3 +16,9 @@
 [submodule "MagicalRecord"]
 	path = MagicalRecord
 	url = git@github.com:foundationkit/MagicalRecord.git
+[submodule "NYXImagesUtilities"]
+	path = NYXImagesUtilities
+	url = git@github.com:foundationkit/NYXImagesUtilities.git
+[submodule "MAZeroingWeakRef"]
+	path = MAZeroingWeakRef
+	url = git@github.com:foundationkit/MAZeroingWeakRef.git
