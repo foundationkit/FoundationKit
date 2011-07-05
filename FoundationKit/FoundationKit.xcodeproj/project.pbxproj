@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
-		DC410D1313C39C4200C90C19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D1213C39C4200C90C19 /* Cocoa.framework */; };
 		DC410D1D13C39C4200C90C19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC410D1B13C39C4200C90C19 /* InfoPlist.strings */; };
+		DC410D4013C3B77C00C90C19 /* NSData+NKCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = DC410D3E13C3B77C00C90C19 /* NSData+NKCrypto.h */; };
+		DC410D4113C3B77C00C90C19 /* NSData+NKCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = DC410D3E13C3B77C00C90C19 /* NSData+NKCrypto.h */; };
+		DC410D4213C3B77C00C90C19 /* NSData+NKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = DC410D3F13C3B77C00C90C19 /* NSData+NKCrypto.m */; };
+		DC410D4313C3B77C00C90C19 /* NSData+NKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = DC410D3F13C3B77C00C90C19 /* NSData+NKCrypto.m */; };
+		DC410D4413C3B96E00C90C19 /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = DC410D3B13C3B72500C90C19 /* Macros.h */; };
+		DC410D4513C3B96F00C90C19 /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = DC410D3B13C3B72500C90C19 /* Macros.h */; };
+		DC410D4613C3B97200C90C19 /* FoundationKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = DC410D0613C39BFD00C90C19 /* FoundationKit-Prefix.pch */; };
+		DC410D4713C3B97200C90C19 /* FoundationKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = DC410D0613C39BFD00C90C19 /* FoundationKit-Prefix.pch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,13 +24,15 @@
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC410D0613C39BFD00C90C19 /* FoundationKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationKit-Prefix.pch"; sourceTree = "<group>"; };
 		DC410D1113C39C4200C90C19 /* FoundationKit-OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "FoundationKit-OSX.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC410D1213C39C4200C90C19 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		DC410D1513C39C4200C90C19 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		DC410D1613C39C4200C90C19 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DC410D1713C39C4200C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC410D1A13C39C4200C90C19 /* FoundationKit-OSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoundationKit-OSX-Info.plist"; sourceTree = "<group>"; };
 		DC410D1C13C39C4200C90C19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC410D1E13C39C4200C90C19 /* FoundationKit-OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationKit-OSX-Prefix.pch"; sourceTree = "<group>"; };
+		DC410D3B13C3B72500C90C19 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		DC410D3E13C3B77C00C90C19 /* NSData+NKCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NKCrypto.h"; sourceTree = "<group>"; };
+		DC410D3F13C3B77C00C90C19 /* NSData+NKCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NKCrypto.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC410D1313C39C4200C90C19 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +57,7 @@
 		DC410CF413C39BFD00C90C19 = {
 			isa = PBXGroup;
 			children = (
+				DC410D2513C3AD0D00C90C19 /* Common */,
 				DC410D0413C39BFD00C90C19 /* FoundationKit */,
 				DC410D1813C39C4200C90C19 /* FoundationKit-OSX */,
 				DC410D0113C39BFD00C90C19 /* Frameworks */,
@@ -69,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				DC410D0213C39BFD00C90C19 /* Foundation.framework */,
-				DC410D1213C39C4200C90C19 /* Cocoa.framework */,
 				DC410D1413C39C4200C90C19 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -119,6 +127,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DC410D2513C3AD0D00C90C19 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DC410D2713C3AD2F00C90C19 /* Categories */,
+				DC410D3B13C3B72500C90C19 /* Macros.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		DC410D2713C3AD2F00C90C19 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DC410D3E13C3B77C00C90C19 /* NSData+NKCrypto.h */,
+				DC410D3F13C3B77C00C90C19 /* NSData+NKCrypto.m */,
+			);
+			name = Categories;
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -126,6 +153,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC410D4013C3B77C00C90C19 /* NSData+NKCrypto.h in Headers */,
+				DC410D4413C3B96E00C90C19 /* Macros.h in Headers */,
+				DC410D4613C3B97200C90C19 /* FoundationKit-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +163,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC410D4113C3B77C00C90C19 /* NSData+NKCrypto.h in Headers */,
+				DC410D4513C3B96F00C90C19 /* Macros.h in Headers */,
+				DC410D4713C3B97200C90C19 /* FoundationKit-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC410D4213C3B77C00C90C19 /* NSData+NKCrypto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC410D4313C3B77C00C90C19 /* NSData+NKCrypto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +318,7 @@
 				DSTROOT = /tmp/FoundationKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit/FoundationKit-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -295,6 +331,7 @@
 				DSTROOT = /tmp/FoundationKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit/FoundationKit-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -370,6 +407,7 @@
 				DC410D0B13C39BFD00C90C19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC410D1F13C39C4200C90C19 /* Build configuration list for PBXNativeTarget "FoundationKit-OSX" */ = {
 			isa = XCConfigurationList;
@@ -378,6 +416,7 @@
 				DC410D2113C39C4200C90C19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
