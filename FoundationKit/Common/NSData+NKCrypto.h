@@ -17,7 +17,7 @@
 
 extern NSString * const kNKCryptoErrorDomain;
 
-@interface NSError (CommonCryptoErrorDomain)
+@interface NSError (Crypto)
 + (NSError *)errorWithCCCryptorStatus:(CCCryptorStatus)status;
 @end
 
