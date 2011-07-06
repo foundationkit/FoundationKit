@@ -160,7 +160,7 @@
 				DC943DE713C4FB99006E7224 /* NKAppleRemote.h */,
 				DC943DE813C4FB99006E7224 /* NKAppleRemote.m */,
 			);
-			name = IO;
+			path = IO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
