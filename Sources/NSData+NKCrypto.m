@@ -1,14 +1,3 @@
-//
-//  NSData+NKCrypto.m
-//  FoundationKit
-//
-//  Created by Jim Dovey on 31.8.2008.
-//  Licensed under BSD.
-//
-//  Modified by:
-//      - Erik Aigner
-//
-
 #import "NSData+NKCrypto.h"
 
 #import <Foundation/Foundation.h>

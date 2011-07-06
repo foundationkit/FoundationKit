@@ -3,6 +3,7 @@
 //
 
 #ifdef __OBJC__
-#import "Macros.h"
-#import <Foundation/Foundation.h>
+    #import <Foundation/Foundation.h>
+
+    #import "FoundationKit.h"
 #endif
