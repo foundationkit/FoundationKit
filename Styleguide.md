@@ -4,6 +4,10 @@ Most of these guidelines are to match Apple's documentation and community-accept
 
 This document is mainly targeted toward iOS development, but definitely applies to Mac as well.
 
+## Comments
+
+Multiline `/**/` comments are not allowed, only one-line comments `//`.
+
 ## Operators
 
 ```objective-c
