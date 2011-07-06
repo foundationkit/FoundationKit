@@ -1,6 +1,6 @@
 // Part of FoundationKit http://foundationk.it
 //
-// Originally created by Jim Dovey on 31.8.2008, BSD licensed.
+// Derived from Jim Dovey's BSD-licensed AQToolkit: https://bitbucket.org/itay/bluemit/src/0a183f27bfae/Classes/Imported/AQCommonCrypto/NSData%2BCommonCrypto.h
 
 #import <Foundation/NSData.h>
 #import <Foundation/NSError.h>
