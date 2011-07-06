@@ -9,9 +9,3 @@
 #include "NSValue-Concise.h"
 #include "NSNull-Concise.h"
 #include "NSString-Concise.h"
-
-#ifdef TARGET_OS_MAC
-#define $app [NSApplication sharedApplication]
-#elif defined TARGET_OS_IPHONE
-#define $app [UIApplication sharedApplication]
-#endif
