@@ -228,40 +228,40 @@ static void nk_ar_queue_put(uint32_t val, uint32_t *q, int qlen);
     self.exclusive = YES;
     
     // Deal with secure input glitch
-    sinPort = IONotificationPortCreate(kIOMasterPortDefault);
-    if (sinPort) {
+    sinPort_ = IONotificationPortCreate(kIOMasterPortDefault);
+    if (sinPort_) {
       io_registry_entry_t entry = IORegistryEntryFromPath(kIOMasterPortDefault, kIOServicePlane ":/");
       if (entry) {
-        kern_return_t result = IOServiceAddInterestNotification(sinPort,
+        kern_return_t result = IOServiceAddInterestNotification(sinPort_,
                                                                 entry,
                                                                 kIOBusyInterest,
                                                                 &nk_ar_secure_input_notification,
                                                                 (__bridge void *)self,
-                                                                &sinNotification);
+                                                                &sinNotification_);
         if (result) {
           NSLog(@"Error: failed to register for ESI notification");
-          IONotificationPortDestroy(sinPort);
-          sinPort = NULL;
+          IONotificationPortDestroy(sinPort_);
+          sinPort_ = NULL;
         }
         else {
-          CFRunLoopSourceRef source = IONotificationPortGetRunLoopSource(sinPort);
+          CFRunLoopSourceRef source = IONotificationPortGetRunLoopSource(sinPort_);
           CFRunLoopAddSource(CFRunLoopGetCurrent(), source, kCFRunLoopDefaultMode);
         }
         
         IOObjectRelease(entry);
       }
     }
-    flags.sin = [self secureEventInputEnabled];
+    flags_.sin = [self secureEventInputEnabled];
   }
   
   return self;
 }
 
 - (void)dealloc {
-  IONotificationPortDestroy(sinPort);
-  IOObjectRelease(sinNotification);
-  sinPort = NULL;
-  sinNotification = MACH_PORT_NULL;
+  IONotificationPortDestroy(sinPort_);
+  IOObjectRelease(sinNotification_);
+  sinPort_ = NULL;
+  sinNotification_ = MACH_PORT_NULL;
   
   [self closeDevice];  
 }
@@ -297,11 +297,11 @@ static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void 
   CFIndex intValue = IOHIDValueGetIntegerValue(value);
   
   // Put cookie in queue
-  uint32_t cookieQueueLen = sizeof(remote->queue.cookie)/sizeof(uint32_t);
-  uint32_t valueQueueLen = sizeof(remote->queue.value)/sizeof(uint32_t);
+  uint32_t cookieQueueLen = sizeof(remote->queue_.cookie)/sizeof(uint32_t);
+  uint32_t valueQueueLen = sizeof(remote->queue_.value)/sizeof(uint32_t);
   
-  nk_ar_queue_put((uint32_t)cookie, remote->queue.cookie, cookieQueueLen);
-  nk_ar_queue_put((uint32_t)intValue, remote->queue.value, valueQueueLen);
+  nk_ar_queue_put((uint32_t)cookie, remote->queue_.cookie, cookieQueueLen);
+  nk_ar_queue_put((uint32_t)intValue, remote->queue_.value, valueQueueLen);
   
   // Match button
   for (int i=0; i<kNKAppleRemoteMatchTableLen; i++) {
@@ -311,8 +311,8 @@ static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void 
     int qlen = nk_ar_queue_len(m.cookieMatch);
     
     for (int n=0; n<qlen; n++) {
-      cnt += (m.cookieMatch[n] == remote->queue.cookie[n]);
-      cnt += (m.valueMatch[n] == remote->queue.value[n]);
+      cnt += (m.cookieMatch[n] == remote->queue_.cookie[n]);
+      cnt += (m.valueMatch[n] == remote->queue_.value[n]);
     }
     
     int found = (cnt == qlen*2);    
@@ -321,8 +321,8 @@ static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void 
       [remote buttonEventPosted:m.id state:m.state];
       
       // Clear queues 
-      nk_ar_queue_clear(remote->queue.cookie, cookieQueueLen);
-      nk_ar_queue_clear(remote->queue.value, valueQueueLen);
+      nk_ar_queue_clear(remote->queue_.cookie, cookieQueueLen);
+      nk_ar_queue_clear(remote->queue_.value, valueQueueLen);
     }
   }
 }
@@ -330,17 +330,17 @@ static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void 
 static void nk_ar_secure_input_notification(void *refcon, io_service_t  service, uint32_t messageType, void *messageArgument) {
   NKAppleRemote *remote = (__bridge NKAppleRemote *)refcon;
   BOOL sin = [remote secureEventInputEnabled];
-  if (sin != remote->flags.sin) {
+  if (sin != remote->flags_.sin) {
     [remote closeDevice];
     [remote openDevice];
-    remote->flags.sin = sin;
+    remote->flags_.sin = sin;
     NSLog(@"Info: regained access to remote control");
   }
 }
 
 - (BOOL)openDevice {
   // Check if device and interface have been properly initialized
-  if (device != NULL) {
+  if (device_ != NULL) {
     NSLog(@"Error: remote device is already opened");
     return NO;
   }
@@ -350,8 +350,8 @@ static void nk_ar_secure_input_notification(void *refcon, io_service_t  service,
                                                      IOServiceMatching(kNKAppleRemoteDeviceName));
   
   // Create the device
-  device = IOHIDDeviceCreate(kCFAllocatorDefault, service);
-  if (device == NULL) {
+  device_ = IOHIDDeviceCreate(kCFAllocatorDefault, service);
+  if (device_ == NULL) {
     NSLog(@"Error: could not access the remote device");
     return NO;
   }
@@ -360,42 +360,42 @@ static void nk_ar_secure_input_notification(void *refcon, io_service_t  service,
   IOHIDOptionsType accessMode = exclusive ? kIOHIDOptionsTypeSeizeDevice : kIOHIDOptionsTypeNone;
   
   // Open the device
-  IOReturn result = IOHIDDeviceOpen(device, accessMode);
+  IOReturn result = IOHIDDeviceOpen(device_, accessMode);
   if (result == kIOReturnExclusiveAccess) {
     NSLog(@"Another application has exclusive remote access, trying to open in passive mode ...");
-    result =  IOHIDDeviceOpen(device, kIOHIDOptionsTypeNone);
+    result =  IOHIDDeviceOpen(device_, kIOHIDOptionsTypeNone);
   }
   
   if (result != kIOReturnSuccess) {
-    device = NULL;
+    device_ = NULL;
     NSLog(@"Error: could not access remote device");
     return NO;
   }
   
   // Register input callback and schedule device with runloop
-  IOHIDDeviceRegisterInputValueCallback(device, nk_ar_hid_input_value_callback, (__bridge void *)self);
-  IOHIDDeviceScheduleWithRunLoop(device, CFRunLoopGetMain(), kCFRunLoopDefaultMode);
+  IOHIDDeviceRegisterInputValueCallback(device_, nk_ar_hid_input_value_callback, (__bridge void *)self);
+  IOHIDDeviceScheduleWithRunLoop(device_, CFRunLoopGetMain(), kCFRunLoopDefaultMode);
   
   return YES;
 }
 
 - (BOOL)closeDevice {
   // We can only close something if its opened ...
-  if (device == NULL) {
+  if (device_ == NULL) {
     NSLog(@"Error: device not opened");
     return NO;
   }
   
   // Unschedule from runloop
-  IOHIDDeviceUnscheduleFromRunLoop(device, CFRunLoopGetMain(), kCFRunLoopDefaultMode);
+  IOHIDDeviceUnscheduleFromRunLoop(device_, CFRunLoopGetMain(), kCFRunLoopDefaultMode);
   
   // Close the device
-  IOReturn status = IOHIDDeviceClose(device, kIOHIDOptionsTypeNone);
+  IOReturn status = IOHIDDeviceClose(device_, kIOHIDOptionsTypeNone);
   if (status != kIOReturnSuccess) {
     NSLog(@"Error: could not close device");
   }
   
-  device = NULL;
+  device_ = NULL;
   
   return YES;
 }

@@ -31,16 +31,16 @@ typedef enum {
 
 @interface NKAppleRemote : NSObject {
 @private
-  IOHIDDeviceRef        device;
-  IONotificationPortRef  sinPort;
-  io_object_t            sinNotification;
+  IOHIDDeviceRef        device_;
+  IONotificationPortRef sinPort_;
+  io_object_t           sinNotification_;
   struct {
     uint32_t cookie[10];
     uint32_t value[10];
-  } queue;
+  } queue_;
   struct {
     BOOL sin;
-  } flags;
+  } flags_;
 }
 
 @property (nonatomic, weak) id<NSObject, NKAppleRemoteDelegate> delegate;
