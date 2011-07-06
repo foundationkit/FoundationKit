@@ -30,6 +30,8 @@
 		DC1CF42F13C484A400E5BEBC /* NSString-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42E13C484A400E5BEBC /* NSString-NKConcise.h */; };
 		DC1CF43113C484B800E5BEBC /* NSSet-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF43013C484B800E5BEBC /* NSSet-NKConcise.h */; };
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
+		DC943DE913C4FB99006E7224 /* AppleRemote.h in Headers */ = {isa = PBXBuildFile; fileRef = DC943DE713C4FB99006E7224 /* AppleRemote.h */; };
+		DC943DEA13C4FB99006E7224 /* AppleRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = DC943DE813C4FB99006E7224 /* AppleRemote.m */; };
 		DCB0127113C4AE9400AB692F /* NSError+NKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */; };
 		DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		DC1CF43013C484B800E5BEBC /* NSSet-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet-NKConcise.h"; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DC943DE713C4FB99006E7224 /* AppleRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleRemote.h; sourceTree = "<group>"; };
+		DC943DE813C4FB99006E7224 /* AppleRemote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleRemote.m; sourceTree = "<group>"; };
 		DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+NKAdditions.h"; sourceTree = "<group>"; };
 		DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+NKAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +82,7 @@
 		C5E319C913C473BD00D9CA76 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DC943DE513C4FB8C006E7224 /* IO */,
 				C5E319F513C4E90B00D9CA76 /* Audio */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
 				C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */,
@@ -149,6 +154,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DC943DE513C4FB8C006E7224 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				DC943DE713C4FB99006E7224 /* AppleRemote.h */,
+				DC943DE813C4FB99006E7224 /* AppleRemote.m */,
+			);
+			name = IO;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -173,6 +187,7 @@
 				C5E31A0613C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.h in Headers */,
 				C5E31A0813C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.h in Headers */,
 				C5E31A0B13C4EC8700D9CA76 /* Shorthands.h in Headers */,
+				DC943DE913C4FB99006E7224 /* AppleRemote.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +245,7 @@
 				C5E31A0513C4EA7E00D9CA76 /* NSDictionary+NKBlocks.m in Sources */,
 				C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.m in Sources */,
 				C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.m in Sources */,
+				DC943DEA13C4FB99006E7224 /* AppleRemote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
