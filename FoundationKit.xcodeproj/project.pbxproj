@@ -13,6 +13,15 @@
 		C5E319D813C474FE00D9CA76 /* FoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D713C474FE00D9CA76 /* FoundationKit.h */; };
 		C5E319F813C4E90B00D9CA76 /* NKAudioRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319F613C4E90B00D9CA76 /* NKAudioRecorder.h */; };
 		C5E319F913C4E90B00D9CA76 /* NKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */; };
+		C5E31A0213C4EA7E00D9CA76 /* NSArray+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319FA13C4EA7C00D9CA76 /* NSArray+Blocks.h */; };
+		C5E31A0313C4EA7E00D9CA76 /* NSArray+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FB13C4EA7C00D9CA76 /* NSArray+Blocks.m */; };
+		C5E31A0413C4EA7E00D9CA76 /* NSDictionary+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319FC13C4EA7C00D9CA76 /* NSDictionary+Blocks.h */; };
+		C5E31A0513C4EA7E00D9CA76 /* NSDictionary+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FD13C4EA7D00D9CA76 /* NSDictionary+Blocks.m */; };
+		C5E31A0613C4EA7E00D9CA76 /* NSMutableArray+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+Blocks.h */; };
+		C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+Blocks.m */; };
+		C5E31A0813C4EA7E00D9CA76 /* NSMutableDictionary+Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+Blocks.h */; };
+		C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+Blocks.m */; };
+		C5E31A0B13C4EC8700D9CA76 /* Shorthands.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E31A0A13C4EC8700D9CA76 /* Shorthands.h */; };
 		DC1CF42413C483BC00E5BEBC /* NSArray-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */; };
 		DC1CF42713C4845D00E5BEBC /* NSNumber-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */; };
 		DC1CF42913C4847200E5BEBC /* NSDictionary-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */; };
@@ -32,6 +41,15 @@
 		C5E319D713C474FE00D9CA76 /* FoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = FoundationKit.h; sourceTree = "<group>"; tabWidth = 2; };
 		C5E319F613C4E90B00D9CA76 /* NKAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKAudioRecorder.h; sourceTree = "<group>"; };
 		C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKAudioRecorder.m; sourceTree = "<group>"; };
+		C5E319FA13C4EA7C00D9CA76 /* NSArray+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Blocks.h"; sourceTree = "<group>"; };
+		C5E319FB13C4EA7C00D9CA76 /* NSArray+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Blocks.m"; sourceTree = "<group>"; };
+		C5E319FC13C4EA7C00D9CA76 /* NSDictionary+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Blocks.h"; sourceTree = "<group>"; };
+		C5E319FD13C4EA7D00D9CA76 /* NSDictionary+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Blocks.m"; sourceTree = "<group>"; };
+		C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Blocks.h"; sourceTree = "<group>"; };
+		C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Blocks.m"; sourceTree = "<group>"; };
+		C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Blocks.h"; sourceTree = "<group>"; };
+		C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Blocks.m"; sourceTree = "<group>"; };
+		C5E31A0A13C4EC8700D9CA76 /* Shorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shorthands.h; sourceTree = "<group>"; };
 		DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-Concise.h"; sourceTree = "<group>"; };
 		DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-Concise.h"; sourceTree = "<group>"; };
 		DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-Concise.h"; sourceTree = "<group>"; };
@@ -62,17 +80,26 @@
 			children = (
 				C5E319F513C4E90B00D9CA76 /* Audio */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
+				C5E319FA13C4EA7C00D9CA76 /* NSArray+Blocks.h */,
+				C5E319FB13C4EA7C00D9CA76 /* NSArray+Blocks.m */,
 				DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */,
 				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
+				C5E319FC13C4EA7C00D9CA76 /* NSDictionary+Blocks.h */,
+				C5E319FD13C4EA7D00D9CA76 /* NSDictionary+Blocks.m */,
 				DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */,
 				DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */,
 				DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */,
+				C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+Blocks.h */,
+				C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+Blocks.m */,
+				C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+Blocks.h */,
+				C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+Blocks.m */,
 				DC1CF42C13C4849400E5BEBC /* NSNull-Concise.h */,
 				DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */,
 				DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */,
 				DC1CF42E13C484A400E5BEBC /* NSString-Concise.h */,
 				DC1CF42A13C4848200E5BEBC /* NSValue-Concise.h */,
+				C5E31A0A13C4EC8700D9CA76 /* Shorthands.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -141,6 +168,11 @@
 				DC1CF43113C484B800E5BEBC /* NSSet-Concise.h in Headers */,
 				DCB0127113C4AE9400AB692F /* NSError+NKAdditions.h in Headers */,
 				C5E319F813C4E90B00D9CA76 /* NKAudioRecorder.h in Headers */,
+				C5E31A0213C4EA7E00D9CA76 /* NSArray+Blocks.h in Headers */,
+				C5E31A0413C4EA7E00D9CA76 /* NSDictionary+Blocks.h in Headers */,
+				C5E31A0613C4EA7E00D9CA76 /* NSMutableArray+Blocks.h in Headers */,
+				C5E31A0813C4EA7E00D9CA76 /* NSMutableDictionary+Blocks.h in Headers */,
+				C5E31A0B13C4EC8700D9CA76 /* Shorthands.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +226,10 @@
 				C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */,
 				DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */,
 				C5E319F913C4E90B00D9CA76 /* NKAudioRecorder.m in Sources */,
+				C5E31A0313C4EA7E00D9CA76 /* NSArray+Blocks.m in Sources */,
+				C5E31A0513C4EA7E00D9CA76 /* NSDictionary+Blocks.m in Sources */,
+				C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+Blocks.m in Sources */,
+				C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
