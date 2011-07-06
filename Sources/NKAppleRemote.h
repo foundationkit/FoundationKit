@@ -11,36 +11,36 @@
 
 
 typedef enum {
-	RKAppleRemoteButtonPlay = 1,
-	RKAppleRemoteButtonCenter,
-	RKAppleRemoteButtonPlus,
-	RKAppleRemoteButtonMinus,
-	RKAppleRemoteButtonLeft,
-	RKAppleRemoteButtonRight,
-	RKAppleRemoteButtonMenu
+  RKAppleRemoteButtonPlay = 1,
+  RKAppleRemoteButtonCenter,
+  RKAppleRemoteButtonPlus,
+  RKAppleRemoteButtonMinus,
+  RKAppleRemoteButtonLeft,
+  RKAppleRemoteButtonRight,
+  RKAppleRemoteButtonMenu
 } RKAppleRemoteButton;
 
 typedef enum {
-	RKAppleRemoteButtonStateUp = 1,
-	RKAppleRemoteButtonStateDown,
-	RKAppleRemoteButtonStateHoldDown,
-	RKAppleRemoteButtonStateHoldUp
+  RKAppleRemoteButtonStateUp = 1,
+  RKAppleRemoteButtonStateDown,
+  RKAppleRemoteButtonStateHoldDown,
+  RKAppleRemoteButtonStateHoldUp
 } RKAppleRemoteButtonState;
 
 @protocol NKAppleRemoteDelegate;
 
 @interface NKAppleRemote : NSObject {
 @private
-	IOHIDDeviceRef				device;
-	IONotificationPortRef	sinPort;
-	io_object_t						sinNotification;
-	struct {
-		uint32_t cookie[10];
-		uint32_t value[10];
-	} queue;
-	struct {
-		BOOL sin;
-	} flags;
+  IOHIDDeviceRef        device;
+  IONotificationPortRef  sinPort;
+  io_object_t            sinNotification;
+  struct {
+    uint32_t cookie[10];
+    uint32_t value[10];
+  } queue;
+  struct {
+    BOOL sin;
+  } flags;
 }
 
 @property (nonatomic, weak) id<NSObject, NKAppleRemoteDelegate> delegate;
