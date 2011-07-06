@@ -34,13 +34,9 @@ typedef enum {
   IOHIDDeviceRef        device_;
   IONotificationPortRef sinPort_;
   io_object_t           sinNotification_;
-  struct {
-    uint32_t cookie[10];
-    uint32_t value[10];
-  } queue_;
-  struct {
-    BOOL sin;
-  } flags_;
+  uint32_t              cookieQueue_[10];
+  uint32_t              valueQueue_[10];
+  BOOL                  secureInputEnabled_;
 }
 
 @property (nonatomic, weak) id<NSObject, NKAppleRemoteDelegate> delegate;

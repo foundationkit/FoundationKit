@@ -251,7 +251,7 @@ static void nk_ar_queue_put(uint32_t val, uint32_t *q, int qlen);
         IOObjectRelease(entry);
       }
     }
-    flags_.sin = [self secureEventInputEnabled];
+   secureInputEnabled_ = [self secureEventInputEnabled];
   }
   
   return self;
@@ -297,11 +297,11 @@ static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void 
   CFIndex intValue = IOHIDValueGetIntegerValue(value);
   
   // Put cookie in queue
-  uint32_t cookieQueueLen = sizeof(remote->queue_.cookie)/sizeof(uint32_t);
-  uint32_t valueQueueLen = sizeof(remote->queue_.value)/sizeof(uint32_t);
+  uint32_t cookieQueueLen = sizeof(remote->cookieQueue_)/sizeof(uint32_t);
+  uint32_t valueQueueLen = sizeof(remote->valueQueue_)/sizeof(uint32_t);
   
-  nk_ar_queue_put((uint32_t)cookie, remote->queue_.cookie, cookieQueueLen);
-  nk_ar_queue_put((uint32_t)intValue, remote->queue_.value, valueQueueLen);
+  nk_ar_queue_put((uint32_t)cookie, remote->cookieQueue_, cookieQueueLen);
+  nk_ar_queue_put((uint32_t)intValue, remote->valueQueue_, valueQueueLen);
   
   // Match button
   for (int i=0; i<kNKAppleRemoteMatchTableLen; i++) {
@@ -311,8 +311,8 @@ static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void 
     int qlen = nk_ar_queue_len(m.cookieMatch);
     
     for (int n=0; n<qlen; n++) {
-      cnt += (m.cookieMatch[n] == remote->queue_.cookie[n]);
-      cnt += (m.valueMatch[n] == remote->queue_.value[n]);
+      cnt += (m.cookieMatch[n] == remote->cookieQueue_[n]);
+      cnt += (m.valueMatch[n] == remote->valueQueue_[n]);
     }
     
     int found = (cnt == qlen*2);    
@@ -321,8 +321,8 @@ static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void 
       [remote buttonEventPosted:m.id state:m.state];
       
       // Clear queues 
-      nk_ar_queue_clear(remote->queue_.cookie, cookieQueueLen);
-      nk_ar_queue_clear(remote->queue_.value, valueQueueLen);
+      nk_ar_queue_clear(remote->cookieQueue_, cookieQueueLen);
+      nk_ar_queue_clear(remote->valueQueue_, valueQueueLen);
     }
   }
 }
@@ -330,10 +330,10 @@ static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void 
 static void nk_ar_secure_input_notification(void *refcon, io_service_t  service, uint32_t messageType, void *messageArgument) {
   NKAppleRemote *remote = (__bridge NKAppleRemote *)refcon;
   BOOL sin = [remote secureEventInputEnabled];
-  if (sin != remote->flags_.sin) {
+  if (sin != remote->secureInputEnabled_) {
     [remote closeDevice];
     [remote openDevice];
-    remote->flags_.sin = sin;
+    remote->secureInputEnabled_ = sin;
     NSLog(@"Info: regained access to remote control");
   }
 }
