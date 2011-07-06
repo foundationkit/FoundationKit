@@ -12,6 +12,7 @@
 		C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */; };
 		C5E319D613C474E800D9CA76 /* FoundationKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */; };
 		C5E319D813C474FE00D9CA76 /* FoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D713C474FE00D9CA76 /* FoundationKit.h */; };
+		C5E319DA13C4769000D9CA76 /* NKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D913C4769000D9CA76 /* NKLog.h */; };
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NKCrypto.m"; sourceTree = "<group>"; };
 		C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoundationKit-Prefix.pch"; sourceTree = "<group>"; };
 		C5E319D713C474FE00D9CA76 /* FoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = FoundationKit.h; sourceTree = "<group>"; tabWidth = 2; };
+		C5E319D913C4769000D9CA76 /* NKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLog.h; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -42,6 +44,7 @@
 			children = (
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
 				C5E319CF13C4744300D9CA76 /* Macros.h */,
+				C5E319D913C4769000D9CA76 /* NKLog.h */,
 				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
 			);
@@ -93,6 +96,7 @@
 				C5E319D313C4744800D9CA76 /* NSData+NKCrypto.h in Headers */,
 				C5E319D613C474E800D9CA76 /* FoundationKit-Prefix.pch in Headers */,
 				C5E319D813C474FE00D9CA76 /* FoundationKit.h in Headers */,
+				C5E319DA13C4769000D9CA76 /* NKLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
