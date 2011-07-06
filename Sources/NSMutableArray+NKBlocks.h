@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
+// Part of FoundationKit http://foundationk.it
 
-@interface NSMutableArray (Blocks)
+@interface NSMutableArray (NKBlocks)
 
 - (void)selectOnSelf:(BOOL (^)(id))block;
 

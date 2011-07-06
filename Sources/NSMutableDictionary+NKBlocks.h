@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
+// Part of FoundationKit http://foundationk.it
 
-@interface NSMutableDictionary (Blocks)
+@interface NSMutableDictionary (NKBlocks)
 
 - (void)selectOnSelf:(BOOL (^)(id, id))block;
 

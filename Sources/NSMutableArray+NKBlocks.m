@@ -1,7 +1,7 @@
-#import "NSMutableArray+Blocks.h"
-#import "NSArray+Blocks.h"
+#import "NSMutableArray+NKBlocks.h"
+#import "NSArray+NKBlocks.h"
 
-@implementation NSMutableArray (Blocks)
+@implementation NSMutableArray (NKBlocks)
 
 - (void)selectOnSelf:(BOOL (^)(id))block {
     NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet];

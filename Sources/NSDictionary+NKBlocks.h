@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
+// Part of FoundationKit http://foundationk.it
 
-@interface NSDictionary (Blocks)
+@interface NSDictionary (NKBlocks)
 
 - (BOOL)all:(BOOL (^)(id, id))block;
 - (BOOL)any:(BOOL (^)(id, id))block;

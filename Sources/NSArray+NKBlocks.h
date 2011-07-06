@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
+// Part of FoundationKit http://foundationk.it
 
-@interface NSArray (Blocks)
+@interface NSArray (NKBlocks)
 
 - (BOOL)all:(BOOL (^)(id))block;
 - (BOOL)any:(BOOL (^)(id))block;

@@ -3,10 +3,10 @@
 #import "Audio/NKAudioRecorder.h"
 
 // Blocks
-#import "NSArray+Blocks.h"
-#import "NSDictionary+Blocks.h"
-#import "NSMutableArray+Blocks.h"
-#import "NSMutableDictionary+Blocks.h"
+#import "NSArray+NKBlocks.h"
+#import "NSDictionary+NKBlocks.h"
+#import "NSMutableArray+NKBlocks.h"
+#import "NSMutableDictionary+NKBlocks.h"
 
 // ConciseKit adoptions
 #import "NSArray-Concise.h"

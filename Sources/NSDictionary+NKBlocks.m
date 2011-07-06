@@ -1,6 +1,6 @@
-#import "NSDictionary+Blocks.h"
+#import "NSDictionary+NKBlocks.h"
 
-@implementation NSDictionary (Blocks)
+@implementation NSDictionary (NKBlocks)
 
 - (BOOL)all:(BOOL (^)(id, id))block {
     return YES;
