@@ -12,6 +12,13 @@
 		C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */; };
 		C5E319D613C474E800D9CA76 /* FoundationKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */; };
 		C5E319D813C474FE00D9CA76 /* FoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D713C474FE00D9CA76 /* FoundationKit.h */; };
+		DC1CF42413C483BC00E5BEBC /* NSArray-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */; };
+		DC1CF42713C4845D00E5BEBC /* NSNumber-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */; };
+		DC1CF42913C4847200E5BEBC /* NSDictionary-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */; };
+		DC1CF42B13C4848200E5BEBC /* NSValue-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42A13C4848200E5BEBC /* NSValue-Concise.h */; };
+		DC1CF42D13C4849400E5BEBC /* NSNull-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42C13C4849400E5BEBC /* NSNull-Concise.h */; };
+		DC1CF42F13C484A400E5BEBC /* NSString-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42E13C484A400E5BEBC /* NSString-Concise.h */; };
+		DC1CF43113C484B800E5BEBC /* NSSet-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */; };
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +28,13 @@
 		C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NKCrypto.m"; sourceTree = "<group>"; };
 		C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoundationKit-Prefix.pch"; sourceTree = "<group>"; };
 		C5E319D713C474FE00D9CA76 /* FoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = FoundationKit.h; sourceTree = "<group>"; tabWidth = 2; };
+		DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-Concise.h"; sourceTree = "<group>"; };
+		DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-Concise.h"; sourceTree = "<group>"; };
+		DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-Concise.h"; sourceTree = "<group>"; };
+		DC1CF42A13C4848200E5BEBC /* NSValue-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue-Concise.h"; sourceTree = "<group>"; };
+		DC1CF42C13C4849400E5BEBC /* NSNull-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull-Concise.h"; sourceTree = "<group>"; };
+		DC1CF42E13C484A400E5BEBC /* NSString-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-Concise.h"; sourceTree = "<group>"; };
+		DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet-Concise.h"; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -40,8 +54,8 @@
 		C5E319C913C473BD00D9CA76 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DC1CF42213C4834800E5BEBC /* Macros */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
-				C5E319CF13C4744300D9CA76 /* Macros.h */,
 				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
 			);
@@ -56,6 +70,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DC1CF42213C4834800E5BEBC /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				C5E319CF13C4744300D9CA76 /* Macros.h */,
+				DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */,
+				DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */,
+				DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */,
+				DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */,
+				DC1CF42A13C4848200E5BEBC /* NSValue-Concise.h */,
+				DC1CF42C13C4849400E5BEBC /* NSNull-Concise.h */,
+				DC1CF42E13C484A400E5BEBC /* NSString-Concise.h */,
+			);
+			name = Macros;
+			sourceTree = "<group>";
+		};
 		DC410CF413C39BFD00C90C19 = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +93,9 @@
 				DC410D0113C39BFD00C90C19 /* Frameworks */,
 				DC410D0013C39BFD00C90C19 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		DC410D0013C39BFD00C90C19 /* Products */ = {
 			isa = PBXGroup;
@@ -93,6 +124,13 @@
 				C5E319D313C4744800D9CA76 /* NSData+NKCrypto.h in Headers */,
 				C5E319D613C474E800D9CA76 /* FoundationKit-Prefix.pch in Headers */,
 				C5E319D813C474FE00D9CA76 /* FoundationKit.h in Headers */,
+				DC1CF42413C483BC00E5BEBC /* NSArray-Concise.h in Headers */,
+				DC1CF42713C4845D00E5BEBC /* NSNumber-Concise.h in Headers */,
+				DC1CF42913C4847200E5BEBC /* NSDictionary-Concise.h in Headers */,
+				DC1CF42B13C4848200E5BEBC /* NSValue-Concise.h in Headers */,
+				DC1CF42D13C4849400E5BEBC /* NSNull-Concise.h in Headers */,
+				DC1CF42F13C484A400E5BEBC /* NSString-Concise.h in Headers */,
+				DC1CF43113C484B800E5BEBC /* NSSet-Concise.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
