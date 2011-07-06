@@ -3,3 +3,4 @@
 #import "Macros.h"
 
 #import "NSData+NKCrypto.h"
+#import "NSError+NKAdditions.h"
