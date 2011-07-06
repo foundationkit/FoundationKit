@@ -76,14 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				C5E319CF13C4744300D9CA76 /* Macros.h */,
-				DCDEC26C13C48960005B5E24 /* Concise.h */,
-				DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */,
-				DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */,
-				DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */,
-				DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */,
-				DC1CF42A13C4848200E5BEBC /* NSValue-Concise.h */,
-				DC1CF42C13C4849400E5BEBC /* NSNull-Concise.h */,
-				DC1CF42E13C484A400E5BEBC /* NSString-Concise.h */,
+				DCDEC26F13C48A90005B5E24 /* Concise */,
 			);
 			name = Macros;
 			sourceTree = "<group>";
@@ -114,6 +107,21 @@
 				DC410D0213C39BFD00C90C19 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCDEC26F13C48A90005B5E24 /* Concise */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEC26C13C48960005B5E24 /* Concise.h */,
+				DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */,
+				DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */,
+				DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */,
+				DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */,
+				DC1CF42A13C4848200E5BEBC /* NSValue-Concise.h */,
+				DC1CF42C13C4849400E5BEBC /* NSNull-Concise.h */,
+				DC1CF42E13C484A400E5BEBC /* NSString-Concise.h */,
+			);
+			name = Concise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
