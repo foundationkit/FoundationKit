@@ -56,10 +56,9 @@
 		C5E319C913C473BD00D9CA76 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DC1CF42213C4834800E5BEBC /* Macros */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
-				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
-				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
+				DC1CF42213C4834800E5BEBC /* Macros */,
+				DCB0126913C4ACE200AB692F /* Categories */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -107,6 +106,15 @@
 				DC410D0213C39BFD00C90C19 /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCB0126913C4ACE200AB692F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
+				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		DCDEC26F13C48A90005B5E24 /* Concise */ = {
