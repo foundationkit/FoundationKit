@@ -1,8 +1,6 @@
 #import "NKAppleRemote.h"
 
 
-#define NSSTR(str) (NSString *)CFSTR(str)
-
 char * const kNKAppleRemoteDeviceName = "AppleIRController";
 
 // Explicit queue layouts
