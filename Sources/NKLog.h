@@ -6,6 +6,29 @@
 #import <Cocoa/Cocoa.h>
 #include <stdarg.h>
 
+
+extern const NSString *kNRInternalDontOutputMe = @"don't output me"
+
+#define PP_NARG(...) PP_NARG_(__VA_ARGS__,PP_RSEQ_N())
+#define PP_NARG_(...) PP_ARG_N(__VA_ARGS__)
+#define PP_ARG_N(_1, _2, _3, _4, _5, _6, _7, _8, _9,_10,...)\
+    @encode(__typeof__(_1)), @"" # _1, _1, \
+    @encode(__typeof__(_2)), @"" # _2, _2, \
+    @encode(__typeof__(_3)), @"" # _3, _3, \
+    @encode(__typeof__(_4)), @"" # _4, _4, \
+    @encode(__typeof__(_5)), @"" # _5, _5, \
+    @encode(__typeof__(_6)), @"" # _6, _6, \
+    @encode(__typeof__(_7)), @"" # _7, _7, \
+    @encode(__typeof__(_8)), @"" # _8, _8, \
+    @encode(__typeof__(_9)), @"" # _9, _9, \
+    @encode(__typeof__(_10)), @"" # _10, _10)
+
+#define PP_RSEQ_N() kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe
+
+
+PP_NARG(0, 1,2,3,4,5,6,7,8)
+
+
 #define Log(_X_) do{\
 __typeof__(_X_) _Y_ = (_X_);\
 const char * _TYPE_CODE_ = @encode(__typeof__(_X_));\
@@ -19,22 +42,7 @@ DDLogInfo(@"Unknown _TYPE_CODE_: %s for expression %s in function %s, file %s, l
 NSString * VTPG_DDToStringFromTypeAndValue(const char * typeCode, void * value);
 
 
-
-#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L)
-
-/* C99-style: anonymous argument referenced by __VA_ARGS__, empty arg not OK */
-
-# define N_ARGS(...) N_ARGS_HELPER1(__VA_ARGS__, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
-# define N_ARGS_HELPER1(...) N_ARGS_HELPER2(__VA_ARGS__)
-# define N_ARGS_HELPER2(x1, x2, x3, x4, x5, x6, x7, x8, x9, n, ...) n
-
-# define NKLog(...) _NKLog([[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, (N_ARGS(__VA_ARGS__)), @"" # __VA_ARGS__, __VA_ARGS__)
-
-#else
-
-#error variadic macros for your compiler here
-
-#endif
+# define NKLog(...) _NKLog([[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, , @"" # __VA_ARGS__, __VA_ARGS__)
 
 static void _NKLog (NSString *file, unsigned int line, unsigned int n_args, NSString *commaSeparatedParameterNames, ...) {
     va_list ap;
