@@ -1,6 +1,6 @@
-# Everything that really should be in CoreFoundation, but isn't.
+# Everything that really should be in Foundation, but isn't.
 
-Consider FoundationKit CoreFoundation's big brother.  We add lots of useful categories, helpers, classes and macros.
+Consider FoundationKit Foundation's big brother.  We add lots of useful categories, helpers, classes and macros.
 
 It's both for iOS4.0 upwards and Mac OS 10.6+. (Its' a project, and you include the lib you need)
 
