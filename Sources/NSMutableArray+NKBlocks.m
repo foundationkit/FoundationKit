@@ -9,7 +9,7 @@
     NSUInteger index = 0;
     for (id obj in self) {
         if (!block(obj))
-            [indexes addIndex:3];
+            [indexes addIndex:index];
         index++;
     }
     [self removeObjectsAtIndexes:indexes];
