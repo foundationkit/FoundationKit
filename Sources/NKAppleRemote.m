@@ -1,20 +1,9 @@
-//
-//  AppleRemote.m
-//  SweetFM 2
-//
-//  Created by Erik Aigner on 16.09.10.
-//  Copyright 2010 chocomoko.com. All rights reserved.
-//
-//	SecureEventInput recovery code by Martin Kahr
-//  http://www.martinkahr.com/Welcome.html
-//
-
-#import "AppleRemote.h"
+#import "NKAppleRemote.h"
 
 
 #define NSSTR(str) (NSString *)CFSTR(str)
 
-char * const kAppleRemoteDeviceName = "AppleIRController";
+char * const kNKAppleRemoteDeviceName = "AppleIRController";
 
 // Explicit queue layouts
 //
@@ -34,198 +23,202 @@ char * const kAppleRemoteDeviceName = "AppleIRController";
 
 // Button state match
 //
-typedef struct match_t {
+typedef struct nk_ar_match_t {
 	int				id;
 	int				state;
 	uint32_t	cookieMatch[10];
 	uint32_t	valueMatch[10];
-} match_t;
+} nk_ar_match_t;
 
 
 // Remote button matching table
 //
-const match_t match_table[] = {
+const nk_ar_match_t nk_ar_match_table[] = {
 	{
-		kRemoteButtonCenter,
-		kRemoteButtonStateDown,
+		RKAppleRemoteButtonCenter,
+		RKAppleRemoteButtonStateDown,
 		kRemoteButtonCenter10_6_Alu,
 		{1, 1}
 	},
 	{
-		kRemoteButtonCenter,
-		kRemoteButtonStateUp,
+		RKAppleRemoteButtonCenter,
+		RKAppleRemoteButtonStateUp,
 		kRemoteButtonCenter10_6_Alu,
 		{0}
 	},
 	{
-		kRemoteButtonCenter,
-		kRemoteButtonStateHoldDown,
+		RKAppleRemoteButtonCenter,
+		RKAppleRemoteButtonStateHoldDown,
 		kRemoteButtonCenter10_6_Alu_Hold,
 		{9, 1}
 	},
 	{
-		kRemoteButtonCenter,
-		kRemoteButtonStateHoldUp,
+		RKAppleRemoteButtonCenter,
+		RKAppleRemoteButtonStateHoldUp,
 		kRemoteButtonCenter10_6_Alu_Hold,
 		{0}
 	},
 	{
-		kRemoteButtonPlay,
-		kRemoteButtonStateDown,
+		RKAppleRemoteButtonPlay,
+		RKAppleRemoteButtonStateDown,
 		kRemoteButtonPlay10_6,
 		{6, 1}
 	},
 	{
-		kRemoteButtonPlay,
-		kRemoteButtonStateUp,
+		RKAppleRemoteButtonPlay,
+		RKAppleRemoteButtonStateUp,
 		kRemoteButtonPlay10_6,
 		{0}
 	},
 	{
-		kRemoteButtonPlay,
-		kRemoteButtonStateHoldDown,
+		RKAppleRemoteButtonPlay,
+		RKAppleRemoteButtonStateHoldDown,
 		kRemoteButtonPlay10_6_Hold,
 		{0, 0, 0, 4, 1}
 	},
 	{
-		kRemoteButtonPlay,
-		kRemoteButtonStateHoldUp,
+		RKAppleRemoteButtonPlay,
+		RKAppleRemoteButtonStateHoldUp,
 		kRemoteButtonPlay10_6_Hold,
 		{0}
 	},
 	{
-		kRemoteButtonPlay,
-		kRemoteButtonStateDown,
+		RKAppleRemoteButtonPlay,
+		RKAppleRemoteButtonStateDown,
 		kRemoteButtonPlay10_6_Alu,
 		{6, 1}
 	},
 	{
-		kRemoteButtonPlay,
-		kRemoteButtonStateUp,
+		RKAppleRemoteButtonPlay,
+		RKAppleRemoteButtonStateUp,
 		kRemoteButtonPlay10_6_Alu,
 		{0}
 	},
 	{
-		kRemoteButtonMenu,
-		kRemoteButtonStateDown,
+		RKAppleRemoteButtonMenu,
+		RKAppleRemoteButtonStateDown,
 		kRemoteButtonMenu10_6,
 		{0, 0, 1, 1}
 	},
 	{
-		kRemoteButtonMenu,
-		kRemoteButtonStateUp,
+		RKAppleRemoteButtonMenu,
+		RKAppleRemoteButtonStateUp,
 		kRemoteButtonMenu10_6,
 		{0}
 	},
 	{
-		kRemoteButtonMenu,
-		kRemoteButtonStateHoldDown,
+		RKAppleRemoteButtonMenu,
+		RKAppleRemoteButtonStateHoldDown,
 		kRemoteButtonMenu10_6_Hold,
 		{0, 1}
 	},
 	{
-		kRemoteButtonMenu,
-		kRemoteButtonStateHoldUp,
+		RKAppleRemoteButtonMenu,
+		RKAppleRemoteButtonStateHoldUp,
 		kRemoteButtonMenu10_6_Hold,
 		{0}
 	},
 	{
-		kRemoteButtonLeft,
-		kRemoteButtonStateDown,
+		RKAppleRemoteButtonLeft,
+		RKAppleRemoteButtonStateDown,
 		kRemoteButtonLeft10_6,
 		{0, 0, 4, 1}
 	},
 	{
-		kRemoteButtonLeft,
-		kRemoteButtonStateUp,
+		RKAppleRemoteButtonLeft,
+		RKAppleRemoteButtonStateUp,
 		kRemoteButtonLeft10_6,
 		{0}
 	},
 	{
-		kRemoteButtonLeft,
-		kRemoteButtonStateHoldDown,
+		RKAppleRemoteButtonLeft,
+		RKAppleRemoteButtonStateHoldDown,
 		kRemoteButtonLeft10_6_Hold,
 		{0, 1, 1}
 	},
 	{
-		kRemoteButtonLeft,
-		kRemoteButtonStateHoldUp,
+		RKAppleRemoteButtonLeft,
+		RKAppleRemoteButtonStateHoldUp,
 		kRemoteButtonLeft10_6_Hold,
 		{0}
 	},
 	{
-		kRemoteButtonRight,
-		kRemoteButtonStateDown,
+		RKAppleRemoteButtonRight,
+		RKAppleRemoteButtonStateDown,
 		kRemoteButtonRight10_6,
 		{0, 0, 3, 1}
 	},
 	{
-		kRemoteButtonRight,
-		kRemoteButtonStateUp,
+		RKAppleRemoteButtonRight,
+		RKAppleRemoteButtonStateUp,
 		kRemoteButtonRight10_6,
 		{0}
 	},
 	{
-		kRemoteButtonRight,
-		kRemoteButtonStateHoldDown,
+		RKAppleRemoteButtonRight,
+		RKAppleRemoteButtonStateHoldDown,
 		kRemoteButtonRight10_6_Hold,
 		{0, 2, 1}
 	},
 	{
-		kRemoteButtonRight,
-		kRemoteButtonStateHoldUp,
+		RKAppleRemoteButtonRight,
+		RKAppleRemoteButtonStateHoldUp,
 		kRemoteButtonRight10_6_Hold,
 		{0}
 	},
 	{
-		kRemoteButtonPlus,
-		kRemoteButtonStateDown,
+		RKAppleRemoteButtonPlus,
+		RKAppleRemoteButtonStateDown,
 		kRemoteButtonPlus10_6,
 		{0, 0, 0, 1, 1}
 	},
 	{
-		kRemoteButtonPlus,
-		kRemoteButtonStateUp,
+		RKAppleRemoteButtonPlus,
+		RKAppleRemoteButtonStateUp,
 		kRemoteButtonPlus10_6,
 		{0}
 	},
 	{
-		kRemoteButtonMinus,
-		kRemoteButtonStateDown,
+		RKAppleRemoteButtonMinus,
+		RKAppleRemoteButtonStateDown,
 		kRemoteButtonMinus10_6,
 		{0, 0, 0, 2, 1}
 	},
 	{
-		kRemoteButtonMinus,
-		kRemoteButtonStateUp,
+		RKAppleRemoteButtonMinus,
+		RKAppleRemoteButtonStateUp,
 		kRemoteButtonMinus10_6,
 		{0}
 	}
 };
 
-#define kMatchTableLen 26
+#define kNKAppleRemoteMatchTableLen 26
 
-void secureInputNotification(void *refcon, io_service_t	service, uint32_t messageType, void *messageArgument);
+static void nk_ar_secure_input_notification(void *refcon, io_service_t	service, uint32_t messageType, void *messageArgument);
+static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void *sender, IOHIDValueRef value);
+static void nk_ar_queue_clear(uint32_t *q, int qlen);
+static int nk_ar_queue_len(uint32_t q[]);
+static void nk_ar_queue_put(uint32_t val, uint32_t *q, int qlen);
 
-@interface AppleRemote ()
+@interface NKAppleRemote ()
 
-- (void)buttonEventPosted:(ARButton)buttonId state:(ARButtonState)state;
+- (void)buttonEventPosted:(RKAppleRemoteButton)buttonId state:(RKAppleRemoteButtonState)state;
 
 @end
 
-@implementation AppleRemote
+@implementation NKAppleRemote
 @synthesize delegate;
 @synthesize exclusive;
 
-+ (NSString *)nameForButton:(ARButton)aButton {
-	switch (aButton) {
-		case kRemoteButtonPlay: return @"Play";
-		case kRemoteButtonCenter: return @"Center";
-		case kRemoteButtonPlus: return @"Plus";
-		case kRemoteButtonMinus: return @"Minus";
-		case kRemoteButtonLeft: return @"Left";
-		case kRemoteButtonRight: return @"Right";
-		case kRemoteButtonMenu: return @"Menu";
++ (NSString *)nameForButton:(RKAppleRemoteButton)button {
+	switch (button) {
+		case RKAppleRemoteButtonPlay: return @"Play";
+		case RKAppleRemoteButtonCenter: return @"Center";
+		case RKAppleRemoteButtonPlus: return @"Plus";
+		case RKAppleRemoteButtonMinus: return @"Minus";
+		case RKAppleRemoteButtonLeft: return @"Left";
+		case RKAppleRemoteButtonRight: return @"Right";
+		case RKAppleRemoteButtonMenu: return @"Menu";
 		default: return nil;
 	}
 }
@@ -242,8 +235,8 @@ void secureInputNotification(void *refcon, io_service_t	service, uint32_t messag
 				kern_return_t result = IOServiceAddInterestNotification(sinPort,
 																																entry,
 																																kIOBusyInterest,
-																																&secureInputNotification,
-																																self,
+																																&nk_ar_secure_input_notification,
+																																(__bridge void *)self,
 																																&sinNotification);
 				if (result) {
 					NSLog(@"Error: failed to register for ESI notification");
@@ -258,7 +251,6 @@ void secureInputNotification(void *refcon, io_service_t	service, uint32_t messag
 				IOObjectRelease(entry);
 			}
 		}
-		
 		flags.sin = [self secureEventInputEnabled];
 	}
 	
@@ -272,23 +264,22 @@ void secureInputNotification(void *refcon, io_service_t	service, uint32_t messag
 	sinNotification = MACH_PORT_NULL;
 	
 	[self closeDevice];	
-	[super dealloc];
 }
 
-void queuePut(uint32_t val, uint32_t *q, int qlen) {
+static void nk_ar_queue_put(uint32_t val, uint32_t *q, int qlen) {
 	for (int i=qlen-1; i>0; i--) {
 		q[i] = q[i-1];
 	}
 	q[0] = val;
 }
 
-void queueClear(uint32_t *q, int qlen) {
+static void nk_ar_queue_clear(uint32_t *q, int qlen) {
 	for (int i=0; i<qlen; i++) {
 		q[i] = 0;
 	}
 }
 
-int queueLen(uint32_t q[]) {
+static int nk_ar_queue_len(uint32_t q[]) {
 	int i = 0;
 	uint32_t val = 0;
 	do {
@@ -299,8 +290,8 @@ int queueLen(uint32_t q[]) {
 	return (i-1);
 }
 
-void hidInputValueCallback(void *context, IOReturn result, void *sender, IOHIDValueRef value) {
-	AppleRemote *remote = (AppleRemote *)context;
+static void nk_ar_hid_input_value_callback(void *context, IOReturn result, void *sender, IOHIDValueRef value) {
+	NKAppleRemote *remote = (__bridge NKAppleRemote *)context;
 	IOHIDElementRef element = IOHIDValueGetElement(value);
 	IOHIDElementCookie cookie = IOHIDElementGetCookie(element);
 	CFIndex intValue = IOHIDValueGetIntegerValue(value);
@@ -309,15 +300,15 @@ void hidInputValueCallback(void *context, IOReturn result, void *sender, IOHIDVa
 	uint32_t cookieQueueLen = sizeof(remote->queue.cookie)/sizeof(uint32_t);
 	uint32_t valueQueueLen = sizeof(remote->queue.value)/sizeof(uint32_t);
 	
-	queuePut((uint32_t)cookie, remote->queue.cookie, cookieQueueLen);
-	queuePut((uint32_t)intValue, remote->queue.value, valueQueueLen);
+	nk_ar_queue_put((uint32_t)cookie, remote->queue.cookie, cookieQueueLen);
+	nk_ar_queue_put((uint32_t)intValue, remote->queue.value, valueQueueLen);
 	
 	// Match button
-	for (int i=0; i<kMatchTableLen; i++) {
-		match_t m = match_table[i];
+	for (int i=0; i<kNKAppleRemoteMatchTableLen; i++) {
+		nk_ar_match_t m = nk_ar_match_table[i];
 		
 		int cnt = 0;
-		int qlen = queueLen(m.cookieMatch);
+		int qlen = nk_ar_queue_len(m.cookieMatch);
 		
 		for (int n=0; n<qlen; n++) {
 			cnt += (m.cookieMatch[n] == remote->queue.cookie[n]);
@@ -330,14 +321,14 @@ void hidInputValueCallback(void *context, IOReturn result, void *sender, IOHIDVa
 			[remote buttonEventPosted:m.id state:m.state];
 			
 			// Clear queues 
-			queueClear(remote->queue.cookie, cookieQueueLen);
-			queueClear(remote->queue.value, valueQueueLen);
+			nk_ar_queue_clear(remote->queue.cookie, cookieQueueLen);
+			nk_ar_queue_clear(remote->queue.value, valueQueueLen);
 		}
 	}
 }
 
-void secureInputNotification(void *refcon, io_service_t	service, uint32_t messageType, void *messageArgument) {
-	AppleRemote *remote = (AppleRemote *)refcon;
+static void nk_ar_secure_input_notification(void *refcon, io_service_t	service, uint32_t messageType, void *messageArgument) {
+	NKAppleRemote *remote = (__bridge NKAppleRemote *)refcon;
 	BOOL sin = [remote secureEventInputEnabled];
 	if (sin != remote->flags.sin) {
 		[remote closeDevice];
@@ -356,7 +347,7 @@ void secureInputNotification(void *refcon, io_service_t	service, uint32_t messag
 	
 	// Search for matching service
 	io_service_t service = IOServiceGetMatchingService(kIOMasterPortDefault,
-																										 IOServiceMatching(kAppleRemoteDeviceName));
+																										 IOServiceMatching(kNKAppleRemoteDeviceName));
 	
 	// Create the device
 	device = IOHIDDeviceCreate(kCFAllocatorDefault, service);
@@ -382,7 +373,7 @@ void secureInputNotification(void *refcon, io_service_t	service, uint32_t messag
 	}
 	
 	// Register input callback and schedule device with runloop
-	IOHIDDeviceRegisterInputValueCallback(device, hidInputValueCallback, self);
+	IOHIDDeviceRegisterInputValueCallback(device, nk_ar_hid_input_value_callback, (__bridge void *)self);
 	IOHIDDeviceScheduleWithRunLoop(device, CFRunLoopGetMain(), kCFRunLoopDefaultMode);
 	
 	return YES;
@@ -413,11 +404,11 @@ void secureInputNotification(void *refcon, io_service_t	service, uint32_t messag
 	BOOL flag = NO;
 	io_registry_entry_t root = IORegistryGetRootEntry(kIOMasterPortDefault);
 	if (root) {
-		NSArray *properties = IORegistryEntrySearchCFProperty(root,
-																													kIOServicePlane,
-																													CFSTR("IOConsoleUsers"),
-																													kCFAllocatorDefault,
-																													kIORegistryIterateRecursively);
+		NSArray *properties = (__bridge NSArray *)IORegistryEntrySearchCFProperty(root,
+                                                                              kIOServicePlane,
+                                                                              CFSTR("IOConsoleUsers"),
+                                                                              kCFAllocatorDefault,
+                                                                              kIORegistryIterateRecursively);
 		for (int i=0; i<[properties count]; i++) {
 			NSDictionary *info = [properties objectAtIndex:i];
 			NSString *user = [info objectForKey:@"kCGSSessionUserNameKey"];
@@ -432,36 +423,31 @@ void secureInputNotification(void *refcon, io_service_t	service, uint32_t messag
 	return flag;
 }
 
-- (void)buttonEventPosted:(ARButton)buttonId state:(ARButtonState)state {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	
-	// Post raw key event
-	if ([delegate respondsToSelector:@selector(remote:postedKey:state:)]) {
-		[delegate remote:self postedKey:buttonId state:state];
-	}
-	
-	// Post explicit events
-	if (state == kRemoteButtonStateDown &&
-			[delegate respondsToSelector:@selector(remote:buttonDown:)]) {
-		[delegate remote:self buttonDown:buttonId];
-	}
-	
-	if (state == kRemoteButtonStateUp &&
-			[delegate respondsToSelector:@selector(remote:buttonUp:)]) {
-		[delegate remote:self buttonUp:buttonId];
-	}
-	
-	if (state == kRemoteButtonStateHoldDown &&
-			[delegate respondsToSelector:@selector(remote:buttonHold:)]) {
-		[delegate remote:self buttonHold:buttonId];
-	}
-	
-	if (state == kRemoteButtonStateHoldUp &&
-			[delegate respondsToSelector:@selector(remote:buttonHoldUp:)]) {
-		[delegate remote:self buttonHoldUp:buttonId];
-	}
-
-	[pool release];
+- (void)buttonEventPosted:(RKAppleRemoteButton)buttonId state:(RKAppleRemoteButtonState)state {
+	@autoreleasepool {
+    // Post raw key event
+    if ([delegate respondsToSelector:@selector(remote:postedKey:state:)]) {
+      [delegate remote:self postedKey:buttonId state:state];
+    }
+    
+    // Post explicit events
+    if (state == RKAppleRemoteButtonStateDown &&
+        [delegate respondsToSelector:@selector(remote:buttonDown:)]) {
+      [delegate remote:self buttonDown:buttonId];
+    }
+    if (state == RKAppleRemoteButtonStateUp &&
+        [delegate respondsToSelector:@selector(remote:buttonUp:)]) {
+      [delegate remote:self buttonUp:buttonId];
+    }
+    if (state == RKAppleRemoteButtonStateHoldDown &&
+        [delegate respondsToSelector:@selector(remote:buttonHold:)]) {
+      [delegate remote:self buttonHold:buttonId];
+    }
+    if (state == RKAppleRemoteButtonStateHoldUp &&
+        [delegate respondsToSelector:@selector(remote:buttonHoldUp:)]) {
+      [delegate remote:self buttonHoldUp:buttonId];
+    }
+  }
 }
 
 @end
