@@ -19,7 +19,7 @@
 
 NSString * const kNKCryptoErrorDomain = @"NKCryptoErrorDomain";
 
-@implementation NSError (Crypto)
+@implementation NSError (NKCrypto)
 
 + (NSError *)errorWithCCCryptorStatus:(CCCryptorStatus)status {
     NSString *description = nil;
@@ -71,7 +71,7 @@ NSString * const kNKCryptoErrorDomain = @"NKCryptoErrorDomain";
 
 #pragma mark -
 
-@implementation NSData (Digest)
+@implementation NSData (NKDigest)
 
 static NSData *nsdata_nk_digest(NSData *this, unsigned char *(*func)(const void *, CC_LONG, unsigned char *), size_t digestLen) {
     unsigned char hash[digestLen];
@@ -113,7 +113,7 @@ static NSData *nsdata_nk_digest(NSData *this, unsigned char *(*func)(const void 
 
 @end
 
-@implementation NSData (Crypto)
+@implementation NSData (NKCrypto)
 
 #define kNKCryptoEncrypt YES
 #define kNKCryptoDecrypt NO
@@ -162,7 +162,7 @@ static NSData *nsdata_nk_crypt(BOOL encrypt, NSData *this, CCAlgorithm algo, id 
 
 @end
 
-@implementation NSData (LowLevelCryptor)
+@implementation NSData (NKLowLevelCryptor)
 
 #define kNKDontEnforceKeyLength -1
 
@@ -311,7 +311,7 @@ static NSData *nsdata_nk_run_cryptor(NSData *this, CCCryptorRef cryptor, CCCrypt
 
 @end
 
-@implementation NSData (HMAC)
+@implementation NSData (NKHMAC)
 
 - (NSData *)HMACWithAlgorithm:(CCHmacAlgorithm)algorithm {
     return [self HMACWithAlgorithm:algorithm key:nil];

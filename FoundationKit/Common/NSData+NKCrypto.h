@@ -17,12 +17,12 @@
 
 extern NSString * const kNKCryptoErrorDomain;
 
-@interface NSError (Crypto)
+@interface NSError (NKCrypto)
 + (NSError *)errorWithCCCryptorStatus:(CCCryptorStatus)status;
 @end
 
 
-@interface NSData (Digest)
+@interface NSData (NKDigest)
 
 - (NSData *)MD2Sum;
 - (NSData *)MD4Sum;
@@ -35,7 +35,7 @@ extern NSString * const kNKCryptoErrorDomain;
 
 @end
 
-@interface NSData (Cryptor)
+@interface NSData (NKCryptor)
 
 - (NSData *)AES256EncryptedDataUsingKey:(id)key error:(NSError **)error;
 - (NSData *)decryptedAES256DataUsingKey:(id)key error:(NSError **)error;
@@ -46,7 +46,7 @@ extern NSString * const kNKCryptoErrorDomain;
 
 @end
 
-@interface NSData (LowLevelCryptor)
+@interface NSData (NKLowLevelCryptor)
 
 // Keys and initialization vectors: NSData or NSString
 - (NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm key:(id)key error:(CCCryptorStatus *)error;
@@ -58,7 +58,7 @@ extern NSString * const kNKCryptoErrorDomain;
 
 @end
 
-@interface NSData (HMAC)
+@interface NSData (NKHMAC)
 
 - (NSData *)HMACWithAlgorithm:(CCHmacAlgorithm)algorithm;
 - (NSData *)HMACWithAlgorithm:(CCHmacAlgorithm)algorithm key:(id)key;
