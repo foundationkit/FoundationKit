@@ -15,6 +15,7 @@ If you start a new app today, it's the perfect time to begin with it.
 - Every `.h` file has only a concise comment header that mentions that this file belongs to `FoundationKit` and credits to other 3rd parties if appropriate (see example header below). The `.m` files don't have a comment header.
 - Category file names must be named after the classes that they extend (e.g. `NSArray+NKAdditions`). Generic categories that span multiple classes are not allowed!
 - Use `assert` instead of `NSAssert` macros to ensure program exit.
+- For all other guidelines have a look at the `Styleguide.md`.
 
 ## Example Header Comment
 
