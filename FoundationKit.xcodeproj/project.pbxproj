@@ -20,6 +20,7 @@
 		DC1CF42F13C484A400E5BEBC /* NSString-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42E13C484A400E5BEBC /* NSString-Concise.h */; };
 		DC1CF43113C484B800E5BEBC /* NSSet-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */; };
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
+		DCDEC26D13C48960005B5E24 /* Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDEC26C13C48960005B5E24 /* Concise.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet-Concise.h"; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCDEC26C13C48960005B5E24 /* Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Concise.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				C5E319CF13C4744300D9CA76 /* Macros.h */,
+				DCDEC26C13C48960005B5E24 /* Concise.h */,
 				DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */,
 				DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */,
 				DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */,
@@ -131,6 +134,7 @@
 				DC1CF42D13C4849400E5BEBC /* NSNull-Concise.h in Headers */,
 				DC1CF42F13C484A400E5BEBC /* NSString-Concise.h in Headers */,
 				DC1CF43113C484B800E5BEBC /* NSSet-Concise.h in Headers */,
+				DCDEC26D13C48960005B5E24 /* Concise.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
