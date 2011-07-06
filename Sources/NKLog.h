@@ -6,6 +6,18 @@
 #import <Cocoa/Cocoa.h>
 #include <stdarg.h>
 
+#define Log(_X_) do{\
+__typeof__(_X_) _Y_ = (_X_);\
+const char * _TYPE_CODE_ = @encode(__typeof__(_X_));\
+NSString *_STR_ = VTPG_DDToStringFromTypeAndValue(_TYPE_CODE_, &_Y_);\
+if(_STR_)\
+DDLogInfo(@"%s = %@", #_X_, _STR_);\
+else\
+DDLogInfo(@"Unknown _TYPE_CODE_: %s for expression %s in function %s, file %s, line %d", _TYPE_CODE_, #_X_, __func__, __FILE__, __LINE__);\
+}while(0)
+
+NSString * VTPG_DDToStringFromTypeAndValue(const char * typeCode, void * value);
+
 
 
 #if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L)
@@ -16,7 +28,7 @@
 # define N_ARGS_HELPER1(...) N_ARGS_HELPER2(__VA_ARGS__)
 # define N_ARGS_HELPER2(x1, x2, x3, x4, x5, x6, x7, x8, x9, n, ...) n
 
-# define NKLog(...) _NKLog([[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, (1 * N_ARGS(__VA_ARGS__)), @"" # __VA_ARGS__, __VA_ARGS__)
+# define NKLog(...) _NKLog([[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, (N_ARGS(__VA_ARGS__)), @"" # __VA_ARGS__, __VA_ARGS__)
 
 #else
 
