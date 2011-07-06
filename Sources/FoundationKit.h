@@ -9,12 +9,12 @@
 #import "NSMutableDictionary+NKBlocks.h"
 
 // ConciseKit adoptions
-#import "NSArray-Concise.h"
-#import "NSDictionary-Concise.h"
-#import "NSNull-Concise.h"
-#import "NSNumber-Concise.h"
-#import "NSString-Concise.h"
-#import "NSValue-Concise.h"
+#import "NSArray-NKConcise.h"
+#import "NSDictionary-NKConcise.h"
+#import "NSNull-NKConcise.h"
+#import "NSNumber-NKConcise.h"
+#import "NSString-NKConcise.h"
+#import "NSValue-NKConcise.h"
 
 #import "NSData+NKCrypto.h"
 #import "NSError+NKAdditions.h"
