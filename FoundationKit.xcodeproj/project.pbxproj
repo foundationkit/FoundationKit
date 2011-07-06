@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C5E319D013C4744300D9CA76 /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319CF13C4744300D9CA76 /* Macros.h */; };
 		C5E319D313C4744800D9CA76 /* NSData+NKCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */; };
 		C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */; };
 		C5E319D613C474E800D9CA76 /* FoundationKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */; };
 		C5E319D813C474FE00D9CA76 /* FoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D713C474FE00D9CA76 /* FoundationKit.h */; };
+		C5E319F813C4E90B00D9CA76 /* NKAudioRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319F613C4E90B00D9CA76 /* NKAudioRecorder.h */; };
+		C5E319F913C4E90B00D9CA76 /* NKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */; };
 		DC1CF42413C483BC00E5BEBC /* NSArray-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */; };
 		DC1CF42713C4845D00E5BEBC /* NSNumber-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */; };
 		DC1CF42913C4847200E5BEBC /* NSDictionary-Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */; };
@@ -22,19 +23,15 @@
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
 		DCB0127113C4AE9400AB692F /* NSError+NKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */; };
 		DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */; };
-		DCB0127A13C4B25600AB692F /* NKAudioRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB0127813C4B25600AB692F /* NKAudioRecorder.h */; };
-		DCB0127B13C4B25600AB692F /* NKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127913C4B25600AB692F /* NKAudioRecorder.m */; };
-		DCB0127D13C4B4BF00AB692F /* Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB0127C13C4B4BF00AB692F /* Categories.h */; };
-		DCB0127F13C4B4F500AB692F /* Audio.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB0127E13C4B4F500AB692F /* Audio.h */; };
-		DCDEC26D13C48960005B5E24 /* Concise.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDEC26C13C48960005B5E24 /* Concise.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C5E319CF13C4744300D9CA76 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NKCrypto.h"; sourceTree = "<group>"; };
 		C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NKCrypto.m"; sourceTree = "<group>"; };
 		C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoundationKit-Prefix.pch"; sourceTree = "<group>"; };
 		C5E319D713C474FE00D9CA76 /* FoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = FoundationKit.h; sourceTree = "<group>"; tabWidth = 2; };
+		C5E319F613C4E90B00D9CA76 /* NKAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKAudioRecorder.h; sourceTree = "<group>"; };
+		C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKAudioRecorder.m; sourceTree = "<group>"; };
 		DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-Concise.h"; sourceTree = "<group>"; };
 		DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-Concise.h"; sourceTree = "<group>"; };
 		DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-Concise.h"; sourceTree = "<group>"; };
@@ -46,11 +43,6 @@
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+NKAdditions.h"; sourceTree = "<group>"; };
 		DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+NKAdditions.m"; sourceTree = "<group>"; };
-		DCB0127813C4B25600AB692F /* NKAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKAudioRecorder.h; sourceTree = "<group>"; };
-		DCB0127913C4B25600AB692F /* NKAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKAudioRecorder.m; sourceTree = "<group>"; };
-		DCB0127C13C4B4BF00AB692F /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
-		DCB0127E13C4B4F500AB692F /* Audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Audio.h; sourceTree = "<group>"; };
-		DCDEC26C13C48960005B5E24 /* Concise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Concise.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +60,19 @@
 		C5E319C913C473BD00D9CA76 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C5E319F513C4E90B00D9CA76 /* Audio */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
-				DC1CF42213C4834800E5BEBC /* Macros */,
-				DCB0126913C4ACE200AB692F /* Categories */,
-				DCB0127713C4B22000AB692F /* Audio */,
+				DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */,
+				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
+				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
+				DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */,
+				DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */,
+				DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */,
+				DC1CF42C13C4849400E5BEBC /* NSNull-Concise.h */,
+				DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */,
+				DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */,
+				DC1CF42E13C484A400E5BEBC /* NSString-Concise.h */,
+				DC1CF42A13C4848200E5BEBC /* NSValue-Concise.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -84,13 +85,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DC1CF42213C4834800E5BEBC /* Macros */ = {
+		C5E319F513C4E90B00D9CA76 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				C5E319CF13C4744300D9CA76 /* Macros.h */,
-				DCDEC26F13C48A90005B5E24 /* Concise */,
+				C5E319F613C4E90B00D9CA76 /* NKAudioRecorder.h */,
+				C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */,
 			);
-			name = Macros;
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		DC410CF413C39BFD00C90C19 = {
@@ -121,43 +122,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DCB0126913C4ACE200AB692F /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				DCB0127C13C4B4BF00AB692F /* Categories.h */,
-				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
-				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
-				DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */,
-				DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-		DCB0127713C4B22000AB692F /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				DCB0127E13C4B4F500AB692F /* Audio.h */,
-				DCB0127813C4B25600AB692F /* NKAudioRecorder.h */,
-				DCB0127913C4B25600AB692F /* NKAudioRecorder.m */,
-			);
-			name = Audio;
-			sourceTree = "<group>";
-		};
-		DCDEC26F13C48A90005B5E24 /* Concise */ = {
-			isa = PBXGroup;
-			children = (
-				DCDEC26C13C48960005B5E24 /* Concise.h */,
-				DC1CF43013C484B800E5BEBC /* NSSet-Concise.h */,
-				DC1CF42313C483BC00E5BEBC /* NSArray-Concise.h */,
-				DC1CF42613C4845D00E5BEBC /* NSNumber-Concise.h */,
-				DC1CF42813C4847200E5BEBC /* NSDictionary-Concise.h */,
-				DC1CF42A13C4848200E5BEBC /* NSValue-Concise.h */,
-				DC1CF42C13C4849400E5BEBC /* NSNull-Concise.h */,
-				DC1CF42E13C484A400E5BEBC /* NSString-Concise.h */,
-			);
-			name = Concise;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -165,7 +129,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5E319D013C4744300D9CA76 /* Macros.h in Headers */,
 				C5E319D313C4744800D9CA76 /* NSData+NKCrypto.h in Headers */,
 				C5E319D613C474E800D9CA76 /* FoundationKit-Prefix.pch in Headers */,
 				C5E319D813C474FE00D9CA76 /* FoundationKit.h in Headers */,
@@ -176,11 +139,8 @@
 				DC1CF42D13C4849400E5BEBC /* NSNull-Concise.h in Headers */,
 				DC1CF42F13C484A400E5BEBC /* NSString-Concise.h in Headers */,
 				DC1CF43113C484B800E5BEBC /* NSSet-Concise.h in Headers */,
-				DCDEC26D13C48960005B5E24 /* Concise.h in Headers */,
 				DCB0127113C4AE9400AB692F /* NSError+NKAdditions.h in Headers */,
-				DCB0127A13C4B25600AB692F /* NKAudioRecorder.h in Headers */,
-				DCB0127D13C4B4BF00AB692F /* Categories.h in Headers */,
-				DCB0127F13C4B4F500AB692F /* Audio.h in Headers */,
+				C5E319F813C4E90B00D9CA76 /* NKAudioRecorder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +193,7 @@
 			files = (
 				C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */,
 				DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */,
-				DCB0127B13C4B25600AB692F /* NKAudioRecorder.m in Sources */,
+				C5E319F913C4E90B00D9CA76 /* NKAudioRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
