@@ -191,6 +191,7 @@
 		DC410D0A13C39BFD00C90C19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -200,6 +201,7 @@
 		DC410D0B13C39BFD00C90C19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
