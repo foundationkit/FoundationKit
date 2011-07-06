@@ -182,12 +182,12 @@ static void nsdata_nk_enforce_key_len(CCAlgorithm algorithm, NSMutableData *keyD
     [ivData setLength:[keyData length]];
 }
 
-- (NSData *)_runCryptor:(CCCryptorRef)cryptor result:(CCCryptorStatus *)status {
-    size_t bufsize = CCCryptorGetOutputLength(cryptor, (size_t)[self length], true);
+static NSData *nsdata_nk_run_cryptor(NSData *this, CCCryptorRef cryptor, CCCryptorStatus *status) {
+    size_t bufsize = CCCryptorGetOutputLength(cryptor, (size_t)[this length], true);
     void * buf = malloc(bufsize);
     size_t bufused = 0;
     size_t bytesTotal = 0;
-    *status = CCCryptorUpdate(cryptor, [self bytes], (size_t)[self length], buf, bufsize, &bufused);
+    *status = CCCryptorUpdate(cryptor, [this bytes], (size_t)[this length], buf, bufsize, &bufused);
     if (*status != kCCSuccess) {
         free(buf);
         return nil;
@@ -248,7 +248,7 @@ static void nsdata_nk_enforce_key_len(CCAlgorithm algorithm, NSMutableData *keyD
         return nil;
     }
 
-    NSData *result = [self _runCryptor:cryptor result:&status];
+    NSData *result = nsdata_nk_run_cryptor(self, cryptor, &status);
     if (!result && error) {
         *error = status;
     }
@@ -299,7 +299,7 @@ static void nsdata_nk_enforce_key_len(CCAlgorithm algorithm, NSMutableData *keyD
         return nil;
     }
 
-    NSData *result = [self _runCryptor:cryptor result:&status];
+    NSData *result = nsdata_nk_run_cryptor(self, cryptor, &status);
     if (!result && error) {
         *error = status;
     }
