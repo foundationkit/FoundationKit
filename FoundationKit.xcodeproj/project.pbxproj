@@ -21,7 +21,8 @@
 		C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */; };
 		C5E31A0813C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */; };
 		C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */; };
-		C5E31A0B13C4EC8700D9CA76 /* Shorthands.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E31A0A13C4EC8700D9CA76 /* Shorthands.h */; };
+		C5E31A0B13C4EC8700D9CA76 /* NKShorthands.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */; };
+		DC11A80E13C51D45001490F2 /* NKShow.h in Headers */ = {isa = PBXBuildFile; fileRef = DC11A80D13C51D45001490F2 /* NKShow.h */; };
 		DC1CF42413C483BC00E5BEBC /* NSArray-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42313C483BC00E5BEBC /* NSArray-NKConcise.h */; };
 		DC1CF42713C4845D00E5BEBC /* NSNumber-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42613C4845D00E5BEBC /* NSNumber-NKConcise.h */; };
 		DC1CF42913C4847200E5BEBC /* NSDictionary-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42813C4847200E5BEBC /* NSDictionary-NKConcise.h */; };
@@ -49,7 +50,8 @@
 		C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+NKBlocks.m"; sourceTree = "<group>"; };
 		C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NKBlocks.h"; sourceTree = "<group>"; };
 		C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NKBlocks.m"; sourceTree = "<group>"; };
-		C5E31A0A13C4EC8700D9CA76 /* Shorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shorthands.h; sourceTree = "<group>"; };
+		C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKShorthands.h; sourceTree = "<group>"; };
+		DC11A80D13C51D45001490F2 /* NKShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKShow.h; sourceTree = "<group>"; };
 		DC1CF42313C483BC00E5BEBC /* NSArray-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-NKConcise.h"; sourceTree = "<group>"; };
 		DC1CF42613C4845D00E5BEBC /* NSNumber-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-NKConcise.h"; sourceTree = "<group>"; };
 		DC1CF42813C4847200E5BEBC /* NSDictionary-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-NKConcise.h"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				C5E319F513C4E90B00D9CA76 /* Audio */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
+				DC11A80D13C51D45001490F2 /* NKShow.h */,
 				C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */,
 				C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */,
 				DC1CF42313C483BC00E5BEBC /* NSArray-NKConcise.h */,
@@ -99,7 +102,7 @@
 				DC1CF43013C484B800E5BEBC /* NSSet-NKConcise.h */,
 				DC1CF42E13C484A400E5BEBC /* NSString-NKConcise.h */,
 				DC1CF42A13C4848200E5BEBC /* NSValue-NKConcise.h */,
-				C5E31A0A13C4EC8700D9CA76 /* Shorthands.h */,
+				C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -172,7 +175,8 @@
 				C5E31A0413C4EA7E00D9CA76 /* NSDictionary+NKBlocks.h in Headers */,
 				C5E31A0613C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.h in Headers */,
 				C5E31A0813C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.h in Headers */,
-				C5E31A0B13C4EC8700D9CA76 /* Shorthands.h in Headers */,
+				C5E31A0B13C4EC8700D9CA76 /* NKShorthands.h in Headers */,
+				DC11A80E13C51D45001490F2 /* NKShow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

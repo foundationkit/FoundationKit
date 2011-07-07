@@ -2,6 +2,12 @@
 
 #import "Audio/NKAudioRecorder.h"
 
+// Generic
+#import "NKShorthands.h"
+
+// Type logging
+#import "NKShow.h"
+
 // Blocks
 #import "NSArray+NKBlocks.h"
 #import "NSDictionary+NKBlocks.h"
@@ -18,4 +24,3 @@
 
 #import "NSData+NKCrypto.h"
 #import "NSError+NKAdditions.h"
-#import "Shorthands.h"
