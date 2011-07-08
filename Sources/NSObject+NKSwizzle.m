@@ -5,25 +5,36 @@
 
 @implementation NSObject (NKSwizzle)
 
-#define SetNSErrorFor(FUNC, ERROR_VAR, CODE, FORMAT, ...)	\
-  if (ERROR_VAR) {	\
-    NSString *errStr = [NSString stringWithFormat:@"%s: " FORMAT, FUNC, ##__VA_ARGS__]; \
-    *ERROR_VAR = [NSError errorWithDomain:NSCocoaErrorDomain \
-                                     code:CODE	\
-                                 userInfo:[NSDictionary dictionaryWithObject:errStr forKey:NSLocalizedDescriptionKey]]; \
+static void NSObjectNKSwizzleSetError(NSError **error, NSInteger code, NSString *format, ...) {
+  if (error) {
+    va_list args;
+    va_start(args, format);
+    NSString *msg = [[NSString alloc] initWithFormat:format arguments:args];
+    *error = [NSError errorWithDomain:NSCocoaErrorDomain
+                                 code:code
+                             userInfo:[NSDictionary dictionaryWithObject:msg forKey:NSLocalizedDescriptionKey]];
+    va_end(args);
+  }
 }
-#define SetNSError(ERROR_VAR, CODE, FORMAT,...) SetNSErrorFor(__func__, ERROR_VAR, CODE, FORMAT, ##__VA_ARGS__)
 
 + (BOOL)swizzleMethod:(SEL)slcOrig withMethod:(SEL)slcAlt error:(NSError**)error {
 	Method origMethod = class_getInstanceMethod(self, slcOrig);
-	if (!origMethod) {
-		SetNSError(error, 0x100, @"original method %@ not found for class %@", NSStringFromSelector(slcOrig), [self className]);
+	if (origMethod == NULL) {
+    NSObjectNKSwizzleSetError(error,
+                              0x100,
+                              @"original method %@ not found for class %@",
+                              NSStringFromSelector(slcOrig),
+                              [self className]);
 		return NO;
 	}
   
 	Method altMethod = class_getInstanceMethod(self, slcAlt);
-	if (!altMethod) {
-		SetNSError(error, 0x101, @"alternate method %@ not found for class %@", NSStringFromSelector(slcAlt), [self className]);
+	if (altMethod == NULL) {
+		NSObjectNKSwizzleSetError(error,
+                              0x101,
+                              @"alternate method %@ not found for class %@",
+                              NSStringFromSelector(slcAlt),
+                              [self className]);
 		return NO;
 	}
   
