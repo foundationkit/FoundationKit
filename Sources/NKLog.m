@@ -33,7 +33,7 @@ NSString * VTPG_DDToStringFromTypeAndValue(const char * typeCode, void * value);
 
 # define NKLogINTASDWIP(...) _NKLog([[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, , @"" # __VA_ARGS__, __VA_ARGS__)
 
-void NKLog___ (NSString *file, unsigned int line, ...) {
+NSString* NKLogToStr___ (NSString *file, unsigned int line, ...) {
   unsigned int n_args;
   NSString *commaSeparatedParameterNames;
   va_list ap;
