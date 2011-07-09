@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */; };
 		C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* NKLog.m */; };
 		C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */; };
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSObject+NKAssociatedObjects.h"; sourceTree = "<group>"; };
+		399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NKAssociatedObjects.m"; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* NKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* NKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLog.m; sourceTree = "<group>"; };
 		C5C18E7A13C8C64C00DD0872 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,13 +60,13 @@
 		C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NKBlocks.h"; sourceTree = "<group>"; };
 		C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NKBlocks.m"; sourceTree = "<group>"; };
 		C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKShorthands.h; sourceTree = "<group>"; };
-		DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSArray+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSNumber+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSDictionary+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSValue+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42C13C4849400E5BEBC /* NSNull+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSNull+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSString+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSSet+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42C13C4849400E5BEBC /* NSNull+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+NKConcise.h"; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+NKAdditions.h"; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */,
 				DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */,
 				C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */,
+				399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */,
+				399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.m in Sources */,
 				DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */,
 				C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */,
+				399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
