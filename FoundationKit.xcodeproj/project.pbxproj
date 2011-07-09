@@ -7,38 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C582BF8B13C8B77C0012DF67 /* NKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C582BF8913C8B77C0012DF67 /* NKLog.h */; };
 		C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* NKLog.m */; };
 		C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */; };
-		C5C18E9613C8C6AA00DD0872 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C18E9513C8C6AA00DD0872 /* Tests.m */; };
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
-		C5E319D313C4744800D9CA76 /* NSData+NKCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */; };
+		C5C18EC213C8CE9800DD0872 /* NKLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */; };
+		C5C18EC313C8CF1A00DD0872 /* libFoundationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */; };
 		C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */; };
-		C5E319D613C474E800D9CA76 /* FoundationKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */; };
-		C5E319D813C474FE00D9CA76 /* FoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319D713C474FE00D9CA76 /* FoundationKit.h */; };
-		C5E319F813C4E90B00D9CA76 /* NKAudioRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319F613C4E90B00D9CA76 /* NKAudioRecorder.h */; };
 		C5E319F913C4E90B00D9CA76 /* NKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */; };
-		C5E31A0213C4EA7E00D9CA76 /* NSArray+NKBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */; };
 		C5E31A0313C4EA7E00D9CA76 /* NSArray+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */; };
-		C5E31A0413C4EA7E00D9CA76 /* NSDictionary+NKBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319FC13C4EA7C00D9CA76 /* NSDictionary+NKBlocks.h */; };
 		C5E31A0513C4EA7E00D9CA76 /* NSDictionary+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FD13C4EA7D00D9CA76 /* NSDictionary+NKBlocks.m */; };
-		C5E31A0613C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.h */; };
 		C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */; };
-		C5E31A0813C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */; };
 		C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */; };
-		C5E31A0B13C4EC8700D9CA76 /* NKShorthands.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */; };
-		DC11A80E13C51D45001490F2 /* NKShow.h in Headers */ = {isa = PBXBuildFile; fileRef = DC11A80D13C51D45001490F2 /* NKShow.h */; };
-		DC1CF42413C483BC00E5BEBC /* NSArray-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42313C483BC00E5BEBC /* NSArray-NKConcise.h */; };
-		DC1CF42713C4845D00E5BEBC /* NSNumber-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42613C4845D00E5BEBC /* NSNumber-NKConcise.h */; };
-		DC1CF42913C4847200E5BEBC /* NSDictionary-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42813C4847200E5BEBC /* NSDictionary-NKConcise.h */; };
-		DC1CF42B13C4848200E5BEBC /* NSValue-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42A13C4848200E5BEBC /* NSValue-NKConcise.h */; };
-		DC1CF42D13C4849400E5BEBC /* NSNull-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42C13C4849400E5BEBC /* NSNull-NKConcise.h */; };
-		DC1CF42F13C484A400E5BEBC /* NSString-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42E13C484A400E5BEBC /* NSString-NKConcise.h */; };
-		DC1CF43113C484B800E5BEBC /* NSSet-NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF43013C484B800E5BEBC /* NSSet-NKConcise.h */; };
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
-		DCB0127113C4AE9400AB692F /* NSError+NKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */; };
 		DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */; };
-		DCF68FBE13C74ADB0057517A /* NSObject+NKSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = DCF68FBC13C74ADB0057517A /* NSObject+NKSwizzle.h */; };
 		DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +39,9 @@
 		C5C18E7A13C8C64C00DD0872 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C5C18E8D13C8C64C00DD0872 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		C5C18E9413C8C6AA00DD0872 /* Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tests.h; sourceTree = "<group>"; };
-		C5C18E9513C8C6AA00DD0872 /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		C5C18EBB13C8CCDF00DD0872 /* NKLogTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLogTests.h; sourceTree = "<group>"; };
+		C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLogTests.m; sourceTree = "<group>"; };
+		C5C18EBD13C8CCDF00DD0872 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NKCrypto.h"; sourceTree = "<group>"; };
 		C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NKCrypto.m"; sourceTree = "<group>"; };
 		C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoundationKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -75,7 +57,6 @@
 		C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NKBlocks.h"; sourceTree = "<group>"; };
 		C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NKBlocks.m"; sourceTree = "<group>"; };
 		C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKShorthands.h; sourceTree = "<group>"; };
-		DC11A80D13C51D45001490F2 /* NKShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKShow.h; sourceTree = "<group>"; };
 		DC1CF42313C483BC00E5BEBC /* NSArray-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-NKConcise.h"; sourceTree = "<group>"; };
 		DC1CF42613C4845D00E5BEBC /* NSNumber-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-NKConcise.h"; sourceTree = "<group>"; };
 		DC1CF42813C4847200E5BEBC /* NSDictionary-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-NKConcise.h"; sourceTree = "<group>"; };
@@ -96,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C18EC313C8CF1A00DD0872 /* libFoundationKit.a in Frameworks */,
 				C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */,
 				C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */,
 			);
@@ -115,8 +97,9 @@
 		C5C18E8313C8C64C00DD0872 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C5C18E9413C8C6AA00DD0872 /* Tests.h */,
-				C5C18E9513C8C6AA00DD0872 /* Tests.m */,
+				C5C18EBB13C8CCDF00DD0872 /* NKLogTests.h */,
+				C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */,
+				C5C18EBD13C8CCDF00DD0872 /* Tests-Info.plist */,
 				C5C18E8D13C8C64C00DD0872 /* Tests-Prefix.pch */,
 			);
 			path = Tests;
@@ -127,7 +110,6 @@
 			children = (
 				C5E319F513C4E90B00D9CA76 /* Audio */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
-				DC11A80D13C51D45001490F2 /* NKShow.h */,
 				C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */,
 				C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */,
 				DC1CF42313C483BC00E5BEBC /* NSArray-NKConcise.h */,
@@ -206,36 +188,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		DC410CFD13C39BFD00C90C19 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5E319D313C4744800D9CA76 /* NSData+NKCrypto.h in Headers */,
-				C5E319D613C474E800D9CA76 /* FoundationKit-Prefix.pch in Headers */,
-				C5E319D813C474FE00D9CA76 /* FoundationKit.h in Headers */,
-				DC1CF42413C483BC00E5BEBC /* NSArray-NKConcise.h in Headers */,
-				DC1CF42713C4845D00E5BEBC /* NSNumber-NKConcise.h in Headers */,
-				DC1CF42913C4847200E5BEBC /* NSDictionary-NKConcise.h in Headers */,
-				DC1CF42B13C4848200E5BEBC /* NSValue-NKConcise.h in Headers */,
-				DC1CF42D13C4849400E5BEBC /* NSNull-NKConcise.h in Headers */,
-				DC1CF42F13C484A400E5BEBC /* NSString-NKConcise.h in Headers */,
-				DC1CF43113C484B800E5BEBC /* NSSet-NKConcise.h in Headers */,
-				DCB0127113C4AE9400AB692F /* NSError+NKAdditions.h in Headers */,
-				C5E319F813C4E90B00D9CA76 /* NKAudioRecorder.h in Headers */,
-				C5E31A0213C4EA7E00D9CA76 /* NSArray+NKBlocks.h in Headers */,
-				C5E31A0413C4EA7E00D9CA76 /* NSDictionary+NKBlocks.h in Headers */,
-				C5E31A0613C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.h in Headers */,
-				C5E31A0813C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.h in Headers */,
-				C5E31A0B13C4EC8700D9CA76 /* NKShorthands.h in Headers */,
-				DC11A80E13C51D45001490F2 /* NKShow.h in Headers */,
-				DCF68FBE13C74ADB0057517A /* NSObject+NKSwizzle.h in Headers */,
-				C582BF8B13C8B77C0012DF67 /* NKLog.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		C5C18E7913C8C64C00DD0872 /* Tests */ = {
 			isa = PBXNativeTarget;
@@ -262,7 +214,6 @@
 			buildPhases = (
 				DC410CFB13C39BFD00C90C19 /* Sources */,
 				DC410CFC13C39BFD00C90C19 /* Frameworks */,
-				DC410CFD13C39BFD00C90C19 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -327,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C18E9613C8C6AA00DD0872 /* Tests.m in Sources */,
+				C5C18EC213C8CE9800DD0872 /* NKLogTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +381,6 @@
 		DC410D0A13C39BFD00C90C19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,7 +390,6 @@
 		DC410D0B13C39BFD00C90C19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,6 +406,7 @@
 				C5C18E8F13C8C64C00DD0872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC410CF913C39BFD00C90C19 /* Build configuration list for PBXProject "FoundationKit" */ = {
 			isa = XCConfigurationList;

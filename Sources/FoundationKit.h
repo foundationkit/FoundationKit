@@ -2,11 +2,8 @@
 
 #import "Audio/NKAudioRecorder.h"
 
-// Generic
 #import "NKShorthands.h"
-
-// Type logging
-#import "NKShow.h"
+#import "NKLog.h"
 
 // Blocks
 #import "NSArray+NKBlocks.h"

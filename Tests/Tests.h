@@ -1,3 +1,0 @@
-@interface Tests : SenTestCase
-
-@end

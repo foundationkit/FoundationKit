@@ -1,6 +1,6 @@
-#import "Tests.h"
+#import "NKLogTests.h"
 
-@implementation Tests
+@implementation NKLogTests
 
 - (void)setUp {
   [super setUp];
@@ -14,8 +14,8 @@
   [super tearDown];
 }
 
-- (void)testExample {
-  STFail(@"Unit tests are not implemented yet in Tests");
+- (void)testNSString {
+  NKLog(@"asd");
 }
 
 @end
