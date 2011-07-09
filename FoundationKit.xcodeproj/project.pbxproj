@@ -57,13 +57,13 @@
 		C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NKBlocks.h"; sourceTree = "<group>"; };
 		C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NKBlocks.m"; sourceTree = "<group>"; };
 		C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKShorthands.h; sourceTree = "<group>"; };
-		DC1CF42313C483BC00E5BEBC /* NSArray-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray-NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42613C4845D00E5BEBC /* NSNumber-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber-NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42813C4847200E5BEBC /* NSDictionary-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42A13C4848200E5BEBC /* NSValue-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue-NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42C13C4849400E5BEBC /* NSNull-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull-NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42E13C484A400E5BEBC /* NSString-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF43013C484B800E5BEBC /* NSSet-NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet-NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSArray+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSNumber+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSDictionary+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSValue+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42C13C4849400E5BEBC /* NSNull+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSNull+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSString+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSSet+NKConcise.h"; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+NKAdditions.h"; sourceTree = "<group>"; };
@@ -112,12 +112,12 @@
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
 				C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */,
 				C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */,
-				DC1CF42313C483BC00E5BEBC /* NSArray-NKConcise.h */,
+				DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */,
 				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
 				C5E319FC13C4EA7C00D9CA76 /* NSDictionary+NKBlocks.h */,
 				C5E319FD13C4EA7D00D9CA76 /* NSDictionary+NKBlocks.m */,
-				DC1CF42813C4847200E5BEBC /* NSDictionary-NKConcise.h */,
+				DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */,
 				DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */,
 				DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */,
 				C582BF8913C8B77C0012DF67 /* NKLog.h */,
@@ -126,13 +126,13 @@
 				C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */,
 				C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */,
 				C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */,
-				DC1CF42C13C4849400E5BEBC /* NSNull-NKConcise.h */,
-				DC1CF42613C4845D00E5BEBC /* NSNumber-NKConcise.h */,
+				DC1CF42C13C4849400E5BEBC /* NSNull+NKConcise.h */,
+				DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */,
 				DCF68FBC13C74ADB0057517A /* NSObject+NKSwizzle.h */,
 				DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */,
-				DC1CF43013C484B800E5BEBC /* NSSet-NKConcise.h */,
-				DC1CF42E13C484A400E5BEBC /* NSString-NKConcise.h */,
-				DC1CF42A13C4848200E5BEBC /* NSValue-NKConcise.h */,
+				DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */,
+				DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */,
+				DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */,
 				C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */,
 			);
 			path = Sources;
