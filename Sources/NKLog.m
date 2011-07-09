@@ -1,6 +1,40 @@
 #import "NKLog.h"
 
-const void *kNRInternalEndVarArgs = "don't output me";
+NSString * VTPG_DDToStringFromTypeAndValue(const char * typeCode, void * value);
+
+const void *kNRInternalEndVarArgs = (void *)@"end of varargs";
+
+
+
+
+NSString* NKLogToStr___ (NSString *file, unsigned int line, ...) {
+  va_list ap;
+  va_start(ap, line);
+  
+  NSString *msg = [NSString stringWithFormat:@"[%@:%u] ", file, line];
+
+  int index = 0;
+  while(true) {
+    char *typeCode = va_arg(ap, char*);
+    NSString *variableName = va_arg(ap, NSString*);
+    void *what = va_arg(ap, void*);
+    
+    if([variableName isEqualToString:@"kNRInternalEndVarArgs"]) {
+      // We've reached the end of the varargs, break out
+      // TODO: change this to a pointer comparison of what against kNRInternalEndVarArgs
+      break;
+    }
+      
+    NSString *description = VTPG_DDToStringFromTypeAndValue(typeCode, what);
+    NSLog(@"%d %@ %@", index, variableName, description);
+    index++;
+  }
+  va_end(ap);
+  return msg;
+}
+
+
+
 
 static BOOL TypeCodeIsCharArray(const char *typeCode){
 	int lastCharOffset = strlen(typeCode) - 1;
@@ -12,39 +46,6 @@ static BOOL TypeCodeIsCharArray(const char *typeCode){
 		isCharArray = isCharArray && isdigit(typeCode[i]);
 	return isCharArray;
 }
-
-#define Log(_X_) do{\
-__typeof__(_X_) _Y_ = (_X_);\
-const char * _TYPE_CODE_ = @encode(__typeof__(_X_));\
-NSString *_STR_ = VTPG_DDToStringFromTypeAndValue(_TYPE_CODE_, &_Y_);\
-if(_STR_)\
-DDLogInfo(@"%s = %@", #_X_, _STR_);\
-else\
-DDLogInfo(@"Unknown _TYPE_CODE_: %s for expression %s in function %s, file %s, line %d", _TYPE_CODE_, #_X_, __func__, __FILE__, __LINE__);\
-}while(0)
-
-NSString * VTPG_DDToStringFromTypeAndValue(const char * typeCode, void * value);
-
-
-NSString* NKLogToStr___ (NSString *file, unsigned int line, ...) {
-  va_list ap;
-  va_start(ap, line);
-  
-  NSString *msg = [NSString stringWithFormat:@"[%@:%u] ", file, line];
-  
-  while(true) {
-    char *typeEncoding = va_arg(ap, char*);
-    NSString *variableName = va_arg(ap, NSString*);
-    void *object = va_arg(ap, void*);
-    if(object == kNRInternalEndVarArgs)
-      break;
-    NSLog(@"varname = %@, type = %s, obj = %@", variableName, typeEncoding, object);
-  }
-  va_end(ap);
-  return msg;
-}
-
-
 
 //since BOOL is #defined as a signed char, we treat the value as
 //a BOOL if it is exactly YES or NO, and a char otherwise.
@@ -69,7 +70,7 @@ static NSString *StringFromNSDecimalWithCurrentLocal(NSDecimal dcm) {
 	return NSDecimalString(&dcm, [NSLocale currentLocale]);
 }
 
-NSString * VTPG_DDToStringFromTypeAndValue(const char * typeCode, void * value) {
+NSString * VTPG_DDToStringFromTypeAndValue(const char * typeCode, void * const value) {
 #define IF_TYPE_MATCHES_INTERPRET_WITH(typeToMatch,func) \
 if (strcmp(typeCode, @encode(typeToMatch)) == 0) \
 return (func)(*(typeToMatch*)value)
@@ -93,6 +94,9 @@ return (func)(*(typeToMatch*)value)
 if (strcmp(typeCode, @encode(typeToMatch)) == 0) \
 return [NSString stringWithFormat:(formatString), (*(typeToMatch*)value)]
   
+  // Special case id for ARC
+  if (strcmp(typeCode, @encode(id)) == 0) \
+    return [NSString stringWithFormat:(@"%@"), (*(__unsafe_unretained id*)value)];
   
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(CFStringRef,@"%@"); //CFStringRef is toll-free bridged to NSString*
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(CFArrayRef,@"%@"); //CFArrayRef is toll-free bridged to NSArray*
@@ -101,9 +105,6 @@ return [NSString stringWithFormat:(formatString), (*(typeToMatch*)value)]
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(unsigned long long,@"%llu");
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(float,@"%f");
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(double,@"%f");
-  if (strcmp(typeCode, @encode(id)) == 0)
-    return [NSString stringWithFormat:(@"%@"), ((__bridge id)value)];
-  
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(short,@"%hi");
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(unsigned short,@"%hu");
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(int,@"%i");
