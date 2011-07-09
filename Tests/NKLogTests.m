@@ -15,7 +15,9 @@
 }
 
 - (void)testNSString {
-  NKLog(@"asd");
+  NSString *result = NKLogToStr(@"asd");
+  NSString *should = @"@\"asd\" = asd";
+  NSLog(@"%@ == %@", result, should);
 }
 
 @end

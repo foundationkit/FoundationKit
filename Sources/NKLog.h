@@ -1,10 +1,9 @@
 // Part of FoundationKit http://foundationk.it
 
-// See http://stackoverflow.com/questions/2632300/looping-through-macro-varargs-values
 // Derived from https://github.com/VTPG/CommonCode/blob/master/VTPG_Common.m by Vincent Gable
 // Derived from http://www.dribin.org/dave/blog/archives/2008/09/22/convert_to_nsstring/
 
-extern const NSString *kNRInternalDontOutputMe;
+extern const void *kNRInternalEndVarArgs;
 
 #define NKLog(...) fprintf(stderr, "%s", [NKLogToStr(__VA_ARGS__) UTF8String])
 
@@ -21,8 +20,8 @@ extern const NSString *kNRInternalDontOutputMe;
     @encode(__typeof__(_7)), @"" # _7, _7, \
     @encode(__typeof__(_8)), @"" # _8, _8, \
     @encode(__typeof__(_9)), @"" # _9, _9, \
-    @encode(__typeof__(_10)), @"" # _10, _10)
+    @encode(__typeof__(_10)), @"" # _10, _10, kNRInternalEndVarArgs)
 
-#define NKLogToStr_RightSequence() kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe
+#define NKLogToStr_RightSequence() kNRInternalEndVarArgs, kNRInternalEndVarArgs, kNRInternalEndVarArgs, kNRInternalEndVarArgs, kNRInternalEndVarArgs, kNRInternalEndVarArgs, kNRInternalEndVarArgs, kNRInternalEndVarArgs, kNRInternalEndVarArgs, kNRInternalEndVarArgs
 
 NSString* NKLogToStr___ (NSString *file, unsigned int line, ...);

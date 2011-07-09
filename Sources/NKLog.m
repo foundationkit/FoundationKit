@@ -1,12 +1,7 @@
 #import "NKLog.h"
 
-const NSString *kNRInternalDontOutputMe = @"don't output me";
+const void *kNRInternalEndVarArgs = "don't output me";
 
-// Copyright (c) 2008-2010, Vincent Gable.
-// http://vincentgable.com
-//
-//based off http://www.dribin.org/dave/blog/archives/2008/09/22/convert_to_nsstring/
-//
 static BOOL TypeCodeIsCharArray(const char *typeCode){
 	int lastCharOffset = strlen(typeCode) - 1;
 	int secondToLastCharOffset = lastCharOffset - 1 ;
@@ -31,43 +26,22 @@ DDLogInfo(@"Unknown _TYPE_CODE_: %s for expression %s in function %s, file %s, l
 NSString * VTPG_DDToStringFromTypeAndValue(const char * typeCode, void * value);
 
 
-# define NKLogINTASDWIP(...) _NKLog([[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, , @"" # __VA_ARGS__, __VA_ARGS__)
-
 NSString* NKLogToStr___ (NSString *file, unsigned int line, ...) {
-  unsigned int n_args;
-  NSString *commaSeparatedParameterNames;
   va_list ap;
   va_start(ap, line);
-  NSArray *parameterNames = [commaSeparatedParameterNames componentsSeparatedByString:@", "];
-  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\n" options:0 error:nil];
   
   NSString *msg = [NSString stringWithFormat:@"[%@:%u] ", file, line];
-  BOOL alreadySplit = NO;
-  for (unsigned int i = 0; i < n_args; i++) {
-    id obj = va_arg(ap, id);
-    NSString *desc = [[parameterNames objectAtIndex:i] stringByAppendingString: @" = "];
-    if([desc characterAtIndex:0] == '@')
-      desc = @"";
-    obj = [obj description];
-    if ([obj hasPrefix:@" "] || [obj hasSuffix:@" "])
-      obj = [[@"@\"" stringByAppendingString:obj] stringByAppendingString:@"\""];
-    obj = [regex stringByReplacingMatchesInString:obj
-                                          options:0
-                                            range:NSMakeRange(0, [obj length])
-                                     withTemplate:@"\n  "];
-    desc = [desc stringByAppendingString:obj];
-    if([msg length] + [desc length] > 60 || alreadySplit) {
-      desc = [@"\n  " stringByAppendingString:desc];
-      alreadySplit = YES;
-    }
-    if(i == n_args - 1)
-      msg = [msg stringByAppendingFormat:@"%@", desc];
-    else
-      msg = [msg stringByAppendingFormat:@"%@, ", desc];
-  }
-  NSLog(@"%@", msg);
   
+  while(true) {
+    char *typeEncoding = va_arg(ap, char*);
+    NSString *variableName = va_arg(ap, NSString*);
+    void *object = va_arg(ap, void*);
+    if(object == kNRInternalEndVarArgs)
+      break;
+    NSLog(@"varname = %@, type = %s, obj = %@", variableName, typeEncoding, object);
+  }
   va_end(ap);
+  return msg;
 }
 
 
