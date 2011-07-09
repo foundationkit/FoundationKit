@@ -9,6 +9,27 @@
 // Localization
 #define _(x) NSLocalizedString(x, nil)
 
+#define NKAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+
+//	The following macro is for specifying property (ivar) names to KVC or KVO methods.
+//	These methods generally take strings, but strings don't get checked for typos
+//	by the compiler. If you write PROPERTY(fremen) instead of PROPERTY(frame),
+//	the compiler will immediately complain that it doesn't know the selector
+//	'fremen', and thus point out the typo. For this to work, you need to make
+//	sure the warning -Wunknown-selector is on.
+//
+//	The code that checks here is (theoretically) slower than just using a string
+//	literal, so what we do is we only do the checking in debug builds. In
+//	release builds, we use the identifier-stringification-operator "#" to turn
+//	the given property name into an ObjC string literal.
+
+#if DEBUG
+#define NKProperty(propertyName)	NSStringFromSelector(@selector(propertyName))
+#else
+#define NKProperty(propertyName)	@#propertyName
+#endif
+
+
 // Four char codes
 NS_INLINE char * NKFcc(code) { return (char[5]){(code >> 24) & 0xFF, (code >> 16) & 0xFF, (code >> 8) & 0xFF, code & 0xFF, 0}; }
 

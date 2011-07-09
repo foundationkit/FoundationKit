@@ -35,8 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSObject+NKAssociatedObjects.h"; sourceTree = "<group>"; };
+		399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NKAssociatedObjects.h"; sourceTree = "<group>"; };
 		399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NKAssociatedObjects.m"; sourceTree = "<group>"; };
+		399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKSynthesizeSingleton.h; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* NKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* NKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLog.m; sourceTree = "<group>"; };
 		C5C18E7A13C8C64C00DD0872 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +140,7 @@
 				C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */,
 				399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */,
 				399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */,
+				399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
