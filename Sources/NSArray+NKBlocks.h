@@ -3,12 +3,12 @@
 
 @interface NSArray (NKBlocks)
 
-- (BOOL)all:(BOOL (^)(id))block;
-- (BOOL)any:(BOOL (^)(id))block;
-- (void)each:(void (^)(id))block;
-- (void)eachWithIndex:(void (^)(NSUInteger, id))block;
-- (NSArray *)select:(BOOL (^)(id))block;
-- (NSArray *)map:(id (^)(id))block;
-- (id)collect:(id)initial withBlock:(id (^)(id,id))block;
+- (BOOL)all:(BOOL (^)(id object))block;
+- (BOOL)any:(BOOL (^)(id object))block;
+- (void)each:(void (^)(id object))block;
+- (void)eachWithIndex:(void (^)(NSUInteger index, id object))block;
+- (NSArray *)select:(BOOL (^)(id object))block;
+- (NSArray *)map:(id (^)(id object))block;
+- (id)inject:(id)initial withBlock:(id (^)(id memo, id object))block;
 
 @end

@@ -3,62 +3,62 @@
 
 @implementation NSArray (NKBlocks)
 
-- (BOOL)all:(BOOL (^)(id))block {
-  for (id obj in self) {
-    if (!block(obj)) {
+- (BOOL)all:(BOOL (^)(id object))block {
+  for (id object in self) {
+    if (!block(object)) {
       return NO;
     }
   }
   return YES;
 }
 
-- (BOOL)any:(BOOL (^)(id))block {
-  for (id obj in self) {
-    if (block(obj)) {
+- (BOOL)any:(BOOL (^)(id object))block {
+  for (id object in self) {
+    if (block(object)) {
       return YES;
     }
   }   
   return NO;
 }
 
-- (void)each:(void (^)(id))block {
-  for (id obj in self) {
-    block(obj);
+- (void)each:(void (^)(id object))block {
+  for (id object in self) {
+    block(object);
   }
 }
 
-- (void)eachWithIndex:(void (^)(NSUInteger, id))block {
+- (void)eachWithIndex:(void (^)(NSUInteger index, id object))block {
   NSUInteger index = 0;
-  for (id obj in self) {
-    block(index, obj);
+  for (id object in self) {
+    block(index, object);
     index++;
   }
 }
 
-- (NSArray *)select:(BOOL (^)(id))block {
+- (NSArray *)select:(BOOL (^)(id object))block {
     NSMutableArray *result = [NSMutableArray array];
-  for (id obj in self) {
-    if (block(obj)) {
-      [result addObject:obj];
+  for (id object in self) {
+    if (block(object)) {
+      [result addObject:object];
     }
   }
   return result;
 }
 
-- (NSArray *)map:(id (^)(id))block {
+- (NSArray *)map:(id (^)(id object))block {
   NSMutableArray *result = [NSMutableArray array];
-  for (id obj in self) {
-    [result addObject:block(obj)];
+  for (id object in self) {
+    [result addObject:block(object)];
   }
   return result;
 }
 
-- (id)collect:(id)initial withBlock:(id (^)(id,id))block {
-  id result = initial;
-  for (id obj in self) {
-    result = block(result, obj);
+- (id)inject:(id)initial withBlock:(id (^)(id memo, id object))block {
+  id memo = initial;
+  for (id object in self) {
+    memo = block(memo, object);
   }
-  return result;
+  return memo;
 }
 
 @end
