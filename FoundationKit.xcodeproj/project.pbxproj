@@ -48,7 +48,14 @@
 		C5EF034A13C9813E00953F2B /* NSString+NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5EF034B13C9813E00953F2B /* NSValue+NKConcise.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5EF034C13C9813E00953F2B /* NSObject+NKAssociatedObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
+		C5EF036713C98C1C00953F2B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF036513C98C1C00953F2B /* AudioToolbox.framework */; };
+		C5EF036813C98C1C00953F2B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF036613C98C1C00953F2B /* AudioUnit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C5EF036A13C98C3200953F2B /* NKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */; };
+		C5EF036B13C98C4D00953F2B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF036513C98C1C00953F2B /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C5EF036C13C98C4D00953F2B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF036613C98C1C00953F2B /* AudioUnit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C5EF036E13C98C7E00953F2B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF036D13C98C7E00953F2B /* CoreAudio.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C5EF037213C98CC500953F2B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF036D13C98C7E00953F2B /* CoreAudio.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */; };
 		DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */; };
 /* End PBXBuildFile section */
@@ -91,6 +98,9 @@
 		C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKShorthands.h; sourceTree = "<group>"; };
 		C5EF02F513C980F600953F2B /* FoundationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5EF02FE13C980F600953F2B /* FoundationKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoundationKit-Info.plist"; sourceTree = "<group>"; };
+		C5EF036513C98C1C00953F2B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		C5EF036613C98C1C00953F2B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
+		C5EF036D13C98C7E00953F2B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NKConcise.h"; sourceTree = "<group>"; };
 		DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NKConcise.h"; sourceTree = "<group>"; };
 		DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NKConcise.h"; sourceTree = "<group>"; };
@@ -121,6 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5EF036E13C98C7E00953F2B /* CoreAudio.framework in Frameworks */,
+				C5EF036B13C98C4D00953F2B /* AudioToolbox.framework in Frameworks */,
+				C5EF036C13C98C4D00953F2B /* AudioUnit.framework in Frameworks */,
 				C5EF030813C9811600953F2B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +142,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5EF037213C98CC500953F2B /* CoreAudio.framework in Frameworks */,
+				C5EF036713C98C1C00953F2B /* AudioToolbox.framework in Frameworks */,
+				C5EF036813C98C1C00953F2B /* AudioUnit.framework in Frameworks */,
 				DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +242,9 @@
 		DC410D0113C39BFD00C90C19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5EF036D13C98C7E00953F2B /* CoreAudio.framework */,
+				C5EF036513C98C1C00953F2B /* AudioToolbox.framework */,
+				C5EF036613C98C1C00953F2B /* AudioUnit.framework */,
 				DC410D0213C39BFD00C90C19 /* Foundation.framework */,
 				C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */,
 			);
@@ -396,6 +415,7 @@
 				C5EF033713C9812400953F2B /* NSMutableDictionary+NKBlocks.m in Sources */,
 				C5EF033813C9812400953F2B /* NSObject+NKSwizzle.m in Sources */,
 				C5EF033913C9812400953F2B /* NSObject+NKAssociatedObjects.m in Sources */,
+				C5EF036A13C98C3200953F2B /* NKAudioRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +581,7 @@
 				C5EF030513C980F600953F2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC410CF913C39BFD00C90C19 /* Build configuration list for PBXProject "FoundationKit" */ = {
 			isa = XCConfigurationList;

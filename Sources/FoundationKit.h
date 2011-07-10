@@ -1,7 +1,6 @@
 // Part of FoundationKit http://foundationk.it
 
-//#import "Audio/NKAudioRecorder.h"
-
+#import "NKAudioRecorder.h"
 #import "NKShorthands.h"
 #import "NKLog.h"
 
