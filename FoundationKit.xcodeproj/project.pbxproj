@@ -201,13 +201,13 @@
 				C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */,
 				DC1CF42C13C4849400E5BEBC /* NSNull+NKConcise.h */,
 				DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */,
+				399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */,
+				399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */,
 				DCF68FBC13C74ADB0057517A /* NSObject+NKSwizzle.h */,
 				DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */,
 				DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */,
 				DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */,
 				DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */,
-				399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */,
-				399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
