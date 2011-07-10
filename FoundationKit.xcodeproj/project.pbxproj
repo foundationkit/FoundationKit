@@ -114,6 +114,10 @@
 			children = (
 				C5E319F513C4E90B00D9CA76 /* Audio */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
+				C582BF8913C8B77C0012DF67 /* NKLog.h */,
+				C582BF8A13C8B77C0012DF67 /* NKLog.m */,
+				C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */,
+				399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */,
 				C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */,
 				C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */,
 				DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */,
@@ -124,8 +128,6 @@
 				DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */,
 				DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */,
 				DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */,
-				C582BF8913C8B77C0012DF67 /* NKLog.h */,
-				C582BF8A13C8B77C0012DF67 /* NKLog.m */,
 				C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.h */,
 				C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */,
 				C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */,
@@ -137,10 +139,8 @@
 				DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */,
 				DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */,
 				DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */,
-				C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */,
 				399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */,
 				399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */,
-				399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
