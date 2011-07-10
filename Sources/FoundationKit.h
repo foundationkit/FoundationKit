@@ -3,6 +3,7 @@
 #import "Audio/NKAudioRecorder.h"
 
 #import "NKShorthands.h"
+#import "NKSynthesizeSingleton.h"
 #import "NKLog.h"
 
 // Blocks

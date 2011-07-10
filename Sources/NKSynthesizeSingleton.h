@@ -19,29 +19,4 @@ static classname *shared##classname = nil; \
 static dispatch_once_t pred; \
 dispatch_once(&pred, ^{ shared##classname = [[self alloc] init]; }); \
 return shared##classname; \
-} \
-\
-\
-- (id)copyWithZone:(NSZone *)zone \
-{ \
-return self; \
-} \
-\
-- (id)retain \
-{ \
-return self; \
-} \
-\
-- (NSUInteger)retainCount \
-{ \
-return NSUIntegerMax; \
-} \
-\
-- (oneway void)release \
-{ \
-} \
-\
-- (id)autorelease \
-{ \
-return self; \
 }
