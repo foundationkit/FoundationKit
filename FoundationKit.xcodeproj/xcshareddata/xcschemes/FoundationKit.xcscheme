@@ -15,7 +15,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC410CFE13C39BFD00C90C19"
                BuildableName = "libFoundationKit.a"
-               BlueprintName = "FoundationKit"
+               BlueprintName = "libFoundationKit"
                ReferencedContainer = "container:FoundationKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,6 +30,20 @@
                BlueprintIdentifier = "C5C18E7913C8C64C00DD0872"
                BuildableName = "Tests.octest"
                BlueprintName = "Tests"
+               ReferencedContainer = "container:FoundationKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C5EF02F413C980F600953F2B"
+               BuildableName = "FoundationKit.framework"
+               BlueprintName = "FoundationKit"
                ReferencedContainer = "container:FoundationKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
