@@ -22,3 +22,9 @@ If you start a new app today, it's the perfect time to begin with it.
     // Part of FoundationKit http://foundationk.it
     //
     // Derived from [Author] [License Type]-licensed [Project Name]: [URL]
+
+
+## Workarounds
+
+- For iOS5b2, this workaround helps with compiling problems: https://devforums.apple.com/thread/107259
+- If you get "Protocol *" errors when compiling, you are using 10.6 SDK - for FoundationKit, you need 10.7.
