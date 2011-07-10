@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */; };
+		39EA898C13C98C6C00B6427F /* NKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* NKMath.m */; };
 		C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* NKLog.m */; };
+		C5AAAA4413C9920900E44CE7 /* NKSynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5AAAA4513C9920900E44CE7 /* NKMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EA898A13C98C6C00B6427F /* NKMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */; };
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
 		C5C18EC213C8CE9800DD0872 /* NKLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */; };
@@ -55,6 +58,7 @@
 		C5EF036C13C98C4D00953F2B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF036613C98C1C00953F2B /* AudioUnit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C5EF036E13C98C7E00953F2B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF036D13C98C7E00953F2B /* CoreAudio.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C5EF037213C98CC500953F2B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF036D13C98C7E00953F2B /* CoreAudio.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C5EF038913C98ECE00953F2B /* NKSynthesizeSingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */; };
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */; };
 		DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */; };
@@ -73,6 +77,9 @@
 /* Begin PBXFileReference section */
 		399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NKAssociatedObjects.h"; sourceTree = "<group>"; };
 		399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NKAssociatedObjects.m"; sourceTree = "<group>"; };
+		399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKSynthesizeSingleton.h; sourceTree = "<group>"; };
+		39EA898A13C98C6C00B6427F /* NKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKMath.h; sourceTree = "<group>"; };
+		39EA898B13C98C6C00B6427F /* NKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKMath.m; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* NKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* NKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLog.m; sourceTree = "<group>"; };
 		C5C18E7A13C8C64C00DD0872 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +108,8 @@
 		C5EF036513C98C1C00953F2B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
 		C5EF036613C98C1C00953F2B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		C5EF036D13C98C7E00953F2B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
+		C5EF038513C98EC100953F2B /* NKSynthesizeSingletonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKSynthesizeSingletonTests.h; sourceTree = "<group>"; };
+		C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKSynthesizeSingletonTests.m; sourceTree = "<group>"; };
 		DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NKConcise.h"; sourceTree = "<group>"; };
 		DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NKConcise.h"; sourceTree = "<group>"; };
 		DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NKConcise.h"; sourceTree = "<group>"; };
@@ -157,6 +166,8 @@
 			children = (
 				C5C18EBB13C8CCDF00DD0872 /* NKLogTests.h */,
 				C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */,
+				C5EF038513C98EC100953F2B /* NKSynthesizeSingletonTests.h */,
+				C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */,
 				C5C18EBD13C8CCDF00DD0872 /* Tests-Info.plist */,
 				C5C18E8D13C8C64C00DD0872 /* Tests-Prefix.pch */,
 			);
@@ -171,6 +182,7 @@
 				C582BF8913C8B77C0012DF67 /* NKLog.h */,
 				C582BF8A13C8B77C0012DF67 /* NKLog.m */,
 				C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */,
+				399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */,
 				C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */,
 				C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */,
 				DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */,
@@ -181,6 +193,8 @@
 				DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */,
 				DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */,
 				DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */,
+				39EA898A13C98C6C00B6427F /* NKMath.h */,
+				39EA898B13C98C6C00B6427F /* NKMath.m */,
 				C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.h */,
 				C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */,
 				C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */,
@@ -268,6 +282,7 @@
 				C5EF034113C9813E00953F2B /* NSDictionary+NKBlocks.h in Headers */,
 				C5EF034213C9813E00953F2B /* NSDictionary+NKConcise.h in Headers */,
 				C5EF034313C9813E00953F2B /* NSError+NKAdditions.h in Headers */,
+				C5AAAA4513C9920900E44CE7 /* NKMath.h in Headers */,
 				C5EF034413C9813E00953F2B /* NSMutableArray+NKBlocks.h in Headers */,
 				C5EF034513C9813E00953F2B /* NSMutableDictionary+NKBlocks.h in Headers */,
 				C5EF034613C9813E00953F2B /* NSNull+NKConcise.h in Headers */,
@@ -275,6 +290,7 @@
 				C5EF034813C9813E00953F2B /* NSObject+NKSwizzle.h in Headers */,
 				C5EF034913C9813E00953F2B /* NSSet+NKConcise.h in Headers */,
 				C5EF034A13C9813E00953F2B /* NSString+NKConcise.h in Headers */,
+				C5AAAA4413C9920900E44CE7 /* NKSynthesizeSingleton.h in Headers */,
 				C5EF034B13C9813E00953F2B /* NSValue+NKConcise.h in Headers */,
 				C5EF034C13C9813E00953F2B /* NSObject+NKAssociatedObjects.h in Headers */,
 			);
@@ -399,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C18EC213C8CE9800DD0872 /* NKLogTests.m in Sources */,
+				C5EF038913C98ECE00953F2B /* NKSynthesizeSingletonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +450,7 @@
 				DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */,
 				C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */,
 				399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */,
+				39EA898C13C98C6C00B6427F /* NKMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
