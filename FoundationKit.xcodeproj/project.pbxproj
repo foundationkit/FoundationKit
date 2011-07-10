@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */; };
+		39EA898C13C98C6C00B6427F /* NKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* NKMath.m */; };
 		C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* NKLog.m */; };
 		C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */; };
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
@@ -37,6 +38,8 @@
 /* Begin PBXFileReference section */
 		399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NKAssociatedObjects.h"; sourceTree = "<group>"; };
 		399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NKAssociatedObjects.m"; sourceTree = "<group>"; };
+		39EA898A13C98C6C00B6427F /* NKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKMath.h; sourceTree = "<group>"; };
+		39EA898B13C98C6C00B6427F /* NKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKMath.m; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* NKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* NKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLog.m; sourceTree = "<group>"; };
 		C5C18E7A13C8C64C00DD0872 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +129,8 @@
 				DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */,
 				DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */,
 				DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */,
+				39EA898A13C98C6C00B6427F /* NKMath.h */,
+				39EA898B13C98C6C00B6427F /* NKMath.m */,
 				C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.h */,
 				C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */,
 				C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */,
@@ -301,6 +306,7 @@
 				DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */,
 				C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */,
 				399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */,
+				39EA898C13C98C6C00B6427F /* NKMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
