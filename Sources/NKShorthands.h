@@ -5,11 +5,14 @@
 
 #import <Foundation/Foundation.h>
 
+// Shorthand for NSLocalizedString
+NS_INLINE NSString* _(NSString *key) {
+  return NSLocalizedString(key, nil);
+}
 
-// Localization
-#define _(x) NSLocalizedString(x, nil)
-
-#define NKAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+NS_INLINE NSString* NKAppVersion() {
+  return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+}
 
 //	The following macro is for specifying property (ivar) names to KVC or KVO methods.
 //	These methods generally take strings, but strings don't get checked for typos
