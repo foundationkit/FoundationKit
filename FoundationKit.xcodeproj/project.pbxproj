@@ -12,10 +12,15 @@
 		C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* NKLog.m */; };
 		C5AAAA4413C9920900E44CE7 /* NKSynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5AAAA4513C9920900E44CE7 /* NKMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EA898A13C98C6C00B6427F /* NKMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5AAAA6213C99A0A00E44CE7 /* NSString+NKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C5AAAA6013C99A0A00E44CE7 /* NSString+NKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5AAAA6313C99A0A00E44CE7 /* NSString+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA6113C99A0A00E44CE7 /* NSString+NKAdditions.m */; };
+		C5AAAA6413C99A0A00E44CE7 /* NSString+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA6113C99A0A00E44CE7 /* NSString+NKAdditions.m */; };
+		C5AAAA6813C99DC900E44CE7 /* NSStringAdditionsTests.h in Headers */ = {isa = PBXBuildFile; fileRef = C5AAAA6613C99DC900E44CE7 /* NSStringAdditionsTests.h */; };
+		C5AAAA6B13C99DD200E44CE7 /* NSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA6713C99DC900E44CE7 /* NSStringAdditionsTests.m */; };
+		C5AAAA6E13C99FAD00E44CE7 /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF02F513C980F600953F2B /* FoundationKit.framework */; };
 		C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */; };
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
 		C5C18EC213C8CE9800DD0872 /* NKLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */; };
-		C5C18EC313C8CF1A00DD0872 /* libFoundationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */; };
 		C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */; };
 		C5E319F913C4E90B00D9CA76 /* NKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */; };
 		C5E31A0313C4EA7E00D9CA76 /* NSArray+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */; };
@@ -65,11 +70,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C5C18E9213C8C65100DD0872 /* PBXContainerItemProxy */ = {
+		C5AAAA6C13C99FA600E44CE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DC410CF613C39BFD00C90C19 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DC410CFE13C39BFD00C90C19;
+			remoteGlobalIDString = C5EF02F413C980F600953F2B;
 			remoteInfo = FoundationKit;
 		};
 /* End PBXContainerItemProxy section */
@@ -82,6 +87,10 @@
 		39EA898B13C98C6C00B6427F /* NKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKMath.m; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* NKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* NKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLog.m; sourceTree = "<group>"; };
+		C5AAAA6013C99A0A00E44CE7 /* NSString+NKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NKAdditions.h"; sourceTree = "<group>"; };
+		C5AAAA6113C99A0A00E44CE7 /* NSString+NKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NKAdditions.m"; sourceTree = "<group>"; };
+		C5AAAA6613C99DC900E44CE7 /* NSStringAdditionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditionsTests.h; sourceTree = "<group>"; };
+		C5AAAA6713C99DC900E44CE7 /* NSStringAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditionsTests.m; sourceTree = "<group>"; };
 		C5C18E7A13C8C64C00DD0872 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C5C18E8D13C8C64C00DD0872 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
@@ -130,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C18EC313C8CF1A00DD0872 /* libFoundationKit.a in Frameworks */,
+				C5AAAA6E13C99FAD00E44CE7 /* FoundationKit.framework in Frameworks */,
 				C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */,
 				C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */,
 			);
@@ -166,6 +175,8 @@
 			children = (
 				C5C18EBB13C8CCDF00DD0872 /* NKLogTests.h */,
 				C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */,
+				C5AAAA6613C99DC900E44CE7 /* NSStringAdditionsTests.h */,
+				C5AAAA6713C99DC900E44CE7 /* NSStringAdditionsTests.m */,
 				C5EF038513C98EC100953F2B /* NKSynthesizeSingletonTests.h */,
 				C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */,
 				C5C18EBD13C8CCDF00DD0872 /* Tests-Info.plist */,
@@ -204,6 +215,8 @@
 				DCF68FBC13C74ADB0057517A /* NSObject+NKSwizzle.h */,
 				DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */,
 				DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */,
+				C5AAAA6013C99A0A00E44CE7 /* NSString+NKAdditions.h */,
+				C5AAAA6113C99A0A00E44CE7 /* NSString+NKAdditions.m */,
 				DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */,
 				DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */,
 				399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */,
@@ -293,6 +306,8 @@
 				C5AAAA4413C9920900E44CE7 /* NKSynthesizeSingleton.h in Headers */,
 				C5EF034B13C9813E00953F2B /* NSValue+NKConcise.h in Headers */,
 				C5EF034C13C9813E00953F2B /* NSObject+NKAssociatedObjects.h in Headers */,
+				C5AAAA6213C99A0A00E44CE7 /* NSString+NKAdditions.h in Headers */,
+				C5AAAA6813C99DC900E44CE7 /* NSStringAdditionsTests.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +326,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C5C18E9313C8C65100DD0872 /* PBXTargetDependency */,
+				C5AAAA6D13C99FA600E44CE7 /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = Tests;
@@ -416,6 +431,7 @@
 			files = (
 				C5C18EC213C8CE9800DD0872 /* NKLogTests.m in Sources */,
 				C5EF038913C98ECE00953F2B /* NKSynthesizeSingletonTests.m in Sources */,
+				C5AAAA6B13C99DD200E44CE7 /* NSStringAdditionsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +449,7 @@
 				C5EF033813C9812400953F2B /* NSObject+NKSwizzle.m in Sources */,
 				C5EF033913C9812400953F2B /* NSObject+NKAssociatedObjects.m in Sources */,
 				C5EF036A13C98C3200953F2B /* NKAudioRecorder.m in Sources */,
+				C5AAAA6413C99A0A00E44CE7 /* NSString+NKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,16 +468,17 @@
 				C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */,
 				399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */,
 				39EA898C13C98C6C00B6427F /* NKMath.m in Sources */,
+				C5AAAA6313C99A0A00E44CE7 /* NSString+NKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C5C18E9313C8C65100DD0872 /* PBXTargetDependency */ = {
+		C5AAAA6D13C99FA600E44CE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC410CFE13C39BFD00C90C19 /* libFoundationKit */;
-			targetProxy = C5C18E9213C8C65100DD0872 /* PBXContainerItemProxy */;
+			target = C5EF02F413C980F600953F2B /* FoundationKit */;
+			targetProxy = C5AAAA6C13C99FA600E44CE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
