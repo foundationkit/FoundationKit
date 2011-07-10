@@ -9,7 +9,7 @@
 // Localization
 #define _(x) NSLocalizedString(x, nil)
 
-#define NKAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+#define NKAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
 
 //	The following macro is for specifying property (ivar) names to KVC or KVO methods.
 //	These methods generally take strings, but strings don't get checked for typos
