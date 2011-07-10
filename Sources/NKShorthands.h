@@ -37,8 +37,8 @@ NS_INLINE NSString* NKAppVersion() {
 NS_INLINE char * NKFcc(code) { return (char[5]){(code >> 24) & 0xFF, (code >> 16) & 0xFF, (code >> 8) & 0xFF, code & 0xFF, 0}; }
 
 // Foundation functions for CF
-NS_INLINE CFIndex CFMaxRange(CFRange range) { return (range.location + range.length); }
-NS_INLINE Boolean CFLocationInRange(CFIndex location, CFRange range) { return (location >= range.location ? (location <= CFMaxRange(range) ? YES : NO) : NO); }
+NS_INLINE CFIndex NKMaxRange(CFRange range) { return (range.location + range.length); }
+NS_INLINE Boolean NKLocationInRange(CFIndex location, CFRange range) { return (location >= range.location ? (location <= NKMaxRange(range) ? YES : NO) : NO); }
 
 
 NS_INLINE BOOL NKIsEmpty(id object) {
