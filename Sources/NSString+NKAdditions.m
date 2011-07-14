@@ -26,4 +26,20 @@
   return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
+- (NSString *)URLEncodedString {
+  return CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                                   (__bridge CFStringRef)self,
+                                                                   NULL,
+                                                                   CFSTR("?=&+"),
+                                                                   kCFStringEncodingUTF8));
+}
+
+- (NSString *)URLEncodedStringEscapingAllCharacters {
+  return CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                                   (__bridge CFStringRef)self,
+                                                                   NULL,
+                                                                   CFSTR(":/=,!$&'()*+;[]@#?"),
+                                                                   kCFStringEncodingUTF8));
+}
+
 @end
