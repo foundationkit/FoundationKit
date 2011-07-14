@@ -21,12 +21,12 @@
 @synthesize didFailSelector = didFailSelector_;
 
 + (id)fetcherWithRequest:(NKOAuthMutableURLRequest *)request delegate:(id)dlg didFinishSelector:(SEL)finSlc didFailSelector:(SEL)failSlc {
-	NKOAuthDataFetcher *fetcher = [NKOAuthDataFetcher new];
-	fetcher.request = request;
-	fetcher.delegate = dlg;
-	fetcher.didFinishSelector = finSlc;
-	fetcher.didFailSelector = failSlc;
-	return fetcher;
+  NKOAuthDataFetcher *fetcher = [NKOAuthDataFetcher new];
+  fetcher.request = request;
+  fetcher.delegate = dlg;
+  fetcher.didFinishSelector = finSlc;
+  fetcher.didFailSelector = failSlc;
+  return fetcher;
 }
 
 - (void)fetchDataWithRequest:(NKOAuthMutableURLRequest *)request delegate:(id)dlg didFinishSelector:(SEL)finSlc didFailSelector:(SEL)failSlc {
@@ -41,12 +41,12 @@
   [request_ prepare];
   
   self.connection = [NSURLConnection connectionWithRequest:request_ delegate:self];
-	if (connection_) {
-		self.responseData = [NSMutableData data];
-	} else {
-		NKOAuthServiceTicket *ticket = [[NKOAuthServiceTicket alloc] initWithRequest:request_ response:nil didSucceed:NO];
-		[delegate_ performSelector:didFailSelector_ withObject:ticket withObject:nil];
-	}
+  if (connection_) {
+    self.responseData = [NSMutableData data];
+  } else {
+    NKOAuthServiceTicket *ticket = [[NKOAuthServiceTicket alloc] initWithRequest:request_ response:nil didSucceed:NO];
+    [delegate_ performSelector:didFailSelector_ withObject:ticket withObject:nil];
+  }
 }
 
 - (void)dealloc {
@@ -57,19 +57,19 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	self.response = response;
+  self.response = response;
   [responseData_ setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	[responseData_ appendData:data];
+  [responseData_ appendData:data];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	BOOL success = [(NSHTTPURLResponse *)response_ statusCode] < 400;
-	NKOAuthServiceTicket *ticket = [[NKOAuthServiceTicket alloc] initWithRequest:request_ response:response_ didSucceed:success];
-	[delegate_ performSelector:didFinishSelector_ withObject:ticket withObject:responseData_];
-	
+  BOOL success = [(NSHTTPURLResponse *)response_ statusCode] < 400;
+  NKOAuthServiceTicket *ticket = [[NKOAuthServiceTicket alloc] initWithRequest:request_ response:response_ didSucceed:success];
+  [delegate_ performSelector:didFinishSelector_ withObject:ticket withObject:responseData_];
+  
   self.connection = nil;
   self.response = nil;
   self.responseData = nil;
@@ -77,9 +77,9 @@
 
 - (void)connection:(NSURLConnection *)theConnection didFailWithError:(NSError *)error {
   NKOAuthServiceTicket *ticket = [[NKOAuthServiceTicket alloc] initWithRequest:request_ response:response_ didSucceed:NO];
-	[delegate_ performSelector:didFailSelector_ withObject:ticket withObject:error];
-	
-	self.connection = nil;
+  [delegate_ performSelector:didFailSelector_ withObject:ticket withObject:error];
+  
+  self.connection = nil;
   self.response = nil;
   self.responseData = nil;
 }

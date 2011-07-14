@@ -147,7 +147,7 @@ static NSString *NSURLStringRemoveQuery(NSURL *url) {
   for (NSString *encodedPair in encodedParameterPairs) {
     NSArray *encodedPairElements = [encodedPair componentsSeparatedByString:@"="];
     NKOAuthRequestParameter *parameter = [NKOAuthRequestParameter requestParameterWithName:[[encodedPairElements objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
-                                                                           value:[[encodedPairElements objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                                                                                     value:[[encodedPairElements objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [requestParameters addObject:parameter];
   }
   

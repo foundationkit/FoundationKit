@@ -26,15 +26,15 @@
 }
 
 - (NSString *)URLEncodedName {
-    return [self.name URLEncodedStringEscapingAllCharacters];
+  return [self.name URLEncodedStringEscapingAllCharacters];
 }
 
 - (NSString *)URLEncodedValue {
-    return [self.value URLEncodedStringEscapingAllCharacters];
+  return [self.value URLEncodedStringEscapingAllCharacters];
 }
 
 - (NSString *)URLEncodedNameValuePair {
-    return [NSString stringWithFormat:@"%@=%@", [self URLEncodedName], [self URLEncodedValue]];
+  return [NSString stringWithFormat:@"%@=%@", [self URLEncodedName], [self URLEncodedValue]];
 }
 
 @end

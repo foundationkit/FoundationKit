@@ -6,15 +6,15 @@
 @synthesize secret = secret_;
 
 + (id)tokenWithKey:(NSString *)key secret:(NSString *)secret {
-	return [[NKOAuthToken alloc] initWithKey:key secret:secret];
+  return [[NKOAuthToken alloc] initWithKey:key secret:secret];
 }
 
 + (id)tokenWithUserDefaultsUsingServiceProviderName:(NSString *)provider prefix:(NSString *)prefix {
-	return [[NKOAuthToken alloc] initWithUserDefaultsUsingServiceProviderName:provider prefix:prefix];
+  return [[NKOAuthToken alloc] initWithUserDefaultsUsingServiceProviderName:provider prefix:prefix];
 }
 
 + (id)tokenWithHTTPResponseBody:(NSString *)body {
-	return [[NKOAuthToken alloc] initWithHTTPResponseBody:body];
+  return [[NKOAuthToken alloc] initWithHTTPResponseBody:body];
 }
 
 - (id)init {
@@ -23,16 +23,16 @@
 
 - (id)initWithCoder:(NSCoder *)coder {
   self = [super init];
-	if (self) {
-		[self setKey:[coder decodeObjectForKey:@"key"]];
-		[self setSecret:[coder decodeObjectForKey:@"secret"]];
-	}
-	return self;
+  if (self) {
+    [self setKey:[coder decodeObjectForKey:@"key"]];
+    [self setSecret:[coder decodeObjectForKey:@"secret"]];
+  }
+  return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder {
-	[coder encodeObject:self.key forKey:@"key"];
-	[coder encodeObject:self.secret forKey:@"secret"];
+  [coder encodeObject:self.key forKey:@"key"];
+  [coder encodeObject:self.secret forKey:@"secret"];
 }
 
 - (id)initWithKey:(NSString *)key secret:(NSString *)secret {
@@ -77,16 +77,16 @@
 }
 
 - (int)storeInUserDefaultsWithServiceProviderName:(NSString *)provider prefix:(NSString *)prefix {
-	[[NSUserDefaults standardUserDefaults] setObject:self.key forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_KEY", prefix, provider]];
-	[[NSUserDefaults standardUserDefaults] setObject:self.secret forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_SECRET", prefix, provider]];
-	[[NSUserDefaults standardUserDefaults] synchronize];
-	return(0);
+  [[NSUserDefaults standardUserDefaults] setObject:self.key forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_KEY", prefix, provider]];
+  [[NSUserDefaults standardUserDefaults] setObject:self.secret forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_SECRET", prefix, provider]];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+  return(0);
 }
 
 + (void)removeFromUserDefaultsWithServiceProviderName:(NSString *)provider prefix:(NSString *)prefix {
-	[[NSUserDefaults standardUserDefaults] setObject:nil forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_KEY", prefix, provider]];
-	[[NSUserDefaults standardUserDefaults] setObject:nil forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_SECRET", prefix, provider]];
-	[[NSUserDefaults standardUserDefaults] synchronize];
+  [[NSUserDefaults standardUserDefaults] setObject:nil forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_KEY", prefix, provider]];
+  [[NSUserDefaults standardUserDefaults] setObject:nil forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_SECRET", prefix, provider]];
+  [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

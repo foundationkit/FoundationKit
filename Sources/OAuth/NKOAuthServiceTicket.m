@@ -13,7 +13,7 @@
 @synthesize didSucceed = didSucceed_;
 
 + (id)ticketWithRequest:(NKOAuthMutableURLRequest *)request response:(NSURLResponse *)response didSucceed:(BOOL)success {
-	return [[NKOAuthServiceTicket alloc] initWithRequest:request response:response didSucceed:success];
+  return [[NKOAuthServiceTicket alloc] initWithRequest:request response:response didSucceed:success];
 }
 
 - (id)initWithRequest:(NKOAuthMutableURLRequest *)request response:(NSURLResponse *)response didSucceed:(BOOL)success {
@@ -25,7 +25,5 @@
   }
   return self;
 }
-
-
 
 @end

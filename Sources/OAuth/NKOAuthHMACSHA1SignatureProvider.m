@@ -7,7 +7,7 @@
 @implementation NKOAuthHMACSHA1SignatureProvider
 
 - (NSString *)name {
-    return @"HMAC-SHA1";
+  return @"HMAC-SHA1";
 }
 
 - (NSString *)signClearText:(NSString *)text withSecret:(NSString *)secret {
