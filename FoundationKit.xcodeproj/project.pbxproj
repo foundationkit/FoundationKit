@@ -15,12 +15,15 @@
 		C5AAAA6213C99A0A00E44CE7 /* NSString+NKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C5AAAA6013C99A0A00E44CE7 /* NSString+NKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5AAAA6313C99A0A00E44CE7 /* NSString+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA6113C99A0A00E44CE7 /* NSString+NKAdditions.m */; };
 		C5AAAA6413C99A0A00E44CE7 /* NSString+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA6113C99A0A00E44CE7 /* NSString+NKAdditions.m */; };
-		C5AAAA6813C99DC900E44CE7 /* NSStringAdditionsTests.h in Headers */ = {isa = PBXBuildFile; fileRef = C5AAAA6613C99DC900E44CE7 /* NSStringAdditionsTests.h */; };
 		C5AAAA6B13C99DD200E44CE7 /* NSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA6713C99DC900E44CE7 /* NSStringAdditionsTests.m */; };
 		C5AAAA6E13C99FAD00E44CE7 /* FoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EF02F513C980F600953F2B /* FoundationKit.framework */; };
 		C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */; };
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
 		C5C18EC213C8CE9800DD0872 /* NKLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */; };
+		C5DDC8BD13D0C9C400E32FD8 /* NSObject+NKBlockObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DDC8BC13D0C9C400E32FD8 /* NSObject+NKBlockObservation.m */; };
+		C5DDC8BF13D0CBA500E32FD8 /* NSObject+NKBlockObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DDC8BC13D0C9C400E32FD8 /* NSObject+NKBlockObservation.m */; };
+		C5DDC8C013D0CBC200E32FD8 /* NKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* NKMath.m */; };
+		C5DDC8C113D0CBE100E32FD8 /* NSObject+NKBlockObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5DDC8BB13D0C9C400E32FD8 /* NSObject+NKBlockObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */; };
 		C5E319F913C4E90B00D9CA76 /* NKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */; };
 		C5E31A0313C4EA7E00D9CA76 /* NSArray+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */; };
@@ -97,6 +100,8 @@
 		C5C18EBB13C8CCDF00DD0872 /* NKLogTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLogTests.h; sourceTree = "<group>"; };
 		C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLogTests.m; sourceTree = "<group>"; };
 		C5C18EBD13C8CCDF00DD0872 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		C5DDC8BB13D0C9C400E32FD8 /* NSObject+NKBlockObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NKBlockObservation.h"; sourceTree = "<group>"; };
+		C5DDC8BC13D0C9C400E32FD8 /* NSObject+NKBlockObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NKBlockObservation.m"; sourceTree = "<group>"; };
 		C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NKCrypto.h"; sourceTree = "<group>"; };
 		C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NKCrypto.m"; sourceTree = "<group>"; };
 		C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoundationKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -214,6 +219,8 @@
 				DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */,
 				399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */,
 				399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */,
+				C5DDC8BB13D0C9C400E32FD8 /* NSObject+NKBlockObservation.h */,
+				C5DDC8BC13D0C9C400E32FD8 /* NSObject+NKBlockObservation.m */,
 				DCF68FBC13C74ADB0057517A /* NSObject+NKSwizzle.h */,
 				DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */,
 				DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */,
@@ -307,7 +314,7 @@
 				C5EF034B13C9813E00953F2B /* NSValue+NKConcise.h in Headers */,
 				C5EF034C13C9813E00953F2B /* NSObject+NKAssociatedObjects.h in Headers */,
 				C5AAAA6213C99A0A00E44CE7 /* NSString+NKAdditions.h in Headers */,
-				C5AAAA6813C99DC900E44CE7 /* NSStringAdditionsTests.h in Headers */,
+				C5DDC8C113D0CBE100E32FD8 /* NSObject+NKBlockObservation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +457,8 @@
 				C5EF033913C9812400953F2B /* NSObject+NKAssociatedObjects.m in Sources */,
 				C5EF036A13C98C3200953F2B /* NKAudioRecorder.m in Sources */,
 				C5AAAA6413C99A0A00E44CE7 /* NSString+NKAdditions.m in Sources */,
+				C5DDC8BF13D0CBA500E32FD8 /* NSObject+NKBlockObservation.m in Sources */,
+				C5DDC8C013D0CBC200E32FD8 /* NKMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +478,7 @@
 				399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */,
 				39EA898C13C98C6C00B6427F /* NKMath.m in Sources */,
 				C5AAAA6313C99A0A00E44CE7 /* NSString+NKAdditions.m in Sources */,
+				C5DDC8BD13D0C9C400E32FD8 /* NSObject+NKBlockObservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

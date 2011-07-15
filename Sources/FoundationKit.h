@@ -21,4 +21,6 @@
 
 #import "NSData+NKCrypto.h"
 #import "NSError+NKAdditions.h"
+#import "NSObject+NKAssociatedObjects.h"
+#import "NSObject+NKBlockObservation.h"
 #import "NSString+NKAdditions.h"
