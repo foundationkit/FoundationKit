@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */; };
 		39EA898C13C98C6C00B6427F /* NKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* NKMath.m */; };
-		C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* NKLog.m */; };
 		C5AAAA7613C9A32A00E44CE7 /* NSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7313C9A31A00E44CE7 /* NSStringAdditionsTests.m */; };
 		C5AAAA7913C9A33F00E44CE7 /* NSString+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7813C9A33F00E44CE7 /* NSString+NKAdditions.m */; };
 		C5AAAA7A13C9A37A00E44CE7 /* libFoundationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */; };
@@ -24,6 +23,15 @@
 		C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */; };
 		C5EF038913C98ECE00953F2B /* NKSynthesizeSingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */; };
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
+		DC5A1FD513CF8A370023CCC0 /* NKOAuthConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5A1FC513CF8A370023CCC0 /* NKOAuthConsumer.m */; };
+		DC5A1FD613CF8A370023CCC0 /* NKOAuthDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5A1FC713CF8A370023CCC0 /* NKOAuthDataFetcher.m */; };
+		DC5A1FD713CF8A370023CCC0 /* NKOAuthHMACSHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5A1FC913CF8A370023CCC0 /* NKOAuthHMACSHA1SignatureProvider.m */; };
+		DC5A1FD813CF8A370023CCC0 /* NKOAuthMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5A1FCB13CF8A370023CCC0 /* NKOAuthMutableURLRequest.m */; };
+		DC5A1FD913CF8A370023CCC0 /* NKOAuthPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5A1FCD13CF8A370023CCC0 /* NKOAuthPlaintextSignatureProvider.m */; };
+		DC5A1FDA13CF8A370023CCC0 /* NKOAuthRequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5A1FCF13CF8A370023CCC0 /* NKOAuthRequestParameter.m */; };
+		DC5A1FDB13CF8A370023CCC0 /* NKOAuthServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5A1FD113CF8A370023CCC0 /* NKOAuthServiceTicket.m */; };
+		DC5A1FDC13CF8A370023CCC0 /* NKOAuthToken.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5A1FD413CF8A370023CCC0 /* NKOAuthToken.m */; };
+		DC5A1FE013CF93F00023CCC0 /* NSData+NKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5A1FDF13CF93F00023CCC0 /* NSData+NKBase64.m */; };
 		DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */; };
 		DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */; };
 /* End PBXBuildFile section */
@@ -82,6 +90,25 @@
 		DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+NKConcise.h"; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DC5A1FC413CF8A370023CCC0 /* NKOAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOAuthConsumer.h; sourceTree = "<group>"; };
+		DC5A1FC513CF8A370023CCC0 /* NKOAuthConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKOAuthConsumer.m; sourceTree = "<group>"; };
+		DC5A1FC613CF8A370023CCC0 /* NKOAuthDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOAuthDataFetcher.h; sourceTree = "<group>"; };
+		DC5A1FC713CF8A370023CCC0 /* NKOAuthDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKOAuthDataFetcher.m; sourceTree = "<group>"; };
+		DC5A1FC813CF8A370023CCC0 /* NKOAuthHMACSHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOAuthHMACSHA1SignatureProvider.h; sourceTree = "<group>"; };
+		DC5A1FC913CF8A370023CCC0 /* NKOAuthHMACSHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKOAuthHMACSHA1SignatureProvider.m; sourceTree = "<group>"; };
+		DC5A1FCA13CF8A370023CCC0 /* NKOAuthMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOAuthMutableURLRequest.h; sourceTree = "<group>"; };
+		DC5A1FCB13CF8A370023CCC0 /* NKOAuthMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKOAuthMutableURLRequest.m; sourceTree = "<group>"; };
+		DC5A1FCC13CF8A370023CCC0 /* NKOAuthPlaintextSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOAuthPlaintextSignatureProvider.h; sourceTree = "<group>"; };
+		DC5A1FCD13CF8A370023CCC0 /* NKOAuthPlaintextSignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKOAuthPlaintextSignatureProvider.m; sourceTree = "<group>"; };
+		DC5A1FCE13CF8A370023CCC0 /* NKOAuthRequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOAuthRequestParameter.h; sourceTree = "<group>"; };
+		DC5A1FCF13CF8A370023CCC0 /* NKOAuthRequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKOAuthRequestParameter.m; sourceTree = "<group>"; };
+		DC5A1FD013CF8A370023CCC0 /* NKOAuthServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOAuthServiceTicket.h; sourceTree = "<group>"; };
+		DC5A1FD113CF8A370023CCC0 /* NKOAuthServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKOAuthServiceTicket.m; sourceTree = "<group>"; };
+		DC5A1FD213CF8A370023CCC0 /* NKOAuthSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOAuthSignatureProvider.h; sourceTree = "<group>"; };
+		DC5A1FD313CF8A370023CCC0 /* NKOAuthToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOAuthToken.h; sourceTree = "<group>"; };
+		DC5A1FD413CF8A370023CCC0 /* NKOAuthToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKOAuthToken.m; sourceTree = "<group>"; };
+		DC5A1FDE13CF93F00023CCC0 /* NSData+NKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NKBase64.h"; sourceTree = "<group>"; };
+		DC5A1FDF13CF93F00023CCC0 /* NSData+NKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NKBase64.m"; sourceTree = "<group>"; };
 		DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+NKAdditions.h"; sourceTree = "<group>"; };
 		DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+NKAdditions.m"; sourceTree = "<group>"; };
 		DCF68FBC13C74ADB0057517A /* NSObject+NKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NKSwizzle.h"; sourceTree = "<group>"; };
@@ -128,6 +155,7 @@
 		C5E319C913C473BD00D9CA76 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DC5A1FC213CF8A220023CCC0 /* OAuth */,
 				C5E319F513C4E90B00D9CA76 /* Audio */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
 				C582BF8913C8B77C0012DF67 /* NKLog.h */,
@@ -137,6 +165,8 @@
 				C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */,
 				C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */,
 				DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */,
+				DC5A1FDE13CF93F00023CCC0 /* NSData+NKBase64.h */,
+				DC5A1FDF13CF93F00023CCC0 /* NSData+NKBase64.m */,
 				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
 				C5E319FC13C4EA7C00D9CA76 /* NSDictionary+NKBlocks.h */,
@@ -211,6 +241,30 @@
 				C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC5A1FC213CF8A220023CCC0 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				DC5A1FC413CF8A370023CCC0 /* NKOAuthConsumer.h */,
+				DC5A1FC513CF8A370023CCC0 /* NKOAuthConsumer.m */,
+				DC5A1FC613CF8A370023CCC0 /* NKOAuthDataFetcher.h */,
+				DC5A1FC713CF8A370023CCC0 /* NKOAuthDataFetcher.m */,
+				DC5A1FC813CF8A370023CCC0 /* NKOAuthHMACSHA1SignatureProvider.h */,
+				DC5A1FC913CF8A370023CCC0 /* NKOAuthHMACSHA1SignatureProvider.m */,
+				DC5A1FCA13CF8A370023CCC0 /* NKOAuthMutableURLRequest.h */,
+				DC5A1FCB13CF8A370023CCC0 /* NKOAuthMutableURLRequest.m */,
+				DC5A1FCC13CF8A370023CCC0 /* NKOAuthPlaintextSignatureProvider.h */,
+				DC5A1FCD13CF8A370023CCC0 /* NKOAuthPlaintextSignatureProvider.m */,
+				DC5A1FCE13CF8A370023CCC0 /* NKOAuthRequestParameter.h */,
+				DC5A1FCF13CF8A370023CCC0 /* NKOAuthRequestParameter.m */,
+				DC5A1FD013CF8A370023CCC0 /* NKOAuthServiceTicket.h */,
+				DC5A1FD113CF8A370023CCC0 /* NKOAuthServiceTicket.m */,
+				DC5A1FD213CF8A370023CCC0 /* NKOAuthSignatureProvider.h */,
+				DC5A1FD313CF8A370023CCC0 /* NKOAuthToken.h */,
+				DC5A1FD413CF8A370023CCC0 /* NKOAuthToken.m */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,10 +377,18 @@
 				C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.m in Sources */,
 				C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.m in Sources */,
 				DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */,
-				C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */,
 				399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */,
 				39EA898C13C98C6C00B6427F /* NKMath.m in Sources */,
 				C5AAAA7913C9A33F00E44CE7 /* NSString+NKAdditions.m in Sources */,
+				DC5A1FD513CF8A370023CCC0 /* NKOAuthConsumer.m in Sources */,
+				DC5A1FD613CF8A370023CCC0 /* NKOAuthDataFetcher.m in Sources */,
+				DC5A1FD713CF8A370023CCC0 /* NKOAuthHMACSHA1SignatureProvider.m in Sources */,
+				DC5A1FD813CF8A370023CCC0 /* NKOAuthMutableURLRequest.m in Sources */,
+				DC5A1FD913CF8A370023CCC0 /* NKOAuthPlaintextSignatureProvider.m in Sources */,
+				DC5A1FDA13CF8A370023CCC0 /* NKOAuthRequestParameter.m in Sources */,
+				DC5A1FDB13CF8A370023CCC0 /* NKOAuthServiceTicket.m in Sources */,
+				DC5A1FDC13CF8A370023CCC0 /* NKOAuthToken.m in Sources */,
+				DC5A1FE013CF93F00023CCC0 /* NSData+NKBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

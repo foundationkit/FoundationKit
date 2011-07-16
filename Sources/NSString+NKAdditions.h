@@ -9,4 +9,7 @@
 - (NSRange)stringRange;
 - (NSString *)trimmed;
 
+- (NSString *)URLEncodedString;
+- (NSString *)URLEncodedStringEscapingAllCharacters;
+
 @end
