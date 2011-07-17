@@ -44,6 +44,7 @@
 		399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKSynthesizeSingleton.h; sourceTree = "<group>"; };
 		39EA898A13C98C6C00B6427F /* NKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKMath.h; sourceTree = "<group>"; };
 		39EA898B13C98C6C00B6427F /* NKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKMath.m; sourceTree = "<group>"; };
+		78AC24FA13D3858E00820A31 /* FKCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCompatibility.h; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* NKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* NKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLog.m; sourceTree = "<group>"; };
 		C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditionsTests.h; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 				C5AAAA7813C9A33F00E44CE7 /* NSString+NKAdditions.m */,
 				DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */,
 				DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */,
+				78AC24FA13D3858E00820A31 /* FKCompatibility.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";

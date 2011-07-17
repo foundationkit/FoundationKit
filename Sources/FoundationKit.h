@@ -23,3 +23,6 @@
 #import "NSData+NKCrypto.h"
 #import "NSError+NKAdditions.h"
 #import "NSString+NKAdditions.h"
+
+// Macro helpers
+#import "FKCompatibility.h"
