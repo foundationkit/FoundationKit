@@ -11,7 +11,7 @@
 		39EA898C13C98C6C00B6427F /* NKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* NKMath.m */; };
 		C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* NKLog.m */; };
 		C5AAAA7613C9A32A00E44CE7 /* NSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7313C9A31A00E44CE7 /* NSStringAdditionsTests.m */; };
-		C5AAAA7913C9A33F00E44CE7 /* NSString+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7813C9A33F00E44CE7 /* NSString+NKAdditions.m */; };
+		C5AAAA7913C9A33F00E44CE7 /* NSString+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */; };
 		C5AAAA7A13C9A37A00E44CE7 /* libFoundationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */; };
 		C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */; };
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
@@ -49,8 +49,8 @@
 		C582BF8A13C8B77C0012DF67 /* NKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLog.m; sourceTree = "<group>"; };
 		C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditionsTests.h; sourceTree = "<group>"; };
 		C5AAAA7313C9A31A00E44CE7 /* NSStringAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringAdditionsTests.m; path = Tests/NSStringAdditionsTests.m; sourceTree = SOURCE_ROOT; };
-		C5AAAA7713C9A33F00E44CE7 /* NSString+NKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NKAdditions.h"; sourceTree = "<group>"; };
-		C5AAAA7813C9A33F00E44CE7 /* NSString+NKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NKAdditions.m"; sourceTree = "<group>"; };
+		C5AAAA7713C9A33F00E44CE7 /* NSString+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSString+FKAdditions.h"; sourceTree = "<group>"; };
+		C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FKAdditions.m"; sourceTree = "<group>"; };
 		C5C18E7A13C8C64C00DD0872 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C5C18E8D13C8C64C00DD0872 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 				DCF68FBC13C74ADB0057517A /* NSObject+NKSwizzle.h */,
 				DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */,
 				DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */,
-				C5AAAA7713C9A33F00E44CE7 /* NSString+NKAdditions.h */,
-				C5AAAA7813C9A33F00E44CE7 /* NSString+NKAdditions.m */,
+				C5AAAA7713C9A33F00E44CE7 /* NSString+FKAdditions.h */,
+				C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */,
 				DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */,
 				DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */,
 				78AC24FA13D3858E00820A31 /* FKCompatibility.h */,
@@ -258,6 +258,9 @@
 /* Begin PBXProject section */
 		DC410CF613C39BFD00C90C19 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = FoundationKit;
+			};
 			buildConfigurationList = DC410CF913C39BFD00C90C19 /* Build configuration list for PBXProject "FoundationKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -328,7 +331,7 @@
 				C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */,
 				399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */,
 				39EA898C13C98C6C00B6427F /* NKMath.m in Sources */,
-				C5AAAA7913C9A33F00E44CE7 /* NSString+NKAdditions.m in Sources */,
+				C5AAAA7913C9A33F00E44CE7 /* NSString+FKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

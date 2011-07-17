@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface NSString (NKAdditions)
+@interface NSString (FKAdditions)
 
 // see https://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/object/blank.rb
 - (BOOL)isBlank;
@@ -8,5 +8,6 @@
 - (NSString *)presence;
 - (NSRange)stringRange;
 - (NSString *)trimmed;
-
+- (NSString *)URLEncodedString;
+- (NSString *)URLDecodedString;
 @end
