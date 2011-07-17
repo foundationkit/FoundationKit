@@ -3,10 +3,10 @@
 // Originally created by Andy Matuschek in public domain, because he loves us:
 // https://github.com/andymatuschak/NSObject-AssociatedObjects
 
-#import "NSObject+NKAssociatedObjects.h"
+#import "NSObject+FKAssociatedObjects.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (NKAssociatedObjects)
+@implementation NSObject (FKAssociatedObjects)
 
 - (void)associateValue:(id)value withKey:(void *)key {
 	objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_RETAIN);

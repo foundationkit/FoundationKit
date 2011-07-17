@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */; };
-		39EA898C13C98C6C00B6427F /* NKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* NKMath.m */; };
-		C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* NKLog.m */; };
+		399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */; };
+		39EA898C13C98C6C00B6427F /* FKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* FKMath.m */; };
+		C582BF8C13C8B77C0012DF67 /* FKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* FKLog.m */; };
 		C5AAAA7613C9A32A00E44CE7 /* NSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7313C9A31A00E44CE7 /* NSStringAdditionsTests.m */; };
 		C5AAAA7913C9A33F00E44CE7 /* NSString+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */; };
 		C5AAAA7A13C9A37A00E44CE7 /* libFoundationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */; };
 		C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */; };
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
-		C5C18EC213C8CE9800DD0872 /* NKLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */; };
-		C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */; };
-		C5E319F913C4E90B00D9CA76 /* NKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */; };
-		C5E31A0313C4EA7E00D9CA76 /* NSArray+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */; };
-		C5E31A0513C4EA7E00D9CA76 /* NSDictionary+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FD13C4EA7D00D9CA76 /* NSDictionary+NKBlocks.m */; };
-		C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */; };
-		C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */; };
+		C5C18EC213C8CE9800DD0872 /* FKLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C18EBC13C8CCDF00DD0872 /* FKLogTests.m */; };
+		C5E319D413C4744800D9CA76 /* NSData+FKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */; };
+		C5E319F913C4E90B00D9CA76 /* FKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319F713C4E90B00D9CA76 /* FKAudioRecorder.m */; };
+		C5E31A0313C4EA7E00D9CA76 /* NSArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FB13C4EA7C00D9CA76 /* NSArray+FKBlocks.m */; };
+		C5E31A0513C4EA7E00D9CA76 /* NSDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FD13C4EA7D00D9CA76 /* NSDictionary+FKBlocks.m */; };
+		C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.m */; };
+		C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+FKBlocks.m */; };
 		C5EF038913C98ECE00953F2B /* NKSynthesizeSingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */; };
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
-		DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */; };
-		DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */; };
+		DCB0127213C4AE9400AB692F /* NSError+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */; };
+		DCF68FBF13C74ADB0057517A /* NSObject+FKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,54 +39,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NKAssociatedObjects.h"; sourceTree = "<group>"; };
-		399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NKAssociatedObjects.m"; sourceTree = "<group>"; };
-		399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKSynthesizeSingleton.h; sourceTree = "<group>"; };
-		39EA898A13C98C6C00B6427F /* NKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKMath.h; sourceTree = "<group>"; };
-		39EA898B13C98C6C00B6427F /* NKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKMath.m; sourceTree = "<group>"; };
+		399F4CD213C905C70008CC0E /* NSObject+FKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKAssociatedObjects.h"; sourceTree = "<group>"; };
+		399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKAssociatedObjects.m"; sourceTree = "<group>"; };
+		399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSynthesizeSingleton.h; sourceTree = "<group>"; };
+		39EA898A13C98C6C00B6427F /* FKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMath.h; sourceTree = "<group>"; };
+		39EA898B13C98C6C00B6427F /* FKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMath.m; sourceTree = "<group>"; };
 		78AC24FA13D3858E00820A31 /* FKCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCompatibility.h; sourceTree = "<group>"; };
-		C582BF8913C8B77C0012DF67 /* NKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLog.h; sourceTree = "<group>"; };
-		C582BF8A13C8B77C0012DF67 /* NKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLog.m; sourceTree = "<group>"; };
+		78AC24FC13D38A8F00820A31 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		C582BF8913C8B77C0012DF67 /* FKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLog.h; sourceTree = "<group>"; };
+		C582BF8A13C8B77C0012DF67 /* FKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLog.m; sourceTree = "<group>"; };
 		C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditionsTests.h; sourceTree = "<group>"; };
 		C5AAAA7313C9A31A00E44CE7 /* NSStringAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringAdditionsTests.m; path = Tests/NSStringAdditionsTests.m; sourceTree = SOURCE_ROOT; };
-		C5AAAA7713C9A33F00E44CE7 /* NSString+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSString+FKAdditions.h"; sourceTree = "<group>"; };
+		C5AAAA7713C9A33F00E44CE7 /* NSString+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FKAdditions.h"; sourceTree = "<group>"; };
 		C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FKAdditions.m"; sourceTree = "<group>"; };
 		C5C18E7A13C8C64C00DD0872 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C5C18E8D13C8C64C00DD0872 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		C5C18EBB13C8CCDF00DD0872 /* NKLogTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKLogTests.h; sourceTree = "<group>"; };
-		C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKLogTests.m; sourceTree = "<group>"; };
+		C5C18EBB13C8CCDF00DD0872 /* FKLogTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLogTests.h; sourceTree = "<group>"; };
+		C5C18EBC13C8CCDF00DD0872 /* FKLogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLogTests.m; sourceTree = "<group>"; };
 		C5C18EBD13C8CCDF00DD0872 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NKCrypto.h"; sourceTree = "<group>"; };
-		C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NKCrypto.m"; sourceTree = "<group>"; };
+		C5E319D113C4744800D9CA76 /* NSData+FKCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+FKCrypto.h"; sourceTree = "<group>"; };
+		C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+FKCrypto.m"; sourceTree = "<group>"; };
 		C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoundationKit-Prefix.pch"; sourceTree = "<group>"; };
 		C5E319D713C474FE00D9CA76 /* FoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = FoundationKit.h; sourceTree = "<group>"; tabWidth = 2; };
-		C5E319F613C4E90B00D9CA76 /* NKAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKAudioRecorder.h; sourceTree = "<group>"; };
-		C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKAudioRecorder.m; sourceTree = "<group>"; };
-		C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NKBlocks.h"; sourceTree = "<group>"; };
-		C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NKBlocks.m"; sourceTree = "<group>"; };
-		C5E319FC13C4EA7C00D9CA76 /* NSDictionary+NKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NKBlocks.h"; sourceTree = "<group>"; };
-		C5E319FD13C4EA7D00D9CA76 /* NSDictionary+NKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NKBlocks.m"; sourceTree = "<group>"; };
-		C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+NKBlocks.h"; sourceTree = "<group>"; };
-		C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+NKBlocks.m"; sourceTree = "<group>"; };
-		C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NKBlocks.h"; sourceTree = "<group>"; };
-		C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NKBlocks.m"; sourceTree = "<group>"; };
-		C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKShorthands.h; sourceTree = "<group>"; };
-		C5EF038513C98EC100953F2B /* NKSynthesizeSingletonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKSynthesizeSingletonTests.h; sourceTree = "<group>"; };
+		C5E319F613C4E90B00D9CA76 /* FKAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKAudioRecorder.h; sourceTree = "<group>"; };
+		C5E319F713C4E90B00D9CA76 /* FKAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKAudioRecorder.m; sourceTree = "<group>"; };
+		C5E319FA13C4EA7C00D9CA76 /* NSArray+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FKBlocks.h"; sourceTree = "<group>"; };
+		C5E319FB13C4EA7C00D9CA76 /* NSArray+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FKBlocks.m"; sourceTree = "<group>"; };
+		C5E319FC13C4EA7C00D9CA76 /* NSDictionary+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FKBlocks.h"; sourceTree = "<group>"; };
+		C5E319FD13C4EA7D00D9CA76 /* NSDictionary+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FKBlocks.m"; sourceTree = "<group>"; };
+		C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+FKBlocks.h"; sourceTree = "<group>"; };
+		C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+FKBlocks.m"; sourceTree = "<group>"; };
+		C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+FKBlocks.h"; sourceTree = "<group>"; };
+		C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+FKBlocks.m"; sourceTree = "<group>"; };
+		C5E31A0A13C4EC8700D9CA76 /* FKShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKShorthands.h; sourceTree = "<group>"; };
+		C5EF038513C98EC100953F2B /* FKSynthesizeSingletonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSynthesizeSingletonTests.h; sourceTree = "<group>"; };
 		C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKSynthesizeSingletonTests.m; sourceTree = "<group>"; };
-		DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42C13C4849400E5BEBC /* NSNull+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NKConcise.h"; sourceTree = "<group>"; };
-		DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+NKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42313C483BC00E5BEBC /* NSArray+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42613C4845D00E5BEBC /* NSNumber+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+FKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42813C4847200E5BEBC /* NSDictionary+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42A13C4848200E5BEBC /* NSValue+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+FKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42C13C4849400E5BEBC /* NSNull+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+FKConcise.h"; sourceTree = "<group>"; };
+		DC1CF42E13C484A400E5BEBC /* NSString+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FKConcise.h"; sourceTree = "<group>"; };
+		DC1CF43013C484B800E5BEBC /* NSSet+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+FKConcise.h"; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+NKAdditions.h"; sourceTree = "<group>"; };
-		DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+NKAdditions.m"; sourceTree = "<group>"; };
-		DCF68FBC13C74ADB0057517A /* NSObject+NKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NKSwizzle.h"; sourceTree = "<group>"; };
-		DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NKSwizzle.m"; sourceTree = "<group>"; };
+		DCB0126F13C4AE9400AB692F /* NSError+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+FKAdditions.h"; sourceTree = "<group>"; };
+		DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+FKAdditions.m"; sourceTree = "<group>"; };
+		DCF68FBC13C74ADB0057517A /* NSObject+FKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKSwizzle.h"; sourceTree = "<group>"; };
+		DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKSwizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +115,11 @@
 		C5C18E8313C8C64C00DD0872 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C5C18EBB13C8CCDF00DD0872 /* NKLogTests.h */,
-				C5C18EBC13C8CCDF00DD0872 /* NKLogTests.m */,
+				C5C18EBB13C8CCDF00DD0872 /* FKLogTests.h */,
+				C5C18EBC13C8CCDF00DD0872 /* FKLogTests.m */,
 				C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */,
 				C5AAAA7313C9A31A00E44CE7 /* NSStringAdditionsTests.m */,
-				C5EF038513C98EC100953F2B /* NKSynthesizeSingletonTests.h */,
+				C5EF038513C98EC100953F2B /* FKSynthesizeSingletonTests.h */,
 				C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */,
 				C5C18EBD13C8CCDF00DD0872 /* Tests-Info.plist */,
 				C5C18E8D13C8C64C00DD0872 /* Tests-Prefix.pch */,
@@ -131,37 +132,37 @@
 			children = (
 				C5E319F513C4E90B00D9CA76 /* Audio */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
-				C582BF8913C8B77C0012DF67 /* NKLog.h */,
-				C582BF8A13C8B77C0012DF67 /* NKLog.m */,
-				C5E31A0A13C4EC8700D9CA76 /* NKShorthands.h */,
-				399F4CD913C90B210008CC0E /* NKSynthesizeSingleton.h */,
-				C5E319FA13C4EA7C00D9CA76 /* NSArray+NKBlocks.h */,
-				C5E319FB13C4EA7C00D9CA76 /* NSArray+NKBlocks.m */,
-				DC1CF42313C483BC00E5BEBC /* NSArray+NKConcise.h */,
-				C5E319D113C4744800D9CA76 /* NSData+NKCrypto.h */,
-				C5E319D213C4744800D9CA76 /* NSData+NKCrypto.m */,
-				C5E319FC13C4EA7C00D9CA76 /* NSDictionary+NKBlocks.h */,
-				C5E319FD13C4EA7D00D9CA76 /* NSDictionary+NKBlocks.m */,
-				DC1CF42813C4847200E5BEBC /* NSDictionary+NKConcise.h */,
-				DCB0126F13C4AE9400AB692F /* NSError+NKAdditions.h */,
-				DCB0127013C4AE9400AB692F /* NSError+NKAdditions.m */,
-				39EA898A13C98C6C00B6427F /* NKMath.h */,
-				39EA898B13C98C6C00B6427F /* NKMath.m */,
-				C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.h */,
-				C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+NKBlocks.m */,
-				C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.h */,
-				C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+NKBlocks.m */,
-				DC1CF42C13C4849400E5BEBC /* NSNull+NKConcise.h */,
-				DC1CF42613C4845D00E5BEBC /* NSNumber+NKConcise.h */,
-				399F4CD213C905C70008CC0E /* NSObject+NKAssociatedObjects.h */,
-				399F4CD313C905C70008CC0E /* NSObject+NKAssociatedObjects.m */,
-				DCF68FBC13C74ADB0057517A /* NSObject+NKSwizzle.h */,
-				DCF68FBD13C74ADB0057517A /* NSObject+NKSwizzle.m */,
-				DC1CF43013C484B800E5BEBC /* NSSet+NKConcise.h */,
+				C582BF8913C8B77C0012DF67 /* FKLog.h */,
+				C582BF8A13C8B77C0012DF67 /* FKLog.m */,
+				C5E31A0A13C4EC8700D9CA76 /* FKShorthands.h */,
+				399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */,
+				C5E319FA13C4EA7C00D9CA76 /* NSArray+FKBlocks.h */,
+				C5E319FB13C4EA7C00D9CA76 /* NSArray+FKBlocks.m */,
+				DC1CF42313C483BC00E5BEBC /* NSArray+FKConcise.h */,
+				C5E319D113C4744800D9CA76 /* NSData+FKCrypto.h */,
+				C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */,
+				C5E319FC13C4EA7C00D9CA76 /* NSDictionary+FKBlocks.h */,
+				C5E319FD13C4EA7D00D9CA76 /* NSDictionary+FKBlocks.m */,
+				DC1CF42813C4847200E5BEBC /* NSDictionary+FKConcise.h */,
+				DCB0126F13C4AE9400AB692F /* NSError+FKAdditions.h */,
+				DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */,
+				39EA898A13C98C6C00B6427F /* FKMath.h */,
+				39EA898B13C98C6C00B6427F /* FKMath.m */,
+				C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.h */,
+				C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.m */,
+				C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+FKBlocks.h */,
+				C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+FKBlocks.m */,
+				DC1CF42C13C4849400E5BEBC /* NSNull+FKConcise.h */,
+				DC1CF42613C4845D00E5BEBC /* NSNumber+FKConcise.h */,
+				399F4CD213C905C70008CC0E /* NSObject+FKAssociatedObjects.h */,
+				399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */,
+				DCF68FBC13C74ADB0057517A /* NSObject+FKSwizzle.h */,
+				DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */,
+				DC1CF43013C484B800E5BEBC /* NSSet+FKConcise.h */,
 				C5AAAA7713C9A33F00E44CE7 /* NSString+FKAdditions.h */,
 				C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */,
-				DC1CF42E13C484A400E5BEBC /* NSString+NKConcise.h */,
-				DC1CF42A13C4848200E5BEBC /* NSValue+NKConcise.h */,
+				DC1CF42E13C484A400E5BEBC /* NSString+FKConcise.h */,
+				DC1CF42A13C4848200E5BEBC /* NSValue+FKConcise.h */,
 				78AC24FA13D3858E00820A31 /* FKCompatibility.h */,
 			);
 			path = Sources;
@@ -170,6 +171,7 @@
 		C5E319CE13C473E800D9CA76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				78AC24FC13D38A8F00820A31 /* README.md */,
 				C5E319D513C474E800D9CA76 /* FoundationKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -178,8 +180,8 @@
 		C5E319F513C4E90B00D9CA76 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				C5E319F613C4E90B00D9CA76 /* NKAudioRecorder.h */,
-				C5E319F713C4E90B00D9CA76 /* NKAudioRecorder.m */,
+				C5E319F613C4E90B00D9CA76 /* FKAudioRecorder.h */,
+				C5E319F713C4E90B00D9CA76 /* FKAudioRecorder.m */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -310,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C18EC213C8CE9800DD0872 /* NKLogTests.m in Sources */,
+				C5C18EC213C8CE9800DD0872 /* FKLogTests.m in Sources */,
 				C5EF038913C98ECE00953F2B /* NKSynthesizeSingletonTests.m in Sources */,
 				C5AAAA7613C9A32A00E44CE7 /* NSStringAdditionsTests.m in Sources */,
 			);
@@ -320,17 +322,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5E319D413C4744800D9CA76 /* NSData+NKCrypto.m in Sources */,
-				DCB0127213C4AE9400AB692F /* NSError+NKAdditions.m in Sources */,
-				C5E319F913C4E90B00D9CA76 /* NKAudioRecorder.m in Sources */,
-				C5E31A0313C4EA7E00D9CA76 /* NSArray+NKBlocks.m in Sources */,
-				C5E31A0513C4EA7E00D9CA76 /* NSDictionary+NKBlocks.m in Sources */,
-				C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+NKBlocks.m in Sources */,
-				C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+NKBlocks.m in Sources */,
-				DCF68FBF13C74ADB0057517A /* NSObject+NKSwizzle.m in Sources */,
-				C582BF8C13C8B77C0012DF67 /* NKLog.m in Sources */,
-				399F4CD413C905C70008CC0E /* NSObject+NKAssociatedObjects.m in Sources */,
-				39EA898C13C98C6C00B6427F /* NKMath.m in Sources */,
+				C5E319D413C4744800D9CA76 /* NSData+FKCrypto.m in Sources */,
+				DCB0127213C4AE9400AB692F /* NSError+FKAdditions.m in Sources */,
+				C5E319F913C4E90B00D9CA76 /* FKAudioRecorder.m in Sources */,
+				C5E31A0313C4EA7E00D9CA76 /* NSArray+FKBlocks.m in Sources */,
+				C5E31A0513C4EA7E00D9CA76 /* NSDictionary+FKBlocks.m in Sources */,
+				C5E31A0713C4EA7E00D9CA76 /* NSMutableArray+FKBlocks.m in Sources */,
+				C5E31A0913C4EA7E00D9CA76 /* NSMutableDictionary+FKBlocks.m in Sources */,
+				DCF68FBF13C74ADB0057517A /* NSObject+FKSwizzle.m in Sources */,
+				C582BF8C13C8B77C0012DF67 /* FKLog.m in Sources */,
+				399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */,
+				39EA898C13C98C6C00B6427F /* FKMath.m in Sources */,
 				C5AAAA7913C9A33F00E44CE7 /* NSString+FKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

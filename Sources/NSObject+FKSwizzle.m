@@ -1,9 +1,8 @@
-#import "NSObject+NKSwizzle.h"
-
+#import "NSObject+FKSwizzle.h"
 #import <objc/objc-class.h>
 
 
-@implementation NSObject (NKSwizzle)
+@implementation NSObject (FKSwizzle)
 
 static void NSObjectNKSwizzleSetError(NSError **error, NSInteger code, NSString *format, ...) {
   if (error) {

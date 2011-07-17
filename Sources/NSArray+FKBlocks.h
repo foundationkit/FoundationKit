@@ -1,7 +1,7 @@
 // Part of FoundationKit http://foundationk.it
 
 
-@interface NSArray (NKBlocks)
+@interface NSArray (FKBlocks)
 
 - (BOOL)all:(BOOL (^)(id object))block;
 - (BOOL)any:(BOOL (^)(id object))block;

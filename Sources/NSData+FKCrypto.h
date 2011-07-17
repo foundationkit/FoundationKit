@@ -8,14 +8,14 @@
 #import <CommonCrypto/CommonHMAC.h>
 
 
-extern NSString * const kNKCryptoErrorDomain;
+extern NSString * const kFKCryptoErrorDomain;
 
-@interface NSError (NKCrypto)
+@interface NSError (FKCrypto)
 + (NSError *)errorWithCCCryptorStatus:(CCCryptorStatus)status;
 @end
 
 
-@interface NSData (NKDigest)
+@interface NSData (FKDigest)
 
 - (NSData *)MD2Sum;
 - (NSData *)MD4Sum;
@@ -28,7 +28,7 @@ extern NSString * const kNKCryptoErrorDomain;
 
 @end
 
-@interface NSData (NKCryptor)
+@interface NSData (FKCryptor)
 
 - (NSData *)AES256EncryptedDataUsingKey:(id)key error:(NSError **)error;
 - (NSData *)decryptedAES256DataUsingKey:(id)key error:(NSError **)error;
@@ -39,7 +39,7 @@ extern NSString * const kNKCryptoErrorDomain;
 
 @end
 
-@interface NSData (NKLowLevelCryptor)
+@interface NSData (FKLowLevelCryptor)
 
 // Keys and initialization vectors: NSData or NSString
 - (NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm key:(id)key error:(CCCryptorStatus *)error;
@@ -51,7 +51,7 @@ extern NSString * const kNKCryptoErrorDomain;
 
 @end
 
-@interface NSData (NKHMAC)
+@interface NSData (FKHMAC)
 
 - (NSData *)HMACWithAlgorithm:(CCHmacAlgorithm)algorithm;
 - (NSData *)HMACWithAlgorithm:(CCHmacAlgorithm)algorithm key:(id)key;

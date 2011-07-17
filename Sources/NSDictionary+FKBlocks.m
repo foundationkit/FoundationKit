@@ -1,7 +1,7 @@
-#import "NSDictionary+NKBlocks.h"
+#import "NSDictionary+FKBlocks.h"
 
 
-@implementation NSDictionary (NKBlocks)
+@implementation NSDictionary (FKBlocks)
 
 - (BOOL)all:(BOOL (^)(id object))block {
   for (id obj in self) {

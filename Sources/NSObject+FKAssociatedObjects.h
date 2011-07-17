@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (NKAssociatedObjects)
+@interface NSObject (FKAssociatedObjects)
 
 - (void)associateValue:(id)value withKey:(void *)key;
 - (void)weaklyAssociateValue:(id)value withKey:(void *)key;

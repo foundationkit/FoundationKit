@@ -1,8 +1,8 @@
-#import "NSMutableDictionary+NKBlocks.h"
-#import "NSDictionary+NKBlocks.h"
+#import "NSMutableDictionary+FKBlocks.h"
+#import "NSDictionary+FKBlocks.h"
 
 
-@implementation NSMutableDictionary (NKBlocks)
+@implementation NSMutableDictionary (FKBlocks)
 
 - (void)selectOnSelf:(BOOL (^)(id, id))block {
   NSMutableArray *keysToRemove = [NSMutableArray array];

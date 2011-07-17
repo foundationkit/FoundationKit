@@ -1,9 +1,9 @@
 // Part of FoundationKit http://foundationk.it
 
 
-@interface NSMutableDictionary (NKBlocks)
+@interface NSMutableArray (FKBlocks)
 
-- (void)selectOnSelf:(BOOL (^)(id, id))block;
+- (void)selectOnSelf:(BOOL (^)(id))block;
 - (void)mapOnSelf:(id (^)(id))block;
 
 @end

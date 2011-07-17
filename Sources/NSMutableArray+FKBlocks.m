@@ -1,8 +1,8 @@
-#import "NSMutableArray+NKBlocks.h"
-#import "NSArray+NKBlocks.h"
+#import "NSMutableArray+FKBlocks.h"
+#import "NSArray+FKBlocks.h"
 
 
-@implementation NSMutableArray (NKBlocks)
+@implementation NSMutableArray (FKBlocks)
 
 - (void)selectOnSelf:(BOOL (^)(id))block {
   NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet];

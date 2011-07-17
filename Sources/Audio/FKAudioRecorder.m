@@ -1,7 +1,7 @@
-#import "NKAudioRecorder.h"
+#import "FKAudioRecorder.h"
 
 
-@interface NKAudioRecorder ()
+@interface FKAudioRecorder ()
 
 - (OSStatus)configureAU;
 - (OSStatus)configureOutputFile;
@@ -15,7 +15,7 @@ static OSStatus AudioRecorderAURenderCallback(void *refcon, AudioUnitRenderActio
 @end
 
 
-@implementation NKAudioRecorder
+@implementation FKAudioRecorder
 
 - (id)initWithOutputFile:(NSString *)path format:(AudioStreamBasicDescription)format {
   if ((self = [super init])) {
@@ -292,7 +292,7 @@ static OSStatus AudioRecorderPrintErrorAndReturn(OSStatus err, OSStatus status) 
     case kAROutputFileErrorCantCreateChannelMap: msg = "cannot create channel map"; break;
     case kAROutputFileErrorCantWriteAsync: msg = "cannot write output file async"; break;
   }
-  printf("error '%s': %s (%d)\n", NKFcc(err), msg, status);
+  printf("error '%s': %s (%d)\n", FKFcc(err), msg, status);
   return err;
 }
 
@@ -348,7 +348,7 @@ static AudioBufferList * AudioRecorderAllocateAudioBufferList(UInt32 numChannels
 
 static OSStatus AudioRecorderAURenderCallback(void *refcon, AudioUnitRenderActionFlags *ioActionFlags, const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber, UInt32 inNumberFrames, AudioBufferList *ioData) {
   OSStatus status;
-  NKAudioRecorder *context = (__bridge NKAudioRecorder *)refcon;
+  FKAudioRecorder *context = (__bridge FKAudioRecorder *)refcon;
   
   // Render into audio buffer
   status = AudioUnitRender(context->audioUnit_, ioActionFlags, inTimeStamp, inBusNumber, inNumberFrames, context->bufferList_);

@@ -1,4 +1,4 @@
-#import "NKLog.h"
+#import "FKLog.h"
 
 const NSString *kNRInternalDontOutputMe = @"don't output me";
 

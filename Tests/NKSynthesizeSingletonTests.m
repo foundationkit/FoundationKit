@@ -1,15 +1,15 @@
-#import "NKSynthesizeSingletonTests.h"
+#import "FKSynthesizeSingletonTests.h"
 
-@interface NKTestSingleton : NSObject
+@interface FKTestSingleton : NSObject
 @end
-@implementation NKTestSingleton
-  NKSynthesizeSingletonForClass(NKTestSingleton);
+@implementation FKTestSingleton
+  FKSynthesizeSingletonForClass(FKTestSingleton);
 @end
 
-@implementation NKSynthesizeSingletonTests
+@implementation FKSynthesizeSingletonTests
 
 - (void)testSingletonAccessor {
-  STAssertEquals([[NKTestSingleton sharedNKTestSingleton] class], [NKTestSingleton class], @"singleton's class equals");
+  STAssertEquals([[FKTestSingleton sharedFKTestSingleton] class], [FKTestSingleton class], @"singleton's class equals");
 }
 
 @end

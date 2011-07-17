@@ -1,7 +1,7 @@
-#import "NSArray+NKBlocks.h"
+#import "NSArray+FKBlocks.h"
 
 
-@implementation NSArray (NKBlocks)
+@implementation NSArray (FKBlocks)
 
 - (BOOL)all:(BOOL (^)(id object))block {
   for (id object in self) {

@@ -1,7 +1,7 @@
-#import "NSError+NKAdditions.h"
+#import "NSError+FKAdditions.h"
 
 
-@implementation NSError (NKAdditions)
+@implementation NSError (FKAdditions)
 
 + (NSError *)errorWithDomain:(NSString *)domain code:(NSInteger)code localizedDescription:(NSString *)description {
   NSDictionary *desc = [NSDictionary dictionaryWithObject:description forKey:NSLocalizedDescriptionKey];

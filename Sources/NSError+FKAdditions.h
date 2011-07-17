@@ -3,7 +3,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSError (NKAdditions)
+@interface NSError (FKAdditions)
 
 + (NSError *)errorWithDomain:(NSString *)domain code:(NSInteger)code localizedDescription:(NSString *)description;
 

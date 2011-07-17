@@ -1,4 +1,4 @@
-#import "NSString+NKAdditions.h"
+#import "NSString+FKAdditions.h"
 
 @interface NSStringAdditionsTests : SenTestCase
 

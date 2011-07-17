@@ -10,7 +10,7 @@ NS_INLINE NSString* _(NSString *key) {
   return NSLocalizedString(key, nil);
 }
 
-NS_INLINE NSString* NKAppVersion() {
+NS_INLINE NSString* FKAppVersion() {
   return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
 
@@ -27,21 +27,21 @@ NS_INLINE NSString* NKAppVersion() {
 //	the given property name into an ObjC string literal.
 
 #if DEBUG
-#define NKProperty(propertyName)	NSStringFromSelector(@selector(propertyName))
+#define FKProperty(propertyName)	NSStringFromSelector(@selector(propertyName))
 #else
-#define NKProperty(propertyName)	@#propertyName
+#define FKProperty(propertyName)	@#propertyName
 #endif
 
 
 // Four char codes
-NS_INLINE char * NKFcc(code) { return (char[5]){(code >> 24) & 0xFF, (code >> 16) & 0xFF, (code >> 8) & 0xFF, code & 0xFF, 0}; }
+NS_INLINE char * FKFcc(code) { return (char[5]){(code >> 24) & 0xFF, (code >> 16) & 0xFF, (code >> 8) & 0xFF, code & 0xFF, 0}; }
 
 // Foundation functions for CF
-NS_INLINE CFIndex NKMaxRange(CFRange range) { return (range.location + range.length); }
-NS_INLINE Boolean NKLocationInRange(CFIndex location, CFRange range) { return (location >= range.location ? (location <= NKMaxRange(range) ? YES : NO) : NO); }
+NS_INLINE CFIndex CFMaxRange(CFRange range) { return (range.location + range.length); }
+NS_INLINE Boolean CFLocationInRange(CFIndex location, CFRange range) { return (location >= range.location ? (location <= CFMaxRange(range) ? YES : NO) : NO); }
 
 
-NS_INLINE BOOL NKIsEmpty(id object) {
+NS_INLINE BOOL FKIsEmpty(id object) {
 	return object == nil || ([object isEqual:[NSNull null]]) ||
   ([object respondsToSelector:@selector(length)] && [(NSData *)object length] == 0) ||
   ([object respondsToSelector:@selector(count)]  && [(NSArray *)object count] == 0);

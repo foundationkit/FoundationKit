@@ -1,28 +1,28 @@
 // Part of FoundationKit http://foundationk.it
 
-#import "Audio/NKAudioRecorder.h"
+#import "Audio/FKAudioRecorder.h"
 
-#import "NKShorthands.h"
-#import "NKSynthesizeSingleton.h"
-#import "NKLog.h"
+#import "FKShorthands.h"
+#import "FKSynthesizeSingleton.h"
+#import "FKLog.h"
 
 // Blocks
-#import "NSArray+NKBlocks.h"
-#import "NSDictionary+NKBlocks.h"
-#import "NSMutableArray+NKBlocks.h"
-#import "NSMutableDictionary+NKBlocks.h"
+#import "NSArray+FKBlocks.h"
+#import "NSDictionary+FKBlocks.h"
+#import "NSMutableArray+FKBlocks.h"
+#import "NSMutableDictionary+FKBlocks.h"
 
 // ConciseKit adoptions
-#import "NSArray+NKConcise.h"
-#import "NSDictionary+NKConcise.h"
-#import "NSNull+NKConcise.h"
-#import "NSNumber+NKConcise.h"
-#import "NSString+NKConcise.h"
-#import "NSValue+NKConcise.h"
+#import "NSArray+FKConcise.h"
+#import "NSDictionary+FKConcise.h"
+#import "NSNull+FKConcise.h"
+#import "NSNumber+FKConcise.h"
+#import "NSString+FKConcise.h"
+#import "NSValue+FKConcise.h"
 
-#import "NSData+NKCrypto.h"
-#import "NSError+NKAdditions.h"
-#import "NSString+NKAdditions.h"
+#import "NSData+FKCrypto.h"
+#import "NSError+FKAdditions.h"
+#import "NSString+FKAdditions.h"
 
 // Macro helpers
 #import "FKCompatibility.h"

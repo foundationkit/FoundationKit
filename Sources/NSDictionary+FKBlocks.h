@@ -1,7 +1,7 @@
 // Part of FoundationKit http://foundationk.it
 
 
-@interface NSDictionary (NKBlocks)
+@interface NSDictionary (FKBlocks)
 
 - (BOOL)all:(BOOL (^)(id object))block;
 - (BOOL)any:(BOOL (^)(id object))block;

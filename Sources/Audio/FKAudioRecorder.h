@@ -7,7 +7,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 
-@interface NKAudioRecorder : NSObject {
+@interface FKAudioRecorder : NSObject {
 @private
   CFURLRef                    fileURL_;
   AudioDeviceID               inputDeviceID_;
