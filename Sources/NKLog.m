@@ -44,7 +44,8 @@ void NKLog___ (NSString *file, unsigned int line, ...) {
   NSString *msg = [NSString stringWithFormat:@"[%@:%u] ", file, line];
   BOOL alreadySplit = NO;
   for (unsigned int i = 0; i < n_args; i++) {
-    id obj = va_arg(ap, id);
+//    id obj = va_arg(ap, id);
+    id obj = nil;
     NSString *desc = [[parameterNames objectAtIndex:i] stringByAppendingString: @" = "];
     if([desc characterAtIndex:0] == '@')
       desc = @"";
