@@ -8,7 +8,8 @@
 @interface NSObject (FKAssociatedObjects)
 
 - (void)associateValue:(id)value withKey:(void *)key;
-- (void)weaklyAssociateValue:(id)value withKey:(void *)key;
+- (void)associateWeakValue:(id)value withKey:(void *)key;
+- (void)associateCopiedValue:(id)value withKey:(void *)key;
 - (id)associatedValueForKey:(void *)key;
 
 @end

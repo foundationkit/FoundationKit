@@ -12,8 +12,12 @@
 	objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void)weaklyAssociateValue:(id)value withKey:(void *)key {
+- (void)associateWeakValue:(id)value withKey:(void *)key; {
 	objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (void)associateCopiedValue:(id)value withKey:(void *)key {
+  objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_COPY);
 }
 
 - (id)associatedValueForKey:(void *)key {
