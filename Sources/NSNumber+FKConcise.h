@@ -17,3 +17,10 @@
 #define $ulong(val)     [NSNumber numberWithUnsignedLong:(val)]
 #define $ulonglong(val) [NSNumber numberWithUnsignedLongLong:(val)]
 #define $ushort(val)    [NSNumber numberWithUnsignedShort:(val)]
+
+
+@interface NSNumber (FKConcise)
+
++ (NSNumber *)numberWithString:(NSString *)string;
+
+@end
