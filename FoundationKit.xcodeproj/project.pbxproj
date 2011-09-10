@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */; };
 		39EA898C13C98C6C00B6427F /* FKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* FKMath.m */; };
+		9B29720E141BC0A0006124A2 /* NSArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */; };
+		9B297212141BC240006124A2 /* NSMutableArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297211141BC23F006124A2 /* NSMutableArray+FKConcise.m */; };
 		C582BF8C13C8B77C0012DF67 /* FKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* FKLog.m */; };
 		C5AAAA7613C9A32A00E44CE7 /* NSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7313C9A31A00E44CE7 /* NSStringAdditionsTests.m */; };
 		C5AAAA7913C9A33F00E44CE7 /* NSString+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */; };
@@ -46,6 +48,9 @@
 		39EA898B13C98C6C00B6427F /* FKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMath.m; sourceTree = "<group>"; };
 		78AC24FA13D3858E00820A31 /* FKCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCompatibility.h; sourceTree = "<group>"; };
 		78AC24FC13D38A8F00820A31 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FKConcise.m"; sourceTree = "<group>"; };
+		9B297210141BC23E006124A2 /* NSMutableArray+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+FKConcise.h"; sourceTree = "<group>"; };
+		9B297211141BC23F006124A2 /* NSMutableArray+FKConcise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+FKConcise.m"; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* FKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* FKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLog.m; sourceTree = "<group>"; };
 		C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditionsTests.h; sourceTree = "<group>"; };
@@ -139,6 +144,7 @@
 				C5E319FA13C4EA7C00D9CA76 /* NSArray+FKBlocks.h */,
 				C5E319FB13C4EA7C00D9CA76 /* NSArray+FKBlocks.m */,
 				DC1CF42313C483BC00E5BEBC /* NSArray+FKConcise.h */,
+				9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */,
 				C5E319D113C4744800D9CA76 /* NSData+FKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */,
 				C5E319FC13C4EA7C00D9CA76 /* NSDictionary+FKBlocks.h */,
@@ -150,6 +156,8 @@
 				39EA898B13C98C6C00B6427F /* FKMath.m */,
 				C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.h */,
 				C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.m */,
+				9B297210141BC23E006124A2 /* NSMutableArray+FKConcise.h */,
+				9B297211141BC23F006124A2 /* NSMutableArray+FKConcise.m */,
 				C5E31A0013C4EA7D00D9CA76 /* NSMutableDictionary+FKBlocks.h */,
 				C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+FKBlocks.m */,
 				DC1CF42C13C4849400E5BEBC /* NSNull+FKConcise.h */,
@@ -334,6 +342,8 @@
 				399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */,
 				39EA898C13C98C6C00B6427F /* FKMath.m in Sources */,
 				C5AAAA7913C9A33F00E44CE7 /* NSString+FKAdditions.m in Sources */,
+				9B29720E141BC0A0006124A2 /* NSArray+FKConcise.m in Sources */,
+				9B297212141BC240006124A2 /* NSMutableArray+FKConcise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

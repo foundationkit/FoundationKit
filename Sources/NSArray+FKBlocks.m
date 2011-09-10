@@ -1,3 +1,5 @@
+// Part of FoundationKit http://foundationk.it
+
 #import "NSArray+FKBlocks.h"
 
 
