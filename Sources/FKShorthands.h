@@ -27,9 +27,9 @@ NS_INLINE NSString* FKAppVersion() {
 //	the given property name into an ObjC string literal.
 
 #if DEBUG
-#define FKProperty(propertyName)	NSStringFromSelector(@selector(propertyName))
+#define $property(propertyName)	NSStringFromSelector(@selector(propertyName))
 #else
-#define FKProperty(propertyName)	@#propertyName
+#define $property(propertyName)	@#propertyName
 #endif
 
 
@@ -41,7 +41,7 @@ NS_INLINE CFIndex CFMaxRange(CFRange range) { return (range.location + range.len
 NS_INLINE Boolean CFLocationInRange(CFIndex location, CFRange range) { return (location >= range.location ? (location <= CFMaxRange(range) ? YES : NO) : NO); }
 
 
-NS_INLINE BOOL FKIsEmpty(id object) {
+NS_INLINE BOOL $empty(id object) {
 	return object == nil || ([object isEqual:[NSNull null]]) ||
   ([object respondsToSelector:@selector(length)] && [(NSData *)object length] == 0) ||
   ([object respondsToSelector:@selector(count)]  && [(NSArray *)object count] == 0);
