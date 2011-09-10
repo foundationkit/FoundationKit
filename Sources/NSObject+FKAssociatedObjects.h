@@ -10,6 +10,8 @@
 - (void)associateValue:(id)value withKey:(void *)key;
 - (void)associateWeakValue:(id)value withKey:(void *)key;
 - (void)associateCopiedValue:(id)value withKey:(void *)key;
+
 - (id)associatedValueForKey:(void *)key;
+- (BOOL)hasAssociatedValueForKey:(void *)key;
 
 @end

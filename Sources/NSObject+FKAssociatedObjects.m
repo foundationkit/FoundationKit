@@ -24,4 +24,8 @@
 	return objc_getAssociatedObject(self, key);
 }
 
+- (BOOL)hasAssociatedValueForKey:(void *)key {
+  return [self associatedValueForKey:key] != nil;
+}
+
 @end
