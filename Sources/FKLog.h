@@ -6,9 +6,9 @@
 
 extern const NSString *kNRInternalDontOutputMe;
 
-#define NKLog(...) NKLog_(__VA_ARGS__,NKLog_RightSequence())
-#define NKLog_(...) NKLog__(__VA_ARGS__)
-#define NKLog__(_1, _2, _3, _4, _5, _6, _7, _8, _9,_10,...) NKLog___(\
+#define FKLog(...) FKLog_(__VA_ARGS__,FKLog_RightSequence())
+#define FKLog_(...) FKLog__(__VA_ARGS__)
+#define FKLog__(_1, _2, _3, _4, _5, _6, _7, _8, _9,_10,...) FKLog___(\
     [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__,\
     @encode(__typeof__(_1)), @"" # _1, _1, \
     @encode(__typeof__(_2)), @"" # _2, _2, \
@@ -21,6 +21,6 @@ extern const NSString *kNRInternalDontOutputMe;
     @encode(__typeof__(_9)), @"" # _9, _9, \
     @encode(__typeof__(_10)), @"" # _10, _10)
 
-#define NKLog_RightSequence() kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe
+#define FKLog_RightSequence() kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe
 
-void NKLog___ (NSString *file, unsigned int line, ...);
+void FKLog___ (NSString *file, unsigned int line, ...);
