@@ -10,4 +10,8 @@
 - (NSString *)trimmed;
 - (NSString *)URLEncodedString;
 - (NSString *)URLDecodedString;
+
+- (BOOL)containsString:(NSString *)string;
+- (BOOL)containsString:(NSString *)string options:(NSStringCompareOptions)options;
+- (BOOL)isEqualToStringIgnoringCase:(NSString*)otherString;
 @end

@@ -43,4 +43,20 @@
   return result;
 }
 
+- (BOOL)containsString:(NSString *)string {
+	return [self containsString:string options:NSCaseInsensitiveSearch];
+}
+
+- (BOOL)containsString:(NSString *)string options:(NSStringCompareOptions)options {
+	return [self rangeOfString:string options:options].location == NSNotFound ? NO : YES;
+}
+
+- (BOOL)isEqualToStringIgnoringCase:(NSString*)otherString {
+	if(!otherString) {
+		return NO;
+  }
+  
+	return NSOrderedSame == [self compare:otherString options:NSCaseInsensitiveSearch + NSWidthInsensitiveSearch];
+}
+
 @end
