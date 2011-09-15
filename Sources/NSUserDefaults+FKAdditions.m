@@ -18,7 +18,7 @@
     }
   }
   
-  [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+  [self registerDefaults:defaultsToRegister];
 }
 
 - (void)registerDefaultsFromSettingsBundle {
