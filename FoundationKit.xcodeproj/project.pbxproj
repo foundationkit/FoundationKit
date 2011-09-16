@@ -63,7 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		393A29BC142361950056CB37 /* libFoundationKitMac copy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFoundationKitMac copy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		393A29BC142361950056CB37 /* libFoundationKitiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKitiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		393A29BD142361AD0056CB37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		393A29BF1423631C0056CB37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		399F4CD213C905C70008CC0E /* NSObject+FKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKAssociatedObjects.h"; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 			children = (
 				DC410CFF13C39BFD00C90C19 /* libFoundationKitMac.a */,
 				C5C18E7A13C8C64C00DD0872 /* Tests.octest */,
-				393A29BC142361950056CB37 /* libFoundationKitMac copy.a */,
+				393A29BC142361950056CB37 /* libFoundationKitiOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 			);
 			name = FoundationKitiOS;
 			productName = FoundationKit;
-			productReference = 393A29BC142361950056CB37 /* libFoundationKitMac copy.a */;
+			productReference = 393A29BC142361950056CB37 /* libFoundationKitiOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		C5C18E7913C8C64C00DD0872 /* Tests */ = {
@@ -456,7 +456,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PRODUCT_NAME = "FoundationKitMac copy";
+				PRODUCT_NAME = FoundationKitiOS;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -467,7 +467,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PRODUCT_NAME = "FoundationKitMac copy";
+				PRODUCT_NAME = FoundationKitiOS;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
