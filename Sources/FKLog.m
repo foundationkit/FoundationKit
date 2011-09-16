@@ -1,5 +1,10 @@
 #import "FKLog.h"
 
+#if	TARGET_OS_IPHONE
+#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
+#endif
+
 const NSString *kNRInternalDontOutputMe = @"don't output me";
 
 // Copyright (c) 2008-2010, Vincent Gable.
