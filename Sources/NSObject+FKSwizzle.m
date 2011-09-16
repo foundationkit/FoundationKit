@@ -23,7 +23,7 @@ static void NSObjectNKSwizzleSetError(NSError **error, NSInteger code, NSString 
                               0x100,
                               @"original method %@ not found for class %@",
                               NSStringFromSelector(slcOrig),
-                              [self className]);
+                              NSStringFromClass([self class]));
 		return NO;
 	}
   
@@ -33,7 +33,7 @@ static void NSObjectNKSwizzleSetError(NSError **error, NSInteger code, NSString 
                               0x101,
                               @"alternate method %@ not found for class %@",
                               NSStringFromSelector(slcAlt),
-                              [self className]);
+                              NSStringFromClass([self class]));
 		return NO;
 	}
   

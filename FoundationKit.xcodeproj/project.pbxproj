@@ -7,7 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393A29A6142361950056CB37 /* NSData+FKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */; };
+		393A29A7142361950056CB37 /* NSError+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */; };
+		393A29A9142361950056CB37 /* NSArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FB13C4EA7C00D9CA76 /* NSArray+FKBlocks.m */; };
+		393A29AA142361950056CB37 /* NSDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FD13C4EA7D00D9CA76 /* NSDictionary+FKBlocks.m */; };
+		393A29AB142361950056CB37 /* NSMutableArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.m */; };
+		393A29AC142361950056CB37 /* NSMutableDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E31A0113C4EA7D00D9CA76 /* NSMutableDictionary+FKBlocks.m */; };
+		393A29AD142361950056CB37 /* NSObject+FKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */; };
+		393A29AE142361950056CB37 /* FKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* FKLog.m */; };
+		393A29AF142361950056CB37 /* NSObject+FKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */; };
+		393A29B0142361950056CB37 /* FKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* FKMath.m */; };
+		393A29B1142361950056CB37 /* NSString+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */; };
+		393A29B2142361950056CB37 /* NSArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */; };
+		393A29B3142361950056CB37 /* NSMutableArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297211141BC23F006124A2 /* NSMutableArray+FKConcise.m */; };
+		393A29B4142361950056CB37 /* NSNumber+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297214141BC64E006124A2 /* NSNumber+FKConcise.m */; };
+		393A29B5142361950056CB37 /* NSObject+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297217141BC81C006124A2 /* NSObject+FKConcise.m */; };
+		393A29B6142361950056CB37 /* NSUserDefaults+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */; };
+		393A29B8142361950056CB37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
+		393A29BE142361AD0056CB37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A29BD142361AD0056CB37 /* CoreGraphics.framework */; };
+		393A29C01423631C0056CB37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A29BF1423631C0056CB37 /* UIKit.framework */; };
 		399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */; };
+		39CFA6151422500600DC3E57 /* NSUserDefaults+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */; };
 		39EA898C13C98C6C00B6427F /* FKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* FKMath.m */; };
 		9B29720E141BC0A0006124A2 /* NSArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */; };
 		9B297212141BC240006124A2 /* NSMutableArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297211141BC23F006124A2 /* NSMutableArray+FKConcise.m */; };
@@ -17,7 +37,7 @@
 		C582BF8C13C8B77C0012DF67 /* FKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* FKLog.m */; };
 		C5AAAA7613C9A32A00E44CE7 /* NSStringAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7313C9A31A00E44CE7 /* NSStringAdditionsTests.m */; };
 		C5AAAA7913C9A33F00E44CE7 /* NSString+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */; };
-		C5AAAA7A13C9A37A00E44CE7 /* libFoundationKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */; };
+		C5AAAA7A13C9A37A00E44CE7 /* libFoundationKitMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410CFF13C39BFD00C90C19 /* libFoundationKitMac.a */; };
 		C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */; };
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
 		C5C18EC213C8CE9800DD0872 /* FKLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C18EBC13C8CCDF00DD0872 /* FKLogTests.m */; };
@@ -44,9 +64,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		393A29BC142361950056CB37 /* libFoundationKitiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKitiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		393A29BD142361AD0056CB37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		393A29BF1423631C0056CB37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		399F4CD213C905C70008CC0E /* NSObject+FKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKAssociatedObjects.h"; sourceTree = "<group>"; };
 		399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKAssociatedObjects.m"; sourceTree = "<group>"; };
 		399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSynthesizeSingleton.h; sourceTree = "<group>"; };
+		39CFA6131422500400DC3E57 /* NSUserDefaults+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+FKAdditions.h"; sourceTree = "<group>"; };
+		39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+FKAdditions.m"; sourceTree = "<group>"; };
 		39EA898A13C98C6C00B6427F /* FKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMath.h; sourceTree = "<group>"; };
 		39EA898B13C98C6C00B6427F /* FKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMath.m; sourceTree = "<group>"; };
 		78AC24FA13D3858E00820A31 /* FKCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCompatibility.h; sourceTree = "<group>"; };
@@ -95,7 +120,7 @@
 		DC1CF42C13C4849400E5BEBC /* NSNull+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+FKConcise.h"; sourceTree = "<group>"; };
 		DC1CF42E13C484A400E5BEBC /* NSString+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FKConcise.h"; sourceTree = "<group>"; };
 		DC1CF43013C484B800E5BEBC /* NSSet+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+FKConcise.h"; sourceTree = "<group>"; };
-		DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC410CFF13C39BFD00C90C19 /* libFoundationKitMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKitMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DCB0126F13C4AE9400AB692F /* NSError+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+FKAdditions.h"; sourceTree = "<group>"; };
 		DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+FKAdditions.m"; sourceTree = "<group>"; };
@@ -104,11 +129,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		393A29B7142361950056CB37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				393A29C01423631C0056CB37 /* UIKit.framework in Frameworks */,
+				393A29BE142361AD0056CB37 /* CoreGraphics.framework in Frameworks */,
+				393A29B8142361950056CB37 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5C18E7613C8C64C00DD0872 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5AAAA7A13C9A37A00E44CE7 /* libFoundationKit.a in Frameworks */,
+				C5AAAA7A13C9A37A00E44CE7 /* libFoundationKitMac.a in Frameworks */,
 				C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */,
 				C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */,
 			);
@@ -144,11 +179,14 @@
 			isa = PBXGroup;
 			children = (
 				C5E319F513C4E90B00D9CA76 /* Audio */,
-				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
+				78AC24FA13D3858E00820A31 /* FKCompatibility.h */,
 				C582BF8913C8B77C0012DF67 /* FKLog.h */,
 				C582BF8A13C8B77C0012DF67 /* FKLog.m */,
+				39EA898A13C98C6C00B6427F /* FKMath.h */,
+				39EA898B13C98C6C00B6427F /* FKMath.m */,
 				C5E31A0A13C4EC8700D9CA76 /* FKShorthands.h */,
 				399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */,
+				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
 				C5E319FA13C4EA7C00D9CA76 /* NSArray+FKBlocks.h */,
 				C5E319FB13C4EA7C00D9CA76 /* NSArray+FKBlocks.m */,
 				DC1CF42313C483BC00E5BEBC /* NSArray+FKConcise.h */,
@@ -160,8 +198,6 @@
 				DC1CF42813C4847200E5BEBC /* NSDictionary+FKConcise.h */,
 				DCB0126F13C4AE9400AB692F /* NSError+FKAdditions.h */,
 				DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */,
-				39EA898A13C98C6C00B6427F /* FKMath.h */,
-				39EA898B13C98C6C00B6427F /* FKMath.m */,
 				C5E319FE13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.h */,
 				C5E319FF13C4EA7D00D9CA76 /* NSMutableArray+FKBlocks.m */,
 				9B297210141BC23E006124A2 /* NSMutableArray+FKConcise.h */,
@@ -183,8 +219,9 @@
 				C5AAAA7713C9A33F00E44CE7 /* NSString+FKAdditions.h */,
 				C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */,
 				DC1CF42E13C484A400E5BEBC /* NSString+FKConcise.h */,
+				39CFA6131422500400DC3E57 /* NSUserDefaults+FKAdditions.h */,
+				39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */,
 				DC1CF42A13C4848200E5BEBC /* NSValue+FKConcise.h */,
-				78AC24FA13D3858E00820A31 /* FKCompatibility.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -223,8 +260,9 @@
 		DC410D0013C39BFD00C90C19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */,
+				DC410CFF13C39BFD00C90C19 /* libFoundationKitMac.a */,
 				C5C18E7A13C8C64C00DD0872 /* Tests.octest */,
+				393A29BC142361950056CB37 /* libFoundationKitiOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +270,8 @@
 		DC410D0113C39BFD00C90C19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				393A29BF1423631C0056CB37 /* UIKit.framework */,
+				393A29BD142361AD0056CB37 /* CoreGraphics.framework */,
 				DC410D0213C39BFD00C90C19 /* Foundation.framework */,
 				C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */,
 			);
@@ -241,6 +281,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		393A29A4142361950056CB37 /* FoundationKitiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 393A29B9142361950056CB37 /* Build configuration list for PBXNativeTarget "FoundationKitiOS" */;
+			buildPhases = (
+				393A29A5142361950056CB37 /* Sources */,
+				393A29B7142361950056CB37 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoundationKitiOS;
+			productName = FoundationKit;
+			productReference = 393A29BC142361950056CB37 /* libFoundationKitiOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		C5C18E7913C8C64C00DD0872 /* Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5C18E9013C8C64C00DD0872 /* Build configuration list for PBXNativeTarget "Tests" */;
@@ -260,9 +316,9 @@
 			productReference = C5C18E7A13C8C64C00DD0872 /* Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		DC410CFE13C39BFD00C90C19 /* FoundationKit */ = {
+		DC410CFE13C39BFD00C90C19 /* FoundationKitMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC410D0913C39BFD00C90C19 /* Build configuration list for PBXNativeTarget "FoundationKit" */;
+			buildConfigurationList = DC410D0913C39BFD00C90C19 /* Build configuration list for PBXNativeTarget "FoundationKitMac" */;
 			buildPhases = (
 				DC410CFB13C39BFD00C90C19 /* Sources */,
 				DC410CFC13C39BFD00C90C19 /* Frameworks */,
@@ -271,9 +327,9 @@
 			);
 			dependencies = (
 			);
-			name = FoundationKit;
+			name = FoundationKitMac;
 			productName = FoundationKit;
-			productReference = DC410CFF13C39BFD00C90C19 /* libFoundationKit.a */;
+			productReference = DC410CFF13C39BFD00C90C19 /* libFoundationKitMac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -282,6 +338,7 @@
 		DC410CF613C39BFD00C90C19 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = FoundationKit;
 			};
 			buildConfigurationList = DC410CF913C39BFD00C90C19 /* Build configuration list for PBXProject "FoundationKit" */;
@@ -296,7 +353,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC410CFE13C39BFD00C90C19 /* FoundationKit */,
+				DC410CFE13C39BFD00C90C19 /* FoundationKitMac */,
+				393A29A4142361950056CB37 /* FoundationKitiOS */,
 				C5C18E7913C8C64C00DD0872 /* Tests */,
 			);
 		};
@@ -329,6 +387,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		393A29A5142361950056CB37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				393A29A6142361950056CB37 /* NSData+FKCrypto.m in Sources */,
+				393A29A7142361950056CB37 /* NSError+FKAdditions.m in Sources */,
+				393A29A9142361950056CB37 /* NSArray+FKBlocks.m in Sources */,
+				393A29AA142361950056CB37 /* NSDictionary+FKBlocks.m in Sources */,
+				393A29AB142361950056CB37 /* NSMutableArray+FKBlocks.m in Sources */,
+				393A29AC142361950056CB37 /* NSMutableDictionary+FKBlocks.m in Sources */,
+				393A29AD142361950056CB37 /* NSObject+FKSwizzle.m in Sources */,
+				393A29AE142361950056CB37 /* FKLog.m in Sources */,
+				393A29AF142361950056CB37 /* NSObject+FKAssociatedObjects.m in Sources */,
+				393A29B0142361950056CB37 /* FKMath.m in Sources */,
+				393A29B1142361950056CB37 /* NSString+FKAdditions.m in Sources */,
+				393A29B2142361950056CB37 /* NSArray+FKConcise.m in Sources */,
+				393A29B3142361950056CB37 /* NSMutableArray+FKConcise.m in Sources */,
+				393A29B4142361950056CB37 /* NSNumber+FKConcise.m in Sources */,
+				393A29B5142361950056CB37 /* NSObject+FKConcise.m in Sources */,
+				393A29B6142361950056CB37 /* NSUserDefaults+FKAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5C18E7513C8C64C00DD0872 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,6 +441,7 @@
 				9B297215141BC650006124A2 /* NSNumber+FKConcise.m in Sources */,
 				9B297218141BC81E006124A2 /* NSObject+FKConcise.m in Sources */,
 				9B662A611420DB5B00F52294 /* NSObject+FKDescription.m in Sources */,
+				39CFA6151422500600DC3E57 /* NSUserDefaults+FKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,12 +450,34 @@
 /* Begin PBXTargetDependency section */
 		C5C18E9313C8C65100DD0872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC410CFE13C39BFD00C90C19 /* FoundationKit */;
+			target = DC410CFE13C39BFD00C90C19 /* FoundationKitMac */;
 			targetProxy = C5C18E9213C8C65100DD0872 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		393A29BA142361950056CB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = FoundationKitiOS;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		393A29BB142361950056CB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = FoundationKitiOS;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
 		C5C18E8E13C8C64C00DD0872 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -464,6 +568,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		393A29B9142361950056CB37 /* Build configuration list for PBXNativeTarget "FoundationKitiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				393A29BA142361950056CB37 /* Debug */,
+				393A29BB142361950056CB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5C18E9013C8C64C00DD0872 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -482,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC410D0913C39BFD00C90C19 /* Build configuration list for PBXNativeTarget "FoundationKit" */ = {
+		DC410D0913C39BFD00C90C19 /* Build configuration list for PBXNativeTarget "FoundationKitMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC410D0A13C39BFD00C90C19 /* Debug */,

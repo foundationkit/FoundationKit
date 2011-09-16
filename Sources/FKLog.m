@@ -1,5 +1,10 @@
 #import "FKLog.h"
 
+#if	TARGET_OS_IPHONE
+#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
+#endif
+
 const NSString *kNRInternalDontOutputMe = @"don't output me";
 
 // Copyright (c) 2008-2010, Vincent Gable.
@@ -31,9 +36,9 @@ DDLogInfo(@"Unknown _TYPE_CODE_: %s for expression %s in function %s, file %s, l
 NSString * VTPG_DDToStringFromTypeAndValue(const char * typeCode, void * value);
 
 
-# define NKLogINTASDWIP(...) _NKLog([[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, , @"" # __VA_ARGS__, __VA_ARGS__)
+# define FKLogINTASDWIP(...) _FKLog([[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, , @"" # __VA_ARGS__, __VA_ARGS__)
 
-void NKLog___ (NSString *file, unsigned int line, ...) {
+void FKLog___ (NSString *file, unsigned int line, ...) {
   unsigned int n_args;
   NSString *commaSeparatedParameterNames;
   va_list ap;

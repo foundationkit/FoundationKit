@@ -2,6 +2,10 @@
 //
 // CGAffineTransform-helpers derived from http://iphonedevelopment.blogspot.com/2011/02/couple-cgaffinetransform-goodies.html
 
+#if	TARGET_OS_IPHONE
+#import <CoreGraphics/CoreGraphics.h>
+#endif
+
 // angle conversion
 NS_INLINE double FKDegreesToRadian(double angleInDegrees);
 NS_INLINE double FKRadianToDegrees(double angleInRadian);
