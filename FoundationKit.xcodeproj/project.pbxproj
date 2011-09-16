@@ -455,6 +455,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "FoundationKitMac copy";
 				SDKROOT = iphoneos;
 			};
@@ -465,6 +466,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationKit-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "FoundationKitMac copy";
 				SDKROOT = iphoneos;
 			};
