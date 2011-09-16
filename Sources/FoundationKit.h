@@ -2,9 +2,12 @@
 
 #import "Audio/FKAudioRecorder.h"
 
+// Macro helpers
+#import "FKCompatibility.h"
+#import "FKLog.h"
+#import "FKMath.h"
 #import "FKShorthands.h"
 #import "FKSynthesizeSingleton.h"
-#import "FKLog.h"
 
 // Blocks
 #import "NSArray+FKBlocks.h"
@@ -15,14 +18,17 @@
 // ConciseKit adoptions
 #import "NSArray+FKConcise.h"
 #import "NSDictionary+FKConcise.h"
+#import "NSMutableArray+FKConcise.h"
 #import "NSNull+FKConcise.h"
 #import "NSNumber+FKConcise.h"
+#import "NSObject+FKConcise.h"
+#import "NSSet+FKConcise.h"
 #import "NSString+FKConcise.h"
 #import "NSValue+FKConcise.h"
 
 #import "NSData+FKCrypto.h"
 #import "NSError+FKAdditions.h"
+#import "NSObject+FKAssociatedObjects.h"
+#import "NSObject+FKSwizzle.h"
 #import "NSString+FKAdditions.h"
-
-// Macro helpers
-#import "FKCompatibility.h"
+#import "NSUserDefaults+FKAdditions.h"
