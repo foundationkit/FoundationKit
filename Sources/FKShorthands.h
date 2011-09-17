@@ -14,6 +14,11 @@ NS_INLINE NSString* FKAppVersion() {
   return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
 
+// runtime-check if class is available to make code more readable
+NS_INLINE BOOL FKClassExists(NSString *className) {
+  return NSClassFromString(className) != nil;
+}
+
 //	The following macro is for specifying property (ivar) names to KVC or KVO methods.
 //	These methods generally take strings, but strings don't get checked for typos
 //	by the compiler. If you write PROPERTY(fremen) instead of PROPERTY(frame),
