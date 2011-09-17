@@ -23,6 +23,14 @@
   return nil;
 }
 
+- (id)objectOrNilAtIndex:(NSUInteger)index {
+  if (index < self.count) {
+    return [self objectAtIndex:index];
+  }
+  
+  return nil;
+}
+
 - (NSArray *)arrayWithUniqueMembers {
 	NSMutableArray *copy = [self mutableCopy];
 	

@@ -11,6 +11,8 @@
 - (id)firstObject;
 - (id)firstObjectMatchingPredicate:(NSPredicate *)predicate;
 
+- (id)objectOrNilAtIndex:(NSUInteger)index;
+
 - (NSArray *)arrayWithUniqueMembers;
 
 @end

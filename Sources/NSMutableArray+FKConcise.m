@@ -47,4 +47,10 @@ static NSUInteger FKRandomNumberBelow(NSUInteger n) {
   }
 }
 
+- (void)addObjectIfNotNil:(id)object {
+  if (object != nil) {
+    [self addObject:object];
+  }
+}
+
 @end
