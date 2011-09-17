@@ -2,6 +2,7 @@
 
 // Macro helpers
 #import "FKCompatibility.h"
+#import "FKDispatch.h"
 #import "FKLog.h"
 #import "FKMath.h"
 #import "FKShorthands.h"
