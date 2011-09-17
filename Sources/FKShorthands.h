@@ -1,6 +1,6 @@
 // Part of FoundationKit http://foundationk.it
 //
-// IsEmpty taken from http://www.wilshipley.com/blog/2005/10/pimp-my-code-interlude-free-code.html
+// $empty derived from http://www.wilshipley.com/blog/2005/10/pimp-my-code-interlude-free-code.html
 
 
 #import <Foundation/Foundation.h>
@@ -36,6 +36,9 @@ NS_INLINE BOOL FKClassExists(NSString *className) {
 #else
 #define $property(propertyName)	@#propertyName
 #endif
+
+// Shortcut for synthesizing a property
+#define $synthesize(PROPERTY) @synthesize PROPERTY = PROPERTY##_
 
 
 // Four char codes
