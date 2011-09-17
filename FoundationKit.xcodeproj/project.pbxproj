@@ -28,6 +28,8 @@
 		393A29C01423631C0056CB37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A29BF1423631C0056CB37 /* UIKit.framework */; };
 		399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */; };
 		39CFA6151422500600DC3E57 /* NSUserDefaults+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */; };
+		39DF5D7B1424B78600090805 /* FKDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF5D7A1424B78600090805 /* FKDispatch.m */; };
+		39DF5D7C1424B78600090805 /* FKDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF5D7A1424B78600090805 /* FKDispatch.m */; };
 		39EA898C13C98C6C00B6427F /* FKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* FKMath.m */; };
 		9B29720E141BC0A0006124A2 /* NSArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */; };
 		9B297212141BC240006124A2 /* NSMutableArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297211141BC23F006124A2 /* NSMutableArray+FKConcise.m */; };
@@ -72,6 +74,8 @@
 		399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSynthesizeSingleton.h; sourceTree = "<group>"; };
 		39CFA6131422500400DC3E57 /* NSUserDefaults+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+FKAdditions.h"; sourceTree = "<group>"; };
 		39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+FKAdditions.m"; sourceTree = "<group>"; };
+		39DF5D791424B78600090805 /* FKDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDispatch.h; sourceTree = "<group>"; };
+		39DF5D7A1424B78600090805 /* FKDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKDispatch.m; sourceTree = "<group>"; };
 		39EA898A13C98C6C00B6427F /* FKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMath.h; sourceTree = "<group>"; };
 		39EA898B13C98C6C00B6427F /* FKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMath.m; sourceTree = "<group>"; };
 		78AC24FA13D3858E00820A31 /* FKCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCompatibility.h; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 			children = (
 				C5E319F513C4E90B00D9CA76 /* Audio */,
 				78AC24FA13D3858E00820A31 /* FKCompatibility.h */,
+				39DF5D791424B78600090805 /* FKDispatch.h */,
+				39DF5D7A1424B78600090805 /* FKDispatch.m */,
 				C582BF8913C8B77C0012DF67 /* FKLog.h */,
 				C582BF8A13C8B77C0012DF67 /* FKLog.m */,
 				39EA898A13C98C6C00B6427F /* FKMath.h */,
@@ -407,6 +413,7 @@
 				393A29B4142361950056CB37 /* NSNumber+FKConcise.m in Sources */,
 				393A29B5142361950056CB37 /* NSObject+FKConcise.m in Sources */,
 				393A29B6142361950056CB37 /* NSUserDefaults+FKAdditions.m in Sources */,
+				39DF5D7C1424B78600090805 /* FKDispatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +449,7 @@
 				9B297218141BC81E006124A2 /* NSObject+FKConcise.m in Sources */,
 				9B662A611420DB5B00F52294 /* NSObject+FKDescription.m in Sources */,
 				39CFA6151422500600DC3E57 /* NSUserDefaults+FKAdditions.m in Sources */,
+				39DF5D7B1424B78600090805 /* FKDispatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
