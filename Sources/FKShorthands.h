@@ -32,7 +32,7 @@ NS_INLINE BOOL FKClassExists(NSString *className) {
 //	release builds, we use the identifier-stringification-operator "#" to turn
 //	the given property name into an ObjC string literal.
 
-#if FK_DEBUG
+#ifdef FK_DEBUG
 #define $property(propertyName)	NSStringFromSelector(@selector(propertyName))
 #else
 #define $property(propertyName)	@#propertyName
