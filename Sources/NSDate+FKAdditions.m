@@ -23,13 +23,13 @@ NSDateFormatter* dateFormatter(void);
 	NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
 	NSTimeInterval diff = now - time;
   
-	if(diff < 10.) {
+	if(diff < FKTimeIntervalSeconds(10.)) {
 		return _(@"just now");	
-	} else if(diff < 60.) {
+	} else if(diff < FKTimeIntervalMinutes(1.)) {
 		return _([NSString stringWithFormat:@"%d seconds ago", (int)diff]);
 	}
   
-	diff = round(diff/60.);
+	diff = round(diff/FKTimeIntervalMinutes(1.));
 	if(diff < 60.) {
 		if(diff == 1.) {
 			return _([NSString stringWithFormat:@"%d minute ago", (int)diff]);
@@ -69,6 +69,14 @@ NSDateFormatter* dateFormatter(void);
   [formatter setPMSymbol:@"pm"];
   
   return [formatter stringFromDate:self];
+}
+
+- (BOOL)isBefore:(NSDate *)otherDate {
+	return [self timeIntervalSinceDate:otherDate] < 0;
+}
+
+- (BOOL)isAfter:(NSDate *)otherDate {
+	return [self timeIntervalSinceDate:otherDate] > 0;
 }
 
 - (BOOL)isToday {
