@@ -25,7 +25,9 @@
 #import "NSString+FKConcise.h"
 #import "NSValue+FKConcise.h"
 
+#import "FKMutableIntArray.h"
 #import "NSData+FKCrypto.h"
+#import "NSDate+FKAdditions.h"
 #import "NSError+FKAdditions.h"
 #import "NSObject+FKAssociatedObjects.h"
 #import "NSObject+FKSwizzle.h"

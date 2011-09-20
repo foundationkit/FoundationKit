@@ -8,7 +8,7 @@
 
 // Shorthand for NSLocalizedString
 NS_INLINE NSString* _(NSString *key) {
-  return NSLocalizedString(key, nil);
+  return NSLocalizedString(key, key);
 }
 
 NS_INLINE NSString* FKAppVersion() {

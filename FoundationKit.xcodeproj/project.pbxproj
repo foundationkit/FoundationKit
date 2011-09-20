@@ -27,6 +27,8 @@
 		393A29BE142361AD0056CB37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A29BD142361AD0056CB37 /* CoreGraphics.framework */; };
 		393A29C01423631C0056CB37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A29BF1423631C0056CB37 /* UIKit.framework */; };
 		399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */; };
+		39AA0FB014291E8500C6956C /* NSDate+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AA0FAF14291E8500C6956C /* NSDate+FKAdditions.m */; };
+		39AA0FB114291E8500C6956C /* NSDate+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AA0FAF14291E8500C6956C /* NSDate+FKAdditions.m */; };
 		39B07E6A14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */; };
 		39B07E6B14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */; };
 		39CFA6151422500600DC3E57 /* NSUserDefaults+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */; };
@@ -76,6 +78,8 @@
 		399F4CD213C905C70008CC0E /* NSObject+FKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKAssociatedObjects.h"; sourceTree = "<group>"; };
 		399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKAssociatedObjects.m"; sourceTree = "<group>"; };
 		399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSynthesizeSingleton.h; sourceTree = "<group>"; };
+		39AA0FAE14291E8500C6956C /* NSDate+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FKAdditions.h"; sourceTree = "<group>"; };
+		39AA0FAF14291E8500C6956C /* NSDate+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FKAdditions.m"; sourceTree = "<group>"; };
 		39B07E6814288A7100CBF1B8 /* FKMutableIntArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMutableIntArray.h; sourceTree = "<group>"; };
 		39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMutableIntArray.m; sourceTree = "<group>"; };
 		39CFA6131422500400DC3E57 /* NSUserDefaults+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+FKAdditions.h"; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 				9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */,
 				C5E319D113C4744800D9CA76 /* NSData+FKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */,
+				39AA0FAE14291E8500C6956C /* NSDate+FKAdditions.h */,
+				39AA0FAF14291E8500C6956C /* NSDate+FKAdditions.m */,
 				C5E319FC13C4EA7C00D9CA76 /* NSDictionary+FKBlocks.h */,
 				C5E319FD13C4EA7D00D9CA76 /* NSDictionary+FKBlocks.m */,
 				DC1CF42813C4847200E5BEBC /* NSDictionary+FKConcise.h */,
@@ -428,6 +434,7 @@
 				39DF5D7C1424B78600090805 /* FKDispatch.m in Sources */,
 				9B54E82814269E6500336F08 /* NSObject+FKReflection.m in Sources */,
 				39B07E6B14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */,
+				39AA0FB114291E8500C6956C /* NSDate+FKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +473,7 @@
 				39DF5D7B1424B78600090805 /* FKDispatch.m in Sources */,
 				9B54E82714269E6500336F08 /* NSObject+FKReflection.m in Sources */,
 				39B07E6A14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */,
+				39AA0FB014291E8500C6956C /* NSDate+FKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
