@@ -1,4 +1,5 @@
 #import "NSDate+FKAdditions.h"
+#import "FKMath.h"
 
 static NSDateFormatter *dateFormatter_ = nil;
 
@@ -68,6 +69,22 @@ NSDateFormatter* dateFormatter(void);
   [formatter setPMSymbol:@"pm"];
   
   return [formatter stringFromDate:self];
+}
+
+- (BOOL)isToday {
+	return [[[NSDate date] midnightDate] isEqual:[self midnightDate]];
+}
+
+- (BOOL)isYesterday {
+	return [[[NSDate dateWithTimeIntervalSinceNow:-FKTimeIntervalDays(1)] midnightDate] isEqual:[self midnightDate]];
+}
+
+- (BOOL)isTomorrow {
+	return [[[NSDate dateWithTimeIntervalSinceNow:FKTimeIntervalDays(1)] midnightDate] isEqual:[self midnightDate]];
+}
+
+- (NSDate *)midnightDate {
+	return [[NSCalendar currentCalendar] dateFromComponents:[[NSCalendar currentCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:self]];
 }
 
 @end

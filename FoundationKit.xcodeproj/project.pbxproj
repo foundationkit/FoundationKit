@@ -16,7 +16,6 @@
 		393A29AD142361950056CB37 /* NSObject+FKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */; };
 		393A29AE142361950056CB37 /* FKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C582BF8A13C8B77C0012DF67 /* FKLog.m */; };
 		393A29AF142361950056CB37 /* NSObject+FKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */; };
-		393A29B0142361950056CB37 /* FKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* FKMath.m */; };
 		393A29B1142361950056CB37 /* NSString+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */; };
 		393A29B2142361950056CB37 /* NSArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */; };
 		393A29B3142361950056CB37 /* NSMutableArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297211141BC23F006124A2 /* NSMutableArray+FKConcise.m */; };
@@ -34,7 +33,6 @@
 		39CFA6151422500600DC3E57 /* NSUserDefaults+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */; };
 		39DF5D7B1424B78600090805 /* FKDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF5D7A1424B78600090805 /* FKDispatch.m */; };
 		39DF5D7C1424B78600090805 /* FKDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF5D7A1424B78600090805 /* FKDispatch.m */; };
-		39EA898C13C98C6C00B6427F /* FKMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA898B13C98C6C00B6427F /* FKMath.m */; };
 		9B29720E141BC0A0006124A2 /* NSArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */; };
 		9B297212141BC240006124A2 /* NSMutableArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297211141BC23F006124A2 /* NSMutableArray+FKConcise.m */; };
 		9B297215141BC650006124A2 /* NSNumber+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297214141BC64E006124A2 /* NSNumber+FKConcise.m */; };
@@ -87,7 +85,6 @@
 		39DF5D791424B78600090805 /* FKDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDispatch.h; sourceTree = "<group>"; };
 		39DF5D7A1424B78600090805 /* FKDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKDispatch.m; sourceTree = "<group>"; };
 		39EA898A13C98C6C00B6427F /* FKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMath.h; sourceTree = "<group>"; };
-		39EA898B13C98C6C00B6427F /* FKMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMath.m; sourceTree = "<group>"; };
 		78AC24FA13D3858E00820A31 /* FKCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCompatibility.h; sourceTree = "<group>"; };
 		78AC24FC13D38A8F00820A31 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9B29720D141BC09F006124A2 /* NSArray+FKConcise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FKConcise.m"; sourceTree = "<group>"; };
@@ -201,7 +198,6 @@
 				C582BF8913C8B77C0012DF67 /* FKLog.h */,
 				C582BF8A13C8B77C0012DF67 /* FKLog.m */,
 				39EA898A13C98C6C00B6427F /* FKMath.h */,
-				39EA898B13C98C6C00B6427F /* FKMath.m */,
 				39B07E6814288A7100CBF1B8 /* FKMutableIntArray.h */,
 				39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */,
 				C5E31A0A13C4EC8700D9CA76 /* FKShorthands.h */,
@@ -424,7 +420,6 @@
 				393A29AD142361950056CB37 /* NSObject+FKSwizzle.m in Sources */,
 				393A29AE142361950056CB37 /* FKLog.m in Sources */,
 				393A29AF142361950056CB37 /* NSObject+FKAssociatedObjects.m in Sources */,
-				393A29B0142361950056CB37 /* FKMath.m in Sources */,
 				393A29B1142361950056CB37 /* NSString+FKAdditions.m in Sources */,
 				393A29B2142361950056CB37 /* NSArray+FKConcise.m in Sources */,
 				393A29B3142361950056CB37 /* NSMutableArray+FKConcise.m in Sources */,
@@ -462,7 +457,6 @@
 				DCF68FBF13C74ADB0057517A /* NSObject+FKSwizzle.m in Sources */,
 				C582BF8C13C8B77C0012DF67 /* FKLog.m in Sources */,
 				399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */,
-				39EA898C13C98C6C00B6427F /* FKMath.m in Sources */,
 				C5AAAA7913C9A33F00E44CE7 /* NSString+FKAdditions.m in Sources */,
 				9B29720E141BC0A0006124A2 /* NSArray+FKConcise.m in Sources */,
 				9B297212141BC240006124A2 /* NSMutableArray+FKConcise.m in Sources */,

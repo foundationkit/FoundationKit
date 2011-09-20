@@ -11,4 +11,9 @@
 - (NSString *)relativeDateString;
 - (NSString *)dateStringWithFormat:(NSString *)format;
 
+- (BOOL)isToday;
+- (BOOL)isYesterday;
+- (BOOL)isTomorrow;
+- (NSDate *)midnightDate;
+
 @end

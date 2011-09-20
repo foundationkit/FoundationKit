@@ -6,20 +6,38 @@
 #import <CoreGraphics/CoreGraphics.h>
 #endif
 
-// angle conversion
-NS_INLINE double FKDegreesToRadian(double angleInDegrees);
-NS_INLINE double FKRadianToDegrees(double angleInRadian);
+NS_INLINE double FKDegreesToRadian(double angleInDegrees) {
+  return (M_PI * (angleInDegrees) / 180.0);
+}
 
-// time functions
-NS_INLINE NSTimeInterval FKTimeIntervalMilliseconds(NSTimeInterval milliseconds); 
-NS_INLINE NSTimeInterval FKTimeIntervalSeconds(NSTimeInterval seconds);
-NS_INLINE NSTimeInterval FKTimeIntervalMinutes(NSTimeInterval minutes);
-NS_INLINE NSTimeInterval FKTimeIntervalHours(NSTimeInterval hours);
-NS_INLINE NSTimeInterval FKTimeIntervalDays(NSTimeInterval days);
+NS_INLINE double FKRadianToDegrees(double angleInRadian) {
+  return (M_PI * 180.0 / (angleInRadian));
+}
 
+NS_INLINE NSTimeInterval FKTimeIntervalMilliseconds(NSTimeInterval milliseconds) {
+  return (NSTimeInterval)(milliseconds/ 1000.);
+}
 
-// returns a matrix that rotates and translates at one time
-NS_INLINE CGAffineTransform FKAffineTransformMakeRotateTranslate(CGFloat angle, CGFloat dx, CGFloat dy);
+NS_INLINE NSTimeInterval FKTimeIntervalSeconds(NSTimeInterval seconds) {
+  return seconds;
+}
 
-// returns a matrix that scales and translates at one time
-NS_INLINE CGAffineTransform FKAffineTransformMakeScaleTranslate(CGFloat sx, CGFloat sy, CGFloat dx, CGFloat dy);
+NS_INLINE NSTimeInterval FKTimeIntervalMinutes(NSTimeInterval minutes) {
+  return (NSTimeInterval)(minutes * 60.);
+}
+
+NS_INLINE NSTimeInterval FKTimeIntervalHours(NSTimeInterval hours) {
+  return (NSTimeInterval)(hours * 3600.);
+}
+
+NS_INLINE NSTimeInterval FKTimeIntervalDays(NSTimeInterval days) {
+  return (NSTimeInterval)(days * 3600. * 24.);
+}
+
+NS_INLINE CGAffineTransform FKAffineTransformMakeRotateTranslate(CGFloat angle, CGFloat dx, CGFloat dy) {
+  return CGAffineTransformMake(cosf(angle), sinf(angle), -sinf(angle), cosf(angle), dx, dy);
+}
+
+NS_INLINE CGAffineTransform FKAffineTransformMakeScaleTranslate(CGFloat sx, CGFloat sy, CGFloat dx, CGFloat dy) {
+  return CGAffineTransformMake(sx, 0.f, 0.f, sy, dx, dy);
+}
