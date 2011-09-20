@@ -27,6 +27,8 @@
 		393A29BE142361AD0056CB37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A29BD142361AD0056CB37 /* CoreGraphics.framework */; };
 		393A29C01423631C0056CB37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393A29BF1423631C0056CB37 /* UIKit.framework */; };
 		399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */; };
+		39B07E6A14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */; };
+		39B07E6B14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */; };
 		39CFA6151422500600DC3E57 /* NSUserDefaults+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */; };
 		39DF5D7B1424B78600090805 /* FKDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF5D7A1424B78600090805 /* FKDispatch.m */; };
 		39DF5D7C1424B78600090805 /* FKDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DF5D7A1424B78600090805 /* FKDispatch.m */; };
@@ -74,6 +76,8 @@
 		399F4CD213C905C70008CC0E /* NSObject+FKAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKAssociatedObjects.h"; sourceTree = "<group>"; };
 		399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKAssociatedObjects.m"; sourceTree = "<group>"; };
 		399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSynthesizeSingleton.h; sourceTree = "<group>"; };
+		39B07E6814288A7100CBF1B8 /* FKMutableIntArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMutableIntArray.h; sourceTree = "<group>"; };
+		39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMutableIntArray.m; sourceTree = "<group>"; };
 		39CFA6131422500400DC3E57 /* NSUserDefaults+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+FKAdditions.h"; sourceTree = "<group>"; };
 		39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+FKAdditions.m"; sourceTree = "<group>"; };
 		39DF5D791424B78600090805 /* FKDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDispatch.h; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 				C582BF8A13C8B77C0012DF67 /* FKLog.m */,
 				39EA898A13C98C6C00B6427F /* FKMath.h */,
 				39EA898B13C98C6C00B6427F /* FKMath.m */,
+				39B07E6814288A7100CBF1B8 /* FKMutableIntArray.h */,
+				39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */,
 				C5E31A0A13C4EC8700D9CA76 /* FKShorthands.h */,
 				399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */,
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
@@ -421,6 +427,7 @@
 				393A29B6142361950056CB37 /* NSUserDefaults+FKAdditions.m in Sources */,
 				39DF5D7C1424B78600090805 /* FKDispatch.m in Sources */,
 				9B54E82814269E6500336F08 /* NSObject+FKReflection.m in Sources */,
+				39B07E6B14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +465,7 @@
 				39CFA6151422500600DC3E57 /* NSUserDefaults+FKAdditions.m in Sources */,
 				39DF5D7B1424B78600090805 /* FKDispatch.m in Sources */,
 				9B54E82714269E6500336F08 /* NSObject+FKReflection.m in Sources */,
+				39B07E6A14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
