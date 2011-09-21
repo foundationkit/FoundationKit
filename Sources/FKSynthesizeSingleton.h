@@ -25,4 +25,4 @@ return shared##classname; \
 static dispatch_once_t pred; \
 __strong static id sharedObject_ = nil; \
 dispatch_once(&pred, ^{ sharedObject_ = block(); }); \
-return _sharedObject; \
+return sharedObject_; \
