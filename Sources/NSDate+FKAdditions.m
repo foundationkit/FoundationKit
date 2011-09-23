@@ -7,6 +7,11 @@ NSDateFormatter* dateFormatter(void);
 
 @implementation NSDate (FKAdditions)
 
+////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Class Methods
+////////////////////////////////////////////////////////////////////////
+
 + (NSDate *)dateWithString:(NSString *)dateString format:(NSString *)format {
 	if(dateString == nil) {
     return nil;
@@ -17,6 +22,45 @@ NSDateFormatter* dateFormatter(void);
   
 	return [formatter dateFromString:dateString];
 }
+
++ (NSDate *)dateWithYear:(NSInteger)year {
+	return [self dateWithYear:year month:0 day:0 hour:0 minute:0 second:0];
+}
+
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month {
+	return [self dateWithYear:year month:month day:0 hour:0 minute:0 second:0];
+}
+
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
+	return [self dateWithYear:year month:month day:day hour:0 minute:0 second:0];
+}
+
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour {
+	return [self dateWithYear:year month:month day:day hour:hour minute:0 second:0];
+}
+
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute {
+	return [self dateWithYear:year month:month day:day hour:hour minute:minute second:0];
+}
+
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second {
+	NSDateComponents *comps = [[NSDateComponents alloc] init];
+  NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+  
+	[comps setYear:year];
+	[comps setMonth:month];
+	[comps setDay:day];
+	[comps setHour:hour];
+	[comps setMinute:minute];
+	[comps setSecond:second];
+  
+	return [gregorian dateFromComponents:comps];
+}
+
+////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Instance Methods
+////////////////////////////////////////////////////////////////////////
 
 - (NSString *)relativeDateString {
 	NSTimeInterval time = [self timeIntervalSince1970];
@@ -93,6 +137,44 @@ NSDateFormatter* dateFormatter(void);
 
 - (NSDate *)midnightDate {
 	return [[NSCalendar currentCalendar] dateFromComponents:[[NSCalendar currentCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:self]];
+}
+
+- (NSDateComponents *)gregorianCalendarComponents {
+	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSDateComponents *components = [gregorian components:(NSSecondCalendarUnit | NSMinuteCalendarUnit | NSHourCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit | NSWeekCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:self];
+	return components;
+}
+
+- (NSInteger)secondComponent {
+	return [[self gregorianCalendarComponents] second];
+}
+
+- (NSInteger)minuteComponent {
+	return [[self gregorianCalendarComponents] minute];
+}
+
+- (NSInteger)hourComponent {
+	return [[self gregorianCalendarComponents] hour];
+}
+
+- (NSInteger)dayComponent {
+	return [[self gregorianCalendarComponents] day];
+}
+
+- (NSInteger)weekdayComponent {
+	return [[self gregorianCalendarComponents] weekday];
+}
+
+- (NSInteger)weekComponent {
+	return [[self gregorianCalendarComponents] week];
+}
+
+- (NSInteger)monthComponent {
+	return [[self gregorianCalendarComponents] month];
+}
+
+- (NSInteger)yearComponent {
+	return [[self gregorianCalendarComponents] year];
 }
 
 @end
