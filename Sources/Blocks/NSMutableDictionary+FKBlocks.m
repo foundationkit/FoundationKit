@@ -1,6 +1,7 @@
 #import "NSMutableDictionary+FKBlocks.h"
 #import "NSDictionary+FKBlocks.h"
 
+FKLoadCategory(NSMutableDictionaryFKBlocks);
 
 @implementation NSMutableDictionary (FKBlocks)
 

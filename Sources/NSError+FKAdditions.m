@@ -1,5 +1,6 @@
 #import "NSError+FKAdditions.h"
 
+FKLoadCategory(NSErrorFKAdditions);
 
 @implementation NSError (FKAdditions)
 

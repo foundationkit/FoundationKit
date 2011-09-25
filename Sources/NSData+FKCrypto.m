@@ -6,6 +6,8 @@
 #import <CommonCrypto/CommonHMAC.h>
 
 
+FKLoadCategory(NSDataFKCrypto);
+
 NSString * const kFKCryptoErrorDomain = @"FKCryptoErrorDomain";
 
 @implementation NSError (FKCrypto)

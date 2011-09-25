@@ -2,6 +2,8 @@
 
 #import "NSNumber+FKConcise.h"
 
+FKLoadCategory(NSNumberFKConcise);
+
 static NSNumberFormatter *numberFormatter = nil;
 
 @implementation NSNumber (FKConcise)

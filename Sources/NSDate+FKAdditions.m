@@ -1,6 +1,8 @@
 #import "NSDate+FKAdditions.h"
 #import "FKMath.h"
 
+FKLoadCategory(NSDateFKAdditions);
+
 static NSDateFormatter *dateFormatter_ = nil;
 
 NSDateFormatter* dateFormatter(void);

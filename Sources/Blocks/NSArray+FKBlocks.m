@@ -2,6 +2,7 @@
 
 #import "NSArray+FKBlocks.h"
 
+FKLoadCategory(NSArrayFKBlocks);
 
 @implementation NSArray (FKBlocks)
 

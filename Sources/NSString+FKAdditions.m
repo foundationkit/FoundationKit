@@ -1,5 +1,7 @@
 #import "NSString+FKAdditions.h"
 
+FKLoadCategory(NSStringFKAdditions);
+
 @implementation NSString (FKAdditions)
 
 - (BOOL)isBlank {

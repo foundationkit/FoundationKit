@@ -1,6 +1,7 @@
 #import "NSMutableArray+FKBlocks.h"
 #import "NSArray+FKBlocks.h"
 
+FKLoadCategory(NSMutableArrayFKBlocks);
 
 @implementation NSMutableArray (FKBlocks)
 

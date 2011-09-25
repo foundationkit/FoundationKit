@@ -6,6 +6,8 @@
 #import "NSObject+FKAssociatedObjects.h"
 #import <objc/runtime.h>
 
+FKLoadCategory(NSObjectFKAssociatedObjects);
+
 @implementation NSObject (FKAssociatedObjects)
 
 - (void)associateValue:(id)value withKey:(void *)key {

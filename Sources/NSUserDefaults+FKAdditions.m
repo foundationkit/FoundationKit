@@ -2,6 +2,8 @@
 
 #import "NSUserDefaults+FKAdditions.h"
 
+FKLoadCategory(NSUserDefaultsFKAdditions);
+
 @implementation NSUserDefaults (FKAdditions)
 
 - (void)registerDefaultsFromBundle:(NSString *)bundle file:(NSString *)file {

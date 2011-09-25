@@ -1,5 +1,6 @@
 #import "NSDictionary+FKBlocks.h"
 
+FKLoadCategory(NSDictionaryFKBlocks);
 
 @implementation NSDictionary (FKBlocks)
 

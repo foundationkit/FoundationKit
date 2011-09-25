@@ -3,6 +3,7 @@
 #import "NSNumber+FKConcise.h"
 #import <objc/runtime.h>
 
+FKLoadCategory(NSObjectFKReflection);
 
 static char objectTagKey;
 static char metaDataKey;

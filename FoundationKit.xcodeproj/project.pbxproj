@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392D3C44142FC5E9003AFB81 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D3C43142FC5E9003AFB81 /* AudioToolbox.framework */; };
+		392D3C47142FC5F2003AFB81 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D3C45142FC5F2003AFB81 /* AudioUnit.framework */; };
+		392D3C48142FC5F2003AFB81 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D3C46142FC5F2003AFB81 /* CoreAudio.framework */; };
 		393A29A6142361950056CB37 /* NSData+FKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */; };
 		393A29A7142361950056CB37 /* NSError+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */; };
 		393A29AD142361950056CB37 /* NSObject+FKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */; };
@@ -39,7 +42,7 @@
 		39CC1E47142F61280017578F /* NSNumber+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E3E142F61280017578F /* NSNumber+FKConcise.m */; };
 		39CC1E4E142F639A0017578F /* FKMutableFloatArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E4D142F63990017578F /* FKMutableFloatArray.mm */; };
 		39CC1E4F142F639A0017578F /* FKMutableFloatArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E4D142F63990017578F /* FKMutableFloatArray.mm */; };
-		39CC1E59142FAA220017578F /* FKMutableFloatArrayTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E58142FAA220017578F /* FKMutableFloatArrayTests.mm */; };
+		39CC1E59142FAA220017578F /* FKMutableFloatArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E58142FAA220017578F /* FKMutableFloatArrayTests.m */; };
 		39CFA6151422500600DC3E57 /* NSUserDefaults+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */; };
 		9B297218141BC81E006124A2 /* NSObject+FKPerform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297217141BC81C006124A2 /* NSObject+FKPerform.m */; };
 		9B54E82714269E6500336F08 /* NSObject+FKReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B54E82614269E6400336F08 /* NSObject+FKReflection.m */; };
@@ -71,6 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		392D3C43142FC5E9003AFB81 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		392D3C45142FC5F2003AFB81 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
+		392D3C46142FC5F2003AFB81 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		393A29BC142361950056CB37 /* libFoundationKitiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKitiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		393A29BD142361AD0056CB37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		393A29BF1423631C0056CB37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -107,7 +113,7 @@
 		39CC1E4C142F63990017578F /* FKMutableFloatArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMutableFloatArray.h; sourceTree = "<group>"; };
 		39CC1E4D142F63990017578F /* FKMutableFloatArray.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FKMutableFloatArray.mm; sourceTree = "<group>"; };
 		39CC1E57142FAA220017578F /* FKMutableFloatArrayTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMutableFloatArrayTests.h; sourceTree = "<group>"; };
-		39CC1E58142FAA220017578F /* FKMutableFloatArrayTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FKMutableFloatArrayTests.mm; sourceTree = "<group>"; };
+		39CC1E58142FAA220017578F /* FKMutableFloatArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMutableFloatArrayTests.m; sourceTree = "<group>"; };
 		39CFA6131422500400DC3E57 /* NSUserDefaults+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+FKAdditions.h"; sourceTree = "<group>"; };
 		39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+FKAdditions.m"; sourceTree = "<group>"; };
 		39DF5D791424B78600090805 /* FKDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDispatch.h; sourceTree = "<group>"; };
@@ -163,6 +169,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				392D3C47142FC5F2003AFB81 /* AudioUnit.framework in Frameworks */,
+				392D3C48142FC5F2003AFB81 /* CoreAudio.framework in Frameworks */,
+				392D3C44142FC5E9003AFB81 /* AudioToolbox.framework in Frameworks */,
 				C5AAAA7A13C9A37A00E44CE7 /* libFoundationKitMac.a in Frameworks */,
 				C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */,
 				C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */,
@@ -220,7 +229,7 @@
 				C5C18EBB13C8CCDF00DD0872 /* FKLogTests.h */,
 				C5C18EBC13C8CCDF00DD0872 /* FKLogTests.m */,
 				39CC1E57142FAA220017578F /* FKMutableFloatArrayTests.h */,
-				39CC1E58142FAA220017578F /* FKMutableFloatArrayTests.mm */,
+				39CC1E58142FAA220017578F /* FKMutableFloatArrayTests.m */,
 				C5EF038513C98EC100953F2B /* FKSynthesizeSingletonTests.h */,
 				C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */,
 				C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */,
@@ -319,10 +328,13 @@
 		DC410D0113C39BFD00C90C19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				393A29BF1423631C0056CB37 /* UIKit.framework */,
+				392D3C43142FC5E9003AFB81 /* AudioToolbox.framework */,
+				392D3C45142FC5F2003AFB81 /* AudioUnit.framework */,
+				392D3C46142FC5F2003AFB81 /* CoreAudio.framework */,
 				393A29BD142361AD0056CB37 /* CoreGraphics.framework */,
 				DC410D0213C39BFD00C90C19 /* Foundation.framework */,
 				C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */,
+				393A29BF1423631C0056CB37 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -469,7 +481,7 @@
 				C5C18EC213C8CE9800DD0872 /* FKLogTests.m in Sources */,
 				C5EF038913C98ECE00953F2B /* NKSynthesizeSingletonTests.m in Sources */,
 				C5AAAA7613C9A32A00E44CE7 /* NSStringAdditionsTests.m in Sources */,
-				39CC1E59142FAA220017578F /* FKMutableFloatArrayTests.mm in Sources */,
+				39CC1E59142FAA220017578F /* FKMutableFloatArrayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +555,10 @@
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -557,6 +573,10 @@
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};

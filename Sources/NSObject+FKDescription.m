@@ -3,6 +3,8 @@
 #import "NSObject+FKDescription.h"
 #import <objc/runtime.h>
 
+FKLoadCategory(NSObjectFKDescription);
+
 @implementation NSObject (FKDescription)
 
 // Finds all properties of an object, and prints each one out as part of a string describing the class.

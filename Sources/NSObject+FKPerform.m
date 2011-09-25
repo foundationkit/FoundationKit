@@ -2,6 +2,8 @@
 
 #import "NSObject+FKPerform.h"
 
+FKLoadCategory(NSObjectFKPerform);
+
 @implementation NSObject (FKPerform)
 
 // Silence clang warning that unknown performSelector can cause a leak (ARC)

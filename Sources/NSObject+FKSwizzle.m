@@ -1,6 +1,7 @@
 #import "NSObject+FKSwizzle.h"
 #import <objc/runtime.h>
 
+FKLoadCategory(NSObjectFKSwizzle);
 
 @implementation NSObject (FKSwizzle)
 

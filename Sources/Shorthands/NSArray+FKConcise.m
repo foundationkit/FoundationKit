@@ -2,6 +2,7 @@
 
 #import "NSArray+FKConcise.h"
 
+FKLoadCategory(NSArrayFKConcise);
 
 @implementation NSArray (FKConcise)
 

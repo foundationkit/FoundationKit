@@ -2,6 +2,8 @@
 
 #import "NSMutableArray+FKConcise.h"
 
+FKLoadCategory(NSMutableArrayFKConcise);
+
 // Unbiased random rounding thingy.
 static NSUInteger FKRandomNumberBelow(NSUInteger n) {
   NSUInteger m = 1;
