@@ -1,5 +1,6 @@
 #import "NSStringAdditionsTests.h"
 
+
 @implementation NSStringAdditionsTests
 
 - (void)testIsBlank {

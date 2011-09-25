@@ -5,8 +5,12 @@
 
 @implementation NSArray (FKConcise)
 
+- (BOOL)isEmpty {
+  return self.count == 0;
+}
+
 - (id)firstObject {
-  if (self.count == 0) {
+  if (self.empty) {
     return nil;
   }
   

@@ -1,5 +1,5 @@
 #import "NSObject+FKSwizzle.h"
-#import <objc/objc-class.h>
+#import <objc/runtime.h>
 
 
 @implementation NSObject (FKSwizzle)

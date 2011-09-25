@@ -8,6 +8,8 @@
 
 @interface NSArray (FKConcise)
 
+@property (nonatomic, readonly, getter = isEmpty) BOOL empty;
+
 - (id)firstObject;
 - (id)firstObjectMatchingPredicate:(NSPredicate *)predicate;
 

@@ -1,4 +1,5 @@
 #import "FKAudioRecorder.h"
+#import "FKShorthands.h"
 
 
 @interface FKAudioRecorder ()

@@ -52,7 +52,7 @@ __VA_ARGS__;                              \
 } while (0)
 
 // Four char codes
-NS_INLINE char * FKFcc(code) { return (char[5]){(code >> 24) & 0xFF, (code >> 16) & 0xFF, (code >> 8) & 0xFF, code & 0xFF, 0}; }
+#define FKFcc(code)  ((char[5]){(code >> 24) & 0xFF, (code >> 16) & 0xFF, (code >> 8) & 0xFF, code & 0xFF, 0})
 
 // Foundation functions for CF
 NS_INLINE CFIndex CFMaxRange(CFRange range) { return (range.location + range.length); }
