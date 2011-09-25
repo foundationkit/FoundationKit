@@ -1,6 +1,7 @@
 // Part of FoundationKit http://foundationk.it
 
 // Macro helpers
+#import "FKAssert.h"
 #import "FKCompatibility.h"
 #import "FKDispatch.h"
 #import "FKLog.h"
