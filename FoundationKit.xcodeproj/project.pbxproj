@@ -10,6 +10,9 @@
 		392D3C44142FC5E9003AFB81 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D3C43142FC5E9003AFB81 /* AudioToolbox.framework */; };
 		392D3C47142FC5F2003AFB81 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D3C45142FC5F2003AFB81 /* AudioUnit.framework */; };
 		392D3C48142FC5F2003AFB81 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D3C46142FC5F2003AFB81 /* CoreAudio.framework */; };
+		392D3C78142FF303003AFB81 /* FKPathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D3C77142FF303003AFB81 /* FKPathsTests.m */; };
+		392D3C7B142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */; };
+		392D3C7C142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */; };
 		393A29A6142361950056CB37 /* NSData+FKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */; };
 		393A29A7142361950056CB37 /* NSError+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */; };
 		393A29AD142361950056CB37 /* NSObject+FKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */; };
@@ -77,6 +80,11 @@
 		392D3C43142FC5E9003AFB81 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
 		392D3C45142FC5F2003AFB81 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		392D3C46142FC5F2003AFB81 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
+		392D3C75142FEE65003AFB81 /* FKPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPaths.h; sourceTree = "<group>"; };
+		392D3C76142FF302003AFB81 /* FKPathsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPathsTests.h; sourceTree = "<group>"; };
+		392D3C77142FF303003AFB81 /* FKPathsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPathsTests.m; sourceTree = "<group>"; };
+		392D3C79142FF3F8003AFB81 /* NSBundle+FKPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FKPaths.h"; sourceTree = "<group>"; };
+		392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FKPaths.m"; sourceTree = "<group>"; };
 		393A29BC142361950056CB37 /* libFoundationKitiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKitiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		393A29BD142361AD0056CB37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		393A29BF1423631C0056CB37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -230,6 +238,8 @@
 				C5C18EBC13C8CCDF00DD0872 /* FKLogTests.m */,
 				39CC1E57142FAA220017578F /* FKMutableFloatArrayTests.h */,
 				39CC1E58142FAA220017578F /* FKMutableFloatArrayTests.m */,
+				392D3C76142FF302003AFB81 /* FKPathsTests.h */,
+				392D3C77142FF303003AFB81 /* FKPathsTests.m */,
 				C5EF038513C98EC100953F2B /* FKSynthesizeSingletonTests.h */,
 				C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */,
 				C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */,
@@ -257,6 +267,7 @@
 				39CC1E4D142F63990017578F /* FKMutableFloatArray.mm */,
 				39B07E6814288A7100CBF1B8 /* FKMutableIntArray.h */,
 				39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */,
+				392D3C75142FEE65003AFB81 /* FKPaths.h */,
 				399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */,
 				C5E319D113C4744800D9CA76 /* NSData+FKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */,
@@ -278,6 +289,8 @@
 				C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */,
 				39CFA6131422500400DC3E57 /* NSUserDefaults+FKAdditions.h */,
 				39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */,
+				392D3C79142FF3F8003AFB81 /* NSBundle+FKPaths.h */,
+				392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -471,6 +484,7 @@
 				39CC1E45142F61280017578F /* NSMutableArray+FKConcise.m in Sources */,
 				39CC1E47142F61280017578F /* NSNumber+FKConcise.m in Sources */,
 				39CC1E4F142F639A0017578F /* FKMutableFloatArray.mm in Sources */,
+				392D3C7C142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +496,7 @@
 				C5EF038913C98ECE00953F2B /* NKSynthesizeSingletonTests.m in Sources */,
 				C5AAAA7613C9A32A00E44CE7 /* NSStringAdditionsTests.m in Sources */,
 				39CC1E59142FAA220017578F /* FKMutableFloatArrayTests.m in Sources */,
+				392D3C78142FF303003AFB81 /* FKPathsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +525,7 @@
 				39CC1E44142F61280017578F /* NSMutableArray+FKConcise.m in Sources */,
 				39CC1E46142F61280017578F /* NSNumber+FKConcise.m in Sources */,
 				39CC1E4E142F639A0017578F /* FKMutableFloatArray.mm in Sources */,
+				392D3C7B142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

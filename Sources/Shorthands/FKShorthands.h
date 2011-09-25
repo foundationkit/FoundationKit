@@ -11,8 +11,12 @@ NS_INLINE NSString* _(NSString *key) {
   return NSLocalizedString(key, key);
 }
 
-NS_INLINE NSString* FKAppVersion() {
+NS_INLINE NSString* FKApplicationVersion() {
   return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+}
+
+NS_INLINE NSString* FKApplicationName() {
+  return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
 }
 
 // runtime-check if class is available to make code more readable

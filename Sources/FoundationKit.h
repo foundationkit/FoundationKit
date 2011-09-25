@@ -25,6 +25,7 @@
 #import "FKShorthands.h"
 #import "FKSynthesizeSingleton.h"
 
+#import "FKPaths.h"
 #import "FKMutableFloatArray.h"
 #import "FKMutableIntArray.h"
 #import "NSData+FKCrypto.h"
