@@ -4,6 +4,10 @@
 
 @implementation NSObject (FKPerform)
 
+// Silence clang warning that unknown performSelector can cause a leak (ARC)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+
 - (void)performSelector:(SEL)selector afterDelay:(NSTimeInterval)delay {
 	[self performSelector:selector withObject:nil afterDelay: delay];
 }
@@ -31,5 +35,7 @@
   
 	return [self performSelector:selector withObject:object1 withObject:object2];	
 }
+
+#pragma clang diagnostic pop
 
 @end
