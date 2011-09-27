@@ -130,7 +130,7 @@
 		39EA898A13C98C6C00B6427F /* FKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMath.h; sourceTree = "<group>"; };
 		78AC24FA13D3858E00820A31 /* FKCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCompatibility.h; sourceTree = "<group>"; };
 		78AC24FC13D38A8F00820A31 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		9B04E2E11431F0E600974B96 /* NSObject+FKObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSObject+FKObserver.h"; sourceTree = "<group>"; };
+		9B04E2E11431F0E600974B96 /* NSObject+FKObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKObserver.h"; sourceTree = "<group>"; };
 		9B04E2E21431F0E600974B96 /* NSObject+FKObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKObserver.m"; sourceTree = "<group>"; };
 		9B297216141BC81A006124A2 /* NSObject+FKPerform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKPerform.h"; sourceTree = "<group>"; };
 		9B297217141BC81C006124A2 /* NSObject+FKPerform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKPerform.m"; sourceTree = "<group>"; };
@@ -283,6 +283,8 @@
 				399F4CD313C905C70008CC0E /* NSObject+FKAssociatedObjects.m */,
 				9B662A5F1420DB5A00F52294 /* NSObject+FKDescription.h */,
 				9B662A601420DB5A00F52294 /* NSObject+FKDescription.m */,
+				9B04E2E11431F0E600974B96 /* NSObject+FKObserver.h */,
+				9B04E2E21431F0E600974B96 /* NSObject+FKObserver.m */,
 				9B297216141BC81A006124A2 /* NSObject+FKPerform.h */,
 				9B297217141BC81C006124A2 /* NSObject+FKPerform.m */,
 				9B54E82514269E6400336F08 /* NSObject+FKReflection.h */,
@@ -295,8 +297,6 @@
 				39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */,
 				392D3C79142FF3F8003AFB81 /* NSBundle+FKPaths.h */,
 				392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */,
-				9B04E2E11431F0E600974B96 /* NSObject+FKObserver.h */,
-				9B04E2E21431F0E600974B96 /* NSObject+FKObserver.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";

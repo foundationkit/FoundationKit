@@ -25,6 +25,6 @@
  @param keyPath The keyPath the observer observes
  @param context The context of the observation
  */
-- (void)removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context;
+- (void)safeRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context;
 
 @end
