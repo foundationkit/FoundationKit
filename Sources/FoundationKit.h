@@ -32,6 +32,7 @@
 #import "NSDate+FKAdditions.h"
 #import "NSError+FKAdditions.h"
 #import "NSObject+FKAssociatedObjects.h"
+#import "NSObject+FKObserver.h"
 #import "NSObject+FKPerform.h"
 #import "NSObject+FKSwizzle.h"
 #import "NSString+FKAdditions.h"
