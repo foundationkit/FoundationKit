@@ -38,8 +38,8 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
 
 
 static BOOL FKTypeCodeIsCharArray(const char *typeCode){
-	int lastCharOffset = strlen(typeCode) - 1;
-	int secondToLastCharOffset = lastCharOffset - 1 ;
+	unsigned long lastCharOffset = strlen(typeCode) - 1;
+	unsigned long secondToLastCharOffset = lastCharOffset - 1 ;
   
 	BOOL isCharArray = typeCode[0] == '[' &&
   typeCode[secondToLastCharOffset] == 'c' && typeCode[lastCharOffset] == ']';

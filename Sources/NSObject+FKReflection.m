@@ -11,7 +11,7 @@ static char metaDataKey;
 @implementation NSObject (FKReflection)
 
 - (void)setObjectTag:(NSInteger)objectTag {
-  [self associateValue:$int(objectTag) withKey:&objectTagKey];
+  [self associateValue:$long(objectTag) withKey:&objectTagKey];
 }
 
 - (NSInteger)objectTag {
