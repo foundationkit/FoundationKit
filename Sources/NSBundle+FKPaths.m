@@ -1,4 +1,5 @@
 #import "NSBundle+FKPaths.h"
+#import "FKPaths.h"
 
 FKLoadCategory(NSBundleFKPaths);
 
