@@ -61,4 +61,25 @@ FKLoadCategory(NSStringFKAdditions);
 	return NSOrderedSame == [self compare:otherString options:NSCaseInsensitiveSearch + NSWidthInsensitiveSearch];
 }
 
+- (NSString *)stringByReplacingUnnecessaryWhitespace {
+  NSError *error = nil;
+  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[ ]{2,}"
+                                                                         options:NSRegularExpressionCaseInsensitive
+                                                                           error:&error];
+  
+  if (regex == nil) {
+    FKLogDebug(@"Couldn't replace unneccessary whitespace because regex couldn't be created: %@", [error localizedDescription]);
+    return self;
+  } 
+  
+  return [regex stringByReplacingMatchesInString:self
+                                         options:0
+                                           range:self.stringRange
+                                    withTemplate:@" "];
+}
+
+- (NSString *)trimmedStringByReplacingUnnecessaryWhitespace {
+  return [[self stringByReplacingUnnecessaryWhitespace] trimmed];
+}
+
 @end
