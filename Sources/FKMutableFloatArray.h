@@ -8,6 +8,9 @@
  FKMutableFloatArray is a simple Objective C - Wrapper around a C++ STL container to store a 
  variable number of CGFloats. If you deal with a lot of CGFloats, NSArray is a lot of overhead
  because you cannot store CGFloat variables directy, you have to box and unbox them into a NSNumber.
+ 
+ Because this class makes use of the C++ STL you have to link to the C++ Runtime library, if you use
+ FKMutableFloatArray. Therefore you have to add "-lstdc++" to "other linker flags".
  */
 @interface FKMutableFloatArray : NSObject
 
