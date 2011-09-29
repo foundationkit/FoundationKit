@@ -21,7 +21,7 @@ static NSNumberFormatter *numberFormatter = nil;
       return [numberFormatter numberFromString:string];
     }
     @catch (NSException * e) {
-      // NSLog(@"NSNumberFormatter exception! parsing: %@", string);
+      FKLogDebug(@"NSNumberFormatter exception! parsing: %@", string);
     }
   }
   

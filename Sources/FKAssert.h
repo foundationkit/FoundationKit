@@ -9,7 +9,7 @@
 #ifdef FK_DEBUG
 
 // Log error and abort in case condition evaluates to NO
-#define FKAssert(condition, ...) do { if ((condition) == NO) { NSLog(__VA_ARGS__); assert(condition); }} while(0)
+#define FKAssert(condition, ...) do { if ((condition) == NO) { FKLogAlways(__VA_ARGS__); assert(condition); }} while(0)
 
 // Release Branch
 #else

@@ -27,7 +27,7 @@ FKLoadCategory(NSUserDefaultsFKAdditions);
   NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
   
   if(!settingsBundle) {
-    // DDLogWarn(@"Could not find Settings.bundle");
+    FKLogDebug(@"Could not find Settings.bundle while trying to register defaults!");
     return;
   }
   
