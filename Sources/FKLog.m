@@ -5,7 +5,7 @@
 #import <UIKit/UIKit.h>
 #endif
 
-const NSString *kNRInternalDontOutputMe = @"don't output me";
+const NSString *kFKLogInternalDontOutputMe = @"don't output me";
 
 static BOOL FKTypeCodeIsCharArray(const char *typeCode);
 static NSString* FKStringFromBoolOrCharValue(BOOL boolOrCharvalue);
@@ -24,7 +24,7 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
     NSString *argumentName = va_arg(ap, NSString *);
     void *argument = va_arg(ap, void *);
     
-    if (argument == (__bridge void *)kNRInternalDontOutputMe) {
+    if (argument == (__bridge void *)kFKLogInternalDontOutputMe) {
       break;
     }
     

@@ -6,7 +6,7 @@
 
 #import "FKCompatibility.h"
 
-extern const NSString *kNRInternalDontOutputMe;
+extern const NSString *kFKLogInternalDontOutputMe;
 
 #define FKLog(...) NSLog(@"%@", FKLogToString(__VA_ARGS__));
 
@@ -25,6 +25,6 @@ extern const NSString *kNRInternalDontOutputMe;
     @encode(__typeof__(_9)), @"" # _9, _9, \
     @encode(__typeof__(_10)), @"" # _10, _10)
 
-#define _FKLogToString_RightSequence() kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe, kNRInternalDontOutputMe
+#define _FKLogToString_RightSequence() kFKLogInternalDontOutputMe, kFKLogInternalDontOutputMe, kFKLogInternalDontOutputMe, kFKLogInternalDontOutputMe, kFKLogInternalDontOutputMe, kFKLogInternalDontOutputMe, kFKLogInternalDontOutputMe, kFKLogInternalDontOutputMe, kFKLogInternalDontOutputMe, kFKLogInternalDontOutputMe
 
 NSString *_FKLogToString (NSString *file, unsigned int line, ...);

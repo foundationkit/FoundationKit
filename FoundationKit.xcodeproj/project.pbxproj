@@ -273,6 +273,8 @@
 				39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */,
 				392D3C75142FEE65003AFB81 /* FKPaths.h */,
 				399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */,
+				392D3C79142FF3F8003AFB81 /* NSBundle+FKPaths.h */,
+				392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */,
 				C5E319D113C4744800D9CA76 /* NSData+FKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */,
 				39AA0FAE14291E8500C6956C /* NSDate+FKAdditions.h */,
@@ -295,8 +297,6 @@
 				C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */,
 				39CFA6131422500400DC3E57 /* NSUserDefaults+FKAdditions.h */,
 				39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */,
-				392D3C79142FF3F8003AFB81 /* NSBundle+FKPaths.h */,
-				392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
