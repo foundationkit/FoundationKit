@@ -33,7 +33,7 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
       [msg appendFormat:@" %@", argument];
     } else {
       NSString *stringRepresentation = FKStringFromTypeAndValue(argumentTypeEncoding, argument);
-      [msg appendFormat:@" %s=%@", argumentName, stringRepresentation];
+      [msg appendFormat:@" %s = %@", argumentName, stringRepresentation];
     }
   }
   va_end(ap);

@@ -11,14 +11,14 @@
   int notAPointer = 1234;
   
   NSString *output = FKLogToString("a", @"asd", string, notAPointer, whatever, something);
-  NSString *expected = @"[FKLogTests.m:13] \"a\"=a asd string=qwe notAPointer=1234 whatever=(null) something=<NSObject: ";
+  NSString *expected = @"[FKLogTests.m:13] \"a\" = a asd string = qwe notAPointer = 1234 whatever = (null) something = <NSObject: ";
   STAssertTrue([output hasPrefix:expected], @"FKLogString failed: output: %@", output);
 }
 
 - (void)testULLONG_MAX {
   unsigned long long value = ULLONG_MAX;
   NSString *output = FKLogToString(value);
-  NSString *expected = @"[FKLogTests.m:20] value=18446744073709551615";
+  NSString *expected = @"[FKLogTests.m:20] value = 18446744073709551615";
   STAssertEqualObjects(expected, output, @"FKLogString failed");
 }
 
