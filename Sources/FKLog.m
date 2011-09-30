@@ -28,8 +28,13 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
       break;
     }
     
-    NSString *stringRepresentation = FKStringFromTypeAndValue(argumentTypeEncoding, argument);
-    msg = [msg stringByAppendingFormat:@" %@=%@", argumentName, stringRepresentation];
+    // special case inline strings
+    if ((strcmp(argumentTypeEncoding, @encode(id)) == 0) && ([argumentName hasPrefix:@"@\""])) {
+        msg = [msg stringByAppendingFormat:@" %@", argument];
+    } else {
+      NSString *stringRepresentation = FKStringFromTypeAndValue(argumentTypeEncoding, argument);
+      msg = [msg stringByAppendingFormat:@" %@=%@", argumentName, stringRepresentation];
+    }
   }
   va_end(ap);
   

@@ -11,7 +11,7 @@
   int notAPointer = 1234;
   
   NSString *output = FKLogToString("a", @"asd", string, notAPointer, whatever, something);
-  NSString *expected = @"[FKLogTests.m:13] \"a\"=a @\"asd\"=asd string=qwe notAPointer=1234 whatever=(null) something=<NSObject: ";
+  NSString *expected = @"[FKLogTests.m:13] \"a\"=a asd string=qwe notAPointer=1234 whatever=(null) something=<NSObject: ";
   STAssertTrue([output hasPrefix:expected], @"FKLogString failed: output: %@", output);
 }
 
