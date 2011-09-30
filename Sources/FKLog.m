@@ -38,14 +38,20 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
 
 
 static BOOL FKTypeCodeIsCharArray(const char *typeCode){
-	unsigned long lastCharOffset = strlen(typeCode) - 1;
-	unsigned long secondToLastCharOffset = lastCharOffset - 1 ;
-  
-	BOOL isCharArray = typeCode[0] == '[' &&
-  typeCode[secondToLastCharOffset] == 'c' && typeCode[lastCharOffset] == ']';
-	for(int i = 1; i < secondToLastCharOffset; i++)
-		isCharArray = isCharArray && isdigit(typeCode[i]);
-	return isCharArray;
+    unsigned long lastCharOffset = strlen(typeCode) - 1;
+    unsigned long secondToLastCharOffset = lastCharOffset - 1 ;
+
+    BOOL isCharArray = typeCode[0] == '[' && typeCode[secondToLastCharOffset] == 'c' && typeCode[lastCharOffset] == ']';
+    if(isCharArray) {
+        // check if typeCode conforms to regexp: \[ (\d)+ c \]
+        for(int i = 1; i < secondToLastCharOffset; i++) {
+            if (!isdigit(typeCode[i])) {
+                isCharArray = NO;
+                break;
+            }
+        }
+    }
+    return isCharArray;
 }
 
 //since BOOL is #defined as a signed char, we treat the value as
