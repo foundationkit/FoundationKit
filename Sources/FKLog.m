@@ -37,7 +37,7 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
 }
 
 
-static BOOL FKTypeCodeIsCharArray(const char *typeCode){
+NS_INLINE BOOL FKTypeCodeIsCharArray(const char *typeCode){
     unsigned long lastCharOffset = strlen(typeCode) - 1;
     unsigned long secondToLastCharOffset = lastCharOffset - 1 ;
 
@@ -56,7 +56,7 @@ static BOOL FKTypeCodeIsCharArray(const char *typeCode){
 
 //since BOOL is #defined as a signed char, we treat the value as
 //a BOOL if it is exactly YES or NO, and a char otherwise.
-static NSString* FKStringFromBoolOrCharValue(BOOL boolOrCharvalue) {
+NS_INLINE NSString* FKStringFromBoolOrCharValue(BOOL boolOrCharvalue) {
 	if(boolOrCharvalue == YES)
 		return @"YES";
 	if(boolOrCharvalue == NO)
@@ -64,7 +64,7 @@ static NSString* FKStringFromBoolOrCharValue(BOOL boolOrCharvalue) {
 	return [NSString stringWithFormat:@"'%c'", boolOrCharvalue];
 }
 
-static NSString *FKStringFromFourCharCodeOrUnsignedInt32(FourCharCode fourcc) {
+NS_INLINE NSString *FKStringFromFourCharCodeOrUnsignedInt32(FourCharCode fourcc) {
 	return [NSString stringWithFormat:@"%u ('%c%c%c%c')",
           fourcc,
           (fourcc >> 24) & 0xFF,
@@ -73,11 +73,11 @@ static NSString *FKStringFromFourCharCodeOrUnsignedInt32(FourCharCode fourcc) {
           fourcc & 0xFF];
 }
 
-static NSString *FKStringFromNSDecimalWithCurrentLocal(NSDecimal dcm) {
+NS_INLINE NSString *FKStringFromNSDecimalWithCurrentLocal(NSDecimal dcm) {
 	return NSDecimalString(&dcm, [NSLocale currentLocale]);
 }
 
-static NSString * FKStringFromTypeAndValue(const char * typeCode, void * value) {
+NS_INLINE NSString * FKStringFromTypeAndValue(const char * typeCode, void * value) {
 #define IF_TYPE_MATCHES_INTERPRET_WITH(typeToMatch,func) \
 if (strcmp(typeCode, @encode(typeToMatch)) == 0) \
 return (func)(*(typeToMatch*)value)
