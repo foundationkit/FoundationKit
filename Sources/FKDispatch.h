@@ -34,15 +34,14 @@ NS_INLINE void dispatch_sync_on_main_queue(dispatch_block_t block) {
  dispatch_sync(foundation_queue(), ^{ NSLog(@"Logging on a queue."); });
  */
 
-#define FKDefineGCDQueueWithName(QUEUE_NAME)                                    \
-static dispatch_queue_t fk_##QUEUE_NAME;                                        \
-dispatch_queue_t QUEUE_NAME(void);                                              \
-dispatch_queue_t QUEUE_NAME(void) {                                             \
-static dispatch_once_t onceToken;                                               \
-dispatch_once(&onceToken, ^{                                                    \
-NSString *queueIdentifier = [NSString stringWithFormat:@"com.%@.%@.%s",         \
-FKApplicationName(), FKApplicationVersion(), #QUEUE_NAME];                      \
-fk_##QUEUE_NAME = dispatch_queue_create([queueIdentifier UTF8String], 0);       \
-});                                                                             \
-return fk_##QUEUE_NAME;                                                         \
+#define FKDefineGCDQueueWithName(QUEUE_NAME)                                                  \
+static dispatch_queue_t fk_##QUEUE_NAME;                                                      \
+NS_INLINE dispatch_queue_t QUEUE_NAME(void) {                                                 \
+  static dispatch_once_t onceToken;                                                           \
+  dispatch_once(&onceToken, ^{                                                                \
+    NSString *queueIdentifier = [NSString stringWithFormat:@"com.%@.%@.%s",                   \
+                                 FKApplicationName(), FKApplicationVersion(), #QUEUE_NAME];   \
+    fk_##QUEUE_NAME = dispatch_queue_create([queueIdentifier UTF8String], 0);                 \
+  });                                                                                         \
+  return fk_##QUEUE_NAME;                                                                     \
 }
