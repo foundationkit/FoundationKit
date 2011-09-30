@@ -17,7 +17,7 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
   va_list ap;
   va_start(ap, line);
 
-  NSString *msg = [NSString stringWithFormat:@"[%@:%u]", file, line];
+  NSMutableString *msg = [NSMutableString stringWithFormat:@"[%@:%u]", file, line];
   
   while (true) {
     char *argumentTypeEncoding = va_arg(ap, char *);
@@ -30,10 +30,10 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
     
     // special case inline strings
     if ((strcmp(argumentTypeEncoding, @encode(id)) == 0) && ([argumentName hasPrefix:@"@\""])) {
-        msg = [msg stringByAppendingFormat:@" %@", argument];
+      [msg appendFormat:@" %@", argument];
     } else {
       NSString *stringRepresentation = FKStringFromTypeAndValue(argumentTypeEncoding, argument);
-      msg = [msg stringByAppendingFormat:@" %@=%@", argumentName, stringRepresentation];
+      [msg appendFormat:@" %@=%@", argumentName, stringRepresentation];
     }
   }
   va_end(ap);
