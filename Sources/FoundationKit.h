@@ -18,6 +18,7 @@
 #import "FKMath.h"
 #import "FKShorthands.h"
 #import "FKSynthesizeSingleton.h"
+#import "FKUnzip.h"
 
 #import "FKPaths.h"
 #import "FKMutableIntArray.h"
