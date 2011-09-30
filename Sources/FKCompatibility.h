@@ -1,11 +1,5 @@
 // Part of FoundationKit http://foundationk.it
 
-// check for common Debug-Macros and define custom Debug-Macro for check within FoundationKit
-#if (defined(DEBUG) || defined(CONFIGURATION_Debug))
-#define FK_DEBUG
-#endif
-
-
 #ifndef kCFCoreFoundationVersionNumber_iPhoneOS_4_0
 #define kCFCoreFoundationVersionNumber_iPhoneOS_4_0 550.32
 #endif

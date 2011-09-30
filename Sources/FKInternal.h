@@ -1,5 +1,10 @@
 // Part of FoundationKit http://foundationk.it
 
+// check for common Debug-Macros and define custom Debug-Macro for check within FoundationKit
+#if (defined(DEBUG) || defined(CONFIGURATION_Debug))
+  #define FK_DEBUG
+#endif
+
 // Internal logging macro
 #ifdef FK_DEBUG
   #define FKLogDebug(fmt, ...) do { NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__); } while(0)
