@@ -161,6 +161,7 @@
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DCB0126F13C4AE9400AB692F /* NSError+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+FKAdditions.h"; sourceTree = "<group>"; };
 		DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+FKAdditions.m"; sourceTree = "<group>"; };
+		DCE05E8E1436479000737130 /* FKBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBenchmark.h; sourceTree = "<group>"; };
 		DCF68FBC13C74ADB0057517A /* NSObject+FKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKSwizzle.h"; sourceTree = "<group>"; };
 		DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKSwizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -271,6 +272,7 @@
 				39E85BCC1434FA6E008FC8D5 /* Optional */,
 				39CC1E25142F60120017578F /* Shorthands */,
 				39CC1E11142F56700017578F /* FKAssert.h */,
+				DCE05E8E1436479000737130 /* FKBenchmark.h */,
 				78AC24FA13D3858E00820A31 /* FKCompatibility.h */,
 				39DF5D791424B78600090805 /* FKDispatch.h */,
 				C582BF8913C8B77C0012DF67 /* FKLog.h */,
