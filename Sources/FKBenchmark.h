@@ -1,13 +1,6 @@
-//
-//  FKBenchmark.h
-//  FoundationKit
-//
-//  Created by Erik Aigner on 30.09.11.
-//  Copyright (c) 2011 FoundationKit. All rights reserved.
-//
+// Part of FoundationKit http://foundationk.it
 
 #import <mach/mach_time.h>
-
 
 NS_INLINE void FKBenchmark(char *title, dispatch_block_t b) {
   if (b == NULL) {
