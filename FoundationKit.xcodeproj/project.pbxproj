@@ -159,6 +159,8 @@
 		C5EF038613C98EC100953F2B /* NKSynthesizeSingletonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKSynthesizeSingletonTests.m; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKitMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKitMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC410D0213C39BFD00C90C19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DC5BFFD914364EFC008FA197 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
+		DC5BFFDC14364F4C008FA197 /* FKUnzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKUnzip.h; sourceTree = "<group>"; };
 		DCB0126F13C4AE9400AB692F /* NSError+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+FKAdditions.h"; sourceTree = "<group>"; };
 		DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+FKAdditions.m"; sourceTree = "<group>"; };
 		DCF68FBC13C74ADB0057517A /* NSObject+FKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKSwizzle.h"; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */,
 				C5AAAA7713C9A33F00E44CE7 /* NSString+FKAdditions.h */,
 				C5AAAA7813C9A33F00E44CE7 /* NSString+FKAdditions.m */,
+				DC5BFFDC14364F4C008FA197 /* FKUnzip.h */,
 				39CFA6131422500400DC3E57 /* NSUserDefaults+FKAdditions.h */,
 				39CFA6141422500500DC3E57 /* NSUserDefaults+FKAdditions.m */,
 			);
@@ -354,6 +357,7 @@
 		DC410D0113C39BFD00C90C19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC5BFFD914364EFC008FA197 /* libz.dylib */,
 				392D3C43142FC5E9003AFB81 /* AudioToolbox.framework */,
 				392D3C45142FC5F2003AFB81 /* AudioUnit.framework */,
 				392D3C46142FC5F2003AFB81 /* CoreAudio.framework */,
