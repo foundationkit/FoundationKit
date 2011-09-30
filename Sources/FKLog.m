@@ -21,7 +21,7 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
   
   while (true) {
     char *argumentTypeEncoding = va_arg(ap, char *);
-    NSString *argumentName = va_arg(ap, NSString *);
+    char *argumentName = va_arg(ap, char *);
     void *argument = va_arg(ap, void *);
     
     if (argument == (__bridge void *)kFKLogInternalDontOutputMe) {
@@ -29,11 +29,11 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
     }
     
     // special case inline strings
-    if ((strcmp(argumentTypeEncoding, @encode(id)) == 0) && ([argumentName hasPrefix:@"@\""])) {
+    if ((strcmp(argumentTypeEncoding, @encode(id)) == 0) && (strncmp(argumentName, "@\"", 2) == 0)) {
       [msg appendFormat:@" %@", argument];
     } else {
       NSString *stringRepresentation = FKStringFromTypeAndValue(argumentTypeEncoding, argument);
-      [msg appendFormat:@" %@=%@", argumentName, stringRepresentation];
+      [msg appendFormat:@" %s=%@", argumentName, stringRepresentation];
     }
   }
   va_end(ap);
