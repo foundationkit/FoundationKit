@@ -12,6 +12,7 @@
 
 // Macro helpers
 #import "FKAssert.h"
+#import "FKBenchmark.h"
 #import "FKCompatibility.h"
 #import "FKDispatch.h"
 #import "FKLog.h"
