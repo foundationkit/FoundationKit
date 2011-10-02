@@ -4,22 +4,43 @@
 // https://github.com/andymatuschak/NSObject-AssociatedObjects
 
 #import "NSObject+FKAssociatedObjects.h"
-#import <objc/runtime.h>
 
 FKLoadCategory(NSObjectFKAssociatedObjects);
 
+NS_INLINE BOOL FKIsValidAssociationPolicy(FKAssociationPolicy policy) {
+  switch (policy) {
+    case FKAssociationPolicyAssign:
+    case FKAssociationPolicyRetainNonatomic:
+    case FKAssociationPolicyCopyNonatomic:
+    case FKAssociationPolicyRetain:
+    case FKAssociationPolicyCopy:
+      return YES;
+      
+    default:
+      return NO;
+  }
+}
+
 @implementation NSObject (FKAssociatedObjects)
 
+- (void)associateValue:(id)value withKey:(void *)key policy:(FKAssociationPolicy)policy {
+  if (FKIsValidAssociationPolicy(policy)) {
+    objc_setAssociatedObject(self, key, value, policy);
+  } else {
+    FKLogDebug(@"Policy %ld is no valid association policy, can't associate value with object '%@'", policy, self);
+  }
+}
+
 - (void)associateValue:(id)value withKey:(void *)key {
-	objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_RETAIN);
+  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_RETAIN];
 }
 
 - (void)associateWeakValue:(id)value withKey:(void *)key; {
-	objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_ASSIGN);
+  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_ASSIGN];
 }
 
 - (void)associateCopiedValue:(id)value withKey:(void *)key {
-  objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_COPY);
+  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_COPY];
 }
 
 - (id)associatedValueForKey:(void *)key {
