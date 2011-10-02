@@ -48,24 +48,34 @@
 - (void)removeNumberAtIndex:(NSUInteger)index;
 
 /**
- Returns the number at the given index.
+ Returns the number at the given index. This method is faster than numberOrNoValueAtIndex but can crash, if the index is out of bounds.
  
- @return The number stored at the index, or `kFKMutableFloatArrayNoValue` if the index is greater or equal the number of numbers stored.
+ @return The number stored at the index.
  @param index The index of the number to return.
+ @see numberOrNoValueAtIndex
  */
 - (CGFloat)numberAtIndex:(NSUInteger)index;
 
 /**
+ Returns the number at the given index. This method performs a bound-check and is therefore slower than numberAtIndex.
+ 
+ @return The number stored at the index, or `kFKMutableFloatArrayNoValue` if the index is greater or equal the number of numbers stored.
+ @param index The index of the number to return.
+ @see numberAtIndex
+ */
+- (CGFloat)numberOrNoValueAtIndex:(NSUInteger)index;
+
+/**
  REturns the first number in the array.
  
- @return The first number in the array, or `nil` if the array is empty.
+ @return The first number in the array, or `kFKMutableFloatArrayNoValue` if the array is empty.
  */
 - (CGFloat)firstNumber;
 
 /**
  Returns the last number in the array.
  
- @return The last number in the array, or `nil` if the array is empty.
+ @return The last number in the array, or `kFKMutableFloatArrayNoValue` if the array is empty.
  */
 - (CGFloat)lastNumber;
 

@@ -29,6 +29,7 @@
 		39AA0FB114291E8500C6956C /* NSDate+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AA0FAF14291E8500C6956C /* NSDate+FKAdditions.m */; };
 		39B07E6A14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */; };
 		39B07E6B14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */; };
+		39C5905C14389169004C438C /* FKMutableIntArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C5905B14389169004C438C /* FKMutableIntArrayTests.m */; };
 		39CC1E2E142F60C70017578F /* NSArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E27142F60C70017578F /* NSArray+FKBlocks.m */; };
 		39CC1E2F142F60C70017578F /* NSArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E27142F60C70017578F /* NSArray+FKBlocks.m */; };
 		39CC1E30142F60C70017578F /* NSDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E29142F60C70017578F /* NSDictionary+FKBlocks.m */; };
@@ -96,6 +97,8 @@
 		39AA0FAF14291E8500C6956C /* NSDate+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FKAdditions.m"; sourceTree = "<group>"; };
 		39B07E6814288A7100CBF1B8 /* FKMutableIntArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMutableIntArray.h; sourceTree = "<group>"; };
 		39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMutableIntArray.m; sourceTree = "<group>"; };
+		39C5905A14389169004C438C /* FKMutableIntArrayTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMutableIntArrayTests.h; sourceTree = "<group>"; };
+		39C5905B14389169004C438C /* FKMutableIntArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMutableIntArrayTests.m; sourceTree = "<group>"; };
 		39CC1E11142F56700017578F /* FKAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKAssert.h; sourceTree = "<group>"; };
 		39CC1E20142F5F070017578F /* FKInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FKInternal.h; path = Sources/FKInternal.h; sourceTree = "<group>"; };
 		39CC1E26142F60C70017578F /* NSArray+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+FKBlocks.h"; path = "Blocks/NSArray+FKBlocks.h"; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 				C5C18EBC13C8CCDF00DD0872 /* FKLogTests.m */,
 				39CC1E57142FAA220017578F /* FKMutableFloatArrayTests.h */,
 				39CC1E58142FAA220017578F /* FKMutableFloatArrayTests.m */,
+				39C5905A14389169004C438C /* FKMutableIntArrayTests.h */,
+				39C5905B14389169004C438C /* FKMutableIntArrayTests.m */,
 				392D3C76142FF302003AFB81 /* FKPathsTests.h */,
 				392D3C77142FF303003AFB81 /* FKPathsTests.m */,
 				C5EF038513C98EC100953F2B /* FKSynthesizeSingletonTests.h */,
@@ -513,6 +518,7 @@
 				39CC1E59142FAA220017578F /* FKMutableFloatArrayTests.m in Sources */,
 				392D3C78142FF303003AFB81 /* FKPathsTests.m in Sources */,
 				39E85BCF1434FB1C008FC8D5 /* FKMutableFloatArray.mm in Sources */,
+				39C5905C14389169004C438C /* FKMutableIntArrayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,6 +40,7 @@ NS_INLINE NSTimeInterval FKTimeIntervalHours(NSTimeInterval hours) {
   return (NSTimeInterval)(hours * 3600.);
 }
 
+// Note: Not every day has exactly 86400 Seconds, make sure to use NSCalendar if you need exact calculation
 NS_INLINE NSTimeInterval FKTimeIntervalDays(NSTimeInterval days) {
   return (NSTimeInterval)(days * 3600. * 24.);
 }
