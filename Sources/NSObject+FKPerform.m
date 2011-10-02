@@ -11,7 +11,7 @@ FKLoadCategory(NSObjectFKPerform);
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 
 - (void)performSelector:(SEL)selector afterDelay:(NSTimeInterval)delay {
-	[self performSelector:selector withObject:nil afterDelay: delay];
+	[self performSelector:selector withObject:nil afterDelay:delay];
 }
 
 - (id)performSelectorIfResponding:(SEL)selector {

@@ -1,8 +1,12 @@
+// Part of FoundationKit http://foundationk.it
+//
+// isBlank see https://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/object/blank.rb
+
+
 #import <Foundation/Foundation.h>
 
 @interface NSString (FKAdditions)
 
-// see https://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/object/blank.rb
 - (BOOL)isBlank;
 - (BOOL)isEmpty;
 - (NSString *)presence;
