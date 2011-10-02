@@ -8,9 +8,24 @@
 
 extern const NSString *kFKLogInternalDontOutputMe;
 
+/**
+ Macro to output debug-information to the console.
+
+ Example:
+ FKLog(aString) results in [Filename.m:Linenumber] aString = value of string
+ */
 #define FKLog(...) NSLog(@"%@", FKLogToString(__VA_ARGS__));
 
+/**
+ Macro to save debug-information into a NSString.
+ 
+ Example:
+ FKLogString(aString, aInt) results in [Filename.m:Linenumber] aString = value of string aInt = 13
+ */
 #define FKLogToString(...) _FKLogToString_(__VA_ARGS__,_FKLogToString_RightSequence())
+
+
+
 #define _FKLogToString_(...) _FKLogToString__(__VA_ARGS__)
 #define _FKLogToString__(_1, _2, _3, _4, _5, _6, _7, _8, _9,_10,...) _FKLogToString(\
     [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__,\

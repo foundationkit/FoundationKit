@@ -12,6 +12,7 @@
 #define FKAssert(condition, ...) do { if ((condition) == NO) { FKLogAlways(__VA_ARGS__); assert(condition); }} while(0)
 
 // Release Branch
+// We block assertions in release branch and only log errors
 #else
 
 // Only Log error

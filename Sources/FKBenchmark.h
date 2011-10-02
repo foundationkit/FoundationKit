@@ -20,8 +20,9 @@ NS_INLINE void FKBenchmark(NSString *title, dispatch_block_t block) {
   
 #ifdef FK_DEBUG
   ^{
-    const uint64_t start = mach_absolute_time();
     FKLogAlways(@"'%@' benchmark started...", title);
+    
+    const uint64_t start = mach_absolute_time();
     block();
     const uint64_t end = mach_absolute_time();
     const uint64_t elapsedMTU = end - start;
