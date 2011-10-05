@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		392D3C44142FC5E9003AFB81 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D3C43142FC5E9003AFB81 /* AudioToolbox.framework */; };
-		392D3C47142FC5F2003AFB81 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D3C45142FC5F2003AFB81 /* AudioUnit.framework */; };
-		392D3C48142FC5F2003AFB81 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D3C46142FC5F2003AFB81 /* CoreAudio.framework */; };
 		392D3C78142FF303003AFB81 /* FKPathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D3C77142FF303003AFB81 /* FKPathsTests.m */; };
 		392D3C7B142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */; };
 		392D3C7C142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */; };
@@ -81,9 +78,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		392D3C43142FC5E9003AFB81 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
-		392D3C45142FC5F2003AFB81 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
-		392D3C46142FC5F2003AFB81 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		392D3C75142FEE65003AFB81 /* FKPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPaths.h; sourceTree = "<group>"; };
 		392D3C76142FF302003AFB81 /* FKPathsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPathsTests.h; sourceTree = "<group>"; };
 		392D3C77142FF303003AFB81 /* FKPathsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPathsTests.m; sourceTree = "<group>"; };
@@ -190,9 +184,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				392D3C47142FC5F2003AFB81 /* AudioUnit.framework in Frameworks */,
-				392D3C48142FC5F2003AFB81 /* CoreAudio.framework in Frameworks */,
-				392D3C44142FC5E9003AFB81 /* AudioToolbox.framework in Frameworks */,
 				C5AAAA7A13C9A37A00E44CE7 /* libFoundationKitMac.a in Frameworks */,
 				C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */,
 				C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */,
@@ -381,9 +372,6 @@
 		DC410D0113C39BFD00C90C19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				392D3C43142FC5E9003AFB81 /* AudioToolbox.framework */,
-				392D3C45142FC5F2003AFB81 /* AudioUnit.framework */,
-				392D3C46142FC5F2003AFB81 /* CoreAudio.framework */,
 				393A29BD142361AD0056CB37 /* CoreGraphics.framework */,
 				DC410D0213C39BFD00C90C19 /* Foundation.framework */,
 				C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */,
