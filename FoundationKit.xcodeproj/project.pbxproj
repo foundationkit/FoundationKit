@@ -47,6 +47,7 @@
 		39DEEAD2143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEAD0143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m */; };
 		39DEEAD6143C8F3700B81BB5 /* FKOperationQueueFinishedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEAD5143C8F3700B81BB5 /* FKOperationQueueFinishedTests.m */; };
 		39DEEAE0143CCDEC00B81BB5 /* FKMutableFloatArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEADF143CCD9C00B81BB5 /* FKMutableFloatArray.mm */; };
+		39DEEB73143CEDB600B81BB5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DEEB72143CEDB500B81BB5 /* CoreData.framework */; };
 		9B04E2E31431F0E600974B96 /* NSObject+FKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04E2E21431F0E600974B96 /* NSObject+FKObserver.m */; };
 		9B04E2E41431F0E600974B96 /* NSObject+FKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04E2E21431F0E600974B96 /* NSObject+FKObserver.m */; };
 		9B297218141BC81E006124A2 /* NSObject+FKPerform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297217141BC81C006124A2 /* NSObject+FKPerform.m */; };
@@ -130,6 +131,9 @@
 		39DEEADA143CCCFA00B81BB5 /* FKAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKAudioRecorder.m; sourceTree = "<group>"; };
 		39DEEADE143CCD9C00B81BB5 /* FKMutableFloatArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKMutableFloatArray.h; sourceTree = "<group>"; };
 		39DEEADF143CCD9C00B81BB5 /* FKMutableFloatArray.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FKMutableFloatArray.mm; sourceTree = "<group>"; };
+		39DEEB72143CEDB500B81BB5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		39DEEB76143CEE7600B81BB5 /* NSManagedObject+FKAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+FKAdditions.h"; sourceTree = "<group>"; };
+		39DEEB77143CEE7600B81BB5 /* NSManagedObject+FKAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+FKAdditions.m"; sourceTree = "<group>"; };
 		39DF5D791424B78600090805 /* FKDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDispatch.h; sourceTree = "<group>"; };
 		39EA898A13C98C6C00B6427F /* FKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMath.h; sourceTree = "<group>"; };
 		78AC24FA13D3858E00820A31 /* FKCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCompatibility.h; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39DEEB73143CEDB600B81BB5 /* CoreData.framework in Frameworks */,
 				C5AAAA7A13C9A37A00E44CE7 /* libFoundationKitMac.a in Frameworks */,
 				C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */,
 				C5C18E7C13C8C64C00DD0872 /* SenTestingKit.framework in Frameworks */,
@@ -257,10 +262,21 @@
 			path = "Optional/C++";
 			sourceTree = "<group>";
 		};
+		39DEEB75143CEE7600B81BB5 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				39DEEB76143CEE7600B81BB5 /* NSManagedObject+FKAdditions.h */,
+				39DEEB77143CEE7600B81BB5 /* NSManagedObject+FKAdditions.m */,
+			);
+			name = "Core Data";
+			path = "Optional/Core Data";
+			sourceTree = "<group>";
+		};
 		39E85BCC1434FA6E008FC8D5 /* Optional */ = {
 			isa = PBXGroup;
 			children = (
 				39DEEAD8143CCCFA00B81BB5 /* Audio */,
+				39DEEB75143CEE7600B81BB5 /* Core Data */,
 				39DEEADD143CCD9C00B81BB5 /* C++ */,
 			);
 			name = Optional;
@@ -372,6 +388,7 @@
 		DC410D0113C39BFD00C90C19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39DEEB72143CEDB500B81BB5 /* CoreData.framework */,
 				393A29BD142361AD0056CB37 /* CoreGraphics.framework */,
 				DC410D0213C39BFD00C90C19 /* Foundation.framework */,
 				C5C18E7B13C8C64C00DD0872 /* SenTestingKit.framework */,
