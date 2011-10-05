@@ -6,20 +6,21 @@
 
 #define kFKOperationCountKeyPath  @"operationCount"
 
-@interface NSOperationQueue ()
-
-@property (nonatomic, copy) fk_queue_finished_block fk_finishedBlock;
-
+/**
+ Internal class that acts as the observer for the keyPath "operationCount" for all NSOperationQueues
+ */
+@interface FKObserver : NSObject 
 @end
 
-@interface FKObserver : NSObject
+@interface NSOperationQueue ()
+
+@property (nonatomic, copy) dispatch_block_t fk_finishedBlock;
 
 @end
 
 static char finishedBlockKey;
 static char finishedContext;
 static FKObserver *observer = nil;
-
 
 @implementation NSOperationQueue (FKBlocks)
 
@@ -33,20 +34,27 @@ static FKObserver *observer = nil;
 }
 
 - (void)removeFinishedBlock {
-  [self safeRemoveObserver:observer forKeyPath:kFKOperationCountKeyPath];
   self.fk_finishedBlock = nil;
 }
 
-- (fk_queue_finished_block)fk_finishedBlock {
+- (dispatch_block_t)fk_finishedBlock {
   return [self associatedValueForKey:&finishedBlockKey];
 }
 
-- (void)setFk_finishedBlock:(fk_queue_finished_block)fk_finishedBlock {
+- (void)setFk_finishedBlock:(dispatch_block_t)fk_finishedBlock {
   [self associateCopiedValue:fk_finishedBlock withKey:&finishedBlockKey];
+  
+  if (fk_finishedBlock == nil) {
+    [self safeRemoveObserver:observer forKeyPath:kFKOperationCountKeyPath];
+  }
 }
 
 @end
 
+////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Internal
+////////////////////////////////////////////////////////////////////////
 
 @implementation FKObserver
 
@@ -64,7 +72,7 @@ static FKObserver *observer = nil;
     NSOperationQueue *operationQueue = (NSOperationQueue *)object;
     
     if (operationQueue.operationCount == 0 && operationQueue.fk_finishedBlock != nil) {
-      operationQueue.fk_finishedBlock(operationQueue);
+      operationQueue.fk_finishedBlock();
     }
   } else {
     [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];

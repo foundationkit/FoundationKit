@@ -2,9 +2,6 @@
 
 #import <Foundation/Foundation.h>
 
-/** Type of the block that is executed, when the NSOperationQueue finished */
-typedef void(^fk_queue_finished_block)();
-
 /**
  This category adds a block-delegate to NSOperationQueue that gets executed
  when the operationQueue finishes.
