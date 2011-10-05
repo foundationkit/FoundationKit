@@ -75,7 +75,7 @@ static char sectionCountKey;
         }
         
         NSUInteger indices[2] = {newSectionLocation, 0};
-        newIndexPath = [[[NSIndexPath alloc] initWithIndexes:indices length:2] autorelease];
+        newIndexPath = [[NSIndexPath alloc] initWithIndexes:indices length:2];
       }
     }
     case NSFetchedResultsChangeMove:
@@ -139,3 +139,5 @@ static char sectionCountKey;
   // update associated object sectionInsertCount
   [self associateValue:$int(sectionInsertCount) withKey:&sectionCountKey];
 }
+
+@end

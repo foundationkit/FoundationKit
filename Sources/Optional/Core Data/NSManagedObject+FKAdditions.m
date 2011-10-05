@@ -1,5 +1,6 @@
 #import "NSManagedObject+FKAdditions.h"
 #import "NSObject+FKDescription.h"
+#import "FKAssert.h"
 #import <objc/runtime.h>
 
 @implementation NSManagedObject (FKAdditions)
