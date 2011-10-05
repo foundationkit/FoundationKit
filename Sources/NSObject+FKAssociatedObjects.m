@@ -32,7 +32,7 @@ NS_INLINE BOOL FKIsValidAssociationPolicy(FKAssociationPolicy policy) {
 }
 
 - (void)associateValue:(id)value withKey:(void *)key {
-  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_RETAIN];
+  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_RETAIN_NONATOMIC];
 }
 
 - (void)associateWeakValue:(id)value withKey:(void *)key; {
@@ -40,7 +40,7 @@ NS_INLINE BOOL FKIsValidAssociationPolicy(FKAssociationPolicy policy) {
 }
 
 - (void)associateCopiedValue:(id)value withKey:(void *)key {
-  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_COPY];
+  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_COPY_NONATOMIC];
 }
 
 - (id)associatedValueForKey:(void *)key {
