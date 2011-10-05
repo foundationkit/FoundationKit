@@ -49,7 +49,7 @@
 		39DEEAD1143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEAD0143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m */; };
 		39DEEAD2143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEAD0143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m */; };
 		39DEEAD6143C8F3700B81BB5 /* FKOperationQueueFinishedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEAD5143C8F3700B81BB5 /* FKOperationQueueFinishedTests.m */; };
-		39E85BCF1434FB1C008FC8D5 /* FKMutableFloatArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39E85BCE1434FABF008FC8D5 /* FKMutableFloatArray.mm */; };
+		39DEEAE0143CCDEC00B81BB5 /* FKMutableFloatArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEADF143CCD9C00B81BB5 /* FKMutableFloatArray.mm */; };
 		9B04E2E31431F0E600974B96 /* NSObject+FKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04E2E21431F0E600974B96 /* NSObject+FKObserver.m */; };
 		9B04E2E41431F0E600974B96 /* NSObject+FKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04E2E21431F0E600974B96 /* NSObject+FKObserver.m */; };
 		9B297218141BC81E006124A2 /* NSObject+FKPerform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B297217141BC81C006124A2 /* NSObject+FKPerform.m */; };
@@ -64,7 +64,6 @@
 		C5C18E9713C8C72D00DD0872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
 		C5C18EC213C8CE9800DD0872 /* FKLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C18EBC13C8CCDF00DD0872 /* FKLogTests.m */; };
 		C5E319D413C4744800D9CA76 /* NSData+FKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */; };
-		C5E319F913C4E90B00D9CA76 /* FKAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319F713C4E90B00D9CA76 /* FKAudioRecorder.m */; };
 		C5EF038913C98ECE00953F2B /* FKSynthesizeSingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF038613C98EC100953F2B /* FKSynthesizeSingletonTests.m */; };
 		DC410D0313C39BFD00C90C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC410D0213C39BFD00C90C19 /* Foundation.framework */; };
 		DCB0127213C4AE9400AB692F /* NSError+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */; };
@@ -133,9 +132,11 @@
 		39DEEAD0143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSOperationQueue+FKBlocks.m"; path = "Blocks/NSOperationQueue+FKBlocks.m"; sourceTree = "<group>"; };
 		39DEEAD4143C8F3700B81BB5 /* FKOperationQueueFinishedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKOperationQueueFinishedTests.h; sourceTree = "<group>"; };
 		39DEEAD5143C8F3700B81BB5 /* FKOperationQueueFinishedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKOperationQueueFinishedTests.m; sourceTree = "<group>"; };
+		39DEEAD9143CCCFA00B81BB5 /* FKAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKAudioRecorder.h; sourceTree = "<group>"; };
+		39DEEADA143CCCFA00B81BB5 /* FKAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKAudioRecorder.m; sourceTree = "<group>"; };
+		39DEEADE143CCD9C00B81BB5 /* FKMutableFloatArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKMutableFloatArray.h; sourceTree = "<group>"; };
+		39DEEADF143CCD9C00B81BB5 /* FKMutableFloatArray.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FKMutableFloatArray.mm; sourceTree = "<group>"; };
 		39DF5D791424B78600090805 /* FKDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDispatch.h; sourceTree = "<group>"; };
-		39E85BCD1434FABF008FC8D5 /* FKMutableFloatArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FKMutableFloatArray.h; path = Optional/FKMutableFloatArray.h; sourceTree = "<group>"; };
-		39E85BCE1434FABF008FC8D5 /* FKMutableFloatArray.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = FKMutableFloatArray.mm; path = Optional/FKMutableFloatArray.mm; sourceTree = "<group>"; };
 		39EA898A13C98C6C00B6427F /* FKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMath.h; sourceTree = "<group>"; };
 		78AC24FA13D3858E00820A31 /* FKCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKCompatibility.h; sourceTree = "<group>"; };
 		78AC24FC13D38A8F00820A31 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -163,8 +164,6 @@
 		C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+FKCrypto.m"; sourceTree = "<group>"; };
 		C5E319D513C474E800D9CA76 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		C5E319D713C474FE00D9CA76 /* FoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = FoundationKit.h; sourceTree = "<group>"; tabWidth = 2; };
-		C5E319F613C4E90B00D9CA76 /* FKAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKAudioRecorder.h; sourceTree = "<group>"; };
-		C5E319F713C4E90B00D9CA76 /* FKAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKAudioRecorder.m; sourceTree = "<group>"; };
 		C5EF038513C98EC100953F2B /* FKSynthesizeSingletonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSynthesizeSingletonTests.h; sourceTree = "<group>"; };
 		C5EF038613C98EC100953F2B /* FKSynthesizeSingletonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKSynthesizeSingletonTests.m; sourceTree = "<group>"; };
 		DC410CFF13C39BFD00C90C19 /* libFoundationKitMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKitMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,11 +246,31 @@
 			name = Shorthands;
 			sourceTree = "<group>";
 		};
+		39DEEAD8143CCCFA00B81BB5 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				39DEEAD9143CCCFA00B81BB5 /* FKAudioRecorder.h */,
+				39DEEADA143CCCFA00B81BB5 /* FKAudioRecorder.m */,
+			);
+			name = Audio;
+			path = Optional/Audio;
+			sourceTree = "<group>";
+		};
+		39DEEADD143CCD9C00B81BB5 /* C++ */ = {
+			isa = PBXGroup;
+			children = (
+				39DEEADE143CCD9C00B81BB5 /* FKMutableFloatArray.h */,
+				39DEEADF143CCD9C00B81BB5 /* FKMutableFloatArray.mm */,
+			);
+			name = "C++";
+			path = "Optional/C++";
+			sourceTree = "<group>";
+		};
 		39E85BCC1434FA6E008FC8D5 /* Optional */ = {
 			isa = PBXGroup;
 			children = (
-				39E85BCD1434FABF008FC8D5 /* FKMutableFloatArray.h */,
-				39E85BCE1434FABF008FC8D5 /* FKMutableFloatArray.mm */,
+				39DEEAD8143CCCFA00B81BB5 /* Audio */,
+				39DEEADD143CCD9C00B81BB5 /* C++ */,
 			);
 			name = Optional;
 			sourceTree = "<group>";
@@ -283,7 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				C5E319D713C474FE00D9CA76 /* FoundationKit.h */,
-				C5E319F513C4E90B00D9CA76 /* Audio */,
 				39CC1E24142F600A0017578F /* Blocks */,
 				39E85BCC1434FA6E008FC8D5 /* Optional */,
 				39CC1E25142F60120017578F /* Shorthands */,
@@ -335,15 +353,6 @@
 				39CC1E20142F5F070017578F /* FKInternal.h */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C5E319F513C4E90B00D9CA76 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				C5E319F613C4E90B00D9CA76 /* FKAudioRecorder.h */,
-				C5E319F713C4E90B00D9CA76 /* FKAudioRecorder.m */,
-			);
-			path = Audio;
 			sourceTree = "<group>";
 		};
 		DC410CF413C39BFD00C90C19 = {
@@ -529,9 +538,9 @@
 				C5AAAA7613C9A32A00E44CE7 /* NSStringAdditionsTests.m in Sources */,
 				39CC1E59142FAA220017578F /* FKMutableFloatArrayTests.m in Sources */,
 				392D3C78142FF303003AFB81 /* FKPathsTests.m in Sources */,
-				39E85BCF1434FB1C008FC8D5 /* FKMutableFloatArray.mm in Sources */,
 				39C5905C14389169004C438C /* FKMutableIntArrayTests.m in Sources */,
 				39DEEAD6143C8F3700B81BB5 /* FKOperationQueueFinishedTests.m in Sources */,
+				39DEEAE0143CCDEC00B81BB5 /* FKMutableFloatArray.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +550,6 @@
 			files = (
 				C5E319D413C4744800D9CA76 /* NSData+FKCrypto.m in Sources */,
 				DCB0127213C4AE9400AB692F /* NSError+FKAdditions.m in Sources */,
-				C5E319F913C4E90B00D9CA76 /* FKAudioRecorder.m in Sources */,
 				DCF68FBF13C74ADB0057517A /* NSObject+FKSwizzle.m in Sources */,
 				C582BF8C13C8B77C0012DF67 /* FKLog.m in Sources */,
 				399F4CD413C905C70008CC0E /* NSObject+FKAssociatedObjects.m in Sources */,

@@ -1,5 +1,8 @@
 // Part of FoundationKit http://foundationk.it
 
+// Blocks
+#import "NSOperationQueue+FKBlocks.h"
+
 // Shorthands
 #import "NSArray+FKConcise.h"
 #import "NSDictionary+FKConcise.h"

@@ -27,7 +27,7 @@ NS_INLINE BOOL FKIsValidAssociationPolicy(FKAssociationPolicy policy) {
   if (FKIsValidAssociationPolicy(policy)) {
     objc_setAssociatedObject(self, key, value, policy);
   } else {
-    FKLogDebug(@"Policy %ld is no valid association policy, can't associate value with object '%@'", policy, self);
+    FKLogDebug(@"Policy %d is no valid association policy, can't associate value with object '%@'", (int)policy, self);
   }
 }
 
