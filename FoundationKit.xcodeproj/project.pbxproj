@@ -153,6 +153,7 @@
 		9B662A601420DB5A00F52294 /* NSObject+FKDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKDescription.m"; sourceTree = "<group>"; };
 		9B9DCA9D143F8676003D467B /* NSString+FKLevenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FKLevenshtein.h"; sourceTree = "<group>"; };
 		9B9DCA9E143F8676003D467B /* NSString+FKLevenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FKLevenshtein.m"; sourceTree = "<group>"; };
+		9B9DCAE8143F9392003D467B /* FoundationKit+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoundationKit+CoreData.h"; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* FKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* FKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLog.m; sourceTree = "<group>"; };
 		C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditionsTests.h; sourceTree = "<group>"; };
@@ -272,6 +273,7 @@
 		39DEEB75143CEE7600B81BB5 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				9B9DCAE8143F9392003D467B /* FoundationKit+CoreData.h */,
 				39DEEB76143CEE7600B81BB5 /* NSManagedObject+FKAdditions.h */,
 				39DEEB77143CEE7600B81BB5 /* NSManagedObject+FKAdditions.m */,
 				39DEEB7C143CEFF900B81BB5 /* UIViewController+FKAnimatedFetchedResultsController.h */,
