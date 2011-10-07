@@ -4,6 +4,8 @@
 #import "FKInternal.h"
 #import "NSObject+FKObserver.h"
 
+FKLoadCategory(NSOperationQueueFKBlocks);
+
 #define kFKOperationCountKeyPath  @"operationCount"
 
 /**

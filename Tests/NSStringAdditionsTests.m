@@ -38,4 +38,16 @@
   STAssertEqualObjects([@"  asd qwe " trimmed], @"asd qwe", @"leading/trailing whitespace, whitespace between words");
 }
 
+- (void)testLevenshtein {
+  STAssertTrue([@"kitten" levenshteinDistanceToString:@"sitting"] == 3, @"Levenshtein failed for kitten - sitting");
+  STAssertTrue([@"Saturday" levenshteinDistanceToString:@"Sunday"] == 3, @"Levenshtein failed for Saturday - Sunday");
+  STAssertTrue([@"Test" levenshteinDistanceToString:@"Test"] == 0, @"Levenshtein failed for Test - Test");
+  STAssertTrue([@"Test" levenshteinDistanceToString:@"Test2"] == 1, @"Levenshtein failed for Test - Test2");
+  STAssertTrue([@"Test" levenshteinDistanceToString:@"test"] == 1, @"Levenshtein failed for Test - test");
+  STAssertTrue([@"Test" levenshteinDistanceToString:@"tst"] == 2, @"Levenshtein failed for Test - tst");
+  STAssertTrue([@"Test" levenshteinDistanceToString:@"est"] == 1, @"Levenshtein failed for Test - est");
+  STAssertTrue([@"Test" levenshteinDistanceToString:@"Fest"] == 1, @"Levenshtein failed for Test - Fest");
+  STAssertTrue([@"Test" levenshteinDistanceToString:@"Fst3"] == 3, @"Levenshtein failed for Test - Fst3");
+}
+
 @end
