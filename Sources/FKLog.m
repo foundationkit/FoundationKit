@@ -24,15 +24,15 @@ NSString *_FKLogToString(NSString *file, unsigned int line, ...) {
     char *argumentName = va_arg(ap, char *);
     void *argument = va_arg(ap, void *);
     
-    if (argument == (__bridge void *)kFKLogInternalDontOutputMe) {
+    if (*(void **)argument == (__bridge void *)kFKLogInternalDontOutputMe) {
       break;
     }
-    
+
     // special case inline strings
     if ((strcmp(argumentTypeEncoding, @encode(id)) == 0) && (strncmp(argumentName, "@\"", 2) == 0)) {
-      [msg appendFormat:@" %@", argument];
+      [msg appendFormat:@" %@", *(void **)argument];
     } else {
-      NSString *stringRepresentation = FKStringFromTypeAndValue(argumentTypeEncoding, argument);
+      NSString *stringRepresentation = FKStringFromTypeAndValue(argumentTypeEncoding,  argument);
       [msg appendFormat:@" %s = %@", argumentName, stringRepresentation];
     }
   }
@@ -106,24 +106,20 @@ return (func)(*(typeToMatch*)value)
 if (strcmp(typeCode, @encode(typeToMatch)) == 0) \
 return [NSString stringWithFormat:(formatString), (*(typeToMatch*)value)]
   
-#define IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(typeToMatch,formatString) \
-if (strcmp(typeCode, @encode(typeToMatch)) == 0) \
-return [NSString stringWithFormat:(formatString), value]
-    
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(CFStringRef,@"%@"); //CFStringRef is toll-free bridged to NSString*
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(CFArrayRef,@"%@"); //CFArrayRef is toll-free bridged to NSArray*
-	IF_TYPE_MATCHES_INTERPRET_WITH(FourCharCode, FKStringFromFourCharCodeOrUnsignedInt32);
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(long long,@"%lld");
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(unsigned long long,@"%llu");
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(float,@"%f");
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(double,@"%f");
-  
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(short,@"%hi");
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(unsigned short,@"%hu");
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(int,@"%i");
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(unsigned, @"%u");
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(long,@"%i");
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(long double,@"%Lf"); //WARNING on older versions of OS X, @encode(long double) == @encode(double)
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(CFStringRef,@"%@"); //CFStringRef is toll-free bridged to NSString*
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(CFArrayRef,@"%@"); //CFArrayRef is toll-free bridged to NSArray*
+  IF_TYPE_MATCHES_INTERPRET_WITH(FourCharCode, FKStringFromFourCharCodeOrUnsignedInt32);
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(long long,@"%lld");
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(unsigned long long,@"%llu");
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(float,@"%f");
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(double,@"%f");
+
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(short,@"%hi");
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(unsigned short,@"%hu");
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(int,@"%i");
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(unsigned, @"%u");
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(long,@"%i");
+  IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(long double,@"%Lf"); //WARNING on older versions of OS X, @encode(long double) == @encode(double)
   
 	//C-strings
 	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(char*, @"%s");
@@ -133,9 +129,9 @@ return [NSString stringWithFormat:(formatString), value]
 
   // objc object
   if (strcmp(typeCode, @encode(id)) == 0)
-    return [NSString stringWithFormat:(@"%@"), ((__bridge id)value)];
+    return [NSString stringWithFormat:(@"%@"), (*(__unsafe_unretained id *)value)];
 
-	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT_WITHOUT_DEREFERENCING(void*,@"(void*)%p");
+	IF_TYPE_MATCHES_INTERPRET_WITH_FORMAT(void*,@"(void*)%p");
   
 	//This is a hack to print out CLLocationCoordinate2D, without needing to #import <CoreLocation/CoreLocation.h>
 	//A CLLocationCoordinate2D is a struct made up of 2 doubles.
