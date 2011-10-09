@@ -4,28 +4,34 @@ FKLoadCategory(NSStringFKLevenshtein);
 
 @implementation NSString (FKLevenshtein)
 
-// TODO: slow algorithm, here is room for improvement
 - (NSInteger)levenshteinDistanceToString:(NSString *)string {
-  NSInteger selfLength = self.length + 1;
-  NSInteger stringLength = string.length + 1;
+  return [self levenshteinDistanceToString:string caseInsensitive:YES];
+}
+
+// TODO: slow algorithm, here is room for improvement
+- (NSInteger)levenshteinDistanceToString:(NSString *)string caseInsensitive:(BOOL)caseInsensitive {
+  NSString *string1 = caseInsensitive ? [self lowercaseString] : self;
+  NSString *string2 = caseInsensitive ? [string lowercaseString] : string;
+  NSInteger string1Length = string1.length + 1;
+  NSInteger string2Length = string2.length + 1;
   NSInteger finalDistance = 0;
-  NSInteger **distance = (NSInteger **)malloc(selfLength * sizeof(NSInteger *));
+  NSInteger **distance = (NSInteger **)malloc(string1Length * sizeof(NSInteger *));
   
-  for (NSInteger i=0;i<selfLength;i++) {
-    distance[i] = (NSInteger *)malloc(stringLength * sizeof(NSInteger));
+  for (NSInteger i=0;i<string1Length;i++) {
+    distance[i] = (NSInteger *)malloc(string2Length * sizeof(NSInteger));
     // the distance of any first string to an empty second string
     distance[i][0] = i;
   }
   
-  for (NSInteger i=0;i<stringLength;i++) {
+  for (NSInteger i=0;i<string2Length;i++) {
     // the distance of any second string to an empty first string
     distance[0][i] = i;
   }
   
-  for (NSInteger j=1;j<stringLength;j++) {
-    for (NSInteger i=1;i<selfLength;i++) {
+  for (NSInteger j=1;j<string2Length;j++) {
+    for (NSInteger i=1;i<string1Length;i++) {
       // no operation needed?
-      if ([self characterAtIndex:i-1] == [string characterAtIndex:j-1]) {
+      if ([string1 characterAtIndex:i-1] == [string2 characterAtIndex:j-1]) {
         distance[i][j] = distance[i-1][j-1];
       }
       
@@ -42,9 +48,9 @@ FKLoadCategory(NSStringFKLevenshtein);
     }
   }
   
-  finalDistance = distance[self.length][string.length];
+  finalDistance = distance[string1Length-1][string2Length-1];
   
-  for (NSInteger i=0;i<self.length+1;i++) {
+  for (NSInteger i=0;i<string1Length;i++) {
     free(distance[i]);
   }
   

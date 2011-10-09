@@ -19,11 +19,20 @@
 @interface NSString (FKLevenshtein)
 
 /**
- Computes the levensthein-distance between self and the other string.
+ Computes the levensthein-distance between self and the other string (case-insensitive).
  
  @param string the string to compute the levensthein-distance to
  @return the levensthein-distance between self and string
  */
 - (NSInteger)levenshteinDistanceToString:(NSString *)string;
+
+/**
+ Computes the levensthein-distance between self and the other string (case-insensitive).
+ 
+ @param string the string to compute the levensthein-distance to
+ @param caseInsensitive flag to determine whether comparison is case-sensitive or case-insensitive
+ @return the levensthein-distance between self and string
+ */
+- (NSInteger)levenshteinDistanceToString:(NSString *)string caseInsensitive:(BOOL)caseInsensitive;
 
 @end
