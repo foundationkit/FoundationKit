@@ -25,7 +25,7 @@
 - (void)testStructs {
   /*NSRange range = NSMakeRange(2, 5);
   NSString *output = FKLogToString(range);
-  NSString *expected = @"[FKLogTests.m:27] range = {loc=2,len=5}";
+  NSString *expected = [@"[FKLogTests.m:27] range = " stringByAppendingString:NSStringFromRange(range)];
   
   STAssertEqualObjects(expected, output, @"FKLogString failed with structs");*/
 }
