@@ -30,9 +30,9 @@
  Computes the levensthein-distance between self and the other string (case-insensitive).
  
  @param string the string to compute the levensthein-distance to
- @param caseInsensitive flag to determine whether comparison is case-sensitive or case-insensitive
+ @param caseSensitive flag to determine whether comparison is case-sensitive or case-insensitive
  @return the levensthein-distance between self and string
  */
-- (NSInteger)levenshteinDistanceToString:(NSString *)string caseInsensitive:(BOOL)caseInsensitive;
+- (NSInteger)levenshteinDistanceToString:(NSString *)string caseSensitive:(BOOL)caseSensitive;
 
 @end
