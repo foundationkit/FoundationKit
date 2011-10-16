@@ -55,6 +55,9 @@ __weak __typeof__(self) self = weakSelf_; \
 __VA_ARGS__;                              \
 } while (0)
 
+// macro to create a string-representation of a name (e.g. enum value)
+#define $stringify(x) @"" #x ""
+
 // Four char codes
 #define FKFcc(code)  ((char[5]){(code >> 24) & 0xFF, (code >> 16) & 0xFF, (code >> 8) & 0xFF, code & 0xFF, 0})
 
