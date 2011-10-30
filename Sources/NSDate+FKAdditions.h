@@ -34,4 +34,8 @@
 - (NSInteger)monthComponent;
 - (NSInteger)yearComponent;
 
+- (NSInteger)daysSinceDate:(NSDate *)date;
+- (NSDate *)dateByAddingDays:(NSUInteger)days;
+- (BOOL)isSameWeekAsDate:(NSDate *)date;
+
 @end

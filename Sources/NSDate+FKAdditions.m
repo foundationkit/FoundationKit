@@ -179,6 +179,27 @@ NSDateFormatter* dateFormatter(void);
 	return [[self gregorianCalendarComponents] year];
 }
 
+- (NSInteger)daysSinceDate:(NSDate *)date {
+	NSTimeInterval timeInterval = [self timeIntervalSinceDate:date];
+  
+	return timeInterval / 3600. / 24.;
+}
+
+- (NSDate *)dateByAddingDays:(NSUInteger)days {
+	NSTimeInterval timeInterval = [self timeIntervalSinceReferenceDate] + FKTimeIntervalDays(days);
+	return [NSDate dateWithTimeIntervalSinceReferenceDate:timeInterval];
+}
+
+// This hard codes the assumption that a week is 7 days
+- (BOOL)isSameWeekAsDate:(NSDate *)date {
+	// Must be same week. 12/31 and 1/1 will both be week "1" if they are in the same week
+	if (self.weekComponent != date.weekComponent) {
+    return NO;
+  }
+	
+	return (ABS([self timeIntervalSinceDate:date]) < FKTimeIntervalDays(7));
+}
+
 @end
 
 ////////////////////////////////////////////////////////////////////////
