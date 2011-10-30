@@ -28,6 +28,7 @@
 #import "NSData+FKCrypto.h"
 #import "NSDate+FKAdditions.h"
 #import "NSError+FKAdditions.h"
+#import "NSMutableString+FKAdditions.h"
 #import "NSObject+FKAssociatedObjects.h"
 #import "NSObject+FKObserver.h"
 #import "NSObject+FKPerform.h"
