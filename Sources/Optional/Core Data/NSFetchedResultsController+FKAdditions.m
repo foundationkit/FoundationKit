@@ -6,7 +6,7 @@
   NSInteger numberOfRows = 0;
   
   if (self.sections.count > 0) {
-    numberOfRows = [self.sections objectAtIndex:section].numberOfObjects;
+    numberOfRows = [[self.sections objectAtIndex:section] numberOfObjects];
   }
   
   return numberOfRows;
