@@ -35,4 +35,5 @@
 #import "NSObject+FKPerform.h"
 #import "NSObject+FKSwizzle.h"
 #import "NSString+FKAdditions.h"
+#import "NSString+FKXML.h"
 #import "NSUserDefaults+FKAdditions.h"

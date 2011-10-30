@@ -51,4 +51,13 @@
   STAssertTrue([@"Test" levenshteinDistanceToString:@"Fst3"] == 3, @"Levenshtein failed for Test - Fst3");
 }
 
+- (void)testXMLDecoding {
+  NSString *encoded1 = [@"&Auml;&Uuml;&Ouml;&auml;&uuml;&ouml;" stringByDecodingXMLEntities];
+  NSString *encoded2 = [@"&lt;HTML&gt;" stringByDecodingXMLEntities];
+  
+  STAssertEqualObjects([@"ASDF" stringByDecodingXMLEntities], @"ASDF", @"XML-Decoding of entities doesn't work");
+  STAssertEqualObjects(encoded1, @"ÄÜÖäüö", @"XML-Decoding of entities doesn't work");
+  STAssertEqualObjects(encoded2, @"<HTML>", @"XML-Decoding of entities doesn't work");
+}
+
 @end
