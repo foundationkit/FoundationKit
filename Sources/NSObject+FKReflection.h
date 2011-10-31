@@ -15,10 +15,10 @@
 @property (nonatomic, strong) id metaData;
 
 /** List of all methods the object responds to */
-@property (nonatomic, readonly) NSArray *methods;
+@property (nonatomic, readonly) NSArray *methodNames;
 /** List of all ivars of the object */
-@property (nonatomic, readonly) NSArray *ivars;
+@property (nonatomic, readonly) NSArray *ivarNames;
 /** List of all properties of the object */
-@property (nonatomic, readonly) NSArray *properties;
+@property (nonatomic, readonly) NSArray *propertyNames;
 
 @end

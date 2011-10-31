@@ -26,7 +26,7 @@ static char metaDataKey;
   return [self associatedValueForKey:&metaDataKey];
 }
 
-- (NSArray *)methods {
+- (NSArray *)methodNames {
   NSMutableArray *array = [NSMutableArray array];
 	unsigned int count;
 	Method *methods = class_copyMethodList([self class], &count);
@@ -41,7 +41,7 @@ static char metaDataKey;
 	return [array copy];
 }
 
-- (NSArray *)ivars {
+- (NSArray *)ivarNames {
   NSMutableArray *array = [NSMutableArray array];
 	unsigned int count;
 	Ivar *ivars = class_copyIvarList([self class], &count);
@@ -57,7 +57,7 @@ static char metaDataKey;
 	return [array copy];
 }
 
-- (NSArray *)properties {
+- (NSArray *)propertyNames {
   NSMutableArray *array = [NSMutableArray array];
 	unsigned int count;
   objc_property_t *properties = class_copyPropertyList([self class], &count);
