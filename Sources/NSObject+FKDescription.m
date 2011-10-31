@@ -13,7 +13,7 @@ FKLoadCategory(NSObjectFKDescription);
   NSMutableArray *propertyArray = [NSMutableArray array];
   NSMutableString *description = [NSMutableString string];
 	unsigned int count;
-  objc_property_t *properties = class_copyPropertyList([self class], &count);
+  objc_property_t *properties = class_copyPropertyList(classType, &count);
   
 	for (int i = 0; i < count; i++) {
 		NSString *property = [NSString stringWithCString:property_getName(properties[i]) 
