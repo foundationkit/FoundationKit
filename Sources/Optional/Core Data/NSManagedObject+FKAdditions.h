@@ -13,7 +13,7 @@
  @see NSObject+FKDescription
  @return the automatically generated description of the properties of the object
  */
-- (NSString *)description;
+// - (NSString *)description;
 
 /**
  This method tries to set the given string value for the property with the given key, whether the property is
