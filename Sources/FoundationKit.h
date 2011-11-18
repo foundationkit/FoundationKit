@@ -33,6 +33,7 @@
 #import "NSObject+FKAssociatedObjects.h"
 #import "NSObject+FKObserver.h"
 #import "NSObject+FKPerform.h"
+#import "NSObject+FKReflection.h"
 #import "NSObject+FKSwizzle.h"
 #import "NSString+FKAdditions.h"
 #import "NSString+FKXML.h"
