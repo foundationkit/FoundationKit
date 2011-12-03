@@ -28,6 +28,7 @@
 - (NSDateComponents *)gregorianCalendarComponents;
 - (NSInteger)secondComponent;
 - (NSInteger)minuteComponent;
+- (NSInteger)hourComponent;
 - (NSInteger)dayComponent;
 - (NSInteger)weekdayComponent;
 - (NSInteger)weekComponent;
