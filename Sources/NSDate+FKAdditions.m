@@ -143,7 +143,15 @@ NSDateFormatter* dateFormatter(void);
 
 - (NSDateComponents *)gregorianCalendarComponents {
 	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-	NSDateComponents *components = [gregorian components:(NSSecondCalendarUnit | NSMinuteCalendarUnit | NSHourCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit | NSWeekCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:self];
+	NSDateComponents *components = [gregorian components:(NSSecondCalendarUnit |
+                                                        NSMinuteCalendarUnit |
+                                                        NSHourCalendarUnit |
+                                                        NSDayCalendarUnit |
+                                                        NSWeekdayCalendarUnit |
+                                                        NSWeekCalendarUnit |
+                                                        NSWeekOfYearCalendarUnit |
+                                                        NSMonthCalendarUnit |
+                                                        NSYearCalendarUnit) fromDate:self];
 	return components;
 }
 
