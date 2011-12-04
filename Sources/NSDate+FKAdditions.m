@@ -171,6 +171,10 @@ NSDateFormatter* dateFormatter(void);
 	return [[self gregorianCalendarComponents] week];
 }
 
+- (NSInteger)weekOfYearComponent {
+  return [[self gregorianCalendarComponents] weekOfYear];
+}
+
 - (NSInteger)monthComponent {
 	return [[self gregorianCalendarComponents] month];
 }

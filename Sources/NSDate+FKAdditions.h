@@ -32,6 +32,7 @@
 - (NSInteger)dayComponent;
 - (NSInteger)weekdayComponent;
 - (NSInteger)weekComponent;
+- (NSInteger)weekOfYearComponent;
 - (NSInteger)monthComponent;
 - (NSInteger)yearComponent;
 
