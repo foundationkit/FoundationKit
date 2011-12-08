@@ -39,5 +39,6 @@
 - (NSInteger)daysSinceDate:(NSDate *)date;
 - (NSDate *)dateByAddingDays:(NSUInteger)days;
 - (BOOL)isSameWeekAsDate:(NSDate *)date;
+- (BOOL)isSameDayAsDate:(NSDate *)date;
 
 @end

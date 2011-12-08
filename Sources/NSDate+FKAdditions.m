@@ -212,6 +212,12 @@ NSDateFormatter* dateFormatter(void);
 	return (ABS([self timeIntervalSinceDate:date]) < FKTimeIntervalDays(7));
 }
 
+- (BOOL)isSameDayAsDate:(NSDate *)date {
+  return (self.yearComponent == date.yearComponent &&
+          self.monthComponent == date.monthComponent &&
+          self.dayComponent == date.dayComponent);
+}
+
 @end
 
 ////////////////////////////////////////////////////////////////////////
