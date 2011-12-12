@@ -14,6 +14,14 @@ FKLoadCategory(NSObjectFKPerform);
 	[self performSelector:selector withObject:nil afterDelay:delay];
 }
 
+- (void)performSelectorInNextRunLoop:(SEL)selector {
+  [self performSelector:selector withObject:nil afterDelay:0];
+}
+
+- (void)performSelectorInNextRunLoop:(SEL)selector withObject:(id)object {
+  [self performSelector:selector withObject:object afterDelay:0];
+}
+
 - (id)performSelectorIfResponding:(SEL)selector {
 	if (![self respondsToSelector:selector]) {
     return nil;
