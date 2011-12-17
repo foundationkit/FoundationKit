@@ -2,7 +2,6 @@
 //
 // Derived from Marcus Zarra's Blog-Post: http://www.cimgf.com/2010/05/02/my-current-prefix-pch-file/
 
-#import "FKCompatibility.h"
 #import "FKInternal.h"
 
 // Debug Branch

@@ -4,7 +4,6 @@
 
 
 #import <Foundation/Foundation.h>
-#import "FKCompatibility.h"
 
 // Shorthand for NSLocalizedString
 NS_INLINE NSString* _(NSString *key) {

@@ -4,8 +4,6 @@
 // Derived from https://github.com/VTPG/CommonCode/blob/master/VTPG_Common.m by Vincent Gable
 // Derived from http://www.dribin.org/dave/blog/archives/2008/09/22/convert_to_nsstring/
 
-#import "FKCompatibility.h"
-
 extern const NSString *kFKLogInternalDontOutputMe;
 
 /**
