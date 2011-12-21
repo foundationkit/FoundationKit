@@ -171,6 +171,14 @@ NSDateFormatter* dateFormatter(void);
 	return [[self gregorianCalendarComponents] day];
 }
 
+- (NSInteger)dayOfYearComponent {
+  NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+  NSUInteger dayOfYear = [gregorian ordinalityOfUnit:NSDayCalendarUnit
+                                              inUnit:NSYearCalendarUnit
+                                             forDate:self];
+  return dayOfYear;
+}
+
 - (NSInteger)weekdayComponent {
 	return [[self gregorianCalendarComponents] weekday];
 }

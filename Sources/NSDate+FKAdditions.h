@@ -30,6 +30,7 @@
 - (NSInteger)minuteComponent;
 - (NSInteger)hourComponent;
 - (NSInteger)dayComponent;
+- (NSInteger)dayOfYearComponent;
 - (NSInteger)weekdayComponent;
 - (NSInteger)weekComponent;
 - (NSInteger)weekOfYearComponent;
