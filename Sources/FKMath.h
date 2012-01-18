@@ -64,13 +64,16 @@ NS_INLINE CGAffineTransform FKAffineTransformMakeScaleTranslate(CGFloat sx, CGFl
 ////////////////////////////////////////////////////////////////////////
 
 NS_INLINE CGFloat FKLimitFloat(CGFloat number, CGFloat min, CGFloat max) {
-   return MIN(MAX(number, min), max);
+  CGFloat bound = MAX(number, min);
+  return MIN(bound, max);
 }
 
 NS_INLINE double FKLimitDouble(double number, double min, double max) {
-  return MIN(MAX(number, min), max);
+  double bound = MAX(number, min);
+  return MIN(bound, max);
 }
 
 NS_INLINE NSInteger FKLimitInteger(NSInteger number, NSInteger min, NSInteger max) {
-  return MIN(MAX(number, min), max);
+  NSInteger bound = MAX(number, min);
+  return MIN(bound, max);
 }
