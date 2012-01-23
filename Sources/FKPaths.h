@@ -2,74 +2,15 @@
 
 #import <Foundation/Foundation.h>
 
-NS_INLINE NSString* FKDocumentsDirectory() {
-  static NSString* directory = nil;
-  
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    NSArray* directories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                               NSUserDomainMask,
-                                                               YES);
-    directory = [directories firstObject];
-  });
-  
-  return directory;
-}
+/**
+ This file contains several functions that can be used to get paths to specific folders in your App
+ */
 
-NS_INLINE NSString* FKPathForResourceInDocumentsDirectory(NSString *resourceName) {
-  return [FKDocumentsDirectory() stringByAppendingPathComponent:resourceName];
-}
-
-NS_INLINE NSString* FKLibraryDirectory() {
-  static NSString* directory = nil;
-  
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    NSArray* directories = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,
-                                                               NSUserDomainMask,
-                                                               YES);
-    directory = [directories firstObject];
-  });
-  
-  return directory;
-}
-
-NS_INLINE NSString* FKPathForResourceInLibraryDirectory(NSString *resourceName) {
-  return [FKLibraryDirectory() stringByAppendingPathComponent:resourceName];
-}
-
-NS_INLINE NSString* FKCacheDirectory() {
-  static NSString* directory = nil;
-  
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    NSArray* directories = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
-                                                               NSUserDomainMask,
-                                                               YES);
-    directory = [directories firstObject];
-  });
-  
-  return directory;
-}
-
-NS_INLINE NSString* FKPathForResourceInCacheDirectory(NSString *resourceName) {
-  return [FKCacheDirectory() stringByAppendingPathComponent:resourceName];
-}
-
-NS_INLINE NSString* FKApplicationSupportDirectory() {
-  static NSString* directory = nil;
-  
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    NSArray* directories = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory,
-                                                               NSUserDomainMask,
-                                                               YES);
-    directory = [directories firstObject];
-  });
-  
-  return directory;
-}
-
-NS_INLINE NSString* FKPathForResourceInApplicationSupportDirectory(NSString *resourceName) {
-  return [FKApplicationSupportDirectory() stringByAppendingPathComponent:resourceName];
-}
+NSString* FKDocumentsDirectory(void); 
+NSString* FKPathForResourceInDocumentsDirectory(NSString *resourceName);
+NSString* FKLibraryDirectory(void);
+NSString* FKPathForResourceInLibraryDirectory(NSString *resourceName);
+NSString* FKCacheDirectory(void);
+NSString* FKPathForResourceInCacheDirectory(NSString *resourceName);
+NSString* FKApplicationSupportDirectory(void);
+NSString* FKPathForResourceInApplicationSupportDirectory(NSString *resourceName);
