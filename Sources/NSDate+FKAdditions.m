@@ -206,8 +206,12 @@ NSDateFormatter* dateFormatter(void);
 }
 
 - (NSDate *)dateByAddingDays:(NSUInteger)days {
-	NSTimeInterval timeInterval = [self timeIntervalSinceReferenceDate] + FKTimeIntervalDays(days);
-	return [NSDate dateWithTimeIntervalSinceReferenceDate:timeInterval];
+  NSCalendar *calender = [NSCalendar currentCalendar];
+  NSDateComponents *components = [[NSDateComponents alloc] init];
+  
+  components.day = days;
+  
+  return [calender dateByAddingComponents:components toDate:self options:0];
 }
 
 // This hard codes the assumption that a week is 7 days
