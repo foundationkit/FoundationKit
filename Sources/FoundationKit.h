@@ -30,6 +30,7 @@
 #import "NSMutableString+FKAdditions.h"
 #import "NSNotificationCenter+FKMainThread.h"
 #import "NSObject+FKAssociatedObjects.h"
+#import "NSObject+FKDeallocBlock.h"
 #import "NSObject+FKObserver.h"
 #import "NSObject+FKPerform.h"
 #import "NSObject+FKReflection.h"
