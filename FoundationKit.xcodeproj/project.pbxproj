@@ -27,14 +27,6 @@
 		39B07E6A14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */; };
 		39B07E6B14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B07E6914288A7100CBF1B8 /* FKMutableIntArray.m */; };
 		39C5905C14389169004C438C /* FKMutableIntArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C5905B14389169004C438C /* FKMutableIntArrayTests.m */; };
-		39CC1E2E142F60C70017578F /* NSArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E27142F60C70017578F /* NSArray+FKBlocks.m */; };
-		39CC1E2F142F60C70017578F /* NSArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E27142F60C70017578F /* NSArray+FKBlocks.m */; };
-		39CC1E30142F60C70017578F /* NSDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E29142F60C70017578F /* NSDictionary+FKBlocks.m */; };
-		39CC1E31142F60C70017578F /* NSDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E29142F60C70017578F /* NSDictionary+FKBlocks.m */; };
-		39CC1E32142F60C70017578F /* NSMutableArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E2B142F60C70017578F /* NSMutableArray+FKBlocks.m */; };
-		39CC1E33142F60C70017578F /* NSMutableArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E2B142F60C70017578F /* NSMutableArray+FKBlocks.m */; };
-		39CC1E34142F60C70017578F /* NSMutableDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E2D142F60C70017578F /* NSMutableDictionary+FKBlocks.m */; };
-		39CC1E35142F60C70017578F /* NSMutableDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E2D142F60C70017578F /* NSMutableDictionary+FKBlocks.m */; };
 		39CC1E42142F61280017578F /* NSArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E38142F61280017578F /* NSArray+FKConcise.m */; };
 		39CC1E43142F61280017578F /* NSArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E38142F61280017578F /* NSArray+FKConcise.m */; };
 		39CC1E44142F61280017578F /* NSMutableArray+FKConcise.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC1E3B142F61280017578F /* NSMutableArray+FKConcise.m */; };
@@ -115,14 +107,6 @@
 		39C5905B14389169004C438C /* FKMutableIntArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMutableIntArrayTests.m; sourceTree = "<group>"; };
 		39CC1E11142F56700017578F /* FKAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKAssert.h; sourceTree = "<group>"; };
 		39CC1E20142F5F070017578F /* FKInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FKInternal.h; path = Sources/FKInternal.h; sourceTree = "<group>"; };
-		39CC1E26142F60C70017578F /* NSArray+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+FKBlocks.h"; path = "Blocks/NSArray+FKBlocks.h"; sourceTree = "<group>"; };
-		39CC1E27142F60C70017578F /* NSArray+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+FKBlocks.m"; path = "Blocks/NSArray+FKBlocks.m"; sourceTree = "<group>"; };
-		39CC1E28142F60C70017578F /* NSDictionary+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+FKBlocks.h"; path = "Blocks/NSDictionary+FKBlocks.h"; sourceTree = "<group>"; };
-		39CC1E29142F60C70017578F /* NSDictionary+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+FKBlocks.m"; path = "Blocks/NSDictionary+FKBlocks.m"; sourceTree = "<group>"; };
-		39CC1E2A142F60C70017578F /* NSMutableArray+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+FKBlocks.h"; path = "Blocks/NSMutableArray+FKBlocks.h"; sourceTree = "<group>"; };
-		39CC1E2B142F60C70017578F /* NSMutableArray+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+FKBlocks.m"; path = "Blocks/NSMutableArray+FKBlocks.m"; sourceTree = "<group>"; };
-		39CC1E2C142F60C70017578F /* NSMutableDictionary+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+FKBlocks.h"; path = "Blocks/NSMutableDictionary+FKBlocks.h"; sourceTree = "<group>"; };
-		39CC1E2D142F60C70017578F /* NSMutableDictionary+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+FKBlocks.m"; path = "Blocks/NSMutableDictionary+FKBlocks.m"; sourceTree = "<group>"; };
 		39CC1E36142F61280017578F /* FKShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FKShorthands.h; path = Shorthands/FKShorthands.h; sourceTree = "<group>"; };
 		39CC1E37142F61280017578F /* NSArray+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+FKConcise.h"; path = "Shorthands/NSArray+FKConcise.h"; sourceTree = "<group>"; };
 		39CC1E38142F61280017578F /* NSArray+FKConcise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+FKConcise.m"; path = "Shorthands/NSArray+FKConcise.m"; sourceTree = "<group>"; };
@@ -244,14 +228,6 @@
 		39CC1E24142F600A0017578F /* Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				39CC1E26142F60C70017578F /* NSArray+FKBlocks.h */,
-				39CC1E27142F60C70017578F /* NSArray+FKBlocks.m */,
-				39CC1E28142F60C70017578F /* NSDictionary+FKBlocks.h */,
-				39CC1E29142F60C70017578F /* NSDictionary+FKBlocks.m */,
-				39CC1E2A142F60C70017578F /* NSMutableArray+FKBlocks.h */,
-				39CC1E2B142F60C70017578F /* NSMutableArray+FKBlocks.m */,
-				39CC1E2C142F60C70017578F /* NSMutableDictionary+FKBlocks.h */,
-				39CC1E2D142F60C70017578F /* NSMutableDictionary+FKBlocks.m */,
 				39DEEACF143BC23200B81BB5 /* NSOperationQueue+FKBlocks.h */,
 				39DEEAD0143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m */,
 			);
@@ -574,10 +550,6 @@
 				9B54E82814269E6500336F08 /* NSObject+FKReflection.m in Sources */,
 				39B07E6B14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */,
 				39AA0FB114291E8500C6956C /* NSDate+FKAdditions.m in Sources */,
-				39CC1E2F142F60C70017578F /* NSArray+FKBlocks.m in Sources */,
-				39CC1E31142F60C70017578F /* NSDictionary+FKBlocks.m in Sources */,
-				39CC1E33142F60C70017578F /* NSMutableArray+FKBlocks.m in Sources */,
-				39CC1E35142F60C70017578F /* NSMutableDictionary+FKBlocks.m in Sources */,
 				39CC1E43142F61280017578F /* NSArray+FKConcise.m in Sources */,
 				39CC1E45142F61280017578F /* NSMutableArray+FKConcise.m in Sources */,
 				39CC1E47142F61280017578F /* NSNumber+FKConcise.m in Sources */,
@@ -628,10 +600,6 @@
 				9B54E82714269E6500336F08 /* NSObject+FKReflection.m in Sources */,
 				39B07E6A14288A7100CBF1B8 /* FKMutableIntArray.m in Sources */,
 				39AA0FB014291E8500C6956C /* NSDate+FKAdditions.m in Sources */,
-				39CC1E2E142F60C70017578F /* NSArray+FKBlocks.m in Sources */,
-				39CC1E30142F60C70017578F /* NSDictionary+FKBlocks.m in Sources */,
-				39CC1E32142F60C70017578F /* NSMutableArray+FKBlocks.m in Sources */,
-				39CC1E34142F60C70017578F /* NSMutableDictionary+FKBlocks.m in Sources */,
 				39CC1E42142F61280017578F /* NSArray+FKConcise.m in Sources */,
 				39CC1E44142F61280017578F /* NSMutableArray+FKConcise.m in Sources */,
 				39CC1E46142F61280017578F /* NSNumber+FKConcise.m in Sources */,
