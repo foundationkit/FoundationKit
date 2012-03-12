@@ -42,7 +42,7 @@ NS_INLINE BOOL FKClassExists(NSString *className) {
 #endif
 
 // Shortcut for synthesizing a property
-#define $synthesize(PROPERTY) @synthesize PROPERTY = _PROPERTY##
+#define $synthesize(PROPERTY) @synthesize PROPERTY = _##PROPERTY
 
 // wrap to have non-retaining self pointers in blocks: $blockSelf(dispatch_async(myQ, ^{[self doSomething];});
 // use with care. To have a safe reference within the block add the following code:
