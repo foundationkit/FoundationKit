@@ -17,6 +17,7 @@
 #import "FKAssert.h"
 #import "FKBenchmark.h"
 #import "FKDispatch.h"
+#import "FKHTTPStatusCodes.h"
 #import "FKLog.h"
 #import "FKMath.h"
 #import "FKShorthands.h"

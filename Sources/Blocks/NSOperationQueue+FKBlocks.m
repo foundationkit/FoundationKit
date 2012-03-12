@@ -28,11 +28,6 @@ static FKObserver *observer = nil;
 
 - (void)whenFinished:(void (^)())block {
   self.fk_finishedBlock = block;
-  
-  [self addObserver:observer
-         forKeyPath:kFKOperationCountKeyPath 
-            options:NSKeyValueObservingOptionNew
-            context:&finishedContext];
 }
 
 - (void)removeFinishedBlock {
@@ -44,18 +39,29 @@ static FKObserver *observer = nil;
 }
 
 - (void)setFk_finishedBlock:(dispatch_block_t)fk_finishedBlock {
-  [self associateCopiedValue:fk_finishedBlock withKey:&finishedBlockKey];
+  dispatch_block_t finishedBlock = self.fk_finishedBlock;
   
-  if (fk_finishedBlock == nil) {
-    [self safeRemoveObserver:observer forKeyPath:kFKOperationCountKeyPath];
+  if (fk_finishedBlock != finishedBlock) {
+    // old observer to remove?
+    if (finishedBlock != nil) {
+      [self removeObserver:observer forKeyPath:kFKOperationCountKeyPath];
+    }
+    
+    [self associateCopiedValue:fk_finishedBlock withKey:&finishedBlockKey];
+    
+    if (fk_finishedBlock != nil) {
+      [self addObserver:observer
+             forKeyPath:kFKOperationCountKeyPath 
+                options:NSKeyValueObservingOptionNew
+                context:&finishedContext];
+    }
   }
 }
 
 @end
 
 ////////////////////////////////////////////////////////////////////////
-#pragma mark -
-#pragma mark Internal
+#pragma mark - Internal
 ////////////////////////////////////////////////////////////////////////
 
 @implementation FKObserver
