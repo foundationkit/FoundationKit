@@ -2,7 +2,7 @@
 
 @implementation FKDeallocBlock
 
-@synthesize block = block_;
+@synthesize block = _block;
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - Lifecycle
@@ -10,15 +10,15 @@
 
 - (id)initWithBlock:(fk_dealloc_block_t)block {
   if ((self = [super init])) {
-    block_ = [block copy];
+    _block = [block copy];
   }
   
   return self;
 }
 
 - (void)dealloc {
-  if (block_ != nil) {
-    block_();
+  if (_block != nil) {
+    _block();
   }
 }
 
