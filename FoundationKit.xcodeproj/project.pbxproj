@@ -486,7 +486,7 @@
 		DC410CF613C39BFD00C90C19 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = FoundationKit;
 			};
 			buildConfigurationList = DC410CF913C39BFD00C90C19 /* Build configuration list for PBXProject "FoundationKit" */;
