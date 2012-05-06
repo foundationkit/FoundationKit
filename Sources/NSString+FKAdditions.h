@@ -36,4 +36,10 @@
  */
 - (NSString *)trimmedStringByReplacingUnnecessaryWhitespace;
 
+/**
+ Checks if the string is valid E-Mail address
+ @return YES, if the string is a valid E-Mail address, NO otherwise
+ */
+- (BOOL)isValidEmailAddress;
+
 @end
