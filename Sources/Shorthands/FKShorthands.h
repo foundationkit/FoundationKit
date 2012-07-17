@@ -44,6 +44,9 @@ NS_INLINE BOOL FKClassExists(NSString *className) {
 // Shortcut for synthesizing a property
 #define $synthesize(PROPERTY) @synthesize PROPERTY = _##PROPERTY
 
+// Shortcut for checking a bit in a bitmask
+#define $flagSet(MASK, FLAG)  ((MASK & FLAG) == FLAG)
+
 // wrap to have non-retaining self pointers in blocks: $blockSelf(dispatch_async(myQ, ^{[self doSomething];});
 // use with care. To have a safe reference within the block add the following code:
 // __typeof__(self) strongSelf = weakSelf_;
