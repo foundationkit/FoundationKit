@@ -1,4 +1,5 @@
 #import "NSString+FKXML.h"
+#import "FKInternal.h"
 
 @implementation NSString (FKXML)
 
@@ -71,7 +72,7 @@
       }
       
       if (gotNumber) {
-        [result appendFormat:@"%C", charCode];
+        [result appendFormat:@"%u", charCode];
         [scanner scanString:@";" intoString:NULL];
       } else {
         NSString *unknownEntity = @"";
