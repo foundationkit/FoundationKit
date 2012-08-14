@@ -4,7 +4,6 @@
 
 @interface NSMutableArray (FKConcise)
 
-- (void)moveObjectAtIndex:(NSUInteger)oldIndex toIndex:(NSUInteger)newIndex;
 - (void)shuffle;
 
 - (void)addObjectIfNotNil:(id)object;

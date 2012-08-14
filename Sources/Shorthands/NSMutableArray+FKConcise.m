@@ -23,23 +23,6 @@ static NSUInteger FKRandomNumberBelow(NSUInteger n) {
 
 @implementation NSMutableArray (FKConcise)
 
-- (void)moveObjectAtIndex:(NSUInteger)oldIndex toIndex:(NSUInteger)newIndex {
-	if (oldIndex == newIndex) {
-		return;
-  }
-  
-	id item = [self objectAtIndex:oldIndex];
-  
-	if (newIndex == self.count) {
-		[self addObject:item];
-		[self removeObjectAtIndex:oldIndex];
-	}
-	else {
-		[self removeObjectAtIndex:oldIndex];
-		[self insertObject:item atIndex:newIndex];
-	}
-}
-
 // http://en.wikipedia.org/wiki/Knuth_shuffle
 - (void)shuffle {
   for(NSUInteger i = self.count; i > 1; i--) {
