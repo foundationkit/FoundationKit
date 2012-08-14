@@ -1,4 +1,5 @@
 #import "NSString+FKXML.h"
+#import "FKInternal.h"
 
 @implementation NSString (FKXML)
 
