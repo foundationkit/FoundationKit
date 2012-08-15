@@ -49,6 +49,7 @@
 		9B2B4F3B14EFB6D400279BAA /* FKDeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B4F3914EFB6D400279BAA /* FKDeallocBlock.m */; };
 		9B2B4F3F14EFB81300279BAA /* NSObject+FKDeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B4F3E14EFB81300279BAA /* NSObject+FKDeallocBlock.m */; };
 		9B2B4F4014EFB81300279BAA /* NSObject+FKDeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B4F3E14EFB81300279BAA /* NSObject+FKDeallocBlock.m */; };
+		9B4623B215DC50A70061325D /* NSMutableArray+FKReorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B82D42D1557289300D01584 /* NSMutableArray+FKReorder.m */; };
 		9B482791145DCD3F00C735DD /* NSMutableString+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B482790145DCD3E00C735DD /* NSMutableString+FKAdditions.m */; };
 		9B482792145DCD3F00C735DD /* NSMutableString+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B482790145DCD3E00C735DD /* NSMutableString+FKAdditions.m */; };
 		9B4827BD145DDB9E00C735DD /* NSNotificationCenter+FKMainThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4827BC145DDB9D00C735DD /* NSNotificationCenter+FKMainThread.m */; };
@@ -569,6 +570,7 @@
 				9B564BFB14CD85B900A6B404 /* FKPaths.m in Sources */,
 				9B2B4F3B14EFB6D400279BAA /* FKDeallocBlock.m in Sources */,
 				9B2B4F4014EFB81300279BAA /* NSObject+FKDeallocBlock.m in Sources */,
+				9B4623B215DC50A70061325D /* NSMutableArray+FKReorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
