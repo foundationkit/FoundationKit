@@ -42,4 +42,10 @@
  */
 - (BOOL)isValidEmailAddress;
 
+/**
+ Returns first letter of the string
+ @return first letter of the string, if string has length 0 it will return the empty string
+ */
+- (NSString *)firstLetter;
+
 @end

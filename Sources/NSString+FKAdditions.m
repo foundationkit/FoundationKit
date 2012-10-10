@@ -94,4 +94,10 @@ FKLoadCategory(NSStringFKAdditions);
   }
 }
 
+- (NSString *)firstLetter {
+  if (self.length <= 1)
+    return self;
+  return [self substringToIndex:1];
+}
+
 @end
