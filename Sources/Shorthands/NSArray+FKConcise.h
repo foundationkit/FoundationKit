@@ -2,7 +2,7 @@
 //
 // Derived from Peter Jihoon Kim's MIT-licensed ConciseKit: https://github.com/petejkim/ConciseKit
 
-#define $array(...)   [NSArray arrayWithObjects:__VA_ARGS__, nil]
+
 #define $marray(...)  [NSMutableArray arrayWithObjects:__VA_ARGS__, nil]
 
 

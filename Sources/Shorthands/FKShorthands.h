@@ -41,21 +41,8 @@ NS_INLINE BOOL FKClassExists(NSString *className) {
 #define $property(propertyName)	@#propertyName
 #endif
 
-// Shortcut for synthesizing a property
-#define $synthesize(PROPERTY) @synthesize PROPERTY = _##PROPERTY
-
 // Shortcut for checking a bit in a bitmask
 #define $flagSet(MASK, FLAG)  ((MASK & FLAG) == FLAG)
-
-// wrap to have non-retaining self pointers in blocks: $blockSelf(dispatch_async(myQ, ^{[self doSomething];});
-// use with care. To have a safe reference within the block add the following code:
-// __typeof__(self) strongSelf = weakSelf_;
-// if (strongSelf) { ... }
-#define $blockSelf(...) do {              \
-__typeof__(self) weakSelf_ = self;        \
-__weak __typeof__(self) self = weakSelf_; \
-__VA_ARGS__;                              \
-} while (0)
 
 // macro to create a string-representation of a name (e.g. enum value)
 #define $stringify(x) @"" #x ""
