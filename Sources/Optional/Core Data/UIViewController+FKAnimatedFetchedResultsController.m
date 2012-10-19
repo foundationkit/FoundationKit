@@ -1,8 +1,5 @@
 #import "UIViewController+FKAnimatedFetchedResultsController.h"
-#import "NSObject+FKAssociatedObjects.h"
-#import "NSNumber+FKConcise.h"
 
-static char sectionCountKey;
 
 @implementation UIViewController (FKAnimatedFetchedResultsController)
 
@@ -12,7 +9,6 @@ static char sectionCountKey;
 ////////////////////////////////////////////////////////////////////////
 
 - (void)handleController:(NSFetchedResultsController *)controller willChangeContentForTableView:(UITableView *)tableView {
-  [self associateValue:$int(0) withKey:&sectionCountKey];
 	[tableView beginUpdates];
 }
 
@@ -27,83 +23,17 @@ static char sectionCountKey;
             newIndexPath:(NSIndexPath *)newIndexPath
                tableView:(UITableView *)tableView {
   
-  int sectionInsertCount =  [[self associatedValueForKey:&sectionCountKey] intValue];
-  
   switch(type) {
     case NSFetchedResultsChangeInsert:
-      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+      [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                    withRowAnimation:UITableViewRowAnimationFade];
       break;
+
     case NSFetchedResultsChangeDelete:
-      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-      break;
-    case NSFetchedResultsChangeUpdate: {
-      NSString *sectionKeyPath = [controller sectionNameKeyPath];
-      if (sectionKeyPath == nil)
-        break;
-      NSManagedObject *changedObject = [controller objectAtIndexPath:indexPath];
-      NSArray *keyParts = [sectionKeyPath componentsSeparatedByString:@"."];
-      id currentKeyValue = [changedObject valueForKeyPath:sectionKeyPath];
-      for (int i = 0; i < [keyParts count] - 1; i++) {
-        NSString *onePart = [keyParts objectAtIndex:i];
-        changedObject = [changedObject valueForKey:onePart];
-      }
-      sectionKeyPath = [keyParts lastObject];
-      NSDictionary *committedValues = [changedObject committedValuesForKeys:nil];
-      
-      if ([[committedValues valueForKeyPath:sectionKeyPath] isEqual:currentKeyValue])
-        break;
-      
-      NSUInteger tableSectionCount = [tableView numberOfSections];
-      NSUInteger frcSectionCount = [[controller sections] count];
-      if (tableSectionCount + sectionInsertCount != frcSectionCount) {
-        // Need to insert a section
-        NSArray *sections = controller.sections;
-        NSInteger newSectionLocation = -1;
-        for (id oneSection in sections) {
-          NSString *sectionName = [oneSection name];
-          if ([currentKeyValue isEqual:sectionName]) {
-            newSectionLocation = [sections indexOfObject:oneSection];
-            break;
-          }
-        }
-        if (newSectionLocation == -1)
-          break; // uh oh
-        
-        if (!((newSectionLocation == 0) && (tableSectionCount == 1) && ([tableView numberOfRowsInSection:0] == 0))) {
-          [tableView insertSections:[NSIndexSet indexSetWithIndex:newSectionLocation] withRowAnimation:UITableViewRowAnimationFade];
-          sectionInsertCount++;
-        }
-        
-        NSUInteger indices[2] = {newSectionLocation, 0};
-        newIndexPath = [[NSIndexPath alloc] initWithIndexes:indices length:2];
-      }
-    }
-    case NSFetchedResultsChangeMove:
-      if (newIndexPath != nil) {
-        
-        NSUInteger tableSectionCount = [tableView numberOfSections];
-        NSUInteger frcSectionCount = [[controller sections] count];
-        if (frcSectionCount != tableSectionCount + sectionInsertCount)  {
-          [tableView insertSections:[NSIndexSet indexSetWithIndex:[newIndexPath section]] withRowAnimation:UITableViewRowAnimationNone];
-          sectionInsertCount++;
-        }
-        
-        
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [tableView insertRowsAtIndexPaths: [NSArray arrayWithObject:newIndexPath]
-                         withRowAnimation: UITableViewRowAnimationRight];
-        
-      }
-      else {
-        [tableView reloadSections:[NSIndexSet indexSetWithIndex:[indexPath section]] withRowAnimation:UITableViewRowAnimationFade];
-      }
-      break;
-    default:
+      [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                    withRowAnimation:UITableViewRowAnimationFade];
       break;
   }
-  
-  // update associated object sectionInsertCount
-  [self associateValue:$int(sectionInsertCount) withKey:&sectionCountKey];
 }
 
 - (void)handleController:(NSFetchedResultsController *)controller
@@ -111,33 +41,26 @@ static char sectionCountKey;
                  atIndex:(NSUInteger)sectionIndex
            forChangeType:(NSFetchedResultsChangeType)type
                tableView:(UITableView *)tableView {
-  
-  int sectionInsertCount = [[self associatedValueForKey:&sectionCountKey] intValue];
-  
-	switch(type) {
+  UITableView *tableView = self.tableView;
+
+  switch(type) {
     case NSFetchedResultsChangeInsert:
-      if (!((sectionIndex == 0) && ([tableView numberOfSections] == 1))) {
-        [tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-        sectionInsertCount++;
-      }
-      
+      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
       break;
+
     case NSFetchedResultsChangeDelete:
-      if (!((sectionIndex == 0) && ([tableView numberOfSections] == 1) )) {
-        [tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-        sectionInsertCount--;
-      }
+      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
       break;
+
+    case NSFetchedResultsChangeUpdate:
+      [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+      break;
+
     case NSFetchedResultsChangeMove:
-      break;
-    case NSFetchedResultsChangeUpdate: 
-      break;
-    default:
+      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
       break;
   }
-  
-  // update associated object sectionInsertCount
-  [self associateValue:$int(sectionInsertCount) withKey:&sectionCountKey];
 }
 
 @end
