@@ -10,6 +10,14 @@ static char metaDataKey;
 
 @implementation NSObject (FKReflection)
 
++ (instancetype)castedObjectOrNil:(id)object {
+  if ([object isKindOfClass:self]) {
+    return object;
+  }
+
+  return nil;
+}
+
 - (void)setObjectTag:(NSInteger)objectTag {
   [self associateValue:@(objectTag) withKey:&objectTagKey];
 }
@@ -21,7 +29,7 @@ static char metaDataKey;
 - (void)setMetaData:(id)metaData {
   [self associateValue:metaData withKey:&metaDataKey];
 }
-   
+
 - (id)metaData {
   return [self associatedValueForKey:&metaDataKey];
 }
@@ -30,14 +38,14 @@ static char metaDataKey;
   NSMutableArray *array = [NSMutableArray array];
 	unsigned int count;
 	Method *methods = class_copyMethodList([self class], &count);
-  
+
 	for (int i = 0; i < count; i++) {
 		NSString *method = NSStringFromSelector(method_getName(methods[i]));
 		[array addObject:method];
 	}
-  
+
 	free(methods);
-  
+
 	return [array copy];
 }
 
@@ -45,15 +53,15 @@ static char metaDataKey;
   NSMutableArray *array = [NSMutableArray array];
 	unsigned int count;
 	Ivar *ivars = class_copyIvarList([self class], &count);
-  
+
 	for (int i = 0; i < count; i++) {
-		NSString *iVar = [NSString stringWithCString:ivar_getName(ivars[i]) 
+		NSString *iVar = [NSString stringWithCString:ivar_getName(ivars[i])
                                         encoding:NSUTF8StringEncoding];
 		[array addObject:iVar];
 	}
-  
+
 	free(ivars);
-  
+
 	return [array copy];
 }
 
@@ -61,15 +69,15 @@ static char metaDataKey;
   NSMutableArray *array = [NSMutableArray array];
 	unsigned int count;
   objc_property_t *properties = class_copyPropertyList([self class], &count);
-  
+
 	for (int i = 0; i < count; i++) {
-		NSString *property = [NSString stringWithCString:property_getName(properties[i]) 
+		NSString *property = [NSString stringWithCString:property_getName(properties[i])
                                             encoding:NSUTF8StringEncoding];
 		[array addObject:property];
 	}
-  
+
 	free(properties);
-  
+
 	return [array copy];
 }
 
