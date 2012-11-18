@@ -63,6 +63,11 @@ NS_INLINE CGAffineTransform FKAffineTransformMakeScaleTranslate(CGFloat sx, CGFl
 #pragma mark Number Helper
 ////////////////////////////////////////////////////////////////////////
 
+NS_INLINE NSInteger FKLimitInteger(NSInteger number, NSInteger min, NSInteger max) {
+  NSInteger bound = MAX(number, min);
+  return MIN(bound, max);
+}
+
 NS_INLINE CGFloat FKLimitFloat(CGFloat number, CGFloat min, CGFloat max) {
   CGFloat bound = MAX(number, min);
   return MIN(bound, max);
@@ -73,7 +78,27 @@ NS_INLINE double FKLimitDouble(double number, double min, double max) {
   return MIN(bound, max);
 }
 
-NS_INLINE NSInteger FKLimitInteger(NSInteger number, NSInteger min, NSInteger max) {
-  NSInteger bound = MAX(number, min);
-  return MIN(bound, max);
+NS_INLINE NSInteger FKSignumInteger(NSInteger number) {
+  if (number == 0) {
+    return 0;
+  }
+  
+  return number > 0 ? 1 : -1;
 }
+
+NS_INLINE CGFloat FKSignumFloat(CGFloat number) {
+  if (number == 0.f) {
+    return 0.f;
+  }
+
+  return number > 0.f ? 1.f : -1.f;
+}
+
+NS_INLINE double FKSignumDouble(double number) {
+  if (number == 0.) {
+    return 0.;
+  }
+
+  return number > 0. ? 1. : -1.;
+}
+
