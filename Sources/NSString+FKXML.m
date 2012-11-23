@@ -59,6 +59,10 @@
       [result appendString:@"ß"];
     } else if ([scanner scanString:@"&nbsp;" intoString:NULL]) {  
       [result appendString:@" "];
+    } else if ([scanner scanString:@"&ndash;" intoString:NULL]) {
+      [result appendString:@"–"];
+    } else if ([scanner scanString:@"&mdash;" intoString:NULL]) {
+      [result appendString:@"—"];
     } else if ([scanner scanString:@"&#" intoString:NULL]) {
       BOOL gotNumber;
       unsigned charCode;
