@@ -1,7 +1,7 @@
 // Part of FoundationKit http://foundationk.it
 //
 // isBlank see https://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/object/blank.rb
-
+// isValidEmailAddress see http://stackoverflow.com/questions/3179859/regex-for-an-email-address-doesnt-work/8863823#8863823
 
 #import <Foundation/Foundation.h>
 

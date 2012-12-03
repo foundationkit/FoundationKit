@@ -83,15 +83,11 @@ FKLoadCategory(NSStringFKAdditions);
 }
 
 - (BOOL)isValidEmailAddress {
-  NSString *regExPattern = @"^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$";
-  NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern options:NSRegularExpressionCaseInsensitive error:nil];
-  NSUInteger regExMatches = [regEx numberOfMatchesInString:self options:0 range:NSMakeRange(0, self.length)];
-  
-  if (regExMatches == 0) {
-    return NO;
-  } else {
-    return YES;
-  }
+  // Regexp from -[NSString(NSEmailAddressString) mf_isLegalEmailAddress] in /System/Library/PrivateFrameworks/MIME.framework
+  NSString *emailRegex = @"^[[:alnum:]!#$%&'*+/=?^_`{|}~-]+((\\.?)[[:alnum:]!#$%&'*+/=?^_`{|}~-]+)*@[[:alnum:]-]+(\\.[[:alnum:]-]+)*(\\.[[:alpha:]]+)+$";
+  NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+
+  return [emailPredicate evaluateWithObject:self];
 }
 
 - (NSString *)firstLetter {
