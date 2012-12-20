@@ -73,6 +73,8 @@
 		9B7638BC168341BE007C0C81 /* NSDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7638B11683417A007C0C81 /* NSDictionary+FKBlocks.m */; };
 		9B7638BD168341C1007C0C81 /* NSMutableArray+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7638B31683417A007C0C81 /* NSMutableArray+FKBlocks.m */; };
 		9B7638BE168341C3007C0C81 /* NSMutableDictionary+FKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7638B51683417A007C0C81 /* NSMutableDictionary+FKBlocks.m */; };
+		9B7638E416835190007C0C81 /* NSArray+FKDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7638E316835190007C0C81 /* NSArray+FKDiff.m */; };
+		9B7638E516835190007C0C81 /* NSArray+FKDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7638E316835190007C0C81 /* NSArray+FKDiff.m */; };
 		9B82D42E1557289300D01584 /* NSMutableArray+FKReorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B82D42D1557289300D01584 /* NSMutableArray+FKReorder.m */; };
 		9B9DCA9F143F8676003D467B /* NSString+FKLevenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9DCA9E143F8676003D467B /* NSString+FKLevenshtein.m */; };
 		9B9DCAA0143F8676003D467B /* NSString+FKLevenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9DCA9E143F8676003D467B /* NSString+FKLevenshtein.m */; };
@@ -185,6 +187,8 @@
 		9B7638B31683417A007C0C81 /* NSMutableArray+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+FKBlocks.m"; path = "Blocks/NSMutableArray+FKBlocks.m"; sourceTree = "<group>"; };
 		9B7638B41683417A007C0C81 /* NSMutableDictionary+FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+FKBlocks.h"; path = "Blocks/NSMutableDictionary+FKBlocks.h"; sourceTree = "<group>"; };
 		9B7638B51683417A007C0C81 /* NSMutableDictionary+FKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+FKBlocks.m"; path = "Blocks/NSMutableDictionary+FKBlocks.m"; sourceTree = "<group>"; };
+		9B7638E216835190007C0C81 /* NSArray+FKDiff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FKDiff.h"; sourceTree = "<group>"; };
+		9B7638E316835190007C0C81 /* NSArray+FKDiff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FKDiff.m"; sourceTree = "<group>"; };
 		9B82D42C1557289300D01584 /* NSMutableArray+FKReorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+FKReorder.h"; sourceTree = "<group>"; };
 		9B82D42D1557289300D01584 /* NSMutableArray+FKReorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+FKReorder.m"; sourceTree = "<group>"; };
 		9B9DCA9D143F8676003D467B /* NSString+FKLevenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FKLevenshtein.h"; sourceTree = "<group>"; };
@@ -379,6 +383,8 @@
 				392D3C75142FEE65003AFB81 /* FKPaths.h */,
 				9B564BF914CD85B900A6B404 /* FKPaths.m */,
 				399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */,
+				9B7638E216835190007C0C81 /* NSArray+FKDiff.h */,
+				9B7638E316835190007C0C81 /* NSArray+FKDiff.m */,
 				392D3C79142FF3F8003AFB81 /* NSBundle+FKPaths.h */,
 				392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */,
 				C5E319D113C4744800D9CA76 /* NSData+FKCrypto.h */,
@@ -611,6 +617,7 @@
 				9B7638BC168341BE007C0C81 /* NSDictionary+FKBlocks.m in Sources */,
 				9B7638BD168341C1007C0C81 /* NSMutableArray+FKBlocks.m in Sources */,
 				9B7638BE168341C3007C0C81 /* NSMutableDictionary+FKBlocks.m in Sources */,
+				9B7638E516835190007C0C81 /* NSArray+FKDiff.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +674,7 @@
 				9B7638B71683417A007C0C81 /* NSDictionary+FKBlocks.m in Sources */,
 				9B7638B81683417A007C0C81 /* NSMutableArray+FKBlocks.m in Sources */,
 				9B7638B91683417A007C0C81 /* NSMutableDictionary+FKBlocks.m in Sources */,
+				9B7638E416835190007C0C81 /* NSArray+FKDiff.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
