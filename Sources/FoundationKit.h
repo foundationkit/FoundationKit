@@ -41,3 +41,4 @@
 #import "NSString+FKAdditions.h"
 #import "NSString+FKXML.h"
 #import "NSUserDefaults+FKAdditions.h"
+#import "NSURL+FKQueryParameters.h"

@@ -10,8 +10,8 @@
 
 - (void)testQueueFinished {
   NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-  NSArray *operations = $array([NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }],
-                               [NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }]);
+  NSArray *operations = @[[NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }],
+                               [NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }]];
   
   [queue whenFinished:^{
     STAssertTrue(finishedCount == 2, @"Not all operations finished");
@@ -22,8 +22,8 @@
 
 - (void)testRemove {
   NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-  NSArray *operations = $array([NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }],
-                               [NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }]);
+  NSArray *operations = @[[NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }],
+                          [NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }]];
   
   [queue whenFinished:^{
     finishedCount++;
