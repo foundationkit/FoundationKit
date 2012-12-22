@@ -31,13 +31,13 @@
   NSMutableIndexSet *combinedDeletedIndexes = [NSMutableIndexSet indexSet];
   NSMutableIndexSet *combinedInsertedIndexes = [NSMutableIndexSet indexSet];
 
-  int selfIndex = 0;
-  int newIndex = 0;
-  int combinedIndex = 0;
+  NSUInteger selfIndex = 0;
+  NSUInteger newIndex = 0;
+  NSUInteger combinedIndex = 0;
 
   while (selfIndex < self.count && newIndex < newArray.count) {
-    if([[self objectAtIndex:selfIndex] isEqual:[newArray objectAtIndex:newIndex]]) {
-      [lcsArray      addObject:[self objectAtIndex:selfIndex]];
+    if ([[self objectAtIndex:selfIndex] isEqual:[newArray objectAtIndex:newIndex]]) {
+      [lcsArray addObject:[self objectAtIndex:selfIndex]];
       [combinedArray addObject:[self objectAtIndex:selfIndex]];
 
       selfIndex++;
@@ -46,8 +46,8 @@
     }
 
     else if (lengthArray[selfIndex + 1][newIndex] >= lengthArray[selfIndex][newIndex + 1]) {
-      [combinedArray          addObject:[self objectAtIndex:selfIndex]];
-      [deletedIndexes         addIndex:selfIndex];
+      [combinedArray addObject:[self objectAtIndex:selfIndex]];
+      [deletedIndexes addIndex:selfIndex];
       [combinedDeletedIndexes addIndex:combinedIndex];
 
       selfIndex++;
@@ -55,8 +55,8 @@
     }
 
     else {
-      [combinedArray           addObject:[newArray objectAtIndex:newIndex]];
-      [insertedIndexes         addIndex:newIndex];
+      [combinedArray addObject:[newArray objectAtIndex:newIndex]];
+      [insertedIndexes addIndex:newIndex];
       [combinedInsertedIndexes addIndex:combinedIndex];
 
       newIndex++;
@@ -66,13 +66,13 @@
 
   FKDiffResult *result = [FKDiffResult new];
 
-  result.oldArray                = [self copy];
-  result.newArray                = [newArray copy];
-  result.lcsArray                = lcsArray;
-  result.combinedArray           = combinedArray;
-  result.deletedIndexes          = deletedIndexes;
-  result.insertedIndexes         = insertedIndexes;
-  result.combinedDeletedIndexes  = combinedDeletedIndexes;
+  result.oldArray = self;
+  result.newArray = newArray;
+  result.lcsArray = lcsArray;
+  result.combinedArray = combinedArray;
+  result.deletedIndexes = deletedIndexes;
+  result.insertedIndexes = insertedIndexes;
+  result.combinedDeletedIndexes = combinedDeletedIndexes;
   result.combinedInsertedIndexes = combinedInsertedIndexes;
   
   return result;
