@@ -150,8 +150,6 @@
 		39DEEB72143CEDB500B81BB5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		39DEEB76143CEE7600B81BB5 /* NSManagedObject+FKAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+FKAdditions.h"; sourceTree = "<group>"; };
 		39DEEB77143CEE7600B81BB5 /* NSManagedObject+FKAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+FKAdditions.m"; sourceTree = "<group>"; };
-		39DEEB7C143CEFF900B81BB5 /* UIViewController+FKAnimatedFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FKAnimatedFetchedResultsController.h"; sourceTree = "<group>"; };
-		39DEEB7D143CEFF900B81BB5 /* UIViewController+FKAnimatedFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FKAnimatedFetchedResultsController.m"; sourceTree = "<group>"; };
 		39DF5D791424B78600090805 /* FKDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDispatch.h; sourceTree = "<group>"; };
 		39EA898A13C98C6C00B6427F /* FKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMath.h; sourceTree = "<group>"; };
 		78AC24FC13D38A8F00820A31 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -196,6 +194,8 @@
 		9B9DCAE8143F9392003D467B /* FoundationKit+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoundationKit+CoreData.h"; sourceTree = "<group>"; };
 		9B9DCAFB143FAEAD003D467B /* NSFetchedResultsController+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+FKAdditions.h"; sourceTree = "<group>"; };
 		9B9DCAFC143FAEAD003D467B /* NSFetchedResultsController+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+FKAdditions.m"; sourceTree = "<group>"; };
+		9BCB706216EA095800D3F234 /* FKFetchedResultsControllerUpdater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKFetchedResultsControllerUpdater.h; sourceTree = "<group>"; };
+		9BCB706316EA095900D3F234 /* FKFetchedResultsControllerUpdater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKFetchedResultsControllerUpdater.m; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* FKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* FKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLog.m; sourceTree = "<group>"; };
 		C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditionsTests.h; sourceTree = "<group>"; };
@@ -320,8 +320,8 @@
 				9B9DCAFC143FAEAD003D467B /* NSFetchedResultsController+FKAdditions.m */,
 				39DEEB76143CEE7600B81BB5 /* NSManagedObject+FKAdditions.h */,
 				39DEEB77143CEE7600B81BB5 /* NSManagedObject+FKAdditions.m */,
-				39DEEB7C143CEFF900B81BB5 /* UIViewController+FKAnimatedFetchedResultsController.h */,
-				39DEEB7D143CEFF900B81BB5 /* UIViewController+FKAnimatedFetchedResultsController.m */,
+				9BCB706216EA095800D3F234 /* FKFetchedResultsControllerUpdater.h */,
+				9BCB706316EA095900D3F234 /* FKFetchedResultsControllerUpdater.m */,
 			);
 			name = "Core Data";
 			path = "Optional/Core Data";

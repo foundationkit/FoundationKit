@@ -4,5 +4,5 @@
 
 #if TARGET_OS_IPHONE
 #import "NSFetchedResultsController+FKAdditions.h"
-#import "UIViewController+FKAnimatedFetchedResultsController.h"
+#import "FKFetchedResultsControllerUpdater.h"
 #endif

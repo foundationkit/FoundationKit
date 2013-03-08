@@ -22,4 +22,4 @@
 // categories and no classes.
 // See http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html for more info.
 
-#define FKLoadCategory(name) @interface FK_LOAD_CATEGORY_##name @end @implementation FK_LOAD_CATEGORY_##name @end
+#define FKLoadCategory(name) @interface FK_LOAD_CATEGORY_##name : NSObject @end @implementation FK_LOAD_CATEGORY_##name @end

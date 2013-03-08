@@ -1,11 +1,14 @@
 // Part of FoundationKit http://foundationk.it
-// 
-// Derived from Book More iPhone 3 Development Chapter 2: The Anatomy of Core Data, Page 29ff
+//
+// Derived from MrRooni's Gist: https://gist.github.com/MrRooni/4988922
 
-#import <CoreData/CoreData.h>
-#import <UIKit/UIKit.h>
 
-@interface UIViewController (FKAnimatedFetchedResultsController)
+#import <Foundation/Foundation.h>
+
+
+@interface FKFetchedResultsControllerUpdater : NSObject
+
+@property (nonatomic, assign) NSUInteger maxNumberOfAnimatedChanges; // defaults to 50
 
 - (void)handleController:(NSFetchedResultsController *)controller willChangeContentForTableView:(UITableView *)tableView;
 - (void)handleController:(NSFetchedResultsController *)controller didChangeContentForTableView:(UITableView *)tableView;
