@@ -17,11 +17,7 @@ NS_INLINE void FKBenchmark(NSString *title, dispatch_block_t block) {
   
 #ifdef FK_DEBUG
   ^{
-    if (title == nil) {
-      title = @"<untitled>";
-    }
-    
-    FKLogAlways(@"'%@' benchmark started...", title);
+    FKLogAlways(@"'%@' benchmark started...", title ?: @"untitled");
     
     const uint64_t start = mach_absolute_time();
     block();
