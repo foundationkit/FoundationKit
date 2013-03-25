@@ -11,11 +11,7 @@ FKLoadCategory(NSArrayFKConcise);
 }
 
 - (id)firstObject {
-  if (self.empty) {
-    return nil;
-  }
-  
-  return [self objectAtIndex:0];
+  return [self objectOrNilAtIndex:0];
 }
 
 - (id)firstObjectMatchingPredicate:(NSPredicate *)predicate {
@@ -30,7 +26,7 @@ FKLoadCategory(NSArrayFKConcise);
 
 - (id)objectOrNilAtIndex:(NSUInteger)index {
   if (index < self.count) {
-    return [self objectAtIndex:index];
+    return self[index];
   }
   
   return nil;

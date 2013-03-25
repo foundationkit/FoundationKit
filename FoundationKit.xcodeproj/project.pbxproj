@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		392D3C78142FF303003AFB81 /* FKPathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D3C77142FF303003AFB81 /* FKPathsTests.m */; };
-		392D3C7B142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */; };
-		392D3C7C142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */; };
 		393A29A6142361950056CB37 /* NSData+FKCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */; };
 		393A29A7142361950056CB37 /* NSError+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB0127013C4AE9400AB692F /* NSError+FKAdditions.m */; };
 		393A29AD142361950056CB37 /* NSObject+FKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF68FBD13C74ADB0057517A /* NSObject+FKSwizzle.m */; };
@@ -40,7 +38,6 @@
 		39DEEAD6143C8F3700B81BB5 /* FKOperationQueueFinishedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEAD5143C8F3700B81BB5 /* FKOperationQueueFinishedTests.m */; };
 		39DEEAE0143CCDEC00B81BB5 /* FKMutableFloatArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEADF143CCD9C00B81BB5 /* FKMutableFloatArray.mm */; };
 		39DEEB73143CEDB600B81BB5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DEEB72143CEDB500B81BB5 /* CoreData.framework */; };
-		39DEEB78143CEED800B81BB5 /* NSManagedObject+FKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DEEB77143CEE7600B81BB5 /* NSManagedObject+FKAdditions.m */; };
 		9B04E2E31431F0E600974B96 /* NSObject+FKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04E2E21431F0E600974B96 /* NSObject+FKObserver.m */; };
 		9B04E2E41431F0E600974B96 /* NSObject+FKObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B04E2E21431F0E600974B96 /* NSObject+FKObserver.m */; };
 		9B29334B145EAB94001AE098 /* NSObject+FKDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B662A601420DB5A00F52294 /* NSObject+FKDescription.m */; };
@@ -106,8 +103,6 @@
 		392D3C75142FEE65003AFB81 /* FKPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPaths.h; sourceTree = "<group>"; };
 		392D3C76142FF302003AFB81 /* FKPathsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPathsTests.h; sourceTree = "<group>"; };
 		392D3C77142FF303003AFB81 /* FKPathsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPathsTests.m; sourceTree = "<group>"; };
-		392D3C79142FF3F8003AFB81 /* NSBundle+FKPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FKPaths.h"; sourceTree = "<group>"; };
-		392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FKPaths.m"; sourceTree = "<group>"; };
 		393A29BC142361950056CB37 /* libFoundationKitiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFoundationKitiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		393A29BD142361AD0056CB37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		393A29BF1423631C0056CB37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -125,15 +120,11 @@
 		39CC1E36142F61280017578F /* FKShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FKShorthands.h; path = Shorthands/FKShorthands.h; sourceTree = "<group>"; };
 		39CC1E37142F61280017578F /* NSArray+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+FKConcise.h"; path = "Shorthands/NSArray+FKConcise.h"; sourceTree = "<group>"; };
 		39CC1E38142F61280017578F /* NSArray+FKConcise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+FKConcise.m"; path = "Shorthands/NSArray+FKConcise.m"; sourceTree = "<group>"; };
-		39CC1E39142F61280017578F /* NSDictionary+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+FKConcise.h"; path = "Shorthands/NSDictionary+FKConcise.h"; sourceTree = "<group>"; };
 		39CC1E3A142F61280017578F /* NSMutableArray+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+FKConcise.h"; path = "Shorthands/NSMutableArray+FKConcise.h"; sourceTree = "<group>"; };
 		39CC1E3B142F61280017578F /* NSMutableArray+FKConcise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+FKConcise.m"; path = "Shorthands/NSMutableArray+FKConcise.m"; sourceTree = "<group>"; };
 		39CC1E3C142F61280017578F /* NSNull+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNull+FKConcise.h"; path = "Shorthands/NSNull+FKConcise.h"; sourceTree = "<group>"; };
 		39CC1E3D142F61280017578F /* NSNumber+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+FKConcise.h"; path = "Shorthands/NSNumber+FKConcise.h"; sourceTree = "<group>"; };
 		39CC1E3E142F61280017578F /* NSNumber+FKConcise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+FKConcise.m"; path = "Shorthands/NSNumber+FKConcise.m"; sourceTree = "<group>"; };
-		39CC1E3F142F61280017578F /* NSSet+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSSet+FKConcise.h"; path = "Shorthands/NSSet+FKConcise.h"; sourceTree = "<group>"; };
-		39CC1E40142F61280017578F /* NSString+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FKConcise.h"; path = "Shorthands/NSString+FKConcise.h"; sourceTree = "<group>"; };
-		39CC1E41142F61280017578F /* NSValue+FKConcise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSValue+FKConcise.h"; path = "Shorthands/NSValue+FKConcise.h"; sourceTree = "<group>"; };
 		39CC1E48142F61D00017578F /* Styleguide.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Styleguide.md; sourceTree = "<group>"; };
 		39CC1E57142FAA220017578F /* FKMutableFloatArrayTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMutableFloatArrayTests.h; sourceTree = "<group>"; };
 		39CC1E58142FAA220017578F /* FKMutableFloatArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKMutableFloatArrayTests.m; sourceTree = "<group>"; };
@@ -148,8 +139,6 @@
 		39DEEADE143CCD9C00B81BB5 /* FKMutableFloatArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKMutableFloatArray.h; sourceTree = "<group>"; };
 		39DEEADF143CCD9C00B81BB5 /* FKMutableFloatArray.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FKMutableFloatArray.mm; sourceTree = "<group>"; };
 		39DEEB72143CEDB500B81BB5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		39DEEB76143CEE7600B81BB5 /* NSManagedObject+FKAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+FKAdditions.h"; sourceTree = "<group>"; };
-		39DEEB77143CEE7600B81BB5 /* NSManagedObject+FKAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+FKAdditions.m"; sourceTree = "<group>"; };
 		39DF5D791424B78600090805 /* FKDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDispatch.h; sourceTree = "<group>"; };
 		39EA898A13C98C6C00B6427F /* FKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMath.h; sourceTree = "<group>"; };
 		78AC24FC13D38A8F00820A31 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -191,11 +180,6 @@
 		9B82D42D1557289300D01584 /* NSMutableArray+FKReorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+FKReorder.m"; sourceTree = "<group>"; };
 		9B9DCA9D143F8676003D467B /* NSString+FKLevenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FKLevenshtein.h"; sourceTree = "<group>"; };
 		9B9DCA9E143F8676003D467B /* NSString+FKLevenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FKLevenshtein.m"; sourceTree = "<group>"; };
-		9B9DCAE8143F9392003D467B /* FoundationKit+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoundationKit+CoreData.h"; sourceTree = "<group>"; };
-		9B9DCAFB143FAEAD003D467B /* NSFetchedResultsController+FKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+FKAdditions.h"; sourceTree = "<group>"; };
-		9B9DCAFC143FAEAD003D467B /* NSFetchedResultsController+FKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+FKAdditions.m"; sourceTree = "<group>"; };
-		9BCB706216EA095800D3F234 /* FKFetchedResultsControllerUpdater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKFetchedResultsControllerUpdater.h; sourceTree = "<group>"; };
-		9BCB706316EA095900D3F234 /* FKFetchedResultsControllerUpdater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKFetchedResultsControllerUpdater.m; sourceTree = "<group>"; };
 		C582BF8913C8B77C0012DF67 /* FKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLog.h; sourceTree = "<group>"; };
 		C582BF8A13C8B77C0012DF67 /* FKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLog.m; sourceTree = "<group>"; };
 		C5AAAA7213C9A31A00E44CE7 /* NSStringAdditionsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditionsTests.h; sourceTree = "<group>"; };
@@ -279,15 +263,11 @@
 				39CC1E36142F61280017578F /* FKShorthands.h */,
 				39CC1E37142F61280017578F /* NSArray+FKConcise.h */,
 				39CC1E38142F61280017578F /* NSArray+FKConcise.m */,
-				39CC1E39142F61280017578F /* NSDictionary+FKConcise.h */,
 				39CC1E3A142F61280017578F /* NSMutableArray+FKConcise.h */,
 				39CC1E3B142F61280017578F /* NSMutableArray+FKConcise.m */,
 				39CC1E3C142F61280017578F /* NSNull+FKConcise.h */,
 				39CC1E3D142F61280017578F /* NSNumber+FKConcise.h */,
 				39CC1E3E142F61280017578F /* NSNumber+FKConcise.m */,
-				39CC1E3F142F61280017578F /* NSSet+FKConcise.h */,
-				39CC1E40142F61280017578F /* NSString+FKConcise.h */,
-				39CC1E41142F61280017578F /* NSValue+FKConcise.h */,
 			);
 			name = Shorthands;
 			sourceTree = "<group>";
@@ -312,26 +292,10 @@
 			path = "Optional/C++";
 			sourceTree = "<group>";
 		};
-		39DEEB75143CEE7600B81BB5 /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				9B9DCAE8143F9392003D467B /* FoundationKit+CoreData.h */,
-				9B9DCAFB143FAEAD003D467B /* NSFetchedResultsController+FKAdditions.h */,
-				9B9DCAFC143FAEAD003D467B /* NSFetchedResultsController+FKAdditions.m */,
-				39DEEB76143CEE7600B81BB5 /* NSManagedObject+FKAdditions.h */,
-				39DEEB77143CEE7600B81BB5 /* NSManagedObject+FKAdditions.m */,
-				9BCB706216EA095800D3F234 /* FKFetchedResultsControllerUpdater.h */,
-				9BCB706316EA095900D3F234 /* FKFetchedResultsControllerUpdater.m */,
-			);
-			name = "Core Data";
-			path = "Optional/Core Data";
-			sourceTree = "<group>";
-		};
 		39E85BCC1434FA6E008FC8D5 /* Optional */ = {
 			isa = PBXGroup;
 			children = (
 				39DEEAD8143CCCFA00B81BB5 /* Audio */,
-				39DEEB75143CEE7600B81BB5 /* Core Data */,
 				39DEEADD143CCD9C00B81BB5 /* C++ */,
 			);
 			name = Optional;
@@ -385,8 +349,6 @@
 				399F4CD913C90B210008CC0E /* FKSynthesizeSingleton.h */,
 				9B7638E216835190007C0C81 /* NSArray+FKDiff.h */,
 				9B7638E316835190007C0C81 /* NSArray+FKDiff.m */,
-				392D3C79142FF3F8003AFB81 /* NSBundle+FKPaths.h */,
-				392D3C7A142FF3FB003AFB81 /* NSBundle+FKPaths.m */,
 				C5E319D113C4744800D9CA76 /* NSData+FKCrypto.h */,
 				C5E319D213C4744800D9CA76 /* NSData+FKCrypto.m */,
 				39AA0FAE14291E8500C6956C /* NSDate+FKAdditions.h */,
@@ -600,7 +562,6 @@
 				39CC1E43142F61280017578F /* NSArray+FKConcise.m in Sources */,
 				39CC1E45142F61280017578F /* NSMutableArray+FKConcise.m in Sources */,
 				39CC1E47142F61280017578F /* NSNumber+FKConcise.m in Sources */,
-				392D3C7C142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */,
 				9B04E2E41431F0E600974B96 /* NSObject+FKObserver.m in Sources */,
 				39DEEAD2143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m in Sources */,
 				9B9DCAA0143F8676003D467B /* NSString+FKLevenshtein.m in Sources */,
@@ -633,7 +594,6 @@
 				39C5905C14389169004C438C /* FKMutableIntArrayTests.m in Sources */,
 				39DEEAD6143C8F3700B81BB5 /* FKOperationQueueFinishedTests.m in Sources */,
 				39DEEAE0143CCDEC00B81BB5 /* FKMutableFloatArray.mm in Sources */,
-				39DEEB78143CEED800B81BB5 /* NSManagedObject+FKAdditions.m in Sources */,
 				9B564BFC14CD85B900A6B404 /* FKPaths.m in Sources */,
 				9B7638A01683374A007C0C81 /* NSURLAdditionsTests.m in Sources */,
 			);
@@ -658,7 +618,6 @@
 				39CC1E42142F61280017578F /* NSArray+FKConcise.m in Sources */,
 				39CC1E44142F61280017578F /* NSMutableArray+FKConcise.m in Sources */,
 				39CC1E46142F61280017578F /* NSNumber+FKConcise.m in Sources */,
-				392D3C7B142FF3FE003AFB81 /* NSBundle+FKPaths.m in Sources */,
 				9B04E2E31431F0E600974B96 /* NSObject+FKObserver.m in Sources */,
 				39DEEAD1143BC23200B81BB5 /* NSOperationQueue+FKBlocks.m in Sources */,
 				9B9DCA9F143F8676003D467B /* NSString+FKLevenshtein.m in Sources */,
@@ -696,7 +655,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = FoundationKitiOS;
 				SDKROOT = iphoneos;
 			};
@@ -709,7 +668,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				GCC_THUMB_SUPPORT = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = FoundationKitiOS;
 				SDKROOT = iphoneos;
 			};

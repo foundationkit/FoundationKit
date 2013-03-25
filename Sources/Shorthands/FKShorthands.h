@@ -60,3 +60,7 @@ NS_INLINE BOOL $empty(id object) {
   ([object respondsToSelector:@selector(length)] && [(NSData *)object length] == 0) ||
   ([object respondsToSelector:@selector(count)]  && [(NSArray *)object count] == 0);
 }
+
+NS_INLINE BOOL $equals(id obj1, id obj2) {
+	return (obj1 == obj2 || [obj1 isEqual:obj2]);
+}

@@ -9,13 +9,9 @@
 
 // Shorthands
 #import "NSArray+FKConcise.h"
-#import "NSDictionary+FKConcise.h"
 #import "NSMutableArray+FKConcise.h"
 #import "NSNull+FKConcise.h"
 #import "NSNumber+FKConcise.h"
-#import "NSSet+FKConcise.h"
-#import "NSString+FKConcise.h"
-#import "NSValue+FKConcise.h"
 
 // Macro helpers
 #import "FKAssert.h"
