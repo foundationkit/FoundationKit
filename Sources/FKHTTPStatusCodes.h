@@ -1,6 +1,6 @@
 // Part of FoundationKit http://foundationk.it
 
-typedef enum {
+typedef NS_ENUM(NSInteger, FKHTTPStatusCode) {
   FKHTTPStatusCodeContinue                            = 100,
   FKHTTPStatusCodeSwitchingProtocols                  = 101,
   FKHTTPStatusCodeProcessing                          = 102,
@@ -58,117 +58,11 @@ typedef enum {
   FKHTTPStatusCodeInsufficientStorage                 = 507,
   // 508 - 509 unused
   FKHTTPStatusCodeNotExtended                         = 510
-} FKHTTPStatusCode;
+};
 
 
 NS_INLINE NSString* FKHTTPStatusCodeDescription(FKHTTPStatusCode statusCode) {
-  switch (statusCode) {
-    case FKHTTPStatusCodeContinue:
-      return _(@"Continue");
-    case FKHTTPStatusCodeSwitchingProtocols:
-      return _(@"Switching Protocols");
-    case FKHTTPStatusCodeProcessing:
-      return _(@"Processing");
-      
-    case FKHTTPStatusCodeOK:
-      return _(@"OK");
-    case FKHTTPStatusCodeCreated:
-      return _(@"Created");
-    case FKHTTPStatusCodeAccepted:
-      return _(@"Accepted");
-    case FKHTTPStatusCodeNonAuthoritativeInformation:
-      return _(@"Non-Authoritative Information");
-    case FKHTTPStatusCodeNoContent:
-      return _(@"No Content");
-    case FKHTTPStatusCodeResetContent:
-      return _(@"Reset Content");
-    case FKHTTPStatusCodePartialContent:
-      return _(@"Partial Content");
-    case FKHTTPStatusCodeMultiStatus:
-      return _(@"Multi-Status");
-      
-    case FKHTTPStatusCodeMultipleChoices:
-      return _(@"Multiple Choices");
-    case FKHTTPStatusCodeMovedPermanently:
-      return _(@"Moved Permanently");
-    case FKHTTPStatusCodeFound:
-      return _(@"Found");
-    case FKHTTPStatusCodeSeeOther:
-      return _(@"See Other");
-    case FKHTTPStatusCodeNotModified:
-      return _(@"Not Modified");
-    case FKHTTPStatusCodeUseProxy:
-      return _(@"Use Proxy");
-    case FKHTTPStatusCodeTemporaryRedirect:
-      return _(@"Temporary Redirect");
-      
-    case FKHTTPStatusCodeBadRequest:
-      return _(@"Bad Request");
-    case FKHTTPStatusCodeAuthorizationRequired:
-      return _(@"Authorization Required");
-    case FKHTTPStatusCodePaymentRequired:
-      return _(@"Payment Required");
-    case FKHTTPStatusCodeForbidden:
-      return _(@"Forbidden");
-    case FKHTTPStatusCodeNotFound:
-      return _(@"Not Found");
-    case FKHTTPStatusCodeMethodNotAllowed:
-      return _(@"Method Not Allowed");
-    case FKHTTPStatusCodeNotAcceptable:
-      return _(@"Not Acceptable");
-    case FKHTTPStatusCodeProxyAuthenticationRequired:
-      return _(@"Proxy Authentication Required");
-    case FKHTTPStatusCodeRequestTimeOut:
-      return _(@"Request Time-out");
-    case FKHTTPStatusCodeConflict:
-      return _(@"Conflict");
-    case FKHTTPStatusCodeGone:
-      return _(@"Gone");
-    case FKHTTPStatusCodeLengthRequired:
-      return _(@"Length Required");
-    case FKHTTPStatusCodePreconditionFailed:
-      return _(@"Precondition Failed");
-    case FKHTTPStatusCodeRequestEntityTooLarge:
-      return _(@"Request Entity Too Large");
-    case FKHTTPStatusCodeRequestURITooLarge:
-      return _(@"Request-URI Too Large");
-    case FKHTTPStatusCodeUnsupportedMediaType:
-      return _(@"Unsupported Media Type");
-    case FKHTTPStatusCodeRequestedRangeNotSatisfiable:
-      return _(@"Requested Range Not Satisfiable");
-    case FKHTTPStatusCodeExpectationFailed:
-      return _(@"Expectation Failed");
-    case FKHTTPStatusCodeUnprocessableEntity:
-      return _(@"Unprocessable Entity");
-    case FKHTTPStatusCodeLocked:
-      return _(@"Locked");
-    case FKHTTPStatusCodeFailedDependency:
-      return _(@"Failed Dependency");
-    case FKHTTPStatusCodeUpgradeRequired:
-      return _(@"Upgrade Required");
-      
-    case FKHTTPStatusCodeInternalServerError:
-      return _(@"Internal Server Error");
-    case FKHTTPStatusCodeMethodNotImplemented:
-      return _(@"Method Not Implemented");
-    case FKHTTPStatusCodeBadGateway:
-      return _(@"Bad Gateway");
-    case FKHTTPStatusCodeServiceTemporaryUnavailable:
-      return _(@"Service Temporarily Unavailable");
-    case FKHTTPStatusCodeGatewayTimeOut:
-      return _(@"Gateway Time-out");
-    case FKHTTPStatusCodeHTTPVersionNotSupported:
-      return _(@"HTTP Version Not Supported");
-    case FKHTTPStatusCodeVariantAlsoNegotiates:
-      return _(@"Variant Also Negotiates");
-    case FKHTTPStatusCodeInsufficientStorage:
-      return _(@"Insufficient Storage");
-    case FKHTTPStatusCodeNotExtended:
-      return _(@"Not Extended");
-      
-    default:
-      return [NSString stringWithFormat:@"%@: %d",_(@"Undefined Status Code"), statusCode];
-  }
+  return [NSHTTPURLResponse localizedStringForStatusCode:(NSInteger)statusCode];
 }
 
 NS_INLINE BOOL FKHTTPStatusCodeIsInformational(FKHTTPStatusCode statusCode) {
