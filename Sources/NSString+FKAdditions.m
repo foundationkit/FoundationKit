@@ -2,6 +2,11 @@
 
 FKLoadCategory(NSStringFKAdditions);
 
+
+static char emailKey;
+static char websiteKey;
+
+
 @implementation NSString (FKAdditions)
 
 - (BOOL)isBlank {
@@ -83,11 +88,36 @@ FKLoadCategory(NSStringFKAdditions);
 }
 
 - (BOOL)isValidEmailAddress {
+  NSNumber *isValidWrapper = [self associatedValueForKey:&emailKey];
+
+  if (isValidWrapper != nil) {
+    return [isValidWrapper boolValue];
+  }
+
   // Regexp from -[NSString(NSEmailAddressString) mf_isLegalEmailAddress] in /System/Library/PrivateFrameworks/MIME.framework
   NSString *emailRegex = @"^[[:alnum:]!#$%&'*+/=?^_`{|}~-]+((\\.?)[[:alnum:]!#$%&'*+/=?^_`{|}~-]+)*@[[:alnum:]-]+(\\.[[:alnum:]-]+)*(\\.[[:alpha:]]+)+$";
   NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
 
-  return [emailPredicate evaluateWithObject:self];
+  isValidWrapper = @([emailPredicate evaluateWithObject:self]);
+  [self associateValue:isValidWrapper withKey:&emailKey];
+  
+  return [isValidWrapper boolValue];
+}
+
+- (BOOL)isValidWebAddress {
+  NSNumber *isValidWrapper = [self associatedValueForKey:&websiteKey];
+
+  if (isValidWrapper != nil) {
+    return [isValidWrapper boolValue];
+  }
+
+  NSString *urlRegex = @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
+  NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegex];
+
+  isValidWrapper = @([urlPredicate evaluateWithObject:self]);
+  [self associateValue:isValidWrapper withKey:&websiteKey];
+
+  return [isValidWrapper boolValue];
 }
 
 - (NSString *)firstLetter {

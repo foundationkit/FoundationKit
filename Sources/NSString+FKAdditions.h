@@ -43,6 +43,12 @@
 - (BOOL)isValidEmailAddress;
 
 /**
+ Checks if the string is valid website address
+ @return YES, if the string is a valid website address, NO otherwise
+ */
+- (BOOL)isValidWebAddress;
+
+/**
  Returns first letter of the string
  @return first letter of the string, if string has length 0 it will return the empty string
  */
