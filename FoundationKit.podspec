@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   }
   s.source = { :git => "https://github.com/foundationkit/FoundationKit.git", :tag => '0.0.1' }
   s.source_files = 'Sources', 'Sources/**/*.{h,m}'
-  s.frameworks = 'CoreGraphics', 'Foundation'
+  s.frameworks = 'CoreGraphics', 'Foundation', 'AudioUnit', 'AudioToolbox'
   s.requires_arc = true
 
   s.subspec "FoundationKit" do |ss|
