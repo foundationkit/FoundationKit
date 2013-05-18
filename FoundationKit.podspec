@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     'Matthias Tretter' => 'myell0w@me.com'
   }
   s.source = { :git => "https://github.com/foundationkit/FoundationKit.git" }
-  s.source_files = 'Sources/Blocks/*.{h,m}', 'Sources/Shorthands/*.{h,m}'
+  s.source_files = 'Sources/*.{h,m}', 'Sources/Blocks/*.{h,m}', 'Sources/Shorthands/*.{h,m}'
   s.frameworks = 'CoreGraphics', 'Foundation'
   s.requires_arc = true
 
