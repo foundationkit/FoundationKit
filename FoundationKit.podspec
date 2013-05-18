@@ -17,15 +17,21 @@ Pod::Spec.new do |s|
     'Matthias Tretter' => 'myell0w@me.com'
   }
   s.source = { :git => "https://github.com/foundationkit/FoundationKit.git", :tag => '0.0.1' }
-  s.source_files = 'Sources', 'Sources/**/*.{h,m}'
-  s.frameworks = 'CoreGraphics', 'Foundation', 'AudioUnit', 'AudioToolbox', 'CoreAudio'
+  s.source_files = 'Sources', 'Sources/Blocks/*.{h,m}', 'Sources/Shorthands/*.{h,m}'
+  s.frameworks = 'CoreGraphics', 'Foundation'
   s.requires_arc = true
 
-  s.subspec "FoundationKit" do |ss|
-    ss.source_files = "FoundationKit"
-    ss.public_header_files = "FoundationKit/*.h"
-    ss.prefix_header_contents = '
-#include <FoundationKit.h>
-    '
-  end
+
+  # s.subspec 'Blocks' do |ss|
+  #   ss.source_files = 'FormatterKit/TTTAddressFormatter.{h,m}'
+  #   ss.frameworks = 'AddressBook'
+  # end
+
+#   s.subspec "FoundationKit" do |ss|
+#     ss.source_files = "FoundationKit"
+#     ss.public_header_files = "FoundationKit/*.h"
+#     ss.prefix_header_contents = '
+# #include <FoundationKit.h>
+#     '
+#   end
 end
