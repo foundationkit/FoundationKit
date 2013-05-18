@@ -19,6 +19,9 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/foundationkit/FoundationKit.git" }
   s.source_files = 'Sources/*.{h,m}', 'Sources/Blocks/*.{h,m}', 'Sources/Shorthands/*.{h,m}'
   s.frameworks = 'CoreGraphics', 'Foundation'
+  s.prefix_header_contents = '
+#include <FoundationKit.h>
+  '
   s.requires_arc = true
 
 
