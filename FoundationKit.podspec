@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     'Peter Steinberger' => 'foundationkit@petersteinberger.com',
     'Matthias Tretter' => 'myell0w@me.com'
   }
-  s.source = { :git => "https://github.com/foundationkit/FoundationKit.git", tag: '0.0.1' }
+  s.source = { :git => "https://github.com/foundationkit/FoundationKit.git", :tag => '0.0.1' }
   s.source_files = 'Sources/*.{h,m}', 'Sources/Blocks/*.{h,m}', 'Sources/Shorthands/*.{h,m}'
   s.frameworks = 'CoreGraphics', 'Foundation'
   s.prefix_header_contents = '
