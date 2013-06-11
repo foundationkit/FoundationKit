@@ -49,9 +49,12 @@ FKLoadCategory(NSArrayFKBlocks);
 }
 
 - (NSArray *)map:(id (^)(id object))block {
-  NSMutableArray *result = [NSMutableArray array];
+  NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
   for (id object in self) {
-    [result addObject:block(object)];
+    id mappedResult = block(object);
+    if (mappedResult != nil) {
+      [result addObject:mappedResult];
+    }
   }
   return result;
 }
