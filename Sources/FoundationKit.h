@@ -29,6 +29,7 @@
 #import "NSDate+FKAdditions.h"
 #import "NSError+FKAdditions.h"
 #import "NSMutableArray+FKReorder.h"
+#import "NSMutableAttributedString+FKAdditions.h"
 #import "NSMutableString+FKAdditions.h"
 #import "NSNotificationCenter+FKMainThread.h"
 #import "NSObject+FKAssociatedObjects.h"
