@@ -25,6 +25,7 @@
 
 #import "FKPaths.h"
 #import "FKMutableIntArray.h"
+#import "NSArray+FKDiff.h"
 #import "NSData+FKCrypto.h"
 #import "NSDate+FKAdditions.h"
 #import "NSError+FKAdditions.h"

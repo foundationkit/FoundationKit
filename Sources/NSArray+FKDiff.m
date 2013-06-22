@@ -2,7 +2,11 @@
 
 
 @implementation FKDiffResult
-// nothing to see here ;)
+
+- (NSString *)description {
+  return [NSString stringWithFormat:@"Deleted indexes:\n%@\nInserted indexes:\n%@", self.deletedIndexes, self.insertedIndexes];
+}
+
 @end
 
 
