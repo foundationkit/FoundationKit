@@ -16,6 +16,9 @@
 @property (nonatomic, copy) NSIndexSet *deletedIndexes;
 @property (nonatomic, copy) NSIndexSet *insertedIndexes;
 
+@property (nonatomic, copy) NSArray *deletedObjects;
+@property (nonatomic, copy) NSArray *insertedObjects;
+
 // combinedDeletedIndexes and combinedInsertedIndexes are indexes to the combinedArray,
 // used to display which elements in combinedArray were inserted or deleted.
 @property (nonatomic, copy) NSIndexSet *combinedDeletedIndexes;
