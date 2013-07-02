@@ -200,9 +200,11 @@ NSDateFormatter* dateFormatter(void);
 }
 
 - (NSInteger)daysSinceDate:(NSDate *)date {
-	NSTimeInterval timeInterval = [self timeIntervalSinceDate:date];
-  
-	return timeInterval / 3600. / 24.;
+  NSUInteger unitFlags = NSDayCalendarUnit;
+  NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+  NSDateComponents *components = [calendar components:unitFlags fromDate:date toDate:self options:0];
+
+  return components.day + 1;
 }
 
 - (NSDate *)dateByAddingDays:(NSUInteger)days {
