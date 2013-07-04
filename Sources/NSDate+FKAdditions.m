@@ -200,11 +200,15 @@ NSDateFormatter* dateFormatter(void);
 }
 
 - (NSInteger)daysSinceDate:(NSDate *)date {
-  NSUInteger unitFlags = NSDayCalendarUnit;
+  NSUInteger unitFlags = NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit;
   NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
   NSDateComponents *components = [calendar components:unitFlags fromDate:date toDate:self options:0];
 
-  return components.day + 1;
+  if (components.hour > 0 || components.minute > 0) {
+    components.day++;
+  }
+
+  return components.day;
 }
 
 - (NSDate *)dateByAddingDays:(NSUInteger)days {
