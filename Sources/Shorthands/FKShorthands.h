@@ -41,6 +41,9 @@ NS_INLINE BOOL FKClassExists(NSString *className) {
 #define $property(propertyName)	@#propertyName
 #endif
 
+// Macro for compile-time errors of forbidden initializers, based on Javi Soto's Gist: https://gist.github.com/JaviSoto/5906004
+#define FKDesignatedInitializer(__SEL__) __attribute__((unavailable("Invoke the designated initializer `" # __SEL__ "` instead.")))
+
 // Shortcut for checking a bit in a bitmask
 #define $flagSet(MASK, FLAG)  ((MASK & FLAG) == FLAG)
 
