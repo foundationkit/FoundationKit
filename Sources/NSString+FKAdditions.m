@@ -111,10 +111,10 @@ static char websiteKey;
     return [isValidWrapper boolValue];
   }
 
-  NSString *urlRegex = @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
+  NSString *urlRegex = @"((http|ftp|https):\\/\\/)?[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?";
   NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegex];
 
-  isValidWrapper = @([urlPredicate evaluateWithObject:self]);
+  isValidWrapper = @([urlPredicate evaluateWithObject:[self lowercaseString]]);
   [self associateValue:isValidWrapper withKey:&websiteKey];
 
   return [isValidWrapper boolValue];
