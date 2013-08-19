@@ -10,8 +10,16 @@ NS_INLINE NSString* _(NSString *key) {
   return NSLocalizedString(key, key);
 }
 
+NS_INLINE NSString* FKApplicationShortVersion() {
+  return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+}
+
 NS_INLINE NSString* FKApplicationVersion() {
   return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+}
+
+NS_INLINE NSString* FKApplicationVersionFormatted() {
+  return [NSString stringWithFormat:@"%@ (%@)", FKApplicationShortVersion(), FKApplicationVersion()];
 }
 
 NS_INLINE NSString* FKApplicationName() {
