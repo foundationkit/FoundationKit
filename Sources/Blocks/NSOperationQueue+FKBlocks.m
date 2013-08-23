@@ -16,7 +16,7 @@ FKLoadCategory(NSOperationQueueFKBlocks);
 
 @interface NSOperationQueue ()
 
-@property (nonatomic, copy) dispatch_block_t fk_finishedBlock;
+@property (nonatomic, copy) dispatch_block_t fkit_finishedBlock;
 
 @end
 
@@ -26,30 +26,30 @@ static FKObserver *observer = nil;
 
 @implementation NSOperationQueue (FKBlocks)
 
-- (void)whenFinished:(void (^)())block {
-  self.fk_finishedBlock = block;
+- (void)fkit_whenFinished:(void (^)())block {
+  self.fkit_finishedBlock = block;
 }
 
-- (void)removeFinishedBlock {
-  self.fk_finishedBlock = nil;
+- (void)fkit_removeFinishedBlock {
+  self.fkit_finishedBlock = nil;
 }
 
-- (dispatch_block_t)fk_finishedBlock {
-  return [self associatedValueForKey:&finishedBlockKey];
+- (dispatch_block_t)fkit_finishedBlock {
+  return [self fkit_associatedValueForKey:&finishedBlockKey];
 }
 
-- (void)setFk_finishedBlock:(dispatch_block_t)fk_finishedBlock {
-  dispatch_block_t finishedBlock = self.fk_finishedBlock;
+- (void)setfkit_finishedBlock:(dispatch_block_t)fkit_finishedBlock {
+  dispatch_block_t finishedBlock = self.fkit_finishedBlock;
   
-  if (fk_finishedBlock != finishedBlock) {
+  if (fkit_finishedBlock != finishedBlock) {
     // old observer to remove?
     if (finishedBlock != nil) {
       [self removeObserver:observer forKeyPath:kFKOperationCountKeyPath];
     }
     
-    [self associateCopiedValue:fk_finishedBlock withKey:&finishedBlockKey];
+    [self fkit_associateCopiedValue:fkit_finishedBlock withKey:&finishedBlockKey];
     
-    if (fk_finishedBlock != nil) {
+    if (fkit_finishedBlock != nil) {
       [self addObserver:observer
              forKeyPath:kFKOperationCountKeyPath 
                 options:NSKeyValueObservingOptionNew
@@ -79,8 +79,8 @@ static FKObserver *observer = nil;
   if ([object isKindOfClass:[NSOperationQueue class]] && context == &finishedContext && [keyPath isEqualToString:kFKOperationCountKeyPath]) {
     NSOperationQueue *operationQueue = (NSOperationQueue *)object;
     
-    if (operationQueue.operationCount == 0 && operationQueue.fk_finishedBlock != nil) {
-      operationQueue.fk_finishedBlock();
+    if (operationQueue.operationCount == 0 && operationQueue.fkit_finishedBlock != nil) {
+      operationQueue.fkit_finishedBlock();
     }
   } else {
     [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];

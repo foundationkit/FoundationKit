@@ -4,7 +4,7 @@
 
 @implementation NSURL (FKQueryParameters)
 
-+ (NSURL *)URLWithString:(NSString *)string queryValuesForKeys:(NSString *)value, ... {
++ (NSURL *)fkit_URLWithString:(NSString *)string queryValuesForKeys:(NSString *)value, ... {
   if (value == nil) {
     return [NSURL URLWithString:string];
   }
@@ -27,7 +27,7 @@
         separator = @"?";
       }
 
-      [queryString appendFormat:@"%@%@=%@", separator, argument, [value URLEncodedString]];
+      [queryString appendFormat:@"%@%@=%@", separator, argument, [value fkit_URLEncodedString]];
     }
   }
 

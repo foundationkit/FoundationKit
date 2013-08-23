@@ -13,21 +13,21 @@
  @param selector the selector to perform, taking no arguments
  @param delay the delay after which the selector gets peformed
  */
-- (void)performSelector:(SEL)selector afterDelay:(NSTimeInterval)delay;
+- (void)fkit_performSelector:(SEL)selector afterDelay:(NSTimeInterval)delay;
 
 /**
  Performs the given selector in the next runloop by performing afterDelay:0
  
  @param selector selector the selector to perform, taking no arguments
  */
-- (void)performSelectorInNextRunLoop:(SEL)selector;
+- (void)fkit_performSelectorInNextRunLoop:(SEL)selector;
 
 /**
  Performs the given selector in the next runloop by performing afterDelay:0
  
  @param selector the selector to perform, taking no arguments
  */
-- (void)performSelectorInNextRunLoop:(SEL)selector withObject:(id)object;
+- (void)fkit_performSelectorInNextRunLoop:(SEL)selector withObject:(id)object;
 
 /**
  performs the given selector on self only if self responds to the selector.
@@ -35,7 +35,7 @@
  @param selector the selector to perform, taking no arguments
  @return the return value of the method performed
  */
-- (id)performSelectorIfResponding:(SEL)selector;
+- (id)fkit_performSelectorIfResponding:(SEL)selector;
 
 /**
  performs the given selector on self only if self responds to the selector.
@@ -44,7 +44,7 @@
  @param object the argument passed to the selector
  @return the return value of the method performed
  */
-- (id)performSelectorIfResponding:(SEL)selector withObject:(id)object;
+- (id)fkit_performSelectorIfResponding:(SEL)selector withObject:(id)object;
 
 /**
  performs the given selector on self only if self responds to the selector.
@@ -54,5 +54,5 @@
  @param object2 the second argument passed to the selector
  @return the return value of the method performed
  */
-- (id)performSelectorIfResponding:(SEL)selector withObject:(id)object1 withObject:(id)object2;
+- (id)fkit_performSelectorIfResponding:(SEL)selector withObject:(id)object1 withObject:(id)object2;
 @end

@@ -5,7 +5,7 @@
 
 @interface NSObject (FKSwizzle)
 
-+ (BOOL)swizzleMethod:(SEL)origSel withMethod:(SEL)altSel error:(NSError**)error;
-+ (BOOL)swizzleClassMethod:(SEL)slcOrig withClassMethod:(SEL)slcAlt error:(NSError**)error;
++ (BOOL)fkit_swizzleMethod:(SEL)origSel withMethod:(SEL)altSel error:(NSError**)error;
++ (BOOL)fkit_swizzleClassMethod:(SEL)slcOrig withClassMethod:(SEL)slcAlt error:(NSError**)error;
 
 @end

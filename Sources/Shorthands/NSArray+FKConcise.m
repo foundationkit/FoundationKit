@@ -6,15 +6,7 @@ FKLoadCategory(NSArrayFKConcise);
 
 @implementation NSArray (FKConcise)
 
-- (BOOL)isEmpty {
-  return self.count == 0;
-}
-
-- (id)firstObject {
-  return [self objectOrNilAtIndex:0];
-}
-
-- (id)firstObjectMatchingPredicate:(NSPredicate *)predicate {
+- (id)fkit_firstObjectMatchingPredicate:(NSPredicate *)predicate {
   NSArray *filteredArray = [self filteredArrayUsingPredicate:predicate];
   
   if (filteredArray != nil) {
@@ -24,7 +16,7 @@ FKLoadCategory(NSArrayFKConcise);
   return nil;
 }
 
-- (id)objectOrNilAtIndex:(NSUInteger)index {
+- (id)fkit_objectOrNilAtIndex:(NSUInteger)index {
   if (index < self.count) {
     return self[index];
   }
@@ -32,7 +24,7 @@ FKLoadCategory(NSArrayFKConcise);
   return nil;
 }
 
-- (NSArray *)arrayWithUniqueMembers {
+- (NSArray *)fkit_arrayWithUniqueMembers {
 	NSMutableArray *copy = [self mutableCopy];
 	
   for (id object in self) {

@@ -5,6 +5,6 @@
 
 @interface NSNumber (FKConcise)
 
-+ (NSNumber *)numberWithString:(NSString *)string;
++ (NSNumber *)fkit_numberWithString:(NSString *)string;
 
 @end

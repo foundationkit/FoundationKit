@@ -3,19 +3,19 @@
 
 @implementation NSNotificationCenter (FKMainThread)
 
-- (void)postNotificationOnMainThread:(NSNotification *)notification {
+- (void)fkit_postNotificationOnMainThread:(NSNotification *)notification {
   dispatch_async(dispatch_get_main_queue(), ^{
     [self postNotification:notification];
   });
 }
 
-- (void)postNotificationOnMainThreadWithName:(NSString *)name object:(id)object {
+- (void)fkit_postNotificationOnMainThreadWithName:(NSString *)name object:(id)object {
   dispatch_async(dispatch_get_main_queue(), ^{
     [self postNotificationName:name object:object];
   });
 }
 
-- (void)postNotificationOnMainThreadWithName:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo {
+- (void)fkit_postNotificationOnMainThreadWithName:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo {
   dispatch_async(dispatch_get_main_queue(), ^{
     [self postNotificationName:name object:object userInfo:userInfo];
   });

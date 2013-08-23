@@ -4,9 +4,9 @@
 
 @interface NSMutableAttributedString (FKAdditions)
 
-- (void)replaceAttribute:(NSString *)attributeName
-           matchingValue:(id)valueToReplace
-               withValue:(id)newValue
-                 inRange:(NSRange)range;
+- (void)fkit_replaceAttribute:(NSString *)attributeName
+                matchingValue:(id)valueToReplace
+                    withValue:(id)newValue
+                      inRange:(NSRange)range;
 
 @end

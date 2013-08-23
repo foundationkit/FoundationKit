@@ -2,7 +2,7 @@
 
 @implementation NSObject (FKObserver)
 
-- (void)safeRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath {
+- (void)fkit_safeRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath {
   @try {
     [self removeObserver:observer forKeyPath:keyPath];
   }
@@ -11,7 +11,7 @@
   }
 }
 
-- (void)safeRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context {
+- (void)fkit_safeRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context {
   @try {
     if ([self respondsToSelector:@selector(removeObserver:forKeyPath:context:)]) {
       [self removeObserver:observer forKeyPath:keyPath context:context];

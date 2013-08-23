@@ -15,6 +15,6 @@
  @param fromIndex the index of the object to move
  @param toIndex the index where the object gets inserted
  */
-- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+- (void)fkit_moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
 
 @end

@@ -7,8 +7,8 @@
  */
 @interface NSNotificationCenter (FKMainThread)
 
-- (void)postNotificationOnMainThread:(NSNotification *)notification;
-- (void)postNotificationOnMainThreadWithName:(NSString *)name object:(id)object;
-- (void)postNotificationOnMainThreadWithName:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo;
+- (void)fkit_postNotificationOnMainThread:(NSNotification *)notification;
+- (void)fkit_postNotificationOnMainThreadWithName:(NSString *)name object:(id)object;
+- (void)fkit_postNotificationOnMainThreadWithName:(NSString *)name object:(id)object userInfo:(NSDictionary *)userInfo;
 
 @end

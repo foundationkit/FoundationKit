@@ -2,38 +2,71 @@
 
 FKLoadCategory(NSStringFKAdditions);
 
+static NSMutableDictionary *fk_checkedWebAddresses = nil;
+static NSLock *fk_checkedWebAddressesLock = nil;
+static NSMutableDictionary *fk_checkedEmailAddresses = nil;
+static NSLock *fk_checkedEmailAddressesLock = nil;
 
-static char emailKey;
-static char websiteKey;
+static void __attribute__((constructor)) FKInitLocks(void) {
+  fk_checkedWebAddressesLock = [[NSLock alloc] init];
+  fk_checkedEmailAddressesLock = [[NSLock alloc] init];
+}
 
+static NSNumber* FKCachedWebAddressValue(NSString *string) {
+  NSNumber *value = nil;
+
+  [fk_checkedWebAddressesLock lock];
+  value = fk_checkedWebAddresses[string];
+  [fk_checkedWebAddressesLock unlock];
+
+  return value;
+}
+
+static NSNumber* FKCachedEmailAddressValue(NSString *string) {
+  NSNumber *value = nil;
+
+  [fk_checkedEmailAddressesLock lock];
+  value = fk_checkedEmailAddresses[string];
+  [fk_checkedEmailAddressesLock unlock];
+
+  return value;
+}
+
+static void FKCacheWebAddressValue(NSString *string, BOOL isValidWebAddress) {
+  [fk_checkedWebAddressesLock lock];
+
+  if (fk_checkedWebAddresses == nil) {
+    fk_checkedWebAddresses = [NSMutableDictionary dictionary];
+  }
+
+  fk_checkedWebAddresses[string] = @(isValidWebAddress);
+
+  [fk_checkedWebAddressesLock unlock];
+}
+
+static void FKCacheEmailAddressValue(NSString *string, BOOL isValidEmailAddress) {
+  [fk_checkedEmailAddressesLock lock];
+
+  if (fk_checkedEmailAddresses == nil) {
+    fk_checkedEmailAddresses = [NSMutableDictionary dictionary];
+  }
+
+  fk_checkedEmailAddresses[string] = @(isValidEmailAddress);
+
+  [fk_checkedEmailAddressesLock unlock];
+}
 
 @implementation NSString (FKAdditions)
 
-- (BOOL)isBlank {
-  return [[self trimmed] isEmpty];
-}
-
-- (BOOL)isEmpty {
-  return ([self length] == 0);
-}
-
-- (NSString *)presence {
-  if([self isBlank]) {
-    return nil;
-  } else {
-    return self;
-  }
-}
-
-- (NSRange)stringRange {
+- (NSRange)fkit_stringRange {
   return NSMakeRange(0, [self length]);
 }
 
-- (NSString *)trimmed {
+- (NSString *)fkit_trimmed {
   return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString *)URLEncodedString {
+- (NSString *)fkit_URLEncodedString {
   NSString *result = (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
                                                                                            (__bridge CFStringRef)self,
                                                                                            NULL,
@@ -42,7 +75,7 @@ static char websiteKey;
   return result;
 }
 
-- (NSString*)URLDecodedString {
+- (NSString*)fkit_URLDecodedString {
   NSString *result = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
                                                                                                            (__bridge CFStringRef)self,
                                                                                                            CFSTR(""),
@@ -50,23 +83,23 @@ static char websiteKey;
   return result;
 }
 
-- (BOOL)containsString:(NSString *)string {
-	return [self containsString:string options:NSCaseInsensitiveSearch];
+- (BOOL)fkit_containsString:(NSString *)string {
+	return [self fkit_containsString:string options:NSCaseInsensitiveSearch];
 }
 
-- (BOOL)containsString:(NSString *)string options:(NSStringCompareOptions)options {
+- (BOOL)fkit_containsString:(NSString *)string options:(NSStringCompareOptions)options {
 	return [self rangeOfString:string options:options].location == NSNotFound ? NO : YES;
 }
 
-- (BOOL)isEqualToStringIgnoringCase:(NSString*)otherString {
-	if(!otherString) {
+- (BOOL)fkit_isEqualToStringIgnoringCase:(NSString*)otherString {
+	if(otherString == nil) {
 		return NO;
   }
   
 	return NSOrderedSame == [self compare:otherString options:NSCaseInsensitiveSearch + NSWidthInsensitiveSearch];
 }
 
-- (NSString *)stringByReplacingUnnecessaryWhitespace {
+- (NSString *)fkit_stringByReplacingUnnecessaryWhitespace {
   NSError *error = nil;
   NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[ ]{2,}"
                                                                          options:NSRegularExpressionCaseInsensitive
@@ -79,17 +112,16 @@ static char websiteKey;
   
   return [regex stringByReplacingMatchesInString:self
                                          options:0
-                                           range:self.stringRange
+                                           range:self.fkit_stringRange
                                     withTemplate:@" "];
 }
 
-- (NSString *)trimmedStringByReplacingUnnecessaryWhitespace {
-  return [[self stringByReplacingUnnecessaryWhitespace] trimmed];
+- (NSString *)fkit_trimmedStringByReplacingUnnecessaryWhitespace {
+  return [[self fkit_stringByReplacingUnnecessaryWhitespace] fkit_trimmed];
 }
 
-- (BOOL)isValidEmailAddress {
-  NSNumber *isValidWrapper = [self associatedValueForKey:&emailKey];
-
+- (BOOL)fkit_isValidEmailAddress {
+  NSNumber *isValidWrapper = FKCachedEmailAddressValue(self);
   if (isValidWrapper != nil) {
     return [isValidWrapper boolValue];
   }
@@ -98,15 +130,14 @@ static char websiteKey;
   NSString *emailRegex = @"^[[:alnum:]!#$%&'*+/=?^_`{|}~-]+((\\.?)[[:alnum:]!#$%&'*+/=?^_`{|}~-]+)*@[[:alnum:]-]+(\\.[[:alnum:]-]+)*(\\.[[:alpha:]]+)+$";
   NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
 
-  isValidWrapper = @([emailPredicate evaluateWithObject:self]);
-  [self associateValue:isValidWrapper withKey:&emailKey];
+  BOOL isValid = [emailPredicate evaluateWithObject:self];
+  FKCacheEmailAddressValue(self, isValid);
   
-  return [isValidWrapper boolValue];
+  return isValid;
 }
 
-- (BOOL)isValidWebAddress {
-  NSNumber *isValidWrapper = [self associatedValueForKey:&websiteKey];
-
+- (BOOL)fkit_isValidWebAddress {
+  NSNumber *isValidWrapper = FKCachedWebAddressValue(self);
   if (isValidWrapper != nil) {
     return [isValidWrapper boolValue];
   }
@@ -114,13 +145,13 @@ static char websiteKey;
   NSString *urlRegex = @"((http|ftp|https):\\/\\/)?[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?";
   NSPredicate *urlPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegex];
 
-  isValidWrapper = @([urlPredicate evaluateWithObject:[self lowercaseString]]);
-  [self associateValue:isValidWrapper withKey:&websiteKey];
+  BOOL isValid = [urlPredicate evaluateWithObject:[self lowercaseString]];
+  FKCacheWebAddressValue(self, isValid);
 
-  return [isValidWrapper boolValue];
+  return isValid;
 }
 
-- (NSString *)firstLetter {
+- (NSString *)fkit_firstLetter {
   if (self.length <= 1)
     return self;
   return [self substringToIndex:1];

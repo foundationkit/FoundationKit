@@ -8,7 +8,7 @@ static NSNumberFormatter *numberFormatter = nil;
 
 @implementation NSNumber (FKConcise)
 
-+ (NSNumber *)numberWithString:(NSString *)string {
++ (NSNumber *)fkit_numberWithString:(NSString *)string {
   static dispatch_once_t onceToken;
   
   dispatch_once(&onceToken, ^{

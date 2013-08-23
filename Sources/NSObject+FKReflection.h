@@ -13,23 +13,16 @@
 /**
  Save cast to a given type, usage: 
  
- UIButton *button = [UIButton castedObjectOrNil:someView];
+ UIButton *button = [UIButton fkit_castedObjectOrNil:someView];
  if (button != nil) {
      // someView was a button
  }
  */
-+ (instancetype)castedObjectOrNil:(id)object;
++ (instancetype)fkit_castedObjectOrNil:(id)object;
 
 /** used to give each object a tag, similar to the tag-property of UIView */
-@property (nonatomic, assign) NSInteger objectTag;
+@property (nonatomic, assign, setter = fkit_setObjectTag:) NSInteger fkit_objectTag;
 /** used to associate metaData of any type with an object */
-@property (nonatomic, strong) id metaData;
-
-/** List of all methods the object responds to */
-@property (nonatomic, readonly) NSArray *methodNames;
-/** List of all ivars of the object */
-@property (nonatomic, readonly) NSArray *ivarNames;
-/** List of all properties of the object */
-@property (nonatomic, readonly) NSArray *propertyNames;
+@property (nonatomic, strong, setter = fkit_setMetaData:) id fkit_metaData;
 
 @end

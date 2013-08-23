@@ -13,7 +13,7 @@
   NSArray *operations = @[[NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }],
                                [NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }]];
   
-  [queue whenFinished:^{
+  [queue fkit_whenFinished:^{
     STAssertTrue(finishedCount == 2, @"Not all operations finished");
   }];
     
@@ -25,12 +25,12 @@
   NSArray *operations = @[[NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }],
                           [NSBlockOperation blockOperationWithBlock:^{ finishedCount++; }]];
   
-  [queue whenFinished:^{
+  [queue fkit_whenFinished:^{
     finishedCount++;
     STFail(@"Observer didn't get removed, finished-block got executed");
   }];
   
-  [queue removeFinishedBlock];
+  [queue fkit_removeFinishedBlock];
   [queue addOperations:operations waitUntilFinished:YES];
   
   STAssertTrue(finishedCount == 2, @"Observer didn't get removed");

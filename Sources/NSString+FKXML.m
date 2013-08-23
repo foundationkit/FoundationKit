@@ -293,7 +293,7 @@ static HTMLEscapeMap gAsciiHTMLEscapeMap[] = {
 
 @implementation NSString (FKXML)
 
-- (NSString *)stringByDecodingXMLEntities {
+- (NSString *)fkit_stringByDecodingXMLEntities {
   NSRange range = NSMakeRange(0, [self length]);
   NSRange subrange = [self rangeOfString:@"&" options:NSBackwardsSearch range:range];
 

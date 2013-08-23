@@ -12,6 +12,6 @@
 /**
  * Returns a new string where XML entities are replace by their representation, e.g. &ouml; -> ö
  */
-- (NSString *)stringByDecodingXMLEntities;
+- (NSString *)fkit_stringByDecodingXMLEntities;
 
 @end

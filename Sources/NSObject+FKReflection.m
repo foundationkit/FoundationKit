@@ -10,7 +10,7 @@ static char metaDataKey;
 
 @implementation NSObject (FKReflection)
 
-+ (instancetype)castedObjectOrNil:(id)object {
++ (instancetype)fkit_castedObjectOrNil:(id)object {
   if ([object isKindOfClass:self]) {
     return object;
   }
@@ -18,67 +18,20 @@ static char metaDataKey;
   return nil;
 }
 
-- (void)setObjectTag:(NSInteger)objectTag {
-  [self associateValue:@(objectTag) withKey:&objectTagKey];
+- (void)fkit_setObjectTag:(NSInteger)objectTag {
+  [self fkit_associateValue:@(objectTag) withKey:&objectTagKey];
 }
 
-- (NSInteger)objectTag {
-  return [[self associatedValueForKey:&objectTagKey] integerValue];
+- (NSInteger)fkit_objectTag {
+  return [[self fkit_associatedValueForKey:&objectTagKey] integerValue];
 }
 
-- (void)setMetaData:(id)metaData {
-  [self associateValue:metaData withKey:&metaDataKey];
+- (void)fkit_setMetaData:(id)metaData {
+  [self fkit_associateValue:metaData withKey:&metaDataKey];
 }
 
-- (id)metaData {
-  return [self associatedValueForKey:&metaDataKey];
-}
-
-- (NSArray *)methodNames {
-  NSMutableArray *array = [NSMutableArray array];
-	unsigned int count;
-	Method *methods = class_copyMethodList([self class], &count);
-
-	for (int i = 0; i < count; i++) {
-		NSString *method = NSStringFromSelector(method_getName(methods[i]));
-		[array addObject:method];
-	}
-
-	free(methods);
-
-	return [array copy];
-}
-
-- (NSArray *)ivarNames {
-  NSMutableArray *array = [NSMutableArray array];
-	unsigned int count;
-	Ivar *ivars = class_copyIvarList([self class], &count);
-
-	for (int i = 0; i < count; i++) {
-		NSString *iVar = [NSString stringWithCString:ivar_getName(ivars[i])
-                                        encoding:NSUTF8StringEncoding];
-		[array addObject:iVar];
-	}
-
-	free(ivars);
-
-	return [array copy];
-}
-
-- (NSArray *)propertyNames {
-  NSMutableArray *array = [NSMutableArray array];
-	unsigned int count;
-  objc_property_t *properties = class_copyPropertyList([self class], &count);
-
-	for (int i = 0; i < count; i++) {
-		NSString *property = [NSString stringWithCString:property_getName(properties[i])
-                                            encoding:NSUTF8StringEncoding];
-		[array addObject:property];
-	}
-
-	free(properties);
-
-	return [array copy];
+- (id)fkit_metaData {
+  return [self fkit_associatedValueForKey:&metaDataKey];
 }
 
 @end

@@ -1,23 +1,19 @@
 // Part of FoundationKit http://foundationk.it
 //
-// isBlank see https://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/object/blank.rb
 // isValidEmailAddress see http://stackoverflow.com/questions/3179859/regex-for-an-email-address-doesnt-work/8863823#8863823
 
 #import <Foundation/Foundation.h>
 
 @interface NSString (FKAdditions)
 
-- (BOOL)isBlank;
-- (BOOL)isEmpty;
-- (NSString *)presence;
-- (NSRange)stringRange;
-- (NSString *)trimmed;
-- (NSString *)URLEncodedString;
-- (NSString *)URLDecodedString;
+- (NSRange)fkit_stringRange;
+- (NSString *)fkit_trimmed;
+- (NSString *)fkit_URLEncodedString;
+- (NSString *)fkit_URLDecodedString;
 
-- (BOOL)containsString:(NSString *)string;
-- (BOOL)containsString:(NSString *)string options:(NSStringCompareOptions)options;
-- (BOOL)isEqualToStringIgnoringCase:(NSString*)otherString;
+- (BOOL)fkit_containsString:(NSString *)string;
+- (BOOL)fkit_containsString:(NSString *)string options:(NSStringCompareOptions)options;
+- (BOOL)fkit_isEqualToStringIgnoringCase:(NSString *)otherString;
 
 /**
  Replaces all occurences of two or more spaces in a row with one space, 
@@ -26,7 +22,7 @@
  
  @return A string that only contains one space in a row
  */
-- (NSString *)stringByReplacingUnnecessaryWhitespace;
+- (NSString *)fkit_stringByReplacingUnnecessaryWhitespace;
 
 /**
  Replaces all occurences of two or more spaces in a row with one space and trim the string, 
@@ -34,24 +30,24 @@
  
  @return A string that only contains one space in a row and no space at the beginning and end
  */
-- (NSString *)trimmedStringByReplacingUnnecessaryWhitespace;
+- (NSString *)fkit_trimmedStringByReplacingUnnecessaryWhitespace;
 
 /**
  Checks if the string is valid E-Mail address
  @return YES, if the string is a valid E-Mail address, NO otherwise
  */
-- (BOOL)isValidEmailAddress;
+- (BOOL)fkit_isValidEmailAddress;
 
 /**
  Checks if the string is valid website address
  @return YES, if the string is a valid website address, NO otherwise
  */
-- (BOOL)isValidWebAddress;
+- (BOOL)fkit_isValidWebAddress;
 
 /**
  Returns first letter of the string
  @return first letter of the string, if string has length 0 it will return the empty string
  */
-- (NSString *)firstLetter;
+- (NSString *)fkit_firstLetter;
 
 @end

@@ -4,12 +4,12 @@ FKLoadCategory(NSStringFKLevenshtein);
 
 @implementation NSString (FKLevenshtein)
 
-- (NSInteger)levenshteinDistanceToString:(NSString *)string {
-  return [self levenshteinDistanceToString:string caseSensitive:NO];
+- (NSInteger)fkit_levenshteinDistanceToString:(NSString *)string {
+  return [self fkit_levenshteinDistanceToString:string caseSensitive:NO];
 }
 
 // TODO: slow algorithm, here is room for improvement
-- (NSInteger)levenshteinDistanceToString:(NSString *)string caseSensitive:(BOOL)caseSensitive {
+- (NSInteger)fkit_levenshteinDistanceToString:(NSString *)string caseSensitive:(BOOL)caseSensitive {
   NSString *string1 = caseSensitive ? self : [self lowercaseString];
   NSString *string2 = caseSensitive ? string : [string lowercaseString];
   NSInteger string1Length = string1.length + 1;

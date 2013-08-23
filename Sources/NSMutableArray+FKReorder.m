@@ -2,7 +2,7 @@
 
 @implementation NSMutableArray (FKReorder)
 
-- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
+- (void)fkit_moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
   if (fromIndex != toIndex) {
     id object = [self objectAtIndex:fromIndex];
     [self removeObjectAtIndex:fromIndex];

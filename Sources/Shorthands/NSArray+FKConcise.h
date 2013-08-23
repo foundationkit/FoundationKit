@@ -3,18 +3,11 @@
 // Derived from Peter Jihoon Kim's MIT-licensed ConciseKit: https://github.com/petejkim/ConciseKit
 
 
-#define $marray(...)  [NSMutableArray arrayWithObjects:__VA_ARGS__, nil]
-
-
 @interface NSArray (FKConcise)
 
-@property (nonatomic, readonly, getter = isEmpty) BOOL empty;
+- (id)fkit_firstObjectMatchingPredicate:(NSPredicate *)predicate;
+- (id)fkit_objectOrNilAtIndex:(NSUInteger)index;
 
-- (id)firstObject;
-- (id)firstObjectMatchingPredicate:(NSPredicate *)predicate;
-
-- (id)objectOrNilAtIndex:(NSUInteger)index;
-
-- (NSArray *)arrayWithUniqueMembers;
+- (NSArray *)fkit_arrayWithUniqueMembers;
 
 @end

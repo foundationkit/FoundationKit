@@ -5,6 +5,6 @@
 
 @interface NSError (FKAdditions)
 
-+ (NSError *)errorWithDomain:(NSString *)domain code:(NSInteger)code localizedDescription:(NSString *)description;
++ (NSError *)fkit_errorWithDomain:(NSString *)domain code:(NSInteger)code localizedDescription:(NSString *)description;
 
 @end

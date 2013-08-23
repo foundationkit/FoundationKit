@@ -30,7 +30,7 @@ enum {
  @param key the key that is used to identify the association. best to the address of a static char.
  @param policy the policy used for association. @see FKAssociationPolicy.
  */
-- (void)associateValue:(id)value withKey:(void *)key policy:(FKAssociationPolicy)policy;
+- (void)fkit_associateValue:(id)value withKey:(void *)key policy:(FKAssociationPolicy)policy;
 
 /**
  Associates a value with the given key and the policy OBJC_ASSOCIATION_RETAIN with the object self.
@@ -38,7 +38,7 @@ enum {
  @param value the value that gets associated with self
  @param key the key that is used to identify the association.
  */
-- (void)associateValue:(id)value withKey:(void *)key;
+- (void)fkit_associateValue:(id)value withKey:(void *)key;
 
 /**
  Associates a value with the given key and the policy OBJC_ASSOCIATION_ASSIGN with the object self.
@@ -46,7 +46,7 @@ enum {
  @param value the value that gets associated with self
  @param key the key that is used to identify the association.
  */
-- (void)associateWeakValue:(id)value withKey:(void *)key;
+- (void)fkit_associateWeakValue:(id)value withKey:(void *)key;
 
 /**
  Associates a value with the given key and the policy OBJC_ASSOCIATION_COPY with the object self.
@@ -54,7 +54,7 @@ enum {
  @param value the value that gets associated with self
  @param key the key that is used to identify the association.
  */
-- (void)associateCopiedValue:(id)value withKey:(void *)key;
+- (void)fkit_associateCopiedValue:(id)value withKey:(void *)key;
 
 /**
  Returns the value of the object associated with self under the given key.
@@ -62,7 +62,7 @@ enum {
  @param key the key used to identify the association
  @return the object associated with self and the given key
  */
-- (id)associatedValueForKey:(void *)key;
+- (id)fkit_associatedValueForKey:(void *)key;
 
 /**
  Returns YES, if there is an object associated with self under the given key.
@@ -70,6 +70,6 @@ enum {
  @param key the key used to identify the association
  @return YES, if there is an object associated, NO otherwise
  */
-- (BOOL)hasAssociatedValueForKey:(void *)key;
+- (BOOL)fkit_hasAssociatedValueForKey:(void *)key;
 
 @end

@@ -5,12 +5,12 @@ static char deallocBlocksKey;
 
 @implementation NSObject (FKDeallocBlock)
 
-- (void)addDeallocBlock:(fk_dealloc_block_t)block {
-  NSMutableArray *deallocBlocks = [self associatedValueForKey:&deallocBlocksKey];
+- (void)fkit_addDeallocBlock:(fk_dealloc_block_t)block {
+  NSMutableArray *deallocBlocks = [self fkit_associatedValueForKey:&deallocBlocksKey];
   
   if (deallocBlocks == nil) {
     deallocBlocks = [NSMutableArray array];
-    [self associateValue:deallocBlocks withKey:&deallocBlocksKey];
+    [self fkit_associateValue:deallocBlocks withKey:&deallocBlocksKey];
   }
   
   FKDeallocBlock *blockWrapper = [[FKDeallocBlock alloc] initWithBlock:block];

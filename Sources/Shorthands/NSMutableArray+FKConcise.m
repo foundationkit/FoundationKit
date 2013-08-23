@@ -24,7 +24,7 @@ static NSUInteger FKRandomNumberBelow(NSUInteger n) {
 @implementation NSMutableArray (FKConcise)
 
 // http://en.wikipedia.org/wiki/Knuth_shuffle
-- (void)shuffle {
+- (void)fkit_shuffle {
   for(NSUInteger i = self.count; i > 1; i--) {
     NSUInteger j = FKRandomNumberBelow(i);
     
@@ -32,7 +32,7 @@ static NSUInteger FKRandomNumberBelow(NSUInteger n) {
   }
 }
 
-- (void)addObjectIfNotNil:(id)object {
+- (void)fkit_addObjectIfNotNil:(id)object {
   if (object != nil) {
     [self addObject:object];
   }

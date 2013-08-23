@@ -10,19 +10,19 @@ FKLoadCategory(NSObjectFKPerform);
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 
-- (void)performSelector:(SEL)selector afterDelay:(NSTimeInterval)delay {
+- (void)fkit_performSelector:(SEL)selector afterDelay:(NSTimeInterval)delay {
 	[self performSelector:selector withObject:nil afterDelay:delay];
 }
 
-- (void)performSelectorInNextRunLoop:(SEL)selector {
+- (void)fkit_performSelectorInNextRunLoop:(SEL)selector {
   [self performSelector:selector withObject:nil afterDelay:0];
 }
 
-- (void)performSelectorInNextRunLoop:(SEL)selector withObject:(id)object {
+- (void)fkit_performSelectorInNextRunLoop:(SEL)selector withObject:(id)object {
   [self performSelector:selector withObject:object afterDelay:0];
 }
 
-- (id)performSelectorIfResponding:(SEL)selector {
+- (id)fkit_performSelectorIfResponding:(SEL)selector {
 	if (![self respondsToSelector:selector]) {
     return nil;
   }
@@ -30,7 +30,7 @@ FKLoadCategory(NSObjectFKPerform);
 	return [self performSelector:selector];	
 }
 
-- (id)performSelectorIfResponding:(SEL)selector withObject:(id)object {
+- (id)fkit_performSelectorIfResponding:(SEL)selector withObject:(id)object {
 	if (![self respondsToSelector:selector]) {
     return nil;
   }
@@ -38,7 +38,7 @@ FKLoadCategory(NSObjectFKPerform);
 	return [self performSelector:selector withObject:object];	
 }
 
-- (id)performSelectorIfResponding:(SEL)selector withObject:(id)object1 withObject:(id)object2 {
+- (id)fkit_performSelectorIfResponding:(SEL)selector withObject:(id)object1 withObject:(id)object2 {
 	if (![self respondsToSelector:selector]) {
     return nil;
   }

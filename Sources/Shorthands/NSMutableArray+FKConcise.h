@@ -4,8 +4,8 @@
 
 @interface NSMutableArray (FKConcise)
 
-- (void)shuffle;
+- (void)fkit_shuffle;
 
-- (void)addObjectIfNotNil:(id)object;
+- (void)fkit_addObjectIfNotNil:(id)object;
 
 @end

@@ -13,7 +13,7 @@
 @implementation NSArray (FKDiff)
 
 // Bottom-Up Iterative LCS algorithm from http://www.ics.uci.edu/~eppstein/161/960229.html
--(FKDiffResult *)diffWithArray:(NSArray *)newArray {
+-(FKDiffResult *)fkit_diffWithArray:(NSArray *)newArray {
   NSUInteger lengthArray[self.count + 1][newArray.count + 1];
 
   for (NSInteger selfIndex = self.count; selfIndex >= 0; selfIndex--) {

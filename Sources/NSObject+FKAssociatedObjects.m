@@ -23,7 +23,7 @@ NS_INLINE BOOL FKIsValidAssociationPolicy(FKAssociationPolicy policy) {
 
 @implementation NSObject (FKAssociatedObjects)
 
-- (void)associateValue:(id)value withKey:(void *)key policy:(FKAssociationPolicy)policy {
+- (void)fkit_associateValue:(id)value withKey:(void *)key policy:(FKAssociationPolicy)policy {
   if (FKIsValidAssociationPolicy(policy)) {
     objc_setAssociatedObject(self, key, value, policy);
   } else {
@@ -31,24 +31,24 @@ NS_INLINE BOOL FKIsValidAssociationPolicy(FKAssociationPolicy policy) {
   }
 }
 
-- (void)associateValue:(id)value withKey:(void *)key {
-  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_RETAIN_NONATOMIC];
+- (void)fkit_associateValue:(id)value withKey:(void *)key {
+  [self fkit_associateValue:value withKey:key policy:OBJC_ASSOCIATION_RETAIN_NONATOMIC];
 }
 
-- (void)associateWeakValue:(id)value withKey:(void *)key; {
-  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_ASSIGN];
+- (void)fkit_associateWeakValue:(id)value withKey:(void *)key; {
+  [self fkit_associateValue:value withKey:key policy:OBJC_ASSOCIATION_ASSIGN];
 }
 
-- (void)associateCopiedValue:(id)value withKey:(void *)key {
-  [self associateValue:value withKey:key policy:OBJC_ASSOCIATION_COPY_NONATOMIC];
+- (void)fkit_associateCopiedValue:(id)value withKey:(void *)key {
+  [self fkit_associateValue:value withKey:key policy:OBJC_ASSOCIATION_COPY_NONATOMIC];
 }
 
-- (id)associatedValueForKey:(void *)key {
+- (id)fkit_associatedValueForKey:(void *)key {
 	return objc_getAssociatedObject(self, key);
 }
 
-- (BOOL)hasAssociatedValueForKey:(void *)key {
-  return [self associatedValueForKey:key] != nil;
+- (BOOL)fkit_hasAssociatedValueForKey:(void *)key {
+  return [self fkit_associatedValueForKey:key] != nil;
 }
 
 @end

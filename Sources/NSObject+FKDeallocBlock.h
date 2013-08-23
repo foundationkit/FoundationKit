@@ -9,6 +9,6 @@
  */
 @interface NSObject (FKDeallocBlock)
 
-- (void)addDeallocBlock:(fk_dealloc_block_t)block;
+- (void)fkit_addDeallocBlock:(fk_dealloc_block_t)block;
 
 @end

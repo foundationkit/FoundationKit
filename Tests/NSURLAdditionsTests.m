@@ -12,14 +12,14 @@
 @implementation NSURLAdditionsTests
 
 - (void)testQueryParameters {
-  NSURL *URL = [NSURL URLWithString:@"http://foundationk.it" queryValuesForKeys:nil];
+  NSURL *URL = [NSURL fkit_URLWithString:@"http://foundationk.it" queryValuesForKeys:nil];
 
   STAssertEqualObjects([URL absoluteString], @"http://foundationk.it", nil);
 
-  URL = [NSURL URLWithString:@"http://foundationk.it" queryValuesForKeys:@"value1",@"key1",@"value2",@"key2",nil];
+  URL = [NSURL fkit_URLWithString:@"http://foundationk.it" queryValuesForKeys:@"value1",@"key1",@"value2",@"key2",nil];
   STAssertEqualObjects([URL absoluteString], @"http://foundationk.it?key1=value1&key2=value2", nil);
 
-  URL = [NSURL URLWithString:@"http://foundationk.it" queryValuesForKeys:@"value 1",@"key1",@"value 2",@"key2",nil];
+  URL = [NSURL fkit_URLWithString:@"http://foundationk.it" queryValuesForKeys:@"value 1",@"key1",@"value 2",@"key2",nil];
   STAssertEqualObjects([URL absoluteString], @"http://foundationk.it?key1=value%201&key2=value%202", nil);
 }
 

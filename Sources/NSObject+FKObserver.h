@@ -16,7 +16,7 @@
  @param observer The observer to remove
  @param keyPath The keyPath the observer observes
  */
-- (void)safeRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath;
+- (void)fkit_safeRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath;
 
 /**
  Safely calls removeObserver:forKeyPath:context: on NSObject
@@ -25,6 +25,6 @@
  @param keyPath The keyPath the observer observes
  @param context The context of the observation
  */
-- (void)safeRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context;
+- (void)fkit_safeRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context;
 
 @end

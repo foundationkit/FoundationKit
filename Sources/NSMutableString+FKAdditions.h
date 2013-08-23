@@ -8,6 +8,6 @@
  This method is a shortcut for replacing all occurences of String "target" with "replacement"
  by performing a case-insensitive search on the whole string.
  */
-- (NSUInteger)replaceOccurrencesOfString:(NSString *)target withString:(NSString *)replacement;
+- (NSUInteger)fkit_replaceOccurrencesOfString:(NSString *)target withString:(NSString *)replacement;
 
 @end

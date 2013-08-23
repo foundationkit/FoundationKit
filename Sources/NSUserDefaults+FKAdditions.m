@@ -6,7 +6,7 @@ FKLoadCategory(NSUserDefaultsFKAdditions);
 
 @implementation NSUserDefaults (FKAdditions)
 
-- (void)registerDefaultsFromBundle:(NSString *)bundle file:(NSString *)file {
+- (void)fkit_registerDefaultsFromBundle:(NSString *)bundle file:(NSString *)file {
   NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[bundle stringByAppendingPathComponent:file]];
   NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
   NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
@@ -23,7 +23,7 @@ FKLoadCategory(NSUserDefaultsFKAdditions);
   [self registerDefaults:defaultsToRegister];
 }
 
-- (void)registerDefaultsFromSettingsBundle {
+- (void)fkit_registerDefaultsFromSettingsBundle {
   NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
   
   if(!settingsBundle) {
@@ -31,7 +31,7 @@ FKLoadCategory(NSUserDefaultsFKAdditions);
     return;
   }
   
-  [self registerDefaultsFromBundle:settingsBundle file:@"Root.plist"];
+  [self fkit_registerDefaultsFromBundle:settingsBundle file:@"Root.plist"];
 }
 
 @end

@@ -8,7 +8,7 @@
 
 @interface NSUserDefaults (FKAdditions)
 
-- (void)registerDefaultsFromBundle:(NSString *)bundle file:(NSString *)file;
-- (void)registerDefaultsFromSettingsBundle; // bundle = Settings.bundle, file = Root.plist
+- (void)fkit_registerDefaultsFromBundle:(NSString *)bundle file:(NSString *)file;
+- (void)fkit_registerDefaultsFromSettingsBundle; // bundle = Settings.bundle, file = Root.plist
 
 @end

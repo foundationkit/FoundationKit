@@ -8,6 +8,6 @@
 
 @interface NSURL (FKQueryParameters)
 
-+ (NSURL *)URLWithString:(NSString *)string queryValuesForKeys:(NSString *)value, ...;
++ (NSURL *)fkit_URLWithString:(NSString *)string queryValuesForKeys:(NSString *)value, ...;
 
 @end

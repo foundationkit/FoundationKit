@@ -29,6 +29,6 @@
 
 @interface NSArray (FKDiff)
 
-- (FKDiffResult *)diffWithArray:(NSArray *)newArray;
+- (FKDiffResult *)fkit_diffWithArray:(NSArray *)newArray;
 
 @end
