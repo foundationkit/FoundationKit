@@ -157,4 +157,12 @@ static void FKCacheEmailAddressValue(NSString *string, BOOL isValidEmailAddress)
   return [self substringToIndex:1];
 }
 
+- (NSString *)fkit_sanitizedPhoneNumber {
+  NSCharacterSet *validCharacters = [NSCharacterSet characterSetWithCharactersInString:@"1234567890-+"];
+  NSString *phoneNumber = [self stringByReplacingOccurrencesOfString:@"(0)" withString:@""];
+
+  return [[phoneNumber componentsSeparatedByCharactersInSet:[validCharacters invertedSet]] componentsJoinedByString:@""];
+}
+
+
 @end

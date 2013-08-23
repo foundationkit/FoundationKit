@@ -14,7 +14,7 @@ NSDateFormatter* dateFormatter(void);
 #pragma mark Class Methods
 ////////////////////////////////////////////////////////////////////////
 
-+ (NSDate *)dateWithString:(NSString *)dateString format:(NSString *)format {
++ (NSDate *)fkit_dateWithString:(NSString *)dateString format:(NSString *)format {
 	if(dateString == nil) {
     return nil;
   }
@@ -25,27 +25,27 @@ NSDateFormatter* dateFormatter(void);
 	return [formatter dateFromString:dateString];
 }
 
-+ (NSDate *)dateWithYear:(NSInteger)year {
-	return [self dateWithYear:year month:0 day:0 hour:0 minute:0 second:0];
++ (NSDate *)fkit_dateWithYear:(NSInteger)year {
+	return [self fkit_dateWithYear:year month:0 day:0 hour:0 minute:0 second:0];
 }
 
-+ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month {
-	return [self dateWithYear:year month:month day:0 hour:0 minute:0 second:0];
++ (NSDate *)fkit_dateWithYear:(NSInteger)year month:(NSInteger)month {
+	return [self fkit_dateWithYear:year month:month day:0 hour:0 minute:0 second:0];
 }
 
-+ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
-	return [self dateWithYear:year month:month day:day hour:0 minute:0 second:0];
++ (NSDate *)fkit_dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
+	return [self fkit_dateWithYear:year month:month day:day hour:0 minute:0 second:0];
 }
 
-+ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour {
-	return [self dateWithYear:year month:month day:day hour:hour minute:0 second:0];
++ (NSDate *)fkit_dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour {
+	return [self fkit_dateWithYear:year month:month day:day hour:hour minute:0 second:0];
 }
 
-+ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute {
-	return [self dateWithYear:year month:month day:day hour:hour minute:minute second:0];
++ (NSDate *)fkit_dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute {
+	return [self fkit_dateWithYear:year month:month day:day hour:hour minute:minute second:0];
 }
 
-+ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second {
++ (NSDate *)fkit_dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second {
 	NSDateComponents *comps = [[NSDateComponents alloc] init];
   NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
   
@@ -64,7 +64,7 @@ NSDateFormatter* dateFormatter(void);
 #pragma mark Instance Methods
 ////////////////////////////////////////////////////////////////////////
 
-- (NSString *)relativeDateString {
+- (NSString *)fkit_relativeDateString {
 	NSTimeInterval time = [self timeIntervalSince1970];
 	NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
 	NSTimeInterval diff = now - time;
@@ -101,10 +101,10 @@ NSDateFormatter* dateFormatter(void);
 		}
 	}
   
-	return [self dateStringWithFormat:_(@"MM/dd/yy")];
+	return [self fkit_dateStringWithFormat:_(@"MM/dd/yy")];
 }
 
-- (NSString *)dateStringWithFormat:(NSString *)format {
+- (NSString *)fkit_dateStringWithFormat:(NSString *)format {
   if(format == nil) {
     return nil;
   }
@@ -117,31 +117,31 @@ NSDateFormatter* dateFormatter(void);
   return [formatter stringFromDate:self];
 }
 
-- (BOOL)isBefore:(NSDate *)otherDate {
+- (BOOL)fkit_isBefore:(NSDate *)otherDate {
 	return [self timeIntervalSinceDate:otherDate] < 0;
 }
 
-- (BOOL)isAfter:(NSDate *)otherDate {
+- (BOOL)fkit_isAfter:(NSDate *)otherDate {
 	return [self timeIntervalSinceDate:otherDate] > 0;
 }
 
-- (BOOL)isToday {
-	return [[[NSDate date] midnightDate] isEqual:[self midnightDate]];
+- (BOOL)fkit_isToday {
+	return [[[NSDate date] fkit_midnightDate] isEqual:[self fkit_midnightDate]];
 }
 
-- (BOOL)isYesterday {
-	return [[[NSDate dateWithTimeIntervalSinceNow:-FKTimeIntervalDays(1)] midnightDate] isEqual:[self midnightDate]];
+- (BOOL)fkit_isYesterday {
+	return [[[NSDate dateWithTimeIntervalSinceNow:-FKTimeIntervalDays(1)] fkit_midnightDate] isEqual:[self fkit_midnightDate]];
 }
 
-- (BOOL)isTomorrow {
-	return [[[NSDate dateWithTimeIntervalSinceNow:FKTimeIntervalDays(1)] midnightDate] isEqual:[self midnightDate]];
+- (BOOL)fkit_isTomorrow {
+	return [[[NSDate dateWithTimeIntervalSinceNow:FKTimeIntervalDays(1)] fkit_midnightDate] isEqual:[self fkit_midnightDate]];
 }
 
-- (NSDate *)midnightDate {
+- (NSDate *)fkit_midnightDate {
 	return [[NSCalendar currentCalendar] dateFromComponents:[[NSCalendar currentCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:self]];
 }
 
-- (NSDateComponents *)gregorianCalendarComponents {
+- (NSDateComponents *)fkit_gregorianCalendarComponents {
 	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	NSDateComponents *components = [gregorian components:(NSSecondCalendarUnit |
                                                         NSMinuteCalendarUnit |
@@ -155,23 +155,23 @@ NSDateFormatter* dateFormatter(void);
 	return components;
 }
 
-- (NSInteger)secondComponent {
-	return [[self gregorianCalendarComponents] second];
+- (NSInteger)fkit_secondComponent {
+	return [[self fkit_gregorianCalendarComponents] second];
 }
 
-- (NSInteger)minuteComponent {
-	return [[self gregorianCalendarComponents] minute];
+- (NSInteger)fkit_minuteComponent {
+	return [[self fkit_gregorianCalendarComponents] minute];
 }
 
-- (NSInteger)hourComponent {
-	return [[self gregorianCalendarComponents] hour];
+- (NSInteger)fkit_hourComponent {
+	return [[self fkit_gregorianCalendarComponents] hour];
 }
 
-- (NSInteger)dayComponent {
-	return [[self gregorianCalendarComponents] day];
+- (NSInteger)fkit_dayComponent {
+	return [[self fkit_gregorianCalendarComponents] day];
 }
 
-- (NSInteger)dayOfYearComponent {
+- (NSInteger)fkit_dayOfYearComponent {
   NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
   NSUInteger dayOfYear = [gregorian ordinalityOfUnit:NSDayCalendarUnit
                                               inUnit:NSYearCalendarUnit
@@ -179,27 +179,27 @@ NSDateFormatter* dateFormatter(void);
   return dayOfYear;
 }
 
-- (NSInteger)weekdayComponent {
-	return [[self gregorianCalendarComponents] weekday];
+- (NSInteger)fkit_weekdayComponent {
+	return [[self fkit_gregorianCalendarComponents] weekday];
 }
 
-- (NSInteger)weekComponent {
-	return [[self gregorianCalendarComponents] week];
+- (NSInteger)fkit_weekComponent {
+	return [[self fkit_gregorianCalendarComponents] week];
 }
 
-- (NSInteger)weekOfYearComponent {
-  return [[self gregorianCalendarComponents] weekOfYear];
+- (NSInteger)fkit_weekOfYearComponent {
+  return [[self fkit_gregorianCalendarComponents] weekOfYear];
 }
 
-- (NSInteger)monthComponent {
-	return [[self gregorianCalendarComponents] month];
+- (NSInteger)fkit_monthComponent {
+	return [[self fkit_gregorianCalendarComponents] month];
 }
 
-- (NSInteger)yearComponent {
-	return [[self gregorianCalendarComponents] year];
+- (NSInteger)fkit_yearComponent {
+	return [[self fkit_gregorianCalendarComponents] year];
 }
 
-- (NSInteger)daysSinceDate:(NSDate *)date {
+- (NSInteger)fkit_daysSinceDate:(NSDate *)date {
   NSUInteger unitFlags = NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit;
   NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
   NSDateComponents *components = [calendar components:unitFlags fromDate:date toDate:self options:0];
@@ -211,7 +211,7 @@ NSDateFormatter* dateFormatter(void);
   return components.day;
 }
 
-- (NSDate *)dateByAddingDays:(NSUInteger)days {
+- (NSDate *)fkit_dateByAddingDays:(NSUInteger)days {
   NSCalendar *calender = [NSCalendar currentCalendar];
   NSDateComponents *components = [[NSDateComponents alloc] init];
   
@@ -221,19 +221,19 @@ NSDateFormatter* dateFormatter(void);
 }
 
 // This hard codes the assumption that a week is 7 days
-- (BOOL)isSameWeekAsDate:(NSDate *)date {
+- (BOOL)fkit_isSameWeekAsDate:(NSDate *)date {
 	// Must be same week. 12/31 and 1/1 will both be week "1" if they are in the same week
-	if (self.weekComponent != date.weekComponent) {
+	if (self.fkit_weekComponent != date.fkit_weekComponent) {
     return NO;
   }
 	
 	return (ABS([self timeIntervalSinceDate:date]) < FKTimeIntervalDays(7));
 }
 
-- (BOOL)isSameDayAsDate:(NSDate *)date {
-  return (self.yearComponent == date.yearComponent &&
-          self.monthComponent == date.monthComponent &&
-          self.dayComponent == date.dayComponent);
+- (BOOL)fkit_isSameDayAsDate:(NSDate *)date {
+  return (self.fkit_yearComponent == date.fkit_yearComponent &&
+          self.fkit_monthComponent == date.fkit_monthComponent &&
+          self.fkit_dayComponent == date.fkit_dayComponent);
 }
 
 @end

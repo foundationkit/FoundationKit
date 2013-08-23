@@ -50,4 +50,11 @@
  */
 - (NSString *)fkit_firstLetter;
 
+/**
+ This method removes all characters from NSString that are no valid phone number characters.
+
+ @return a sanitized phone number
+ */
+- (NSString *)fkit_sanitizedPhoneNumber;
+
 @end
