@@ -98,7 +98,7 @@ NS_INLINE BOOL FKHTTPStatusCodeIsClientError(FKHTTPStatusCode statusCode) {
 }
 
 NS_INLINE BOOL FKHTTPStatusCodeIsServerError(FKHTTPStatusCode statusCode) {
-  if (statusCode >= 500 && statusCode < 600) {
+  if (statusCode >= 500) {
     return YES;
   }
   
