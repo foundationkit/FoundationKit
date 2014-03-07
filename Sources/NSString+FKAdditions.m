@@ -96,7 +96,7 @@ static void FKCacheEmailAddressValue(NSString *string, BOOL isValidEmailAddress)
 		return NO;
   }
   
-	return NSOrderedSame == [self compare:otherString options:NSCaseInsensitiveSearch + NSWidthInsensitiveSearch];
+	return NSOrderedSame == [self compare:otherString options:NSCaseInsensitiveSearch | NSWidthInsensitiveSearch];
 }
 
 - (NSString *)fkit_stringByReplacingUnnecessaryWhitespace {

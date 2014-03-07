@@ -2,6 +2,10 @@
 
 // Blocks
 #import "NSOperationQueue+FKBlocks.h"
+#import "NSArray+FKBlocks.h"
+#import "NSDictionary+FKBlocks.h"
+#import "NSMutableArray+FKBlocks.h"
+#import "NSMutableDictionary+FKBlocks.h"
 
 // Shorthands
 #import "NSArray+FKConcise.h"
