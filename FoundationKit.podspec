@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     'Matthias Tretter' => 'myell0w@me.com'
   }
   s.source = { :git => "https://github.com/foundationkit/FoundationKit.git", :tag => '0.0.1' }
-  s.source_files = 'Sources/*.{h,m}', 'Sources/Shorthands/*.{h,m}'
+  s.source_files = 'Sources/*.{h,m}', 'Sources/Blocks/*.{h,m}', 'Sources/Optional/*.{h,m}', 'Sources/Shorthands/*.{h,m}'
   s.frameworks = 'CoreGraphics', 'Foundation'
   s.prefix_header_contents = '
 #include <FoundationKit.h>
